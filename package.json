@@ -1,6 +1,6 @@
 {
   "packageManager": "yarn@3.1.1",
-  "name": "@straw-hat/monorepo",
+  "name": "@straw-hat/javascript-monorepo",
   "type": "module",
   "private": true,
   "workspaces": [
