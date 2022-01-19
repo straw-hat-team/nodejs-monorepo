@@ -1,6 +1,6 @@
 coverage
 dist
-docs/references
+**/docs/references
 .yarn
 .pnp.cjs
 .pnp.loader.mjs
