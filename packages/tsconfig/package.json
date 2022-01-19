@@ -1,0 +1,26 @@
+{
+  "name": "@straw-hat/tsconfig",
+  "version": "3.0.0",
+  "description": "TypeScript configurations",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "directory": "packages/tsconfig"
+  },
+  "license": "MIT",
+  "keywords": [
+    "tsconfig",
+    "config",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "commonjs",
+  "main": "lib/base.json",
+  "files": [
+    "lib",
+    "README.md"
+  ]
+}

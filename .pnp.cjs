@@ -31,6 +31,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/sdk"
       },
       {
+        "name": "@straw-hat/tsconfig",
+        "reference": "workspace:packages/tsconfig"
+      },
+      {
         "name": "@straw-hat/types",
         "reference": "workspace:packages/types"
       }
@@ -41,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@straw-hat/javascript-monorepo", ["workspace:."]],
       ["@straw-hat/react-fullscreen", ["workspace:packages/react-fullscreen"]],
       ["@straw-hat/sdk", ["workspace:packages/sdk"]],
+      ["@straw-hat/tsconfig", ["workspace:packages/tsconfig"]],
       ["@straw-hat/types", ["workspace:packages/types"]]
     ],
     "fallbackPool": [
@@ -2073,6 +2078,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@straw-hat/tsconfig", "npm:3.0.1"]
           ],
           "linkType": "HARD",
+        }],
+        ["workspace:packages/tsconfig", {
+          "packageLocation": "./packages/tsconfig/",
+          "packageDependencies": [
+            ["@straw-hat/tsconfig", "workspace:packages/tsconfig"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["@straw-hat/types", [

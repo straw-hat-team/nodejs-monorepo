@@ -1406,6 +1406,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@straw-hat/tsconfig@workspace:packages/tsconfig":
+  version: 0.0.0-use.local
+  resolution: "@straw-hat/tsconfig@workspace:packages/tsconfig"
+  languageName: unknown
+  linkType: soft
+
 "@straw-hat/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@straw-hat/types@workspace:packages/types"
