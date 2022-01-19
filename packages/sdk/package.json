@@ -27,7 +27,8 @@
   "typings": "dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
-    "./openapi": "./dist/openapi.js"
+    "./openapi": "./dist/openapi.js",
+    "./fp": "./dist/fp.js"
   },
   "files": [
     "dist",
