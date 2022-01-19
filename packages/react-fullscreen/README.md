@@ -4,7 +4,7 @@ A React hook for interacting with the Fullscreen API.
 
 ## Usage
 
-- [Reference guides](./docs/references/index.html) Please use `yarn docs:reference`
+- [References](./docs/references/index.html) Please use `yarn docs:reference`
   to generate the reference docs.
 
 An example of a fullscreen button using https://material-ui.com/.
