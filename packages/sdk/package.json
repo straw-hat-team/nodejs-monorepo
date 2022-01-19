@@ -2,6 +2,7 @@
   "name": "@straw-hat/sdk",
   "version": "0.0.1",
   "description": "A collection of software useful for developing JavaScript applications",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/straw-hat-team/javascript-monorepo.git",

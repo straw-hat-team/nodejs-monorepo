@@ -2,6 +2,7 @@
   "name": "@straw-hat/react-fullscreen",
   "version": "4.0.0",
   "description": "React hook for interacting with the browser fullscreen API",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/straw-hat-team/javascript-monorepo.git",

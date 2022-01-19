@@ -1,0 +1,38 @@
+{
+  "name": "@straw-hat/babel-preset-base",
+  "version": "1.0.2",
+  "description": "Babel configuration for compiling libraries",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "directory": "packages/babel-preset-base"
+  },
+  "license": "MIT",
+  "keywords": [
+    "babel",
+    "config",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-numeric-separator": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.4",
+    "babel-plugin-dynamic-import-node": "^2.3.0"
+  }
+}
