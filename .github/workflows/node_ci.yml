@@ -8,6 +8,6 @@ on:
 
 jobs:
   nodejs-quality-assurance:
-    uses: straw-hat-team/github-actions-workflows/.github/workflows/nodejs-quality-assurance.yml@v1.3.2
+    uses: straw-hat-team/github-actions-workflows/.github/workflows/nodejs-quality-assurance.yml@v1.3.3
     secrets:
       SHT_NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
