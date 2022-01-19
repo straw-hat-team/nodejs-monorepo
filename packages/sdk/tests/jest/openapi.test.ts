@@ -12,7 +12,7 @@ describe('given "replaceDynamicPathParams" function', () => {
       expect(result).toEqual('/api/v1/users/123/456');
     });
   });
-  describe('when replacing some dynamic path params', ()=> {
+  describe('when replacing some dynamic path params', () => {
     it('then only replaces the dynamic path params defined', () => {
       const path = '/api/v1/users/{userId}/{articleId}';
       const params = {
@@ -21,6 +21,5 @@ describe('given "replaceDynamicPathParams" function', () => {
       const result = replaceDynamicPathParams(path, params);
       expect(result).toEqual('/api/v1/users/123/{articleId}');
     });
-  })
+  });
 });
-
