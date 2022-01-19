@@ -23,6 +23,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
+        "name": "@straw-hat/react-fullscreen",
+        "reference": "workspace:packages/react-fullscreen"
+      },
+      {
         "name": "@straw-hat/sdk",
         "reference": "workspace:packages/sdk"
       }
@@ -31,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
       ["@straw-hat/javascript-monorepo", ["workspace:."]],
+      ["@straw-hat/react-fullscreen", ["workspace:packages/react-fullscreen"]],
       ["@straw-hat/sdk", ["workspace:packages/sdk"]]
     ],
     "fallbackPool": [
@@ -2031,6 +2036,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@straw-hat/react-fullscreen", [
+        ["workspace:packages/react-fullscreen", {
+          "packageLocation": "./packages/react-fullscreen/",
+          "packageDependencies": [
+            ["@straw-hat/react-fullscreen", "workspace:packages/react-fullscreen"],
+            ["@straw-hat/tsconfig", "npm:3.0.1"],
+            ["@types/fscreen", "npm:1.0.1"],
+            ["@types/react", "npm:16.8.6"],
+            ["fscreen", "npm:1.2.0"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["@straw-hat/sdk", [
         ["workspace:packages/sdk", {
           "packageLocation": "./packages/sdk/",
@@ -2146,6 +2164,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-emscripten-npm-1.39.6-c9c4021365-437f2f9cdf.zip/node_modules/@types/emscripten/",
           "packageDependencies": [
             ["@types/emscripten", "npm:1.39.6"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/fscreen", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/@types-fscreen-npm-1.0.1-0fbe41bd75-06ef89c263.zip/node_modules/@types/fscreen/",
+          "packageDependencies": [
+            ["@types/fscreen", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -2267,6 +2294,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-prettier-npm-2.4.1-d83bd651f7-df330c2d6f.zip/node_modules/@types/prettier/",
           "packageDependencies": [
             ["@types/prettier", "npm:2.4.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/prop-types", [
+        ["npm:15.7.4", {
+          "packageLocation": "./.yarn/cache/@types-prop-types-npm-15.7.4-592896a9fe-ef6e1899e5.zip/node_modules/@types/prop-types/",
+          "packageDependencies": [
+            ["@types/prop-types", "npm:15.7.4"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/react", [
+        ["npm:16.8.6", {
+          "packageLocation": "./.yarn/cache/@types-react-npm-16.8.6-1d3d7e6b7b-09e04a51e3.zip/node_modules/@types/react/",
+          "packageDependencies": [
+            ["@types/react", "npm:16.8.6"],
+            ["@types/prop-types", "npm:15.7.4"],
+            ["csstype", "npm:2.6.19"]
           ],
           "linkType": "HARD",
         }]
@@ -4082,6 +4129,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["csstype", [
+        ["npm:2.6.19", {
+          "packageLocation": "./.yarn/cache/csstype-npm-2.6.19-33559f7ef5-72b51ddd30.zip/node_modules/csstype/",
+          "packageDependencies": [
+            ["csstype", "npm:2.6.19"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["data-urls", [
         ["npm:2.0.0", {
           "packageLocation": "./.yarn/cache/data-urls-npm-2.0.0-2b80c32b82-97caf828aa.zip/node_modules/data-urls/",
@@ -4724,6 +4780,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/fs.realpath-npm-1.0.0-c8f05d8126-99ddea01a7.zip/node_modules/fs.realpath/",
           "packageDependencies": [
             ["fs.realpath", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["fscreen", [
+        ["npm:1.2.0", {
+          "packageLocation": "./.yarn/cache/fscreen-npm-1.2.0-cbeb194fbc-ac50f9ac52.zip/node_modules/fscreen/",
+          "packageDependencies": [
+            ["fscreen", "npm:1.2.0"]
           ],
           "linkType": "HARD",
         }]

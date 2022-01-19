@@ -1,0 +1,49 @@
+{
+  "name": "@straw-hat/react-fullscreen",
+  "version": "3.0.2",
+  "description": "React hook for interacting with the browser fullscreen API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "directory": "packages/react-fullscreen"
+  },
+  "license": "MIT",
+  "keywords": [
+    "fullscreen",
+    "react",
+    "ui",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:jest": "yarn run -T jest",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "dependencies": {
+    "fscreen": "^1.0.2"
+  },
+  "devDependencies": {
+    "@straw-hat/tsconfig": "^3.0.1",
+    "@types/fscreen": "^1.0.1",
+    "@types/react": "16.8.6"
+  }
+}
