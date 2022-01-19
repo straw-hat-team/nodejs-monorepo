@@ -17,7 +17,7 @@ export function compose<
   TFunctions extends AnyFunction[],
   TParameters extends ParametersOfLastInTuple<TFunctions>,
   TReturn extends ReturnTypeOfFirstInTuple<TFunctions>
-  >(...fns: TFunctions): (...args: TParameters) => TReturn {
+>(...fns: TFunctions): (...args: TParameters) => TReturn {
   return function (...args) {
     const list = fns.slice();
     const firstFn = list.pop();

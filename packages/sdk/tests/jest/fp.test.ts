@@ -12,7 +12,7 @@ describe('given a "identity" function', () => {
       // THEN
       expect(actual).toBe('hello, world');
     });
-  })
+  });
 });
 
 describe('given a "groupBy" function', () => {
@@ -44,7 +44,7 @@ describe('given a "groupBy" function', () => {
         ],
       });
     });
-  })
+  });
 });
 
 describe('given a "compose" function', () => {
