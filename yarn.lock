@@ -1355,14 +1355,14 @@ __metadata:
   resolution: "@straw-hat/javascript-monorepo@workspace:."
   dependencies:
     "@straw-hat/prettier-config": ^2.0.2
-    "@straw-hat/tsconfig": ^3.0.0
+    "@straw-hat/tsconfig": ^3.0.1
     husky: ^7.0.4
     jest: ^27.4.7
-    lint-staged: ^12.1.7
+    lint-staged: ^12.2.0
     monodeploy: ^3.0.0-rc.1
     prettier: ^2.5.1
     rimraf: ^3.0.2
-    typedoc: ^0.22.10
+    typedoc: ^0.22.11
     typescript: ^4.5.4
   languageName: unknown
   linkType: soft
@@ -1380,16 +1380,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/sdk@workspace:packages/sdk"
   dependencies:
-    "@straw-hat/tsconfig": ^3.0.0
+    "@straw-hat/tsconfig": ^3.0.1
     "@types/jest": ^27.4.0
-    ts-jest: ^27.1.2
+    ts-jest: ^27.1.3
   languageName: unknown
   linkType: soft
 
-"@straw-hat/tsconfig@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@straw-hat/tsconfig@npm:3.0.0"
-  checksum: ad7f31550c5cb5ff2ddb450f9f672df7b08a4ffb72d6d74ea3c6c96fd8ae4b6efc361e15f4034fc806502c0f55a385d85050b9b7eef569569ef74523da305d72
+"@straw-hat/tsconfig@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@straw-hat/tsconfig@npm:3.0.1"
+  checksum: d8e977f62c819d6abe2a18b4ba90dd6f3413aa15a0bb9db2e0c919cdc71fb876e521813b75998e949620008e5430661c5bd164f85c9603965156f0ea5caadbb5
   languageName: node
   linkType: hard
 
@@ -4865,9 +4865,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^12.1.7":
-  version: 12.1.7
-  resolution: "lint-staged@npm:12.1.7"
+"lint-staged@npm:^12.2.0":
+  version: 12.2.0
+  resolution: "lint-staged@npm:12.2.0"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
@@ -4884,7 +4884,7 @@ __metadata:
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 3d0757706c8b0ca3f004bb2ffa89a9d5fc97ccdebfa4cde29a9636c661538780e194b99cbc5e4b8b89b13986187b33c97e009b09014511bbd45ee05ba557d0eb
+  checksum: 940cb0f1d56dcd5a69fafc6c2e5ea946805ecc0c65403828a7612851d33e52947e1a6523579a18bed6f9e781e1362bf17c89aeecf8ec28e3a9ccd1dea6efbe78
   languageName: node
   linkType: hard
 
@@ -4972,15 +4972,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^5.1.1":
-  version: 5.1.1
-  resolution: "lru-cache@npm:5.1.1"
-  dependencies:
-    yallist: ^3.0.2
-  checksum: c154ae1cbb0c2206d1501a0e94df349653c92c8cbb25236d7e85190bcaf4567a03ac6eb43166fabfa36fd35623694da7233e88d9601fbf411a9a481d85dbd2cb
-  languageName: node
-  linkType: hard
-
 "lru-cache@npm:^6.0.0":
   version: 6.0.0
   resolution: "lru-cache@npm:6.0.0"
@@ -5060,12 +5051,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^3.0.8":
-  version: 3.0.8
-  resolution: "marked@npm:3.0.8"
+"marked@npm:^4.0.10":
+  version: 4.0.10
+  resolution: "marked@npm:4.0.10"
   bin:
-    marked: bin/marked
-  checksum: 3cdeaa126bbeca5b1b8d2f91e9728018dcd63b250233f3607009a4d70bb6bd9df8c769f1bc52ce9856d1316c91c9dacb1d94d80696f76d094146b4fab126a4eb
+    marked: bin/marked.js
+  checksum: 46cd8ef1a7cfcf5e461727c7f3e16dd4244369ef58f60485e75d3f5df9d53a8249b9609e96a336521eaa5c88d9531cbd296509a148718056e9375e69609f4442
   languageName: node
   linkType: hard
 
@@ -5510,15 +5501,6 @@ __metadata:
   dependencies:
     mimic-fn: ^2.1.0
   checksum: 2478859ef817fc5d4e9c2f9e5728512ddd1dbc9fb7829ad263765bb6d3b91ce699d6e2332eef6b7dff183c2f490bd3349f1666427eaba4469fba0ac38dfd0d34
-  languageName: node
-  linkType: hard
-
-"onigasm@npm:^2.2.5":
-  version: 2.2.5
-  resolution: "onigasm@npm:2.2.5"
-  dependencies:
-    lru-cache: ^5.1.1
-  checksum: 97aedde610ef561f05853609d6a5b720ec1e123f867bdac1b38b5aeb3bc90ed60209678c75a5f0f9821aa793c720b6d17aabfb956e26ab115ee9b81d6e56bdf7
   languageName: node
   linkType: hard
 
@@ -6248,14 +6230,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:^0.9.12":
-  version: 0.9.12
-  resolution: "shiki@npm:0.9.12"
+"shiki@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "shiki@npm:0.10.0"
   dependencies:
     jsonc-parser: ^3.0.0
-    onigasm: ^2.2.5
+    vscode-oniguruma: ^1.6.1
     vscode-textmate: 5.2.0
-  checksum: ee2ca7b997ffe6d412af946c7fa3909f2ade3fe505fe03b5c3f3c5cc90a9b10dbe34a208c9557ee0376d7a64c23995445cdb7c69e60da855cf80305bafdc018e
+  checksum: b72630a56c5e4384128a57443fc188ca8f6cf239c16defb6624b2aa500c0c953d41fb53e49f9d583cf093ddc522ff07e1b19fab8f0ae40a03304805c4fd5894b
   languageName: node
   linkType: hard
 
@@ -6857,9 +6839,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:^27.1.2":
-  version: 27.1.2
-  resolution: "ts-jest@npm:27.1.2"
+"ts-jest@npm:^27.1.3":
+  version: 27.1.3
+  resolution: "ts-jest@npm:27.1.3"
   dependencies:
     bs-logger: 0.x
     fast-json-stable-stringify: 2.x
@@ -6887,7 +6869,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: 2e7275f8a3545ec1340b37c458ace9244b5903e86861eb108beffff97d433f296c1254f76a41b573b1fe6245110b21bb62150bb88d55159f1dc7a929886535cb
+  checksum: eb54e5b8fc5f06e4cc20ecec7891201ddc78a3537d5eb3775e29ffbc7e83fd2a68f91db801b6a8c820c872060b24dc41fb6decac800b76256d3cdda6520b5c4f
   languageName: node
   linkType: hard
 
@@ -6979,20 +6961,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc@npm:^0.22.10":
-  version: 0.22.10
-  resolution: "typedoc@npm:0.22.10"
+"typedoc@npm:^0.22.11":
+  version: 0.22.11
+  resolution: "typedoc@npm:0.22.11"
   dependencies:
     glob: ^7.2.0
     lunr: ^2.3.9
-    marked: ^3.0.8
+    marked: ^4.0.10
     minimatch: ^3.0.4
-    shiki: ^0.9.12
+    shiki: ^0.10.0
   peerDependencies:
     typescript: 4.0.x || 4.1.x || 4.2.x || 4.3.x || 4.4.x || 4.5.x
   bin:
     typedoc: bin/typedoc
-  checksum: 404932ae8e62d1507209d50b635d9d5cefead344e7e84e2d21fc84741fb739e011dcffcf335d6d4e2a31fe45910757b27f11678f6ae5b89514d2f291fe41884e
+  checksum: 7d29f4b771d3eadc612d0b35509ee88c153d7310b7adb57faf0740132765613d6ceceb94877148d674cfc8242ca3c2e22e3ae2060768b2d96842bf14659d1b1c
   languageName: node
   linkType: hard
 
@@ -7084,6 +7066,13 @@ __metadata:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 35703ac889d419cf2aceef63daeadbe4e77227c39ab6287eeb6c1b36a746b364f50ba22e88591f5d017bc54685d8137bc2d328d0a896e4d3fd22093c0f32a9ad
+  languageName: node
+  linkType: hard
+
+"vscode-oniguruma@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "vscode-oniguruma@npm:1.6.1"
+  checksum: b019563a0d48b08c26b66c9f8729ed4ca2620b3b09c6957d5e622f0f104574bec48c7ba575bd157da40fb9a03c03495704894e3ed2d799d80a7180e3051b1f10
   languageName: node
   linkType: hard
 
@@ -7281,13 +7270,6 @@ __metadata:
   version: 5.0.8
   resolution: "y18n@npm:5.0.8"
   checksum: 54f0fb95621ee60898a38c572c515659e51cc9d9f787fb109cef6fde4befbe1c4602dc999d30110feee37456ad0f1660fa2edcfde6a9a740f86a290999550d30
-  languageName: node
-  linkType: hard
-
-"yallist@npm:^3.0.2":
-  version: 3.1.1
-  resolution: "yallist@npm:3.1.1"
-  checksum: 48f7bb00dc19fc635a13a39fe547f527b10c9290e7b3e836b9a8f1ca04d4d342e85714416b3c2ab74949c9c66f9cebb0473e6bc353b79035356103b47641285d
   languageName: node
   linkType: hard
 
