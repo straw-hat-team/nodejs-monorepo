@@ -2,10 +2,12 @@ name: Node CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   nodejs-quality-assurance:
-    uses: straw-hat-team/github-actions-workflows/.github/workflows/nodejs-quality-assurance.yml@v1.3.1
+    uses: straw-hat-team/github-actions-workflows/.github/workflows/nodejs-quality-assurance.yml@v1.3.2
+    with:
+      sht-npm-token: '${{ secrets.NPM_TOKEN }}'
