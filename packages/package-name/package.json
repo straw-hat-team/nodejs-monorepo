@@ -1,0 +1,40 @@
+{
+  "name": "@straw-hat/CHANGE_ME_PACKAGE_NAME",
+  "version": "0.0.1",
+  "description": "CHANGE_ME_DESCRIPTION",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/CHANGE_ME_REPO_NAME.git",
+    "directory": "packages/package-name"
+  },
+  "license": "MIT",
+  "keywords": [
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:jest": "yarn run -T jest",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@straw-hat/tsconfig": "^3.0.0",
+    "@types/jest": "^27.4.0",
+    "ts-jest": "^27.1.2"
+  }
+}

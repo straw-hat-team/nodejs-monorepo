@@ -1,0 +1,17 @@
+name: Node CD
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.3.0
+      - run: yarn ci:install
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
