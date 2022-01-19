@@ -2388,14 +2388,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/prettier-config@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@straw-hat/prettier-config@npm:2.0.2"
+"@straw-hat/prettier-config@^2.0.0, @straw-hat/prettier-config@^2.0.2, @straw-hat/prettier-config@workspace:packages/prettier-config":
+  version: 0.0.0-use.local
+  resolution: "@straw-hat/prettier-config@workspace:packages/prettier-config"
+  dependencies:
+    "@straw-hat/prettier-config": ^2.0.0
+    prettier: ^2.2.1
   peerDependencies:
     prettier: ^2.2.1
-  checksum: 5188ca9d5cb21466c62b562fa26eb40f81761acf656591a2b8b656aace16a6132bf0ff4d2068ae19d1b48ce04d6fdd00252c2a7bbcc9d24d1dc1573c53213cbe
-  languageName: node
-  linkType: hard
+  languageName: unknown
+  linkType: soft
 
 "@straw-hat/react-fullscreen@workspace:packages/react-fullscreen":
   version: 0.0.0-use.local
@@ -6901,7 +6903,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.1":
+"prettier@npm:^2.2.1, prettier@npm:^2.5.1":
   version: 2.5.1
   resolution: "prettier@npm:2.5.1"
   bin:

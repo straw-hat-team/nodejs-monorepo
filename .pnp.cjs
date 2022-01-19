@@ -27,6 +27,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/babel-preset-base"
       },
       {
+        "name": "@straw-hat/prettier-config",
+        "reference": "workspace:packages/prettier-config"
+      },
+      {
         "name": "@straw-hat/react-fullscreen",
         "reference": "workspace:packages/react-fullscreen"
       },
@@ -48,6 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [
       ["@straw-hat/babel-preset-base", ["workspace:packages/babel-preset-base"]],
       ["@straw-hat/javascript-monorepo", ["workspace:."]],
+      ["@straw-hat/prettier-config", ["virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#workspace:packages/prettier-config", "virtual:de38ddcc23e2f7a534e2ff716e07804bfe7bdd3d26ea7f09615fb71040e87309fb8dea0ff10f12ed136f6c5644369dc38f4fdee31b30b0188369def839e3dae2#workspace:packages/prettier-config", "workspace:packages/prettier-config"]],
       ["@straw-hat/react-fullscreen", ["workspace:packages/react-fullscreen"]],
       ["@straw-hat/sdk", ["workspace:packages/sdk"]],
       ["@straw-hat/tsconfig", ["workspace:packages/tsconfig"]],
@@ -60,7 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:2.0.2"],
+            ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#workspace:packages/prettier-config"],
             ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.4.7"],
@@ -3944,7 +3949,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@straw-hat/javascript-monorepo", "workspace:."],
-            ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:2.0.2"],
+            ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#workspace:packages/prettier-config"],
             ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.4.7"],
@@ -3959,17 +3964,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@straw-hat/prettier-config", [
-        ["npm:2.0.2", {
-          "packageLocation": "./.yarn/cache/@straw-hat-prettier-config-npm-2.0.2-1800a49520-5188ca9d5c.zip/node_modules/@straw-hat/prettier-config/",
+        ["virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#workspace:packages/prettier-config", {
+          "packageLocation": "./.yarn/__virtual__/@straw-hat-prettier-config-virtual-129f588d3b/1/packages/prettier-config/",
           "packageDependencies": [
-            ["@straw-hat/prettier-config", "npm:2.0.2"]
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:2.0.2", {
-          "packageLocation": "./.yarn/__virtual__/@straw-hat-prettier-config-virtual-39efceb072/0/cache/@straw-hat-prettier-config-npm-2.0.2-1800a49520-5188ca9d5c.zip/node_modules/@straw-hat/prettier-config/",
-          "packageDependencies": [
-            ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:2.0.2"],
+            ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#workspace:packages/prettier-config"],
             ["@types/prettier", null],
             ["prettier", "npm:2.5.1"]
           ],
@@ -3977,7 +3975,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/prettier",
             "prettier"
           ],
-          "linkType": "HARD",
+          "linkType": "SOFT",
+        }],
+        ["virtual:de38ddcc23e2f7a534e2ff716e07804bfe7bdd3d26ea7f09615fb71040e87309fb8dea0ff10f12ed136f6c5644369dc38f4fdee31b30b0188369def839e3dae2#workspace:packages/prettier-config", {
+          "packageLocation": "./.yarn/__virtual__/@straw-hat-prettier-config-virtual-d2e30bac2e/1/packages/prettier-config/",
+          "packageDependencies": [
+            ["@straw-hat/prettier-config", "virtual:de38ddcc23e2f7a534e2ff716e07804bfe7bdd3d26ea7f09615fb71040e87309fb8dea0ff10f12ed136f6c5644369dc38f4fdee31b30b0188369def839e3dae2#workspace:packages/prettier-config"],
+            ["@types/prettier", null],
+            ["prettier", "npm:2.5.1"]
+          ],
+          "packagePeers": [
+            "@types/prettier",
+            "prettier"
+          ],
+          "linkType": "SOFT",
+        }],
+        ["workspace:packages/prettier-config", {
+          "packageLocation": "./packages/prettier-config/",
+          "packageDependencies": [
+            ["@straw-hat/prettier-config", "virtual:de38ddcc23e2f7a534e2ff716e07804bfe7bdd3d26ea7f09615fb71040e87309fb8dea0ff10f12ed136f6c5644369dc38f4fdee31b30b0188369def839e3dae2#workspace:packages/prettier-config"],
+            ["prettier", "npm:2.5.1"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["@straw-hat/react-fullscreen", [
