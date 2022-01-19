@@ -54,6 +54,6 @@
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "^3.0.1",
-    "@types/react": "^17.0.14"
+    "@types/react": "^17.0.38"
   }
 }

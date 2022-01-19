@@ -813,7 +813,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-class-properties@npm:^7.16.7, @babel/plugin-proposal-class-properties@npm:^7.7.4":
+"@babel/plugin-proposal-class-properties@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/plugin-proposal-class-properties@npm:7.16.7"
   dependencies:
@@ -838,7 +838,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-decorators@npm:^7.7.4":
+"@babel/plugin-proposal-decorators@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/plugin-proposal-decorators@npm:7.16.7"
   dependencies:
@@ -899,7 +899,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-nullish-coalescing-operator@npm:^7.16.7, @babel/plugin-proposal-nullish-coalescing-operator@npm:^7.7.4":
+"@babel/plugin-proposal-nullish-coalescing-operator@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/plugin-proposal-nullish-coalescing-operator@npm:7.16.7"
   dependencies:
@@ -911,7 +911,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-numeric-separator@npm:^7.16.7, @babel/plugin-proposal-numeric-separator@npm:^7.7.4":
+"@babel/plugin-proposal-numeric-separator@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/plugin-proposal-numeric-separator@npm:7.16.7"
   dependencies:
@@ -950,7 +950,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-optional-chaining@npm:^7.16.7, @babel/plugin-proposal-optional-chaining@npm:^7.7.4":
+"@babel/plugin-proposal-optional-chaining@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/plugin-proposal-optional-chaining@npm:7.16.7"
   dependencies:
@@ -1067,7 +1067,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-dynamic-import@npm:^7.7.4, @babel/plugin-syntax-dynamic-import@npm:^7.8.3":
+"@babel/plugin-syntax-dynamic-import@npm:^7.8.3":
   version: 7.8.3
   resolution: "@babel/plugin-syntax-dynamic-import@npm:7.8.3"
   dependencies:
@@ -1612,7 +1612,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.7.4":
+"@babel/preset-env@npm:^7.16.8":
   version: 7.16.8
   resolution: "@babel/preset-env@npm:7.16.8"
   dependencies:
@@ -1711,7 +1711,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.7.4":
+"@babel/preset-typescript@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/preset-typescript@npm:7.16.7"
   dependencies:
@@ -2359,15 +2359,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/babel-preset-base@workspace:packages/babel-preset-base"
   dependencies:
-    "@babel/plugin-proposal-class-properties": ^7.7.4
-    "@babel/plugin-proposal-decorators": ^7.7.4
-    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.7.4
-    "@babel/plugin-proposal-numeric-separator": ^7.7.4
-    "@babel/plugin-proposal-optional-chaining": ^7.7.4
-    "@babel/plugin-syntax-dynamic-import": ^7.7.4
-    "@babel/preset-env": ^7.7.4
-    "@babel/preset-typescript": ^7.7.4
-    babel-plugin-dynamic-import-node: ^2.3.0
+    "@babel/plugin-proposal-class-properties": ^7.16.7
+    "@babel/plugin-proposal-decorators": ^7.16.7
+    "@babel/plugin-proposal-nullish-coalescing-operator": ^7.16.7
+    "@babel/plugin-proposal-numeric-separator": ^7.16.7
+    "@babel/plugin-proposal-optional-chaining": ^7.16.7
+    "@babel/plugin-syntax-dynamic-import": ^7.8.3
+    "@babel/preset-env": ^7.16.8
+    "@babel/preset-typescript": ^7.16.7
+    babel-plugin-dynamic-import-node: ^2.3.3
   languageName: unknown
   linkType: soft
 
@@ -2393,7 +2393,7 @@ __metadata:
   resolution: "@straw-hat/prettier-config@workspace:packages/prettier-config"
   dependencies:
     "@straw-hat/prettier-config": ^2.0.0
-    prettier: ^2.2.1
+    prettier: ^2.5.1
   peerDependencies:
     prettier: ^2.2.1
   languageName: unknown
@@ -2405,8 +2405,8 @@ __metadata:
   dependencies:
     "@straw-hat/tsconfig": ^3.0.1
     "@types/fscreen": ^1.0.1
-    "@types/react": 16.8.6
-    fscreen: ^1.0.2
+    "@types/react": 17.0.38
+    fscreen: ^1.2.0
   peerDependencies:
     react: ^16.8.6
   languageName: unknown
@@ -2433,7 +2433,7 @@ __metadata:
   resolution: "@straw-hat/types@workspace:packages/types"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.1
-    "@types/react": ^17.0.14
+    "@types/react": ^17.0.38
   peerDependencies:
     "@types/react": ^17.0.14
   languageName: unknown
@@ -2644,17 +2644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:16.8.6":
-  version: 16.8.6
-  resolution: "@types/react@npm:16.8.6"
-  dependencies:
-    "@types/prop-types": "*"
-    csstype: ^2.2.0
-  checksum: 09e04a51e3265b16b297f5e4c0ec05761c58c827fe506f9e4c735e809d6b5959b38b0e4adff286d239911c984455d3e6062e5548d83164c74d277feda2b15a72
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^17.0.14":
+"@types/react@npm:17.0.38, @types/react@npm:^17.0.38":
   version: 17.0.38
   resolution: "@types/react@npm:17.0.38"
   dependencies:
@@ -3423,7 +3413,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-dynamic-import-node@npm:^2.3.0, babel-plugin-dynamic-import-node@npm:^2.3.3":
+"babel-plugin-dynamic-import-node@npm:^2.3.3":
   version: 2.3.3
   resolution: "babel-plugin-dynamic-import-node@npm:2.3.3"
   dependencies:
@@ -4092,13 +4082,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^2.2.0":
-  version: 2.6.19
-  resolution: "csstype@npm:2.6.19"
-  checksum: 72b51ddd30ba308d08373cd890e79526efdc19a9762941845040055f75353992f2d8d4cf4db282a8e1d3d9d2a39c989c65fe32b7b2655f08d313660c4048d2d6
-  languageName: node
-  linkType: hard
-
 "csstype@npm:^3.0.2":
   version: 3.0.10
   resolution: "csstype@npm:3.0.10"
@@ -4631,7 +4614,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fscreen@npm:^1.0.2":
+"fscreen@npm:^1.2.0":
   version: 1.2.0
   resolution: "fscreen@npm:1.2.0"
   checksum: ac50f9ac52a157b8fe6aaecdf9efa7c1cfa90b42a76c3bc6b85372fab05c5a9cd72c1b7f4c2e273eba1a0e630e381fd72ae135fcc57acd05a0943d5d0c21b451
@@ -6903,7 +6886,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.2.1, prettier@npm:^2.5.1":
+"prettier@npm:^2.5.1":
   version: 2.5.1
   resolution: "prettier@npm:2.5.1"
   bin:

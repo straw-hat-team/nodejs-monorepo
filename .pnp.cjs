@@ -4006,7 +4006,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@straw-hat/react-fullscreen", "workspace:packages/react-fullscreen"],
             ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["@types/fscreen", "npm:1.0.1"],
-            ["@types/react", "npm:16.8.6"],
+            ["@types/react", "npm:17.0.38"],
             ["fscreen", "npm:1.2.0"]
           ],
           "linkType": "SOFT",
@@ -4282,15 +4282,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react", [
-        ["npm:16.8.6", {
-          "packageLocation": "./.yarn/cache/@types-react-npm-16.8.6-1d3d7e6b7b-09e04a51e3.zip/node_modules/@types/react/",
-          "packageDependencies": [
-            ["@types/react", "npm:16.8.6"],
-            ["@types/prop-types", "npm:15.7.4"],
-            ["csstype", "npm:2.6.19"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:17.0.38", {
           "packageLocation": "./.yarn/cache/@types-react-npm-17.0.38-e8f2055f5b-4079f4f959.zip/node_modules/@types/react/",
           "packageDependencies": [
@@ -6216,13 +6207,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["csstype", [
-        ["npm:2.6.19", {
-          "packageLocation": "./.yarn/cache/csstype-npm-2.6.19-33559f7ef5-72b51ddd30.zip/node_modules/csstype/",
-          "packageDependencies": [
-            ["csstype", "npm:2.6.19"]
-          ],
-          "linkType": "HARD",
-        }],
         ["npm:3.0.10", {
           "packageLocation": "./.yarn/cache/csstype-npm-3.0.10-e26ef49bb2-20a8fa324f.zip/node_modules/csstype/",
           "packageDependencies": [

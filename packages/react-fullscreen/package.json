@@ -40,11 +40,11 @@
     "react": "^16.8.6"
   },
   "dependencies": {
-    "fscreen": "^1.0.2"
+    "fscreen": "^1.2.0"
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "^3.0.1",
     "@types/fscreen": "^1.0.1",
-    "@types/react": "16.8.6"
+    "@types/react": "17.0.38"
   }
 }
