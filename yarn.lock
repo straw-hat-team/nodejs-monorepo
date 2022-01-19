@@ -1350,16 +1350,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@straw-hat/CHANGE_ME_PACKAGE_NAME@workspace:packages/package-name":
-  version: 0.0.0-use.local
-  resolution: "@straw-hat/CHANGE_ME_PACKAGE_NAME@workspace:packages/package-name"
-  dependencies:
-    "@straw-hat/tsconfig": ^3.0.0
-    "@types/jest": ^27.4.0
-    ts-jest: ^27.1.2
-  languageName: unknown
-  linkType: soft
-
 "@straw-hat/monorepo@workspace:.":
   version: 0.0.0-use.local
   resolution: "@straw-hat/monorepo@workspace:."
@@ -1385,6 +1375,16 @@ __metadata:
   checksum: 5188ca9d5cb21466c62b562fa26eb40f81761acf656591a2b8b656aace16a6132bf0ff4d2068ae19d1b48ce04d6fdd00252c2a7bbcc9d24d1dc1573c53213cbe
   languageName: node
   linkType: hard
+
+"@straw-hat/sdk@workspace:packages/sdk":
+  version: 0.0.0-use.local
+  resolution: "@straw-hat/sdk@workspace:packages/sdk"
+  dependencies:
+    "@straw-hat/tsconfig": ^3.0.0
+    "@types/jest": ^27.4.0
+    ts-jest: ^27.1.2
+  languageName: unknown
+  linkType: soft
 
 "@straw-hat/tsconfig@npm:^3.0.0":
   version: 3.0.0

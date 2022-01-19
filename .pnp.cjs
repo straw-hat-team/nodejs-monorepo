@@ -23,15 +23,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
-        "name": "@straw-hat/CHANGE_ME_PACKAGE_NAME",
-        "reference": "workspace:packages/package-name"
+        "name": "@straw-hat/sdk",
+        "reference": "workspace:packages/sdk"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["@straw-hat/CHANGE_ME_PACKAGE_NAME", ["workspace:packages/package-name"]],
-      ["@straw-hat/monorepo", ["workspace:."]]
+      ["@straw-hat/monorepo", ["workspace:."]],
+      ["@straw-hat/sdk", ["workspace:packages/sdk"]]
     ],
     "fallbackPool": [
     ],
@@ -1990,18 +1990,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
-      ["@straw-hat/CHANGE_ME_PACKAGE_NAME", [
-        ["workspace:packages/package-name", {
-          "packageLocation": "./packages/package-name/",
-          "packageDependencies": [
-            ["@straw-hat/CHANGE_ME_PACKAGE_NAME", "workspace:packages/package-name"],
-            ["@straw-hat/tsconfig", "npm:3.0.0"],
-            ["@types/jest", "npm:27.4.0"],
-            ["ts-jest", "virtual:5e5616422c5d4aefc3adbad9ab4b924a16ce9b0c52054b74f9e4bd344330c29cbcf90cdc7ab0330d0e1b61192e2f016b92479099b613dd2fc5258fff450b3f4f#npm:27.1.2"]
-          ],
-          "linkType": "SOFT",
-        }]
-      ]],
       ["@straw-hat/monorepo", [
         ["workspace:.", {
           "packageLocation": "./",
@@ -2041,6 +2029,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "prettier"
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["@straw-hat/sdk", [
+        ["workspace:packages/sdk", {
+          "packageLocation": "./packages/sdk/",
+          "packageDependencies": [
+            ["@straw-hat/sdk", "workspace:packages/sdk"],
+            ["@straw-hat/tsconfig", "npm:3.0.0"],
+            ["@types/jest", "npm:27.4.0"],
+            ["ts-jest", "virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#npm:27.1.2"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["@straw-hat/tsconfig", [
@@ -8508,10 +8508,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:5e5616422c5d4aefc3adbad9ab4b924a16ce9b0c52054b74f9e4bd344330c29cbcf90cdc7ab0330d0e1b61192e2f016b92479099b613dd2fc5258fff450b3f4f#npm:27.1.2", {
-          "packageLocation": "./.yarn/__virtual__/ts-jest-virtual-ad7659e7e5/0/cache/ts-jest-npm-27.1.2-fe360013a6-2e7275f8a3.zip/node_modules/ts-jest/",
+        ["virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#npm:27.1.2", {
+          "packageLocation": "./.yarn/__virtual__/ts-jest-virtual-80fc330773/0/cache/ts-jest-npm-27.1.2-fe360013a6-2e7275f8a3.zip/node_modules/ts-jest/",
           "packageDependencies": [
-            ["ts-jest", "virtual:5e5616422c5d4aefc3adbad9ab4b924a16ce9b0c52054b74f9e4bd344330c29cbcf90cdc7ab0330d0e1b61192e2f016b92479099b613dd2fc5258fff450b3f4f#npm:27.1.2"],
+            ["ts-jest", "virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#npm:27.1.2"],
             ["@babel/core", null],
             ["@types/babel-jest", null],
             ["@types/babel__core", null],

@@ -1,3 +1,3 @@
 export default {
-  "projects": ["<rootDir>/packages/package-name"]
+  "projects": ["<rootDir>/packages/sdk"]
 }

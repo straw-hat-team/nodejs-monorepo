@@ -1,11 +1,11 @@
 {
-  "name": "@straw-hat/CHANGE_ME_PACKAGE_NAME",
+  "name": "@straw-hat/sdk",
   "version": "0.0.1",
-  "description": "CHANGE_ME_DESCRIPTION",
+  "description": "A collection of software useful for developing JavaScript applications",
   "repository": {
     "type": "git",
-    "url": "https://github.com/straw-hat-team/CHANGE_ME_REPO_NAME.git",
-    "directory": "packages/package-name"
+    "url": "https://github.com/straw-hat-team/js-sdk.git",
+    "directory": "packages/sdk"
   },
   "license": "MIT",
   "keywords": [
