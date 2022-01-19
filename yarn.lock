@@ -1350,9 +1350,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@straw-hat/monorepo@workspace:.":
+"@straw-hat/javascript-monorepo@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/monorepo@workspace:."
+  resolution: "@straw-hat/javascript-monorepo@workspace:."
   dependencies:
     "@straw-hat/prettier-config": ^2.0.2
     "@straw-hat/tsconfig": ^3.0.0
