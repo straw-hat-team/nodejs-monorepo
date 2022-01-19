@@ -56,7 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:2.0.2"],
-            ["@straw-hat/tsconfig", "npm:3.0.1"],
+            ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.4.7"],
             ["lint-staged", "npm:12.2.0"],
@@ -2011,7 +2011,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@straw-hat/javascript-monorepo", "workspace:."],
             ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:2.0.2"],
-            ["@straw-hat/tsconfig", "npm:3.0.1"],
+            ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.4.7"],
             ["lint-staged", "npm:12.2.0"],
@@ -2051,7 +2051,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/react-fullscreen/",
           "packageDependencies": [
             ["@straw-hat/react-fullscreen", "workspace:packages/react-fullscreen"],
-            ["@straw-hat/tsconfig", "npm:3.0.1"],
+            ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["@types/fscreen", "npm:1.0.1"],
             ["@types/react", "npm:16.8.6"],
             ["fscreen", "npm:1.2.0"]
@@ -2064,7 +2064,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/sdk/",
           "packageDependencies": [
             ["@straw-hat/sdk", "workspace:packages/sdk"],
-            ["@straw-hat/tsconfig", "npm:3.0.1"],
+            ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["@types/jest", "npm:27.4.0"],
             ["ts-jest", "virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#npm:27.1.3"]
           ],
@@ -2072,13 +2072,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@straw-hat/tsconfig", [
-        ["npm:3.0.1", {
-          "packageLocation": "./.yarn/cache/@straw-hat-tsconfig-npm-3.0.1-ca905e69bd-d8e977f62c.zip/node_modules/@straw-hat/tsconfig/",
-          "packageDependencies": [
-            ["@straw-hat/tsconfig", "npm:3.0.1"]
-          ],
-          "linkType": "HARD",
-        }],
         ["workspace:packages/tsconfig", {
           "packageLocation": "./packages/tsconfig/",
           "packageDependencies": [
@@ -2092,7 +2085,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/types/",
           "packageDependencies": [
             ["@straw-hat/types", "workspace:packages/types"],
-            ["@straw-hat/tsconfig", "npm:3.0.1"],
+            ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["@types/react", "npm:17.0.38"]
           ],
           "linkType": "SOFT",

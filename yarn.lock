@@ -1399,14 +1399,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/tsconfig@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@straw-hat/tsconfig@npm:3.0.1"
-  checksum: d8e977f62c819d6abe2a18b4ba90dd6f3413aa15a0bb9db2e0c919cdc71fb876e521813b75998e949620008e5430661c5bd164f85c9603965156f0ea5caadbb5
-  languageName: node
-  linkType: hard
-
-"@straw-hat/tsconfig@workspace:packages/tsconfig":
+"@straw-hat/tsconfig@^3.0.1, @straw-hat/tsconfig@workspace:packages/tsconfig":
   version: 0.0.0-use.local
   resolution: "@straw-hat/tsconfig@workspace:packages/tsconfig"
   languageName: unknown
