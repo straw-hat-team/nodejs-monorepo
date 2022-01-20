@@ -9,11 +9,12 @@ Base TypeScript configurations.
 
 The following is the of available configuration types:
 
-- **base**: for the baseline for your projects.
-- **react.nextjs**: for React NextJS applications.
-- **react.cra**: for React CRA-like web applications.
-- **react.lib**: for React libraries.
-- **cypress**: for Cypress tests.
+- `@straw-hat/tsconfig/lib/base`: for the baseline for your projects.
+- `@straw-hat/tsconfig/lib/react.nextjs`: for React NextJS applications.
+- `@straw-hat/tsconfig/lib/react.cra`: for React CRA-like web applications.
+- `@straw-hat/tsconfig/lib/react.lib`: for React libraries.
+- `@straw-hat/tsconfig/lib/cypress`: for Cypress tests.
+- `@straw-hat/tsconfig/lib/browser.lib`: for libraries that are intended to be used in the browser.
 
 ## How-To Guides
 
