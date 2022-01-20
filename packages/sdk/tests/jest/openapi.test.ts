@@ -9,8 +9,10 @@ describe('given a "replaceDynamicPathParams" function', () => {
         userId: '123',
         articleId: '456',
       };
+
       // WHEN
       const result = replaceDynamicPathParams(path, params);
+
       // THEN
       expect(result).toEqual('/api/v1/users/123/456');
     });
@@ -22,8 +24,10 @@ describe('given a "replaceDynamicPathParams" function', () => {
       const params = {
         userId: '123',
       };
+
       // WHEN
       const result = replaceDynamicPathParams(path, params);
+
       // THEN
       expect(result).toEqual('/api/v1/users/123/{articleId}');
     });

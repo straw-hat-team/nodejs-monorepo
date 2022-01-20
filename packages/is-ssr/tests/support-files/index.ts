@@ -1,4 +1,4 @@
-export function addBrowserContext(callback: Function) {
+export function withMockedWindow(callback: Function) {
   globalThis.window = {
     document: {
       // @ts-ignore
@@ -6,8 +6,10 @@ export function addBrowserContext(callback: Function) {
     },
   };
 
-  callback();
+  const result = callback();
 
   // @ts-ignore
   delete globalThis.window;
+
+  return result;
 }
