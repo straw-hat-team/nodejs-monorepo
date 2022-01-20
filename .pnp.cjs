@@ -27,6 +27,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/babel-preset-base"
       },
       {
+        "name": "@straw-hat/is-ssr",
+        "reference": "workspace:packages/is-ssr"
+      },
+      {
         "name": "@straw-hat/prettier-config",
         "reference": "workspace:packages/prettier-config"
       },
@@ -51,6 +55,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
       ["@straw-hat/babel-preset-base", ["workspace:packages/babel-preset-base"]],
+      ["@straw-hat/is-ssr", ["workspace:packages/is-ssr"]],
       ["@straw-hat/javascript-monorepo", ["workspace:."]],
       ["@straw-hat/prettier-config", ["virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#workspace:packages/prettier-config", "virtual:de38ddcc23e2f7a534e2ff716e07804bfe7bdd3d26ea7f09615fb71040e87309fb8dea0ff10f12ed136f6c5644369dc38f4fdee31b30b0188369def839e3dae2#workspace:packages/prettier-config", "workspace:packages/prettier-config"]],
       ["@straw-hat/react-fullscreen", ["workspace:packages/react-fullscreen"]],
@@ -3944,6 +3949,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
+      ["@straw-hat/is-ssr", [
+        ["workspace:packages/is-ssr", {
+          "packageLocation": "./packages/is-ssr/",
+          "packageDependencies": [
+            ["@straw-hat/is-ssr", "workspace:packages/is-ssr"],
+            ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
+            ["@types/jest", "npm:27.4.0"],
+            ["ts-jest", "virtual:6b0323b58e2f84bb4bb8de9f27a453f1a2ec7d9cb45feb5ab7de0f99489e7683b9df9eaac9fb6dc8158c1a9f6d9c6ab3cb294525be2e9297ad765c8baf025ee6#npm:27.1.3"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["@straw-hat/javascript-monorepo", [
         ["workspace:.", {
           "packageLocation": "./",
@@ -4019,7 +4036,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@straw-hat/sdk", "workspace:packages/sdk"],
             ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["@types/jest", "npm:27.4.0"],
-            ["ts-jest", "virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#npm:27.1.3"]
+            ["ts-jest", "virtual:6b0323b58e2f84bb4bb8de9f27a453f1a2ec7d9cb45feb5ab7de0f99489e7683b9df9eaac9fb6dc8158c1a9f6d9c6ab3cb294525be2e9297ad765c8baf025ee6#npm:27.1.3"]
           ],
           "linkType": "SOFT",
         }]
@@ -10718,10 +10735,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#npm:27.1.3", {
-          "packageLocation": "./.yarn/__virtual__/ts-jest-virtual-1b08260aae/0/cache/ts-jest-npm-27.1.3-a4b2ce4894-eb54e5b8fc.zip/node_modules/ts-jest/",
+        ["virtual:6b0323b58e2f84bb4bb8de9f27a453f1a2ec7d9cb45feb5ab7de0f99489e7683b9df9eaac9fb6dc8158c1a9f6d9c6ab3cb294525be2e9297ad765c8baf025ee6#npm:27.1.3", {
+          "packageLocation": "./.yarn/__virtual__/ts-jest-virtual-94df8ff2bd/0/cache/ts-jest-npm-27.1.3-a4b2ce4894-eb54e5b8fc.zip/node_modules/ts-jest/",
           "packageDependencies": [
-            ["ts-jest", "virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#npm:27.1.3"],
+            ["ts-jest", "virtual:6b0323b58e2f84bb4bb8de9f27a453f1a2ec7d9cb45feb5ab7de0f99489e7683b9df9eaac9fb6dc8158c1a9f6d9c6ab3cb294525be2e9297ad765c8baf025ee6#npm:27.1.3"],
             ["@babel/core", null],
             ["@types/babel-jest", null],
             ["@types/babel__core", null],

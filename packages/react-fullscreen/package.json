@@ -22,7 +22,6 @@
   "scripts": {
     "prebuild": "yarn run -T rimraf dist",
     "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
-    "test:jest": "yarn run -T jest",
     "prepack": "yarn build",
     "docs:typedoc": "yarn run -T typedoc"
   },

@@ -1,3 +1,3 @@
 export default {
-  "projects": ["<rootDir>/packages/sdk"]
-}
+  projects: ['<rootDir>/packages/sdk', '<rootDir>/packages/is-ssr'],
+};

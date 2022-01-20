@@ -1,16 +1,18 @@
 {
-  "name": "@straw-hat/types",
-  "version": "0.4.1",
-  "description": "A bag of TypeScript types",
+  "name": "@straw-hat/is-ssr",
+  "version": "2.0.0",
+  "description": "Check if the code is running on the server side",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
-    "directory": "packages/types"
+    "directory": "packages/is-ssr"
   },
   "license": "MIT",
   "keywords": [
-    "types",
+    "ssr",
+    "browser",
+    "server-side-rendering",
     "straw-hat-team"
   ],
   "publishConfig": {
@@ -20,6 +22,7 @@
   "scripts": {
     "prebuild": "yarn run -T rimraf dist",
     "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:jest": "yarn run -T jest",
     "prepack": "yarn build",
     "docs:typedoc": "yarn run -T typedoc"
   },
@@ -27,32 +30,15 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./css-modules": {
-      "types": "./dist/css-modules.d.ts",
-      "import": "./dist/css-modules.js"
-    },
-    "./http": {
-      "types": "./dist/http.d.ts",
-      "import": "./dist/http.js"
-    },
-    "./svgr-webpack": {
-      "types": "./dist/svgr-webpack.d.ts",
-      "import": "./dist/svgr-webpack.js"
-    }
+    ".": "./dist/index.js"
   },
   "files": [
     "dist",
     "README.md"
   ],
-  "peerDependencies": {
-    "@types/react": "^17.0.14"
-  },
   "devDependencies": {
     "@straw-hat/tsconfig": "^3.0.1",
-    "@types/react": "^17.0.38"
+    "@types/jest": "^27.4.0",
+    "ts-jest": "^27.1.3"
   }
 }
