@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/types",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "A bag of TypeScript types",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -27,22 +27,8 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./css-modules": {
-      "types": "./dist/css-modules.d.ts",
-      "import": "./dist/css-modules.js"
-    },
-    "./http": {
-      "types": "./dist/http.d.ts",
-      "import": "./dist/http.js"
-    },
-    "./svgr-webpack": {
-      "types": "./dist/svgr-webpack.d.ts",
-      "import": "./dist/svgr-webpack.js"
-    }
+    "./*": "./dist/*.js",
+    ".": "./dist/index.js"
   },
   "files": [
     "dist",

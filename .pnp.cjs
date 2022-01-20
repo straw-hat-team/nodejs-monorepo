@@ -61,7 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@straw-hat/react-fullscreen", ["workspace:packages/react-fullscreen"]],
       ["@straw-hat/sdk", ["workspace:packages/sdk"]],
       ["@straw-hat/tsconfig", ["workspace:packages/tsconfig"]],
-      ["@straw-hat/types", ["workspace:packages/types"]]
+      ["@straw-hat/types", ["virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#workspace:packages/types", "workspace:packages/types"]]
     ],
     "fallbackPool": [
     ],
@@ -4035,6 +4035,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@straw-hat/sdk", "workspace:packages/sdk"],
             ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
+            ["@straw-hat/types", "virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#workspace:packages/types"],
             ["@types/jest", "npm:27.4.0"],
             ["ts-jest", "virtual:6b0323b58e2f84bb4bb8de9f27a453f1a2ec7d9cb45feb5ab7de0f99489e7683b9df9eaac9fb6dc8158c1a9f6d9c6ab3cb294525be2e9297ad765c8baf025ee6#npm:27.1.3"]
           ],
@@ -4051,6 +4052,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@straw-hat/types", [
+        ["virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#workspace:packages/types", {
+          "packageLocation": "./.yarn/__virtual__/@straw-hat-types-virtual-97de8ef15f/1/packages/types/",
+          "packageDependencies": [
+            ["@straw-hat/types", "virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#workspace:packages/types"],
+            ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
+            ["@types/react", "npm:17.0.38"]
+          ],
+          "linkType": "SOFT",
+        }],
         ["workspace:packages/types", {
           "packageLocation": "./packages/types/",
           "packageDependencies": [

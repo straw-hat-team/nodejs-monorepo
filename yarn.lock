@@ -2427,6 +2427,7 @@ __metadata:
   resolution: "@straw-hat/sdk@workspace:packages/sdk"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.1
+    "@straw-hat/types": ^0.5.0
     "@types/jest": ^27.4.0
     ts-jest: ^27.1.3
   languageName: unknown
@@ -2438,7 +2439,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/types@workspace:packages/types":
+"@straw-hat/types@^0.5.0, @straw-hat/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@straw-hat/types@workspace:packages/types"
   dependencies:

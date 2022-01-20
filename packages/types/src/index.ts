@@ -20,3 +20,8 @@ export type TypedArray =
   | BigUint64Array;
 
 export type EntryTuple<V, K = string> = [K, V];
+
+/**
+ * Defines a function with any signature.
+ */
+export type AnyFunction = (...args: any[]) => any;

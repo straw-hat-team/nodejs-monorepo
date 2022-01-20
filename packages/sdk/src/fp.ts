@@ -1,4 +1,4 @@
-type AnyFunction = (...args: any[]) => any;
+import type { AnyFunction } from '@straw-hat/types';
 
 type LengthOfTuple<Tuple extends unknown[]> = Tuple['length'];
 
