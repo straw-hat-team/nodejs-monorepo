@@ -5,7 +5,7 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
+    "module": "ES2020",
     "moduleResolution": "Node",
     "newLine": "LF",
     "emitDeclarationOnly": true,
@@ -19,10 +19,11 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "esnext",
+    "target": "ES2021",
     "esModuleInterop": true,
     "inlineSources": true,
     "useUnknownInCatchVariables": true,
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
+    "lib": ["ESNext"]
   }
 }

@@ -2,35 +2,60 @@
 
 A React hook for interacting with the Fullscreen API.
 
-## Usage
-
+- [How-To Guides](#how-to-guides)
 - [References](./docs/references/index.html) Please use `yarn docs:reference`
   to generate the reference docs.
 
-An example of a fullscreen button using https://material-ui.com/.
+## How-To Guides
 
-```typescript jsx
-import IconButton from '@material-ui/core/IconButton';
-import FullscreenIcon from '@material-ui/icons/Fullscreen';
-import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
-import * as React from 'react';
+### Create a Fullscreen Toggler Button
 
-// 1. Import the dependency.
-import { useFullscreen } from '@straw-hat/react-fullscreen';
+An example of a fullscreen button using https://material-ui.com/
 
-export function FullscreenButton() {
-  // 2. Create a `ref` that with the targeted element that will display in
-  // fullscreen mode.
-  const target = React.useRef(window.document.body);
+1. Import the dependencies:
 
-  // 3. Pass the targeted element to the hook
-  const { isFullscreen, toggleFullscreen } = useFullscreen(target);
+   ```tsx
+   import IconButton from '@material-ui/core/IconButton';
+   import FullscreenIcon from '@material-ui/icons/Fullscreen';
+   import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
+   import * as React from 'react';
 
-  // 4. Use the exposed API in your component.
-  return (
-    <IconButton color="inherit" onClick={toggleFullscreen}>
-      {isFullscreen ? <FullscreenExitIcon /> : <FullscreenIcon />}
-    </IconButton>
-  );
-}
-```
+   import { useFullscreen } from '@straw-hat/react-fullscreen';
+   ```
+
+2. Define the `FullscreenButton` component, and create a `ref` that with the targeted element that will display in
+   fullscreen mode:
+
+   ```tsx
+   // ...
+   export function FullscreenButton() {
+     const target = React.useRef(window.document.body);
+     return null;
+   }
+   ```
+
+3. Pass the targeted element to the `useFullscreen` hook:
+
+   ```tsx
+   export function FullscreenButton() {
+     const target = React.useRef(window.document.body);
+     const { isFullscreen, toggleFullscreen } = useFullscreen(target);
+     // ...
+   }
+   ```
+
+4. Connect the data and the behavior to the UI:
+
+   ```tsx
+   // ...
+   export function FullscreenButton() {
+     const target = React.useRef(window.document.body);
+     const { isFullscreen, toggleFullscreen } = useFullscreen(target);
+
+     return (
+       <IconButton color="inherit" onClick={toggleFullscreen}>
+         {isFullscreen ? <FullscreenExitIcon /> : <FullscreenIcon />}
+       </IconButton>
+     );
+   }
+   ```

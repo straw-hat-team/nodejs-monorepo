@@ -27,10 +27,8 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./openapi": "./dist/openapi.js",
-    "./fp": "./dist/fp.js",
-    "./map": "./dist/map.js"
+    "./*": "./dist/*.js",
+    ".": "./dist/index.js"
   },
   "files": [
     "dist",

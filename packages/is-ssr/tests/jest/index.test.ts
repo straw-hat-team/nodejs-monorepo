@@ -1,4 +1,4 @@
-import { isSSR, isBrowser, onSSR, onBrowser } from '../../src/index';
+import { isSSR, isBrowser, onSSR, onBrowser } from '../../src';
 import { withMockedWindow } from '../support-files';
 
 describe('given a "isSSR" function', () => {

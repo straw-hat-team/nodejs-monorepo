@@ -1,9 +1,8 @@
 {
   "extends": "@straw-hat/tsconfig/lib/base",
   "compilerOptions": {
-    "module": "ES6",
-    "target": "ES2021",
-    "outDir": "dist"
+    "outDir": "dist",
+    "lib": ["ESNext"]
   },
   "include": ["src", "tests"]
 }
