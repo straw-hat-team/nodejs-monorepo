@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/sdk",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A collection of software useful for developing JavaScript applications",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -29,7 +29,8 @@
   "exports": {
     ".": "./dist/index.js",
     "./openapi": "./dist/openapi.js",
-    "./fp": "./dist/fp.js"
+    "./fp": "./dist/fp.js",
+    "./map": "./dist/map.js"
   },
   "files": [
     "dist",
