@@ -1,3 +1,5 @@
 .yarn/** linguist-vendored
 .pnp.cjs linguist-generated
 .pnp.loader.mjs linguist-generated
+.yarn/releases/** binary
+.yarn/plugins/** binary
