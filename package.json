@@ -9,7 +9,7 @@
   "scripts": {
     "prepare": "husky install",
     "docs:typedoc": "yarn workspaces foreach -p -v run docs:typedoc",
-    "build": "yarn workspaces foreach -v -p run build",
+    "build": "yarn workspaces foreach -v -p -t run build",
     "publish": "yarn workspaces foreach -v --no-private npm publish --tolerate-republish",
     "test:jest": "yarn jest",
     "format": "prettier --write */** --ignore-unknown --no-error-on-unmatched-pattern"
