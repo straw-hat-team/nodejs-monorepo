@@ -34,5 +34,8 @@
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-typescript": "^7.16.7",
     "babel-plugin-dynamic-import-node": "^2.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.7"
   }
 }
