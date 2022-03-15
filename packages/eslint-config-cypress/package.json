@@ -1,0 +1,32 @@
+{
+  "name": "@straw-hat/eslint-config-cypress",
+  "version": "3.0.0",
+  "description": "Straw Hat Team ESLint Cypress configurations",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "directory": "packages/eslint-config-cypress"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "cypress",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-plugin-cypress": "^2.12.1"
+  }
+}

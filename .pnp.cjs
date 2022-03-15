@@ -27,6 +27,34 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:packages/babel-preset-base"
       },
       {
+        "name": "@straw-hat/eslint-config-babel",
+        "reference": "workspace:packages/eslint-config-babel"
+      },
+      {
+        "name": "@straw-hat/eslint-config-base",
+        "reference": "workspace:packages/eslint-config-base"
+      },
+      {
+        "name": "@straw-hat/eslint-config-cypress",
+        "reference": "workspace:packages/eslint-config-cypress"
+      },
+      {
+        "name": "@straw-hat/eslint-config-nextjs",
+        "reference": "workspace:packages/eslint-config-nextjs"
+      },
+      {
+        "name": "@straw-hat/eslint-config-prettier",
+        "reference": "workspace:packages/eslint-config-prettier"
+      },
+      {
+        "name": "@straw-hat/eslint-config-react",
+        "reference": "workspace:packages/eslint-config-react"
+      },
+      {
+        "name": "@straw-hat/eslint-config-typescript",
+        "reference": "workspace:packages/eslint-config-typescript"
+      },
+      {
         "name": "@straw-hat/is-ssr",
         "reference": "workspace:packages/is-ssr"
       },
@@ -59,6 +87,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
       ["@straw-hat/babel-preset-base", ["workspace:packages/babel-preset-base"]],
+      ["@straw-hat/eslint-config-babel", ["workspace:packages/eslint-config-babel"]],
+      ["@straw-hat/eslint-config-base", ["workspace:packages/eslint-config-base"]],
+      ["@straw-hat/eslint-config-cypress", ["workspace:packages/eslint-config-cypress"]],
+      ["@straw-hat/eslint-config-nextjs", ["workspace:packages/eslint-config-nextjs"]],
+      ["@straw-hat/eslint-config-prettier", ["workspace:packages/eslint-config-prettier"]],
+      ["@straw-hat/eslint-config-react", ["workspace:packages/eslint-config-react"]],
+      ["@straw-hat/eslint-config-typescript", ["workspace:packages/eslint-config-typescript"]],
       ["@straw-hat/is-ssr", ["workspace:packages/is-ssr"]],
       ["@straw-hat/javascript-monorepo", ["workspace:."]],
       ["@straw-hat/logger", ["workspace:packages/logger"]],
@@ -4156,6 +4191,69 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:e9170c0d317b5b149cbd41af7bcb0eb851396a4c54a41264a8a3eef1401226b151ac6577b7c6c1ef5b8631bf920379801219bb69833b3d90f2064fd254ac8c5a#npm:7.16.8"],
             ["@babel/preset-typescript", "virtual:e9170c0d317b5b149cbd41af7bcb0eb851396a4c54a41264a8a3eef1401226b151ac6577b7c6c1ef5b8631bf920379801219bb69833b3d90f2064fd254ac8c5a#npm:7.16.7"],
             ["babel-plugin-dynamic-import-node", "npm:2.3.3"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@straw-hat/eslint-config-babel", [
+        ["workspace:packages/eslint-config-babel", {
+          "packageLocation": "./packages/eslint-config-babel/",
+          "packageDependencies": [
+            ["@straw-hat/eslint-config-babel", "workspace:packages/eslint-config-babel"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@straw-hat/eslint-config-base", [
+        ["workspace:packages/eslint-config-base", {
+          "packageLocation": "./packages/eslint-config-base/",
+          "packageDependencies": [
+            ["@straw-hat/eslint-config-base", "workspace:packages/eslint-config-base"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@straw-hat/eslint-config-cypress", [
+        ["workspace:packages/eslint-config-cypress", {
+          "packageLocation": "./packages/eslint-config-cypress/",
+          "packageDependencies": [
+            ["@straw-hat/eslint-config-cypress", "workspace:packages/eslint-config-cypress"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@straw-hat/eslint-config-nextjs", [
+        ["workspace:packages/eslint-config-nextjs", {
+          "packageLocation": "./packages/eslint-config-nextjs/",
+          "packageDependencies": [
+            ["@straw-hat/eslint-config-nextjs", "workspace:packages/eslint-config-nextjs"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@straw-hat/eslint-config-prettier", [
+        ["workspace:packages/eslint-config-prettier", {
+          "packageLocation": "./packages/eslint-config-prettier/",
+          "packageDependencies": [
+            ["@straw-hat/eslint-config-prettier", "workspace:packages/eslint-config-prettier"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@straw-hat/eslint-config-react", [
+        ["workspace:packages/eslint-config-react", {
+          "packageLocation": "./packages/eslint-config-react/",
+          "packageDependencies": [
+            ["@straw-hat/eslint-config-react", "workspace:packages/eslint-config-react"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@straw-hat/eslint-config-typescript", [
+        ["workspace:packages/eslint-config-typescript", {
+          "packageLocation": "./packages/eslint-config-typescript/",
+          "packageDependencies": [
+            ["@straw-hat/eslint-config-typescript", "workspace:packages/eslint-config-typescript"]
           ],
           "linkType": "SOFT",
         }]
