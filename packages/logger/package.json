@@ -1,0 +1,38 @@
+{
+  "name": "@straw-hat/logger",
+  "version": "1.2.0",
+  "description": "A logging library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/logger.git",
+    "directory": "packages/logger"
+  },
+  "license": "MIT",
+  "keywords": [
+    "logger",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:jest": "yarn run -T jest",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@straw-hat/tsconfig": "^3.0.0",
+    "@types/jest": "^27.0.2",
+    "ts-jest": "^27.0.7"
+  }
+}
