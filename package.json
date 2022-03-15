@@ -18,7 +18,7 @@
     "@straw-hat/prettier-config": "^2.0.2",
     "@straw-hat/tsconfig": "^3.0.1",
     "husky": "^7.0.4",
-    "jest": "^27.4.7",
+    "jest": "^27.5.1",
     "lint-staged": "^12.2.0",
     "monodeploy": "^3.0.0-rc.1",
     "prettier": "^2.5.1",
