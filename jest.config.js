@@ -4,5 +4,6 @@ export default {
     '<rootDir>/packages/is-ssr',
     '<rootDir>/packages/logger',
     '<rootDir>/packages/next-sdk',
+    '<rootDir>/packages/chainable-config',
   ],
 };
