@@ -2582,6 +2582,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@straw-hat/fancy-map@workspace:packages/fancy-map":
+  version: 0.0.0-use.local
+  resolution: "@straw-hat/fancy-map@workspace:packages/fancy-map"
+  dependencies:
+    "@straw-hat/tsconfig": ^3.0.0
+    "@types/jest": ^27.4.1
+    jest: ^27.5.1
+    ts-jest: ^27.1.3
+    typescript: ^4.5.4
+  languageName: unknown
+  linkType: soft
+
 "@straw-hat/is-ssr@workspace:packages/is-ssr":
   version: 0.0.0-use.local
   resolution: "@straw-hat/is-ssr@workspace:packages/is-ssr"
@@ -2602,7 +2614,7 @@ __metadata:
     "@straw-hat/tsconfig": ^3.0.1
     husky: ^7.0.4
     jest: ^27.5.1
-    lint-staged: ^12.2.0
+    lint-staged: ^12.3.5
     monodeploy: ^3.0.0-rc.1
     prettier: ^2.5.1
     rimraf: ^3.0.2
@@ -2616,7 +2628,7 @@ __metadata:
   resolution: "@straw-hat/jest-config-chain@workspace:packages/jest-config-chain"
   dependencies:
     "@straw-hat/chainable-config": ^0.9.0
-    "@straw-hat/tsconfig": ^2.1.1
+    "@straw-hat/tsconfig": ^2.3.1
     "@types/jest": ^27.4.1
     jest: ^27.5.1
     ts-jest: ^27.1.3
@@ -2675,7 +2687,7 @@ __metadata:
   dependencies:
     "@straw-hat/tsconfig": ^3.0.1
     "@types/fscreen": ^1.0.1
-    "@types/react": 17.0.38
+    "@types/react": 17.0.40
     fscreen: ^1.2.0
   peerDependencies:
     react: ^16.8.6
@@ -2701,7 +2713,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/tsconfig@npm:^2.1.0, @straw-hat/tsconfig@npm:^2.1.1":
+"@straw-hat/tsconfig@npm:^2.3.1":
   version: 2.3.1
   resolution: "@straw-hat/tsconfig@npm:2.3.1"
   checksum: 0a87404f4ac84952dee0a610946b38036092e56b1cb46de1a9f6b7e8b3f019ef40493cb121135a74ed8e4b532cc5a43c4cc66962c4fd9b6dd654d83df90fc2fe
@@ -2713,7 +2725,7 @@ __metadata:
   resolution: "@straw-hat/types@workspace:packages/types"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.1
-    "@types/react": ^17.0.38
+    "@types/react": ^17.0.40
   peerDependencies:
     "@types/react": ^17.0.14
   languageName: unknown
@@ -2723,7 +2735,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/webpack-chain-graphql@workspace:packages/webpack-chain-graphql"
   dependencies:
-    "@straw-hat/tsconfig": ^2.1.0
+    "@straw-hat/tsconfig": ^2.3.1
     "@types/jest": ^27.4.1
     jest: ^27.5.1
     ts-jest: ^27.1.3
@@ -2993,7 +3005,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^17.0.40":
+"@types/react@npm:*, @types/react@npm:17.0.40, @types/react@npm:^17.0.40":
   version: 17.0.40
   resolution: "@types/react@npm:17.0.40"
   dependencies:
@@ -3001,17 +3013,6 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 24d1b210b5bf3c7d49f9a7fe5490db02e005a1d989045a2d67528347557dd0bcb0d7bcf96088152697e97521ac4c9506d1357ee48a2b7d4e701c70d838dc7284
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:17.0.38, @types/react@npm:^17.0.38":
-  version: 17.0.38
-  resolution: "@types/react@npm:17.0.38"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: 4079f4f959cd4a4bfaeda8b89fe8a1b1f8bdc9d87acfdc5f74a0b39cec9ec6a470724357c62778c0f063180b360c250e920c5a142f1dbcda67d9cc25a6d43a85
   languageName: node
   linkType: hard
 
@@ -6440,9 +6441,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^12.2.0":
-  version: 12.2.0
-  resolution: "lint-staged@npm:12.2.0"
+"lint-staged@npm:^12.3.5":
+  version: 12.3.5
+  resolution: "lint-staged@npm:12.3.5"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
@@ -6450,29 +6451,29 @@ __metadata:
     debug: ^4.3.3
     execa: ^5.1.1
     lilconfig: 2.0.4
-    listr2: ^3.13.5
+    listr2: ^4.0.1
     micromatch: ^4.0.4
     normalize-path: ^3.0.0
-    object-inspect: ^1.11.1
+    object-inspect: ^1.12.0
     string-argv: ^0.3.1
     supports-color: ^9.2.1
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 940cb0f1d56dcd5a69fafc6c2e5ea946805ecc0c65403828a7612851d33e52947e1a6523579a18bed6f9e781e1362bf17c89aeecf8ec28e3a9ccd1dea6efbe78
+  checksum: 6653c7078b36741e521e5f309b56bb75db198a05cbdd188124ff82a290e352ade3eb1e6080265729e19711ac08d190e300874af00e4e540b57b3c8f0690e2573
   languageName: node
   linkType: hard
 
-"listr2@npm:^3.13.5":
-  version: 3.14.0
-  resolution: "listr2@npm:3.14.0"
+"listr2@npm:^4.0.1":
+  version: 4.0.5
+  resolution: "listr2@npm:4.0.5"
   dependencies:
     cli-truncate: ^2.1.0
     colorette: ^2.0.16
     log-update: ^4.0.0
     p-map: ^4.0.0
     rfdc: ^1.3.0
-    rxjs: ^7.5.1
+    rxjs: ^7.5.5
     through: ^2.3.8
     wrap-ansi: ^7.0.0
   peerDependencies:
@@ -6480,7 +6481,7 @@ __metadata:
   peerDependenciesMeta:
     enquirer:
       optional: true
-  checksum: fdb8b2d6bdf5df9371ebd5082bee46c6d0ca3d1e5f2b11fbb5a127839855d5f3da9d4968fce94f0a5ec67cac2459766abbb1faeef621065ebb1829b11ef9476d
+  checksum: 7af31851abe25969ef0581c6db808117e36af15b131401795182427769d9824f451ba9e8aff6ccd25b6a4f6c8796f816292caf08e5f1f9b1775e8e9c313dc6c5
   languageName: node
   linkType: hard
 
@@ -7151,7 +7152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-inspect@npm:^1.11.1, object-inspect@npm:^1.9.0":
+"object-inspect@npm:^1.12.0, object-inspect@npm:^1.9.0":
   version: 1.12.0
   resolution: "object-inspect@npm:1.12.0"
   checksum: 2b36d4001a9c921c6b342e2965734519c9c58c355822243c3207fbf0aac271f8d44d30d2d570d450b2cc6f0f00b72bcdba515c37827d2560e5f22b1899a31cf4
@@ -7937,12 +7938,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.5.1":
-  version: 7.5.2
-  resolution: "rxjs@npm:7.5.2"
+"rxjs@npm:^7.5.5":
+  version: 7.5.5
+  resolution: "rxjs@npm:7.5.5"
   dependencies:
     tslib: ^2.1.0
-  checksum: daf1fe7289de500b25d822fd96cde3c138c7902e8bf0e6aa12a3e70847a5cabeeb4d677f10e19387e1db44b12c5b1be0ff5c79b8cd63ed6ce891d765e566cf4d
+  checksum: e034f60805210cce756dd2f49664a8108780b117cf5d0e2281506e9e6387f7b4f1532d974a8c8b09314fa7a16dd2f6cff3462072a5789672b5dcb45c4173f3c6
   languageName: node
   linkType: hard
 

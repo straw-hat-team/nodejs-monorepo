@@ -1,18 +1,16 @@
 {
-  "name": "@straw-hat/react-fullscreen",
-  "version": "4.0.0",
-  "description": "React hook for interacting with the browser fullscreen API",
-  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "name": "@straw-hat/fancy-map",
+  "version": "3.0.1",
+  "description": "An Extended Native Map",
   "repository": {
     "type": "git",
     "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
-    "directory": "packages/react-fullscreen"
+    "directory": "packages/fancy-map"
   },
   "license": "MIT",
   "keywords": [
-    "fullscreen",
-    "react",
-    "ui",
+    "map",
+    "cache",
     "straw-hat-team"
   ],
   "publishConfig": {
@@ -22,6 +20,7 @@
   "scripts": {
     "prebuild": "yarn run -T rimraf dist",
     "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:jest": "yarn run -T jest",
     "prepack": "yarn build",
     "docs:typedoc": "yarn run -T typedoc"
   },
@@ -35,15 +34,11 @@
     "dist",
     "README.md"
   ],
-  "peerDependencies": {
-    "react": "^16.8.6"
-  },
-  "dependencies": {
-    "fscreen": "^1.2.0"
-  },
   "devDependencies": {
-    "@straw-hat/tsconfig": "^3.0.1",
-    "@types/fscreen": "^1.0.1",
-    "@types/react": "17.0.40"
+    "@straw-hat/tsconfig": "^3.0.0",
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.4"
   }
 }
