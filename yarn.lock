@@ -2808,9 +2808,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/next-sdk@workspace:packages/next-sdk":
+"@straw-hat/next-sdk@workspace:packages/next-sdk2":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/next-sdk@workspace:packages/next-sdk"
+  resolution: "@straw-hat/next-sdk@workspace:packages/next-sdk2"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.0
     "@straw-hat/types": ^0.2.0
