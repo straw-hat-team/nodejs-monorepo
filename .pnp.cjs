@@ -96,7 +96,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       },
       {
         "name": "@straw-hat/webpack-chain-graphql",
-        "reference": "workspace:packages/webpack-chain-graphql2"
+        "reference": "workspace:packages/webpack-chain-graphql"
       }
     ],
     "enableTopLevelFallback": true,
@@ -121,7 +121,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@straw-hat/sdk", ["workspace:packages/sdk"]],
       ["@straw-hat/tsconfig", ["workspace:packages/tsconfig"]],
       ["@straw-hat/types", ["virtual:1bb539b4b45a9115c5f2ec77b02d7a7ba599a159de5cf57131b268dda77e14c22532e4bd781367101241d86b1267f1a297be5c853d353b558377b45c061f0518#workspace:packages/types", "virtual:e51acd59385f8a29f246b063e0cd8d19c637466a147397aa18c6cd3e9d4379823f9e72a4c45d2937854637c819b42712f53347057c9defb6dd611085181a5431#workspace:packages/types", "workspace:packages/types"]],
-      ["@straw-hat/webpack-chain-graphql", ["workspace:packages/webpack-chain-graphql2"]]
+      ["@straw-hat/webpack-chain-graphql", ["workspace:packages/webpack-chain-graphql"]]
     ],
     "fallbackPool": [
     ],
@@ -4402,15 +4402,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@straw-hat/webpack-chain-graphql", [
-        ["workspace:packages/webpack-chain-graphql2", {
-          "packageLocation": "./packages/webpack-chain-graphql2/",
+        ["workspace:packages/webpack-chain-graphql", {
+          "packageLocation": "./packages/webpack-chain-graphql/",
           "packageDependencies": [
-            ["@straw-hat/webpack-chain-graphql", "workspace:packages/webpack-chain-graphql2"],
+            ["@straw-hat/webpack-chain-graphql", "workspace:packages/webpack-chain-graphql"],
             ["@straw-hat/tsconfig", "npm:2.3.1"],
             ["@types/jest", "npm:27.4.1"],
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],
             ["ts-jest", "virtual:6afeadc4d2bb788255a6b083e70e938223d9ee9f66a48c123a65b376eb6c7deb31a42729a38fe5a90f5e6cc0b88ae7559c09fd31a8cb61be8ff4d429dfe04f70#npm:27.1.3"],
-            ["typedoc", "virtual:e7da2d5c9c33b0728cd7772b94aa277dad03a5859ac54417354a74ad72739775ed74592fd771e51d57940edd785928c96160a81c85ad33c7b3ae6312c31578cf#npm:0.22.13"],
+            ["typedoc", "virtual:8609a37bcac99ab8c10df512cbf8eb24441c8034c2e24f2616ada206b98aa9178b3a15da40757ffd1618ac057313958d38322b53dde6800ff157b668dc168ffb#npm:0.22.13"],
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=493e53"],
             ["webpack-chain", "npm:6.5.1"]
           ],
@@ -11639,6 +11639,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["virtual:8609a37bcac99ab8c10df512cbf8eb24441c8034c2e24f2616ada206b98aa9178b3a15da40757ffd1618ac057313958d38322b53dde6800ff157b668dc168ffb#npm:0.22.13", {
+          "packageLocation": "./.yarn/__virtual__/typedoc-virtual-2a6b91cb83/0/cache/typedoc-npm-0.22.13-61c93d1213-e453114fbb.zip/node_modules/typedoc/",
+          "packageDependencies": [
+            ["typedoc", "virtual:8609a37bcac99ab8c10df512cbf8eb24441c8034c2e24f2616ada206b98aa9178b3a15da40757ffd1618ac057313958d38322b53dde6800ff157b668dc168ffb#npm:0.22.13"],
+            ["@types/typescript", null],
+            ["glob", "npm:7.2.0"],
+            ["lunr", "npm:2.3.9"],
+            ["marked", "npm:4.0.12"],
+            ["minimatch", "npm:5.0.1"],
+            ["shiki", "npm:0.10.1"],
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=493e53"]
+          ],
+          "packagePeers": [
+            "@types/typescript",
+            "typescript"
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:0.22.13", {
           "packageLocation": "./.yarn/__virtual__/typedoc-virtual-d580080cde/0/cache/typedoc-npm-0.22.13-61c93d1213-e453114fbb.zip/node_modules/typedoc/",
           "packageDependencies": [
@@ -11650,24 +11668,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minimatch", "npm:5.0.1"],
             ["shiki", "npm:0.10.1"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
-          ],
-          "packagePeers": [
-            "@types/typescript",
-            "typescript"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:e7da2d5c9c33b0728cd7772b94aa277dad03a5859ac54417354a74ad72739775ed74592fd771e51d57940edd785928c96160a81c85ad33c7b3ae6312c31578cf#npm:0.22.13", {
-          "packageLocation": "./.yarn/__virtual__/typedoc-virtual-fa073253b1/0/cache/typedoc-npm-0.22.13-61c93d1213-e453114fbb.zip/node_modules/typedoc/",
-          "packageDependencies": [
-            ["typedoc", "virtual:e7da2d5c9c33b0728cd7772b94aa277dad03a5859ac54417354a74ad72739775ed74592fd771e51d57940edd785928c96160a81c85ad33c7b3ae6312c31578cf#npm:0.22.13"],
-            ["@types/typescript", null],
-            ["glob", "npm:7.2.0"],
-            ["lunr", "npm:2.3.9"],
-            ["marked", "npm:4.0.12"],
-            ["minimatch", "npm:5.0.1"],
-            ["shiki", "npm:0.10.1"],
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=493e53"]
           ],
           "packagePeers": [
             "@types/typescript",

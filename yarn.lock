@@ -2719,9 +2719,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/webpack-chain-graphql@workspace:packages/webpack-chain-graphql2":
+"@straw-hat/webpack-chain-graphql@workspace:packages/webpack-chain-graphql":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/webpack-chain-graphql@workspace:packages/webpack-chain-graphql2"
+  resolution: "@straw-hat/webpack-chain-graphql@workspace:packages/webpack-chain-graphql"
   dependencies:
     "@straw-hat/tsconfig": ^2.1.0
     "@types/jest": ^27.4.1
