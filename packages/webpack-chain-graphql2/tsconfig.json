@@ -1,0 +1,9 @@
+{
+  "extends": "@straw-hat/tsconfig/lib/base",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES6",
+    "outDir": "dist"
+  },
+  "include": ["src", "tests"]
+}
