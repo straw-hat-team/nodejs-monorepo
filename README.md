@@ -18,6 +18,7 @@
 - [@straw-hat/next-sdk](./packages/next-sdk/README.md)
 - [@straw-hat/prettier-config](./packages/prettier-config/README.md)
 - [@straw-hat/react-fullscreen](./packages/react-fullscreen/README.md)
+- [@straw-hat/react-hooks](./packages/react-hooks/README.md)
 - [@straw-hat/sdk](./packages/sdk/README.md)
 - [@straw-hat/tsconfig](./packages/tsconfig/README.md)
 - [@straw-hat/types](./packages/types/README.md)
