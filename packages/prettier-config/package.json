@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "@straw-hat/prettier-config": "^2.0.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.0"
   }
 }

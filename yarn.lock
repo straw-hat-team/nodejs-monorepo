@@ -329,6 +329,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-create-class-features-plugin@npm:^7.16.10, @babel/helper-create-class-features-plugin@npm:^7.17.1":
+  version: 7.17.6
+  resolution: "@babel/helper-create-class-features-plugin@npm:7.17.6"
+  dependencies:
+    "@babel/helper-annotate-as-pure": ^7.16.7
+    "@babel/helper-environment-visitor": ^7.16.7
+    "@babel/helper-function-name": ^7.16.7
+    "@babel/helper-member-expression-to-functions": ^7.16.7
+    "@babel/helper-optimise-call-expression": ^7.16.7
+    "@babel/helper-replace-supers": ^7.16.7
+    "@babel/helper-split-export-declaration": ^7.16.7
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: d85a5b3f9a18a661372d77462e6ea2a6a03f1083f8b3055ed165284214af9ea6ad677f6bcc4b5ce215da27f95fa93064580d4b6723b578c480ecf17dd31a4307
+  languageName: node
+  linkType: hard
+
 "@babel/helper-create-class-features-plugin@npm:^7.16.7":
   version: 7.16.7
   resolution: "@babel/helper-create-class-features-plugin@npm:7.16.7"
@@ -989,16 +1006,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-decorators@npm:^7.16.7":
-  version: 7.16.7
-  resolution: "@babel/plugin-proposal-decorators@npm:7.16.7"
+"@babel/plugin-proposal-decorators@npm:^7.17.2":
+  version: 7.17.2
+  resolution: "@babel/plugin-proposal-decorators@npm:7.17.2"
   dependencies:
-    "@babel/helper-create-class-features-plugin": ^7.16.7
+    "@babel/helper-create-class-features-plugin": ^7.17.1
     "@babel/helper-plugin-utils": ^7.16.7
-    "@babel/plugin-syntax-decorators": ^7.16.7
+    "@babel/helper-replace-supers": ^7.16.7
+    "@babel/plugin-syntax-decorators": ^7.17.0
+    charcodes: ^0.2.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 1c1a658ad70f71c542f2b770849eaebaff0a12e1f12b9b4a994a2d26440cb44b7bd8b88987bc0252ea669d1cbf253d2da134975607e362cf14d5e3f2d11c966a
+  checksum: da5424d51e49912a1784a7074e8fb7b2d55b4a41c32bf05a829a81987274068e170f469de81d95d177def3480f7de3402a1808d599ad91f98fdaa44023a416da
   languageName: node
   linkType: hard
 
@@ -1141,15 +1160,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-private-methods@npm:^7.16.7":
-  version: 7.16.7
-  resolution: "@babel/plugin-proposal-private-methods@npm:7.16.7"
+"@babel/plugin-proposal-private-methods@npm:^7.16.11":
+  version: 7.16.11
+  resolution: "@babel/plugin-proposal-private-methods@npm:7.16.11"
   dependencies:
-    "@babel/helper-create-class-features-plugin": ^7.16.7
+    "@babel/helper-create-class-features-plugin": ^7.16.10
     "@babel/helper-plugin-utils": ^7.16.7
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 1d3aef6f1818278d257ed6f1a90ec3b0cfe85e1b24cabf1bcd0d2a0033f8ae15f9cb36140ec2adc2a317f63fc78095ce0b5c154f73128e0f84480879a4b64269
+  checksum: b333e5aa91c265bb394a57b5f4ae1a34fc8ee73a8d75506b12df258d8b5342107cbd9261f95e606bd3264a5b023db77f1f95be30c2e526683916c57f793f7943
   languageName: node
   linkType: hard
 
@@ -1234,14 +1253,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-decorators@npm:^7.16.7":
-  version: 7.16.7
-  resolution: "@babel/plugin-syntax-decorators@npm:7.16.7"
+"@babel/plugin-syntax-decorators@npm:^7.17.0":
+  version: 7.17.0
+  resolution: "@babel/plugin-syntax-decorators@npm:7.17.0"
   dependencies:
     "@babel/helper-plugin-utils": ^7.16.7
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 4c8dacd8b612d24638394bc86df7f89f92f8a21e5c450be983f754003ffe72d70aebdb81456232df5ec2fc7ff4f7415489bc1f577a28c072c336fc4f9114b82a
+  checksum: 745a3553c8ad4d2ea4805eaf50634cf0cb3036f1259fbfa1cd3cb04d685cec68b6f2f0b3ca1856091730e5aca630975283f9f910d87694141e81754fbc074a7a
   languageName: node
   linkType: hard
 
@@ -1935,9 +1954,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.16.8":
-  version: 7.16.8
-  resolution: "@babel/preset-env@npm:7.16.8"
+"@babel/preset-env@npm:^7.16.11":
+  version: 7.16.11
+  resolution: "@babel/preset-env@npm:7.16.11"
   dependencies:
     "@babel/compat-data": ^7.16.8
     "@babel/helper-compilation-targets": ^7.16.7
@@ -1957,7 +1976,7 @@ __metadata:
     "@babel/plugin-proposal-object-rest-spread": ^7.16.7
     "@babel/plugin-proposal-optional-catch-binding": ^7.16.7
     "@babel/plugin-proposal-optional-chaining": ^7.16.7
-    "@babel/plugin-proposal-private-methods": ^7.16.7
+    "@babel/plugin-proposal-private-methods": ^7.16.11
     "@babel/plugin-proposal-private-property-in-object": ^7.16.7
     "@babel/plugin-proposal-unicode-property-regex": ^7.16.7
     "@babel/plugin-syntax-async-generators": ^7.8.4
@@ -2015,7 +2034,7 @@ __metadata:
     semver: ^6.3.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 834fc0638b26e9a118a4deaac828ebb9cc17c4d1aa6497e6588003de1ff3768b1ee9bfddd055ccc6be526c65b92d5c463168da2425d26a53c836b38eeb3362cb
+  checksum: c8029c272073df787309d983ae458dd094b57f87152b8ccad95c7c8b1e82b042c1077e169538aae5f98b7659de0632d10708d9c85acf21a5e9406d7dd3656d8c
   languageName: node
   linkType: hard
 
@@ -3055,7 +3074,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-help@npm:^5.1.10":
+"@oclif/plugin-help@npm:^5.1.12":
   version: 5.1.12
   resolution: "@oclif/plugin-help@npm:5.1.12"
   dependencies:
@@ -3367,12 +3386,12 @@ __metadata:
   resolution: "@straw-hat/babel-preset-base@workspace:packages/babel-preset-base"
   dependencies:
     "@babel/plugin-proposal-class-properties": ^7.16.7
-    "@babel/plugin-proposal-decorators": ^7.16.7
+    "@babel/plugin-proposal-decorators": ^7.17.2
     "@babel/plugin-proposal-nullish-coalescing-operator": ^7.16.7
     "@babel/plugin-proposal-numeric-separator": ^7.16.7
     "@babel/plugin-proposal-optional-chaining": ^7.16.7
     "@babel/plugin-syntax-dynamic-import": ^7.8.3
-    "@babel/preset-env": ^7.16.8
+    "@babel/preset-env": ^7.16.11
     "@babel/preset-typescript": ^7.16.7
     babel-plugin-dynamic-import-node: ^2.3.3
   peerDependencies:
@@ -3519,7 +3538,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/fetcher@workspace:packages/fetcher"
   dependencies:
-    "@straw-hat/tsconfig": ^2.2.0
+    "@straw-hat/tsconfig": ^2.3.1
     "@types/jest": ^27.4.1
     jest: ^27.5.1
     jest-fetch-mock: ^3.0.3
@@ -3557,7 +3576,7 @@ __metadata:
     jest: ^27.5.1
     lint-staged: ^12.3.5
     monodeploy: ^3.0.0-rc.1
-    prettier: ^2.5.1
+    prettier: ^2.6.0
     rimraf: ^3.0.2
     typedoc: ^0.22.13
     typescript: ^4.5.4
@@ -3620,14 +3639,14 @@ __metadata:
     "@oclif/dev-cli": ^1.26.10
     "@oclif/errors": ^1.3.5
     "@oclif/help": ^1.0.1
-    "@oclif/plugin-help": ^5.1.10
+    "@oclif/plugin-help": ^5.1.12
     "@stoplight/json-ref-resolver": ^3.1.3
     "@straw-hat/fancy-map": ^2.0.0
     "@straw-hat/prettier-config": ^2.0.2
     "@straw-hat/tsconfig": ^3.0.1
-    "@straw-hat/types": ^0.3.0
+    "@straw-hat/types": ^0.5.0
     "@types/debug": ^4.1.7
-    "@types/jest": ^27.4.0
+    "@types/jest": ^27.4.1
     "@types/js-yaml": ^4.0.5
     "@types/mustache": ^4.1.2
     "@types/node": ^17.0.21
@@ -3637,11 +3656,11 @@ __metadata:
     debug: ^4.3.3
     del: ^6.0.0
     import-from: ^4.0.0
-    jest: ^27.4.7
+    jest: ^27.5.1
     make-dir: ^3.1.0
     mustache: ^4.2.0
     openapi-types: ^10.0.0
-    prettier: ^2.5.1
+    prettier: ^2.6.0
     ts-jest: ^27.1.3
     typescript: ^4.5.4
   bin:
@@ -3654,7 +3673,7 @@ __metadata:
   resolution: "@straw-hat/prettier-config@workspace:packages/prettier-config"
   dependencies:
     "@straw-hat/prettier-config": ^2.0.0
-    prettier: ^2.5.1
+    prettier: ^2.6.0
   peerDependencies:
     prettier: ^2.2.1
   languageName: unknown
@@ -3678,7 +3697,7 @@ __metadata:
   resolution: "@straw-hat/react-hooks@workspace:packages/react-hooks"
   dependencies:
     "@straw-hat/is-ssr": ^1.0.3
-    "@straw-hat/tsconfig": ^2.1.1
+    "@straw-hat/tsconfig": ^2.3.1
     "@testing-library/react-hooks": ^7.0.2
     "@types/jest": ^27.4.1
     "@types/react": ^17.0.40
@@ -3696,7 +3715,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/react-native-sdk@workspace:packages/react-native-sdk"
   dependencies:
-    "@straw-hat/tsconfig": ^2.1.0
+    "@straw-hat/tsconfig": ^2.3.1
     "@types/react-native": ^0.67.3
     react-native: ^0.67.3
     typescript: ^4.0.3
@@ -3747,7 +3766,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/tsconfig@npm:^2.1.0, @straw-hat/tsconfig@npm:^2.1.1, @straw-hat/tsconfig@npm:^2.2.0, @straw-hat/tsconfig@npm:^2.3.1":
+"@straw-hat/tsconfig@npm:^2.3.1":
   version: 2.3.1
   resolution: "@straw-hat/tsconfig@npm:2.3.1"
   checksum: 0a87404f4ac84952dee0a610946b38036092e56b1cb46de1a9f6b7e8b3f019ef40493cb121135a74ed8e4b532cc5a43c4cc66962c4fd9b6dd654d83df90fc2fe
@@ -3764,15 +3783,6 @@ __metadata:
     "@types/react": ^17.0.14
   languageName: unknown
   linkType: soft
-
-"@straw-hat/types@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@straw-hat/types@npm:0.3.0"
-  peerDependencies:
-    "@types/react": ^17.0.14
-  checksum: b447df98a38e6e25fa13de1840ab5b041ef4e80d17efeae948817b46ee37f29a9273a8e2a2aa47836b6137bd344c1b2bd85bd018a5b9c4dd81275b052d0e7fad
-  languageName: node
-  linkType: hard
 
 "@straw-hat/webpack-chain-graphql@workspace:packages/webpack-chain-graphql":
   version: 0.0.0-use.local
@@ -4005,7 +4015,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^27.4.0, @types/jest@npm:^27.4.1":
+"@types/jest@npm:^27.4.1":
   version: 27.4.1
   resolution: "@types/jest@npm:27.4.1"
   dependencies:
@@ -5785,6 +5795,13 @@ __metadata:
   version: 1.0.2
   resolution: "char-regex@npm:1.0.2"
   checksum: b563e4b6039b15213114626621e7a3d12f31008bdce20f9c741d69987f62aeaace7ec30f6018890ad77b2e9b4d95324c9f5acfca58a9441e3b1dcdd1e2525d17
+  languageName: node
+  linkType: hard
+
+"charcodes@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "charcodes@npm:0.2.0"
+  checksum: 972443ed359d54382e721b9db0a298eb95c4c454386f7e98886586f433e1e6686225416114e6f6bb2e6ef3facc9ba3b4ab9946a56a180fe64ef67816a05d4fe4
   languageName: node
   linkType: hard
 
@@ -9116,7 +9133,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^27.4.7, jest@npm:^27.5.1":
+"jest@npm:^27.5.1":
   version: 27.5.1
   resolution: "jest@npm:27.5.1"
   dependencies:
@@ -11453,12 +11470,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.5.1":
-  version: 2.5.1
-  resolution: "prettier@npm:2.5.1"
+"prettier@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "prettier@npm:2.6.0"
   bin:
     prettier: bin-prettier.js
-  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
+  checksum: 3e527ad62279676778a8404d18174d7ca2365ada4caba6eebbcdd9907d1187afd3bc6ade5b4e5f5d4549bb9fb71e45ca8930d71500017635524f8fc05bc52e93
   languageName: node
   linkType: hard
 

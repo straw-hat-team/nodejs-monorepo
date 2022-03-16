@@ -34,7 +34,7 @@
     "README.md"
   ],
   "devDependencies": {
-    "@straw-hat/tsconfig": "^2.2.0",
+    "@straw-hat/tsconfig": "^2.3.1",
     "@types/jest": "^27.4.1",
     "jest": "^27.5.1",
     "jest-fetch-mock": "^3.0.3",
