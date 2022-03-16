@@ -6130,6 +6130,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@oclif/command", "virtual:df36121af98d2704c80396452eff9df29746827d16467eb2c40d41d10959b3afbc6a2644fe8aa0d9b6541e69a29a1afcafa253902174840cdbaa4b9f36b2eefa#npm:1.8.16"],
             ["@oclif/dev-cli", "npm:1.26.10"],
             ["@oclif/errors", "npm:1.3.5"],
+            ["@oclif/help", "npm:1.0.1"],
             ["@oclif/plugin-help", "npm:5.1.12"],
             ["@stoplight/json-ref-resolver", "npm:3.1.3"],
             ["@straw-hat/fancy-map", "npm:2.0.0"],

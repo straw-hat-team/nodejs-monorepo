@@ -16,4 +16,4 @@ OPTIONS
   --config=config  (required) OpenAPI V3 configuration file.
 ```
 
-_See code: [dist/commands/local.ts](https://github.com/straw-hat-team/openapi-web-sdk-generator/blob/v2.1.0/dist/commands/local.ts)_
+_See code: [dist/commands/local.ts](https://github.com/straw-hat-team/javascript-monorepo/blob/v2.7.3/dist/commands/local.ts)_

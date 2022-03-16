@@ -35,7 +35,7 @@ sht-openapi-web-sdk-generator local \
 
 # Command Topics
 
-- [`sht-openapi-web-sdk-generator help`](docs/commands/help.md) - display help for sht-openapi-web-sdk-generator
+- [`sht-openapi-web-sdk-generator help`](docs/commands/help.md) - Display help for sht-openapi-web-sdk-generator.
 - [`sht-openapi-web-sdk-generator local`](docs/commands/local.md) - Generate the code from a local OpenAPI V3 file.
 
 <!-- commandsstop -->
