@@ -74,7 +74,7 @@
     "@types/prettier": "^2.4.4",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.3",
-    "typescript": "^4.5.4"
+    "typescript": "^4.6.2"
   },
   "oclif": {
     "commands": "./dist/commands",
