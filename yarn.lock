@@ -2701,9 +2701,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/react-hooks@workspace:packages/react-hooks":
+"@straw-hat/react-hooks@workspace:packages/react-hooks2":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/react-hooks@workspace:packages/react-hooks"
+  resolution: "@straw-hat/react-hooks@workspace:packages/react-hooks2"
   dependencies:
     "@straw-hat/is-ssr": ^1.0.3
     "@straw-hat/tsconfig": ^2.1.1

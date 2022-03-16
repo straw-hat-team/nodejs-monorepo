@@ -1,0 +1,52 @@
+{
+  "name": "@straw-hat/react-hooks",
+  "version": "0.7.1",
+  "description": "A collection of React hooks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "directory": "packages/react-hooks"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:jest": "yarn run -T jest",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@straw-hat/is-ssr": "^1.0.3"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "@straw-hat/tsconfig": "^2.1.1",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.0.3",
+    "@types/react": "^17.0.2",
+    "jest": "^27.4.3",
+    "react": "^17.0.1",
+    "react-test-renderer": "^17.0.2",
+    "ts-jest": "^27.1.0",
+    "typescript": "^4.2.3"
+  }
+}
