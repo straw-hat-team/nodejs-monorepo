@@ -41,15 +41,15 @@
     "@straw-hat/fetcher": "^4.8.0",
     "@straw-hat/tsconfig": "^2.3.1",
     "@testing-library/react-hooks": "^7.0.2",
-    "@types/jest": "^27.0.2",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "jest": "^27.3.1",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "jest": "^27.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.30.0",
     "react-test-renderer": "^17.0.2",
-    "ts-jest": "^27.0.7",
+    "ts-jest": "^27.1.3",
     "typescript": "^4.4.4"
   }
 }
