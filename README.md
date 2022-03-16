@@ -12,6 +12,7 @@
 - [@straw-hat/eslint-config-react](./packages/eslint-config-react/README.md)
 - [@straw-hat/eslint-config-typescript](./packages/eslint-config-typescript/README.md)
 - [@straw-hat/fancy-map](./packages/fancy-map/README.md)
+- [@straw-hat/fetcher](./packages/fetcher/README.md)
 - [@straw-hat/is-ssr](./packages/is-ssr/README.md)
 - [@straw-hat/jest-config-chain](./packages/jest-config-chain/README.md)
 - [@straw-hat/logger](./packages/logger/README.md)
