@@ -1,0 +1,6 @@
+import type { Fetcher } from '@straw-hat/fetcher';
+import {
+  {{#hasRequestBody}}getRequestBody,{{/hasRequestBody}}
+  getResponseBody,
+} from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';

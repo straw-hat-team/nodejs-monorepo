@@ -1,0 +1,40 @@
+export type {{{typePrefix}}}PathParams = {{{pathParamsType}}};
+
+export type {{{typePrefix}}}QueryParams = {{{queryParamsType}}};
+
+export type {{{typePrefix}}}BodyParams = {{{bodyParamsType}}};
+
+export type {{{typePrefix}}}Params = Pick<
+  OperationParams<
+    {{{typePrefix}}}PathParams,
+    {{{typePrefix}}}QueryParams,
+    {{{typePrefix}}}BodyParams
+  >,
+  {{{requiredParams}}}
+>
+
+export type {{{typePrefix}}}Response = {{{responseType}}};
+
+export function {{{functionName}}}UrlPath(params: Omit<{{{typePrefix}}}Params, 'options'>) {
+  return createUrlPath<
+    {{{typePrefix}}}PathParams,
+    {{{typePrefix}}}QueryParams
+  >('{{{operationPath}}}', params);
+}
+
+export async function {{{functionName}}}(
+  client: Fetcher,
+  params: {{{typePrefix}}}Params
+): Promise<{{{typePrefix}}}Response> {
+  const url = {{{functionName}}}UrlPath(params);
+
+  const response = await client(url, {
+    method: '{{{operationMethod}}}',
+    {{#hasRequestBody}}
+      body: getRequestBody(params.body),
+    {{/hasRequestBody}}
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}

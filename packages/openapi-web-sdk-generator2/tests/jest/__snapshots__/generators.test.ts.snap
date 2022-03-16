@@ -1,0 +1,1533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetcher generator: add-pet.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type AddPetPathParams = never;
+
+export type AddPetQueryParams = never;
+
+export type AddPetBodyParams = schemas.Pet;
+
+export type AddPetParams = Pick<
+  OperationParams<AddPetPathParams, AddPetQueryParams, AddPetBodyParams>,
+  'options' | 'body'
+>;
+
+export type AddPetResponse = schemas.Pet;
+
+export function addPetUrlPath(params: Omit<AddPetParams, 'options'>) {
+  return createUrlPath<AddPetPathParams, AddPetQueryParams>('/pet', params);
+}
+
+export async function addPet(client: Fetcher, params: AddPetParams): Promise<AddPetResponse> {
+  const url = addPetUrlPath(params);
+
+  const response = await client(url, {
+    method: 'POST',
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: components/schemas.ts 1`] = `
+"import * as schemas from './schemas';
+
+export type Order = {
+  /**
+   * @format int64
+   */
+  id?: number;
+  /**
+   * @format int64
+   */
+  petId?: number;
+  /**
+   * @format int32
+   */
+  quantity?: number;
+  /**
+   * @format date-time
+   */
+  shipDate?: string;
+  /**
+   * Order Status
+   */
+  status?: 'placed' | 'approved' | 'delivered';
+
+  complete?: boolean;
+};
+
+export type Customer = {
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  username?: string;
+
+  address?: Array<schemas.Address>;
+};
+
+export type Address = {
+  street?: string;
+
+  city?: string;
+
+  state?: string;
+
+  zip?: string;
+};
+
+export type Category = {
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  name?: string;
+};
+
+export type User = {
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  username?: string;
+
+  firstName?: string;
+
+  lastName?: string;
+
+  email?: string;
+
+  password?: string;
+
+  phone?: string;
+  /**
+   * User Status
+   * @format int32
+   */
+  userStatus?: number;
+};
+
+export type Tag = {
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  name?: string;
+};
+
+export type Pet = {
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  name: string;
+
+  category?: schemas.Category;
+
+  photoUrls: Array<string>;
+
+  tags?: Array<schemas.Tag>;
+  /**
+   * pet status in the store
+   */
+  status?: 'available' | 'pending' | 'sold';
+};
+
+export type ApiResponse = {
+  /**
+   * @format int32
+   */
+  code?: number;
+
+  type?: string;
+
+  message?: string;
+};
+"
+`;
+
+exports[`fetcher generator: create-user.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type CreateUserPathParams = never;
+
+export type CreateUserQueryParams = never;
+
+export type CreateUserBodyParams = schemas.User;
+
+export type CreateUserParams = Pick<
+  OperationParams<CreateUserPathParams, CreateUserQueryParams, CreateUserBodyParams>,
+  'options' | 'body'
+>;
+
+export type CreateUserResponse = unknown;
+
+export function createUserUrlPath(params: Omit<CreateUserParams, 'options'>) {
+  return createUrlPath<CreateUserPathParams, CreateUserQueryParams>('/user', params);
+}
+
+export async function createUser(client: Fetcher, params: CreateUserParams): Promise<CreateUserResponse> {
+  const url = createUserUrlPath(params);
+
+  const response = await client(url, {
+    method: 'POST',
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: create-users-with-list-input.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type CreateUsersWithListInputPathParams = never;
+
+export type CreateUsersWithListInputQueryParams = never;
+
+export type CreateUsersWithListInputBodyParams = Array<schemas.User>;
+
+export type CreateUsersWithListInputParams = Pick<
+  OperationParams<
+    CreateUsersWithListInputPathParams,
+    CreateUsersWithListInputQueryParams,
+    CreateUsersWithListInputBodyParams
+  >,
+  'options' | 'body'
+>;
+
+export type CreateUsersWithListInputResponse = schemas.User;
+
+export function createUsersWithListInputUrlPath(params: Omit<CreateUsersWithListInputParams, 'options'>) {
+  return createUrlPath<CreateUsersWithListInputPathParams, CreateUsersWithListInputQueryParams>(
+    '/user/createWithList',
+    params
+  );
+}
+
+export async function createUsersWithListInput(
+  client: Fetcher,
+  params: CreateUsersWithListInputParams
+): Promise<CreateUsersWithListInputResponse> {
+  const url = createUsersWithListInputUrlPath(params);
+
+  const response = await client(url, {
+    method: 'POST',
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: delete-order.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+
+export type DeleteOrderPathParams = {
+  /**
+   * ID of the order that needs to be deleted
+   * @format int64
+   */
+  orderId: number;
+};
+
+export type DeleteOrderQueryParams = never;
+
+export type DeleteOrderBodyParams = never;
+
+export type DeleteOrderParams = Pick<
+  OperationParams<DeleteOrderPathParams, DeleteOrderQueryParams, DeleteOrderBodyParams>,
+  'options' | 'path'
+>;
+
+export type DeleteOrderResponse = unknown;
+
+export function deleteOrderUrlPath(params: Omit<DeleteOrderParams, 'options'>) {
+  return createUrlPath<DeleteOrderPathParams, DeleteOrderQueryParams>('/store/order/{orderId}', params);
+}
+
+export async function deleteOrder(client: Fetcher, params: DeleteOrderParams): Promise<DeleteOrderResponse> {
+  const url = deleteOrderUrlPath(params);
+
+  const response = await client(url, {
+    method: 'DELETE',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: delete-pet.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+
+export type DeletePetPathParams = {
+  /**
+   * Pet id to delete
+   * @format int64
+   */
+  petId: number;
+};
+
+export type DeletePetQueryParams = never;
+
+export type DeletePetBodyParams = never;
+
+export type DeletePetParams = Pick<
+  OperationParams<DeletePetPathParams, DeletePetQueryParams, DeletePetBodyParams>,
+  'options' | 'path'
+>;
+
+export type DeletePetResponse = unknown;
+
+export function deletePetUrlPath(params: Omit<DeletePetParams, 'options'>) {
+  return createUrlPath<DeletePetPathParams, DeletePetQueryParams>('/pet/{petId}', params);
+}
+
+export async function deletePet(client: Fetcher, params: DeletePetParams): Promise<DeletePetResponse> {
+  const url = deletePetUrlPath(params);
+
+  const response = await client(url, {
+    method: 'DELETE',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: delete-user.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+
+export type DeleteUserPathParams = {
+  /**
+   * The name that needs to be deleted
+   */
+  username: string;
+};
+
+export type DeleteUserQueryParams = never;
+
+export type DeleteUserBodyParams = never;
+
+export type DeleteUserParams = Pick<
+  OperationParams<DeleteUserPathParams, DeleteUserQueryParams, DeleteUserBodyParams>,
+  'options' | 'path'
+>;
+
+export type DeleteUserResponse = unknown;
+
+export function deleteUserUrlPath(params: Omit<DeleteUserParams, 'options'>) {
+  return createUrlPath<DeleteUserPathParams, DeleteUserQueryParams>('/user/{username}', params);
+}
+
+export async function deleteUser(client: Fetcher, params: DeleteUserParams): Promise<DeleteUserResponse> {
+  const url = deleteUserUrlPath(params);
+
+  const response = await client(url, {
+    method: 'DELETE',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: find-pets-by-status.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type FindPetsByStatusPathParams = never;
+
+export type FindPetsByStatusQueryParams = {
+  /**
+   * Status values that need to be considered for filter
+   * @default available
+   */
+  status?: 'available' | 'pending' | 'sold';
+};
+
+export type FindPetsByStatusBodyParams = never;
+
+export type FindPetsByStatusParams = Pick<
+  OperationParams<FindPetsByStatusPathParams, FindPetsByStatusQueryParams, FindPetsByStatusBodyParams>,
+  'options' | 'query'
+>;
+
+export type FindPetsByStatusResponse = Array<schemas.Pet>;
+
+export function findPetsByStatusUrlPath(params: Omit<FindPetsByStatusParams, 'options'>) {
+  return createUrlPath<FindPetsByStatusPathParams, FindPetsByStatusQueryParams>('/pet/findByStatus', params);
+}
+
+export async function findPetsByStatus(
+  client: Fetcher,
+  params: FindPetsByStatusParams
+): Promise<FindPetsByStatusResponse> {
+  const url = findPetsByStatusUrlPath(params);
+
+  const response = await client(url, {
+    method: 'GET',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: find-pets-by-tags.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type FindPetsByTagsPathParams = never;
+
+export type FindPetsByTagsQueryParams = {
+  /**
+   * Tags to filter by
+   */
+  tags?: Array<string>;
+};
+
+export type FindPetsByTagsBodyParams = never;
+
+export type FindPetsByTagsParams = Pick<
+  OperationParams<FindPetsByTagsPathParams, FindPetsByTagsQueryParams, FindPetsByTagsBodyParams>,
+  'options' | 'query'
+>;
+
+export type FindPetsByTagsResponse = Array<schemas.Pet>;
+
+export function findPetsByTagsUrlPath(params: Omit<FindPetsByTagsParams, 'options'>) {
+  return createUrlPath<FindPetsByTagsPathParams, FindPetsByTagsQueryParams>('/pet/findByTags', params);
+}
+
+export async function findPetsByTags(client: Fetcher, params: FindPetsByTagsParams): Promise<FindPetsByTagsResponse> {
+  const url = findPetsByTagsUrlPath(params);
+
+  const response = await client(url, {
+    method: 'GET',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: get-inventory.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+
+export type GetInventoryPathParams = never;
+
+export type GetInventoryQueryParams = never;
+
+export type GetInventoryBodyParams = never;
+
+export type GetInventoryParams = Pick<
+  OperationParams<GetInventoryPathParams, GetInventoryQueryParams, GetInventoryBodyParams>,
+  'options'
+>;
+
+export type GetInventoryResponse = {};
+
+export function getInventoryUrlPath(params: Omit<GetInventoryParams, 'options'>) {
+  return createUrlPath<GetInventoryPathParams, GetInventoryQueryParams>('/store/inventory', params);
+}
+
+export async function getInventory(client: Fetcher, params: GetInventoryParams): Promise<GetInventoryResponse> {
+  const url = getInventoryUrlPath(params);
+
+  const response = await client(url, {
+    method: 'GET',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: get-order-by-id.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type GetOrderByIdPathParams = {
+  /**
+   * ID of order that needs to be fetched
+   * @format int64
+   */
+  orderId: number;
+};
+
+export type GetOrderByIdQueryParams = never;
+
+export type GetOrderByIdBodyParams = never;
+
+export type GetOrderByIdParams = Pick<
+  OperationParams<GetOrderByIdPathParams, GetOrderByIdQueryParams, GetOrderByIdBodyParams>,
+  'options' | 'path'
+>;
+
+export type GetOrderByIdResponse = schemas.Order;
+
+export function getOrderByIdUrlPath(params: Omit<GetOrderByIdParams, 'options'>) {
+  return createUrlPath<GetOrderByIdPathParams, GetOrderByIdQueryParams>('/store/order/{orderId}', params);
+}
+
+export async function getOrderById(client: Fetcher, params: GetOrderByIdParams): Promise<GetOrderByIdResponse> {
+  const url = getOrderByIdUrlPath(params);
+
+  const response = await client(url, {
+    method: 'GET',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: get-pet-by-id.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type GetPetByIdPathParams = {
+  /**
+   * ID of pet to return
+   * @format int64
+   */
+  petId: number;
+};
+
+export type GetPetByIdQueryParams = never;
+
+export type GetPetByIdBodyParams = never;
+
+export type GetPetByIdParams = Pick<
+  OperationParams<GetPetByIdPathParams, GetPetByIdQueryParams, GetPetByIdBodyParams>,
+  'options' | 'path'
+>;
+
+export type GetPetByIdResponse = schemas.Pet;
+
+export function getPetByIdUrlPath(params: Omit<GetPetByIdParams, 'options'>) {
+  return createUrlPath<GetPetByIdPathParams, GetPetByIdQueryParams>('/pet/{petId}', params);
+}
+
+export async function getPetById(client: Fetcher, params: GetPetByIdParams): Promise<GetPetByIdResponse> {
+  const url = getPetByIdUrlPath(params);
+
+  const response = await client(url, {
+    method: 'GET',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: get-user-by-name.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type GetUserByNamePathParams = {
+  /**
+   * The name that needs to be fetched. Use user1 for testing.
+   */
+  username: string;
+};
+
+export type GetUserByNameQueryParams = never;
+
+export type GetUserByNameBodyParams = never;
+
+export type GetUserByNameParams = Pick<
+  OperationParams<GetUserByNamePathParams, GetUserByNameQueryParams, GetUserByNameBodyParams>,
+  'options' | 'path'
+>;
+
+export type GetUserByNameResponse = schemas.User;
+
+export function getUserByNameUrlPath(params: Omit<GetUserByNameParams, 'options'>) {
+  return createUrlPath<GetUserByNamePathParams, GetUserByNameQueryParams>('/user/{username}', params);
+}
+
+export async function getUserByName(client: Fetcher, params: GetUserByNameParams): Promise<GetUserByNameResponse> {
+  const url = getUserByNameUrlPath(params);
+
+  const response = await client(url, {
+    method: 'GET',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: index.ts 1`] = `
+"export * from './update-pet';
+export * from './add-pet';
+export * from './find-pets-by-status';
+export * from './find-pets-by-tags';
+export * from './get-pet-by-id';
+export * from './update-pet-with-form';
+export * from './delete-pet';
+export * from './upload-file';
+export * from './get-inventory';
+export * from './place-order';
+export * from './get-order-by-id';
+export * from './delete-order';
+export * from './create-user';
+export * from './create-users-with-list-input';
+export * from './login-user';
+export * from './logout-user';
+export * from './get-user-by-name';
+export * from './update-user';
+export * from './delete-user';
+"
+`;
+
+exports[`fetcher generator: login-user.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+
+export type LoginUserPathParams = never;
+
+export type LoginUserQueryParams = {
+  /**
+   * The user name for login
+   */
+  username?: string;
+  /**
+   * The password for login in clear text
+   */
+  password?: string;
+};
+
+export type LoginUserBodyParams = never;
+
+export type LoginUserParams = Pick<
+  OperationParams<LoginUserPathParams, LoginUserQueryParams, LoginUserBodyParams>,
+  'options' | 'query'
+>;
+
+export type LoginUserResponse = string;
+
+export function loginUserUrlPath(params: Omit<LoginUserParams, 'options'>) {
+  return createUrlPath<LoginUserPathParams, LoginUserQueryParams>('/user/login', params);
+}
+
+export async function loginUser(client: Fetcher, params: LoginUserParams): Promise<LoginUserResponse> {
+  const url = loginUserUrlPath(params);
+
+  const response = await client(url, {
+    method: 'GET',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: logout-user.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+
+export type LogoutUserPathParams = never;
+
+export type LogoutUserQueryParams = never;
+
+export type LogoutUserBodyParams = never;
+
+export type LogoutUserParams = Pick<
+  OperationParams<LogoutUserPathParams, LogoutUserQueryParams, LogoutUserBodyParams>,
+  'options'
+>;
+
+export type LogoutUserResponse = unknown;
+
+export function logoutUserUrlPath(params: Omit<LogoutUserParams, 'options'>) {
+  return createUrlPath<LogoutUserPathParams, LogoutUserQueryParams>('/user/logout', params);
+}
+
+export async function logoutUser(client: Fetcher, params: LogoutUserParams): Promise<LogoutUserResponse> {
+  const url = logoutUserUrlPath(params);
+
+  const response = await client(url, {
+    method: 'GET',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: place-order.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type PlaceOrderPathParams = never;
+
+export type PlaceOrderQueryParams = never;
+
+export type PlaceOrderBodyParams = schemas.Order;
+
+export type PlaceOrderParams = Pick<
+  OperationParams<PlaceOrderPathParams, PlaceOrderQueryParams, PlaceOrderBodyParams>,
+  'options' | 'body'
+>;
+
+export type PlaceOrderResponse = schemas.Order;
+
+export function placeOrderUrlPath(params: Omit<PlaceOrderParams, 'options'>) {
+  return createUrlPath<PlaceOrderPathParams, PlaceOrderQueryParams>('/store/order', params);
+}
+
+export async function placeOrder(client: Fetcher, params: PlaceOrderParams): Promise<PlaceOrderResponse> {
+  const url = placeOrderUrlPath(params);
+
+  const response = await client(url, {
+    method: 'POST',
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: update-pet.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type UpdatePetPathParams = never;
+
+export type UpdatePetQueryParams = never;
+
+export type UpdatePetBodyParams = schemas.Pet;
+
+export type UpdatePetParams = Pick<
+  OperationParams<UpdatePetPathParams, UpdatePetQueryParams, UpdatePetBodyParams>,
+  'options' | 'body'
+>;
+
+export type UpdatePetResponse = schemas.Pet;
+
+export function updatePetUrlPath(params: Omit<UpdatePetParams, 'options'>) {
+  return createUrlPath<UpdatePetPathParams, UpdatePetQueryParams>('/pet', params);
+}
+
+export async function updatePet(client: Fetcher, params: UpdatePetParams): Promise<UpdatePetResponse> {
+  const url = updatePetUrlPath(params);
+
+  const response = await client(url, {
+    method: 'PUT',
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: update-pet-with-form.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+
+export type UpdatePetWithFormPathParams = {
+  /**
+   * ID of pet that needs to be updated
+   * @format int64
+   */
+  petId: number;
+};
+
+export type UpdatePetWithFormQueryParams = {
+  /**
+   * Name of pet that needs to be updated
+   */
+  name?: string;
+  /**
+   * Status of pet that needs to be updated
+   */
+  status?: string;
+};
+
+export type UpdatePetWithFormBodyParams = never;
+
+export type UpdatePetWithFormParams = Pick<
+  OperationParams<UpdatePetWithFormPathParams, UpdatePetWithFormQueryParams, UpdatePetWithFormBodyParams>,
+  'options' | 'path' | 'query'
+>;
+
+export type UpdatePetWithFormResponse = unknown;
+
+export function updatePetWithFormUrlPath(params: Omit<UpdatePetWithFormParams, 'options'>) {
+  return createUrlPath<UpdatePetWithFormPathParams, UpdatePetWithFormQueryParams>('/pet/{petId}', params);
+}
+
+export async function updatePetWithForm(
+  client: Fetcher,
+  params: UpdatePetWithFormParams
+): Promise<UpdatePetWithFormResponse> {
+  const url = updatePetWithFormUrlPath(params);
+
+  const response = await client(url, {
+    method: 'POST',
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: update-user.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type UpdateUserPathParams = {
+  /**
+   * name that need to be deleted
+   */
+  username: string;
+};
+
+export type UpdateUserQueryParams = never;
+
+export type UpdateUserBodyParams = schemas.User;
+
+export type UpdateUserParams = Pick<
+  OperationParams<UpdateUserPathParams, UpdateUserQueryParams, UpdateUserBodyParams>,
+  'options' | 'body' | 'path'
+>;
+
+export type UpdateUserResponse = unknown;
+
+export function updateUserUrlPath(params: Omit<UpdateUserParams, 'options'>) {
+  return createUrlPath<UpdateUserPathParams, UpdateUserQueryParams>('/user/{username}', params);
+}
+
+export async function updateUser(client: Fetcher, params: UpdateUserParams): Promise<UpdateUserResponse> {
+  const url = updateUserUrlPath(params);
+
+  const response = await client(url, {
+    method: 'PUT',
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator: upload-file.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
+import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import * as schemas from './components/schemas';
+
+export type UploadFilePathParams = {
+  /**
+   * ID of pet to update
+   * @format int64
+   */
+  petId: number;
+};
+
+export type UploadFileQueryParams = {
+  /**
+   * Additional Metadata
+   */
+  additionalMetadata?: string;
+};
+
+export type UploadFileBodyParams = unknown;
+
+export type UploadFileParams = Pick<
+  OperationParams<UploadFilePathParams, UploadFileQueryParams, UploadFileBodyParams>,
+  'options' | 'body' | 'path' | 'query'
+>;
+
+export type UploadFileResponse = schemas.ApiResponse;
+
+export function uploadFileUrlPath(params: Omit<UploadFileParams, 'options'>) {
+  return createUrlPath<UploadFilePathParams, UploadFileQueryParams>('/pet/{petId}/uploadImage', params);
+}
+
+export async function uploadFile(client: Fetcher, params: UploadFileParams): Promise<UploadFileResponse> {
+  const url = uploadFileUrlPath(params);
+
+  const response = await client(url, {
+    method: 'POST',
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`react-query-fetcher generator: index.ts 1`] = `
+"export * from './use-update-pet';
+export * from './use-add-pet';
+export * from './use-find-pets-by-status';
+export * from './use-find-pets-by-tags';
+export * from './use-get-pet-by-id';
+export * from './use-update-pet-with-form';
+export * from './use-delete-pet';
+export * from './use-upload-file';
+export * from './use-get-inventory';
+export * from './use-place-order';
+export * from './use-get-order-by-id';
+export * from './use-delete-order';
+export * from './use-create-user';
+export * from './use-create-users-with-list-input';
+export * from './use-login-user';
+export * from './use-logout-user';
+export * from './use-get-user-by-name';
+export * from './use-update-user';
+export * from './use-delete-user';
+"
+`;
+
+exports[`react-query-fetcher generator: use-add-pet.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { AddPetResponse, AddPetParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { addPet } from '@my-sdk/pepeg';
+
+type UseAddPetVariables = Omit<AddPetParams, 'options'>;
+
+type UseAddPetArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<AddPetResponse, TError, UseAddPetVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'addPet';
+
+export function useAddPet<TError = unknown>(client: Fetcher, args: UseAddPetArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<AddPetResponse, TError, UseAddPetVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: addPet,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-create-user.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { CreateUserResponse, CreateUserParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { createUser } from '@my-sdk/pepeg';
+
+type UseCreateUserVariables = Omit<CreateUserParams, 'options'>;
+
+type UseCreateUserArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<CreateUserResponse, TError, UseCreateUserVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'createUser';
+
+export function useCreateUser<TError = unknown>(client: Fetcher, args: UseCreateUserArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<CreateUserResponse, TError, UseCreateUserVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: createUser,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-create-users-with-list-input.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { CreateUsersWithListInputResponse, CreateUsersWithListInputParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { createUsersWithListInput } from '@my-sdk/pepeg';
+
+type UseCreateUsersWithListInputVariables = Omit<CreateUsersWithListInputParams, 'options'>;
+
+type UseCreateUsersWithListInputArgs<TError = unknown> = {
+  options?: Omit<
+    UseMutationOptions<CreateUsersWithListInputResponse, TError, UseCreateUsersWithListInputVariables>,
+    'mutationKey'
+  >;
+};
+
+const MUTATION_KEY = 'createUsersWithListInput';
+
+export function useCreateUsersWithListInput<TError = unknown>(
+  client: Fetcher,
+  args: UseCreateUsersWithListInputArgs<TError>
+) {
+  const options = args.options ?? {};
+  return useFetcherMutation<CreateUsersWithListInputResponse, TError, UseCreateUsersWithListInputVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: createUsersWithListInput,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-delete-order.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { DeleteOrderResponse, DeleteOrderParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { deleteOrder } from '@my-sdk/pepeg';
+
+type UseDeleteOrderVariables = Omit<DeleteOrderParams, 'options'>;
+
+type UseDeleteOrderArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<DeleteOrderResponse, TError, UseDeleteOrderVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'deleteOrder';
+
+export function useDeleteOrder<TError = unknown>(client: Fetcher, args: UseDeleteOrderArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<DeleteOrderResponse, TError, UseDeleteOrderVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: deleteOrder,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-delete-pet.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { DeletePetResponse, DeletePetParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { deletePet } from '@my-sdk/pepeg';
+
+type UseDeletePetVariables = Omit<DeletePetParams, 'options'>;
+
+type UseDeletePetArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<DeletePetResponse, TError, UseDeletePetVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'deletePet';
+
+export function useDeletePet<TError = unknown>(client: Fetcher, args: UseDeletePetArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<DeletePetResponse, TError, UseDeletePetVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: deletePet,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-delete-user.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { DeleteUserResponse, DeleteUserParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { deleteUser } from '@my-sdk/pepeg';
+
+type UseDeleteUserVariables = Omit<DeleteUserParams, 'options'>;
+
+type UseDeleteUserArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<DeleteUserResponse, TError, UseDeleteUserVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'deleteUser';
+
+export function useDeleteUser<TError = unknown>(client: Fetcher, args: UseDeleteUserArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<DeleteUserResponse, TError, UseDeleteUserVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: deleteUser,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-find-pets-by-status.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import type { FindPetsByStatusResponse, FindPetsByStatusParams } from '@my-sdk/pepeg';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+import { findPetsByStatus } from '@my-sdk/pepeg';
+
+type UseFindPetsByStatusParams = Omit<FindPetsByStatusParams, 'options'>;
+
+type UseFindPetsByStatusArgs<TData, TError> = Omit<
+  UseFetcherQueryArgs<FindPetsByStatusResponse, TError, TData, UseFindPetsByStatusParams>,
+  'queryKey' | 'endpoint'
+>;
+
+const QUERY_KEY = ['findPetsByStatus'];
+
+export function useFindPetsByStatusQueryKey(params?: UseFindPetsByStatusParams) {
+  return createQueryKey(QUERY_KEY, params);
+}
+
+export function useFindPetsByStatus<TData = FindPetsByStatusResponse, TError = unknown>(
+  client: Fetcher,
+  args: UseFindPetsByStatusArgs<TData, TError>
+) {
+  return useFetcherQuery<FindPetsByStatusResponse, TError, TData, UseFindPetsByStatusParams>(client, {
+    ...args,
+    queryKey: QUERY_KEY,
+    endpoint: findPetsByStatus,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-find-pets-by-tags.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import type { FindPetsByTagsResponse, FindPetsByTagsParams } from '@my-sdk/pepeg';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+import { findPetsByTags } from '@my-sdk/pepeg';
+
+type UseFindPetsByTagsParams = Omit<FindPetsByTagsParams, 'options'>;
+
+type UseFindPetsByTagsArgs<TData, TError> = Omit<
+  UseFetcherQueryArgs<FindPetsByTagsResponse, TError, TData, UseFindPetsByTagsParams>,
+  'queryKey' | 'endpoint'
+>;
+
+const QUERY_KEY = ['findPetsByTags'];
+
+export function useFindPetsByTagsQueryKey(params?: UseFindPetsByTagsParams) {
+  return createQueryKey(QUERY_KEY, params);
+}
+
+export function useFindPetsByTags<TData = FindPetsByTagsResponse, TError = unknown>(
+  client: Fetcher,
+  args: UseFindPetsByTagsArgs<TData, TError>
+) {
+  return useFetcherQuery<FindPetsByTagsResponse, TError, TData, UseFindPetsByTagsParams>(client, {
+    ...args,
+    queryKey: QUERY_KEY,
+    endpoint: findPetsByTags,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-get-inventory.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import type { GetInventoryResponse, GetInventoryParams } from '@my-sdk/pepeg';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+import { getInventory } from '@my-sdk/pepeg';
+
+type UseGetInventoryParams = Omit<GetInventoryParams, 'options'>;
+
+type UseGetInventoryArgs<TData, TError> = Omit<
+  UseFetcherQueryArgs<GetInventoryResponse, TError, TData, UseGetInventoryParams>,
+  'queryKey' | 'endpoint'
+>;
+
+const QUERY_KEY = ['getInventory'];
+
+export function useGetInventoryQueryKey(params?: UseGetInventoryParams) {
+  return createQueryKey(QUERY_KEY, params);
+}
+
+export function useGetInventory<TData = GetInventoryResponse, TError = unknown>(
+  client: Fetcher,
+  args: UseGetInventoryArgs<TData, TError>
+) {
+  return useFetcherQuery<GetInventoryResponse, TError, TData, UseGetInventoryParams>(client, {
+    ...args,
+    queryKey: QUERY_KEY,
+    endpoint: getInventory,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-get-order-by-id.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import type { GetOrderByIdResponse, GetOrderByIdParams } from '@my-sdk/pepeg';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+import { getOrderById } from '@my-sdk/pepeg';
+
+type UseGetOrderByIdParams = Omit<GetOrderByIdParams, 'options'>;
+
+type UseGetOrderByIdArgs<TData, TError> = Omit<
+  UseFetcherQueryArgs<GetOrderByIdResponse, TError, TData, UseGetOrderByIdParams>,
+  'queryKey' | 'endpoint'
+>;
+
+const QUERY_KEY = ['getOrderById'];
+
+export function useGetOrderByIdQueryKey(params?: UseGetOrderByIdParams) {
+  return createQueryKey(QUERY_KEY, params);
+}
+
+export function useGetOrderById<TData = GetOrderByIdResponse, TError = unknown>(
+  client: Fetcher,
+  args: UseGetOrderByIdArgs<TData, TError>
+) {
+  return useFetcherQuery<GetOrderByIdResponse, TError, TData, UseGetOrderByIdParams>(client, {
+    ...args,
+    queryKey: QUERY_KEY,
+    endpoint: getOrderById,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-get-pet-by-id.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import type { GetPetByIdResponse, GetPetByIdParams } from '@my-sdk/pepeg';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+import { getPetById } from '@my-sdk/pepeg';
+
+type UseGetPetByIdParams = Omit<GetPetByIdParams, 'options'>;
+
+type UseGetPetByIdArgs<TData, TError> = Omit<
+  UseFetcherQueryArgs<GetPetByIdResponse, TError, TData, UseGetPetByIdParams>,
+  'queryKey' | 'endpoint'
+>;
+
+const QUERY_KEY = ['getPetById'];
+
+export function useGetPetByIdQueryKey(params?: UseGetPetByIdParams) {
+  return createQueryKey(QUERY_KEY, params);
+}
+
+export function useGetPetById<TData = GetPetByIdResponse, TError = unknown>(
+  client: Fetcher,
+  args: UseGetPetByIdArgs<TData, TError>
+) {
+  return useFetcherQuery<GetPetByIdResponse, TError, TData, UseGetPetByIdParams>(client, {
+    ...args,
+    queryKey: QUERY_KEY,
+    endpoint: getPetById,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-get-user-by-name.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import type { GetUserByNameResponse, GetUserByNameParams } from '@my-sdk/pepeg';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+import { getUserByName } from '@my-sdk/pepeg';
+
+type UseGetUserByNameParams = Omit<GetUserByNameParams, 'options'>;
+
+type UseGetUserByNameArgs<TData, TError> = Omit<
+  UseFetcherQueryArgs<GetUserByNameResponse, TError, TData, UseGetUserByNameParams>,
+  'queryKey' | 'endpoint'
+>;
+
+const QUERY_KEY = ['getUserByName'];
+
+export function useGetUserByNameQueryKey(params?: UseGetUserByNameParams) {
+  return createQueryKey(QUERY_KEY, params);
+}
+
+export function useGetUserByName<TData = GetUserByNameResponse, TError = unknown>(
+  client: Fetcher,
+  args: UseGetUserByNameArgs<TData, TError>
+) {
+  return useFetcherQuery<GetUserByNameResponse, TError, TData, UseGetUserByNameParams>(client, {
+    ...args,
+    queryKey: QUERY_KEY,
+    endpoint: getUserByName,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-login-user.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import type { LoginUserResponse, LoginUserParams } from '@my-sdk/pepeg';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+import { loginUser } from '@my-sdk/pepeg';
+
+type UseLoginUserParams = Omit<LoginUserParams, 'options'>;
+
+type UseLoginUserArgs<TData, TError> = Omit<
+  UseFetcherQueryArgs<LoginUserResponse, TError, TData, UseLoginUserParams>,
+  'queryKey' | 'endpoint'
+>;
+
+const QUERY_KEY = ['loginUser'];
+
+export function useLoginUserQueryKey(params?: UseLoginUserParams) {
+  return createQueryKey(QUERY_KEY, params);
+}
+
+export function useLoginUser<TData = LoginUserResponse, TError = unknown>(
+  client: Fetcher,
+  args: UseLoginUserArgs<TData, TError>
+) {
+  return useFetcherQuery<LoginUserResponse, TError, TData, UseLoginUserParams>(client, {
+    ...args,
+    queryKey: QUERY_KEY,
+    endpoint: loginUser,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-logout-user.ts 1`] = `
+"import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import type { LogoutUserResponse, LogoutUserParams } from '@my-sdk/pepeg';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+import { logoutUser } from '@my-sdk/pepeg';
+
+type UseLogoutUserParams = Omit<LogoutUserParams, 'options'>;
+
+type UseLogoutUserArgs<TData, TError> = Omit<
+  UseFetcherQueryArgs<LogoutUserResponse, TError, TData, UseLogoutUserParams>,
+  'queryKey' | 'endpoint'
+>;
+
+const QUERY_KEY = ['logoutUser'];
+
+export function useLogoutUserQueryKey(params?: UseLogoutUserParams) {
+  return createQueryKey(QUERY_KEY, params);
+}
+
+export function useLogoutUser<TData = LogoutUserResponse, TError = unknown>(
+  client: Fetcher,
+  args: UseLogoutUserArgs<TData, TError>
+) {
+  return useFetcherQuery<LogoutUserResponse, TError, TData, UseLogoutUserParams>(client, {
+    ...args,
+    queryKey: QUERY_KEY,
+    endpoint: logoutUser,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-place-order.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { PlaceOrderResponse, PlaceOrderParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { placeOrder } from '@my-sdk/pepeg';
+
+type UsePlaceOrderVariables = Omit<PlaceOrderParams, 'options'>;
+
+type UsePlaceOrderArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<PlaceOrderResponse, TError, UsePlaceOrderVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'placeOrder';
+
+export function usePlaceOrder<TError = unknown>(client: Fetcher, args: UsePlaceOrderArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<PlaceOrderResponse, TError, UsePlaceOrderVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: placeOrder,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-update-pet.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UpdatePetResponse, UpdatePetParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { updatePet } from '@my-sdk/pepeg';
+
+type UseUpdatePetVariables = Omit<UpdatePetParams, 'options'>;
+
+type UseUpdatePetArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<UpdatePetResponse, TError, UseUpdatePetVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'updatePet';
+
+export function useUpdatePet<TError = unknown>(client: Fetcher, args: UseUpdatePetArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<UpdatePetResponse, TError, UseUpdatePetVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: updatePet,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-update-pet-with-form.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UpdatePetWithFormResponse, UpdatePetWithFormParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { updatePetWithForm } from '@my-sdk/pepeg';
+
+type UseUpdatePetWithFormVariables = Omit<UpdatePetWithFormParams, 'options'>;
+
+type UseUpdatePetWithFormArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<UpdatePetWithFormResponse, TError, UseUpdatePetWithFormVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'updatePetWithForm';
+
+export function useUpdatePetWithForm<TError = unknown>(client: Fetcher, args: UseUpdatePetWithFormArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<UpdatePetWithFormResponse, TError, UseUpdatePetWithFormVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: updatePetWithForm,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-update-user.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UpdateUserResponse, UpdateUserParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { updateUser } from '@my-sdk/pepeg';
+
+type UseUpdateUserVariables = Omit<UpdateUserParams, 'options'>;
+
+type UseUpdateUserArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<UpdateUserResponse, TError, UseUpdateUserVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'updateUser';
+
+export function useUpdateUser<TError = unknown>(client: Fetcher, args: UseUpdateUserArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<UpdateUserResponse, TError, UseUpdateUserVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: updateUser,
+  });
+}
+"
+`;
+
+exports[`react-query-fetcher generator: use-upload-file.ts 1`] = `
+"import type { UseMutationOptions } from 'react-query';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UploadFileResponse, UploadFileParams } from '@my-sdk/pepeg';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import { uploadFile } from '@my-sdk/pepeg';
+
+type UseUploadFileVariables = Omit<UploadFileParams, 'options'>;
+
+type UseUploadFileArgs<TError = unknown> = {
+  options?: Omit<UseMutationOptions<UploadFileResponse, TError, UseUploadFileVariables>, 'mutationKey'>;
+};
+
+const MUTATION_KEY = 'uploadFile';
+
+export function useUploadFile<TError = unknown>(client: Fetcher, args: UseUploadFileArgs<TError>) {
+  const options = args.options ?? {};
+  return useFetcherMutation<UploadFileResponse, TError, UseUploadFileVariables>(client, {
+    options: {
+      ...options,
+      mutationKey: MUTATION_KEY,
+    },
+    endpoint: uploadFile,
+  });
+}
+"
+`;
