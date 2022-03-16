@@ -17,6 +17,7 @@
 - [@straw-hat/jest-config-chain](./packages/jest-config-chain/README.md)
 - [@straw-hat/logger](./packages/logger/README.md)
 - [@straw-hat/next-sdk](./packages/next-sdk/README.md)
+- [@straw-hat/openapi-web-sdk-generator](./packages/openapi-web-sdk-generator/README.md)
 - [@straw-hat/prettier-config](./packages/prettier-config/README.md)
 - [@straw-hat/react-fullscreen](./packages/react-fullscreen/README.md)
 - [@straw-hat/react-hooks](./packages/react-hooks/README.md)
