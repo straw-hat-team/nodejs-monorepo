@@ -1,0 +1,10 @@
+{
+  "extends": "@straw-hat/tsconfig/lib/base",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES6",
+    "outDir": "dist",
+    "jsx": "react"
+  },
+  "include": ["src", "tests"]
+}

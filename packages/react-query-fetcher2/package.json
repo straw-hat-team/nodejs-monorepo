@@ -1,0 +1,55 @@
+{
+  "name": "@straw-hat/react-query-fetcher",
+  "version": "1.3.2",
+  "description": "React Query and Straw Hat Fetcher Integration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "directory": "packages/react-query-fetcher"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-query",
+    "fetcher",
+    "http",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:jest": "yarn run -T jest",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@straw-hat/fetcher": "^4.4.1",
+    "react-query": "^3.30.0"
+  },
+  "devDependencies": {
+    "@straw-hat/fetcher": "^4.8.0",
+    "@straw-hat/tsconfig": "^2.3.1",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "jest": "^27.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-query": "^3.30.0",
+    "react-test-renderer": "^17.0.2",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4"
+  }
+}

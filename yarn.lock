@@ -2727,9 +2727,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/react-query-fetcher@workspace:packages/react-query-fetcher":
+"@straw-hat/react-query-fetcher@workspace:packages/react-query-fetcher2":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/react-query-fetcher@workspace:packages/react-query-fetcher"
+  resolution: "@straw-hat/react-query-fetcher@workspace:packages/react-query-fetcher2"
   dependencies:
     "@straw-hat/fetcher": ^4.8.0
     "@straw-hat/tsconfig": ^2.3.1
