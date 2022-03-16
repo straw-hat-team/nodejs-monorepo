@@ -25,3 +25,7 @@
 - [@straw-hat/tsconfig](./packages/tsconfig/README.md)
 - [@straw-hat/types](./packages/types/README.md)
 - [@straw-hat/webpack-chain-graphql](./packages/webpack-chain-graphql/README.md)
+
+### Unreleased
+
+- [@straw-hat/react-native-sdk](./packages/react-native-sdk/README.md)
