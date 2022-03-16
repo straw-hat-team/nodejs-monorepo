@@ -1,0 +1,37 @@
+{
+  "name": "@straw-hat/eslint-config-base",
+  "version": "3.1.1",
+  "description": "Straw Hat Team ESLint base configurations",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "directory": "packages/@straw-hat/eslint-config-base"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@straw-hat/eslint-config-prettier": "^1.0.2",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.4.1"
+  }
+}

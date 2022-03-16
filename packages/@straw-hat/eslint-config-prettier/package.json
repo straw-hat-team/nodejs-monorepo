@@ -1,0 +1,33 @@
+{
+  "name": "@straw-hat/eslint-config-prettier",
+  "version": "3.0.1",
+  "description": "Straw Hat Team ESLint configuration for prettier integration",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "directory": "packages/@straw-hat/eslint-config-prettier"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
+  }
+}

@@ -3381,9 +3381,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@straw-hat/babel-preset-base@workspace:packages/babel-preset-base":
+"@straw-hat/babel-preset-base@workspace:packages/@straw-hat/babel-preset-base":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/babel-preset-base@workspace:packages/babel-preset-base"
+  resolution: "@straw-hat/babel-preset-base@workspace:packages/@straw-hat/babel-preset-base"
   dependencies:
     "@babel/plugin-proposal-class-properties": ^7.16.7
     "@babel/plugin-proposal-decorators": ^7.17.2
@@ -3399,9 +3399,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/chainable-config@^0.9.0, @straw-hat/chainable-config@workspace:packages/chainable-config":
+"@straw-hat/chainable-config@^0.9.0, @straw-hat/chainable-config@workspace:packages/@straw-hat/chainable-config":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/chainable-config@workspace:packages/chainable-config"
+  resolution: "@straw-hat/chainable-config@workspace:packages/@straw-hat/chainable-config"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.2
     "@types/jest": ^27.4.1
@@ -3415,9 +3415,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/eslint-config-babel@workspace:packages/eslint-config-babel":
+"@straw-hat/eslint-config-babel@workspace:packages/@straw-hat/eslint-config-babel":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/eslint-config-babel@workspace:packages/eslint-config-babel"
+  resolution: "@straw-hat/eslint-config-babel@workspace:packages/@straw-hat/eslint-config-babel"
   peerDependencies:
     "@straw-hat/eslint-config-base": ^2.0.2
     "@straw-hat/eslint-config-prettier": ^1.0.2
@@ -3431,9 +3431,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/eslint-config-base@workspace:packages/eslint-config-base":
+"@straw-hat/eslint-config-base@workspace:packages/@straw-hat/eslint-config-base":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/eslint-config-base@workspace:packages/eslint-config-base"
+  resolution: "@straw-hat/eslint-config-base@workspace:packages/@straw-hat/eslint-config-base"
   peerDependencies:
     "@straw-hat/eslint-config-prettier": ^1.0.2
     eslint: ^8.2.0
@@ -3446,27 +3446,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/eslint-config-cypress@workspace:packages/eslint-config-cypress":
+"@straw-hat/eslint-config-cypress@workspace:packages/@straw-hat/eslint-config-cypress":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/eslint-config-cypress@workspace:packages/eslint-config-cypress"
+  resolution: "@straw-hat/eslint-config-cypress@workspace:packages/@straw-hat/eslint-config-cypress"
   peerDependencies:
     eslint: ^8.2.0
     eslint-plugin-cypress: ^2.12.1
   languageName: unknown
   linkType: soft
 
-"@straw-hat/eslint-config-nextjs@workspace:packages/eslint-config-nextjs":
+"@straw-hat/eslint-config-nextjs@workspace:packages/@straw-hat/eslint-config-nextjs":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/eslint-config-nextjs@workspace:packages/eslint-config-nextjs"
+  resolution: "@straw-hat/eslint-config-nextjs@workspace:packages/@straw-hat/eslint-config-nextjs"
   peerDependencies:
     eslint: ^8.2.0
     eslint-config-next: ^12.0.4
   languageName: unknown
   linkType: soft
 
-"@straw-hat/eslint-config-prettier@workspace:packages/eslint-config-prettier":
+"@straw-hat/eslint-config-prettier@workspace:packages/@straw-hat/eslint-config-prettier":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/eslint-config-prettier@workspace:packages/eslint-config-prettier"
+  resolution: "@straw-hat/eslint-config-prettier@workspace:packages/@straw-hat/eslint-config-prettier"
   peerDependencies:
     eslint: ^8.2.0
     eslint-config-prettier: ^8.3.0
@@ -3475,9 +3475,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/eslint-config-react@workspace:packages/eslint-config-react":
+"@straw-hat/eslint-config-react@workspace:packages/@straw-hat/eslint-config-react":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/eslint-config-react@workspace:packages/eslint-config-react"
+  resolution: "@straw-hat/eslint-config-react@workspace:packages/@straw-hat/eslint-config-react"
   peerDependencies:
     "@straw-hat/eslint-config-base": ^2.0.2
     "@straw-hat/eslint-config-prettier": ^1.0.2
@@ -3496,9 +3496,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/eslint-config-typescript@workspace:packages/eslint-config-typescript":
+"@straw-hat/eslint-config-typescript@workspace:packages/@straw-hat/eslint-config-typescript":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/eslint-config-typescript@workspace:packages/eslint-config-typescript"
+  resolution: "@straw-hat/eslint-config-typescript@workspace:packages/@straw-hat/eslint-config-typescript"
   peerDependencies:
     "@straw-hat/eslint-config-base": ^2.0.2
     "@straw-hat/eslint-config-prettier": ^1.0.2
@@ -3515,9 +3515,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/fancy-map@^3.0.1, @straw-hat/fancy-map@workspace:packages/fancy-map":
+"@straw-hat/fancy-map@^3.0.1, @straw-hat/fancy-map@workspace:packages/@straw-hat/fancy-map":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/fancy-map@workspace:packages/fancy-map"
+  resolution: "@straw-hat/fancy-map@workspace:packages/@straw-hat/fancy-map"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.0
     "@types/jest": ^27.4.1
@@ -3527,9 +3527,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/fetcher@^4.8.0, @straw-hat/fetcher@workspace:packages/fetcher":
+"@straw-hat/fetcher@^4.8.0, @straw-hat/fetcher@workspace:packages/@straw-hat/fetcher":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/fetcher@workspace:packages/fetcher"
+  resolution: "@straw-hat/fetcher@workspace:packages/@straw-hat/fetcher"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.2
     "@types/jest": ^27.4.1
@@ -3540,9 +3540,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/is-ssr@^2.0.0, @straw-hat/is-ssr@workspace:packages/is-ssr":
+"@straw-hat/is-ssr@^2.0.0, @straw-hat/is-ssr@workspace:packages/@straw-hat/is-ssr":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/is-ssr@workspace:packages/is-ssr"
+  resolution: "@straw-hat/is-ssr@workspace:packages/@straw-hat/is-ssr"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.1
     "@types/jest": ^27.4.1
@@ -3569,9 +3569,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/jest-config-chain@workspace:packages/jest-config-chain":
+"@straw-hat/jest-config-chain@workspace:packages/@straw-hat/jest-config-chain":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/jest-config-chain@workspace:packages/jest-config-chain"
+  resolution: "@straw-hat/jest-config-chain@workspace:packages/@straw-hat/jest-config-chain"
   dependencies:
     "@straw-hat/chainable-config": ^0.9.0
     "@straw-hat/tsconfig": ^3.0.2
@@ -3582,9 +3582,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/logger@workspace:packages/logger":
+"@straw-hat/logger@workspace:packages/@straw-hat/logger":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/logger@workspace:packages/logger"
+  resolution: "@straw-hat/logger@workspace:packages/@straw-hat/logger"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.0
     "@types/jest": ^27.4.1
@@ -3594,9 +3594,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/next-sdk@workspace:packages/next-sdk":
+"@straw-hat/next-sdk@workspace:packages/@straw-hat/next-sdk":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/next-sdk@workspace:packages/next-sdk"
+  resolution: "@straw-hat/next-sdk@workspace:packages/@straw-hat/next-sdk"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.0
     "@straw-hat/types": ^0.5.0
@@ -3616,9 +3616,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/openapi-web-sdk-generator@workspace:packages/openapi-web-sdk-generator":
+"@straw-hat/openapi-web-sdk-generator@workspace:packages/@straw-hat/openapi-web-sdk-generator":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/openapi-web-sdk-generator@workspace:packages/openapi-web-sdk-generator"
+  resolution: "@straw-hat/openapi-web-sdk-generator@workspace:packages/@straw-hat/openapi-web-sdk-generator"
   dependencies:
     "@apidevtools/swagger-parser": ^10.0.3
     "@oclif/command": ^1.8.16
@@ -3654,9 +3654,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/prettier-config@^2.0.0, @straw-hat/prettier-config@^2.0.2, @straw-hat/prettier-config@workspace:packages/prettier-config":
+"@straw-hat/prettier-config@^2.0.0, @straw-hat/prettier-config@^2.0.2, @straw-hat/prettier-config@workspace:packages/@straw-hat/prettier-config":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/prettier-config@workspace:packages/prettier-config"
+  resolution: "@straw-hat/prettier-config@workspace:packages/@straw-hat/prettier-config"
   dependencies:
     "@straw-hat/prettier-config": ^2.0.0
     prettier: ^2.6.0
@@ -3665,9 +3665,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/react-fullscreen@workspace:packages/react-fullscreen":
+"@straw-hat/react-fullscreen@workspace:packages/@straw-hat/react-fullscreen":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/react-fullscreen@workspace:packages/react-fullscreen"
+  resolution: "@straw-hat/react-fullscreen@workspace:packages/@straw-hat/react-fullscreen"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.1
     "@types/fscreen": ^1.0.1
@@ -3678,9 +3678,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/react-hooks@workspace:packages/react-hooks":
+"@straw-hat/react-hooks@workspace:packages/@straw-hat/react-hooks":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/react-hooks@workspace:packages/react-hooks"
+  resolution: "@straw-hat/react-hooks@workspace:packages/@straw-hat/react-hooks"
   dependencies:
     "@straw-hat/is-ssr": ^2.0.0
     "@straw-hat/tsconfig": ^3.0.2
@@ -3697,9 +3697,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/react-native-sdk@workspace:packages/react-native-sdk":
+"@straw-hat/react-native-sdk@workspace:packages/@straw-hat/react-native-sdk":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/react-native-sdk@workspace:packages/react-native-sdk"
+  resolution: "@straw-hat/react-native-sdk@workspace:packages/@straw-hat/react-native-sdk"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.2
     "@types/react-native": ^0.67.3
@@ -3710,9 +3710,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/react-query-fetcher@workspace:packages/react-query-fetcher":
+"@straw-hat/react-query-fetcher@workspace:packages/@straw-hat/react-query-fetcher":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/react-query-fetcher@workspace:packages/react-query-fetcher"
+  resolution: "@straw-hat/react-query-fetcher@workspace:packages/@straw-hat/react-query-fetcher"
   dependencies:
     "@straw-hat/fetcher": ^4.8.0
     "@straw-hat/tsconfig": ^3.0.2
@@ -3733,9 +3733,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/sdk@workspace:packages/sdk":
+"@straw-hat/sdk@workspace:packages/@straw-hat/sdk":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/sdk@workspace:packages/sdk"
+  resolution: "@straw-hat/sdk@workspace:packages/@straw-hat/sdk"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.1
     "@straw-hat/types": ^0.5.0
@@ -3746,15 +3746,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/tsconfig@^3.0.0, @straw-hat/tsconfig@^3.0.1, @straw-hat/tsconfig@^3.0.2, @straw-hat/tsconfig@workspace:packages/tsconfig":
+"@straw-hat/tsconfig@^3.0.0, @straw-hat/tsconfig@^3.0.1, @straw-hat/tsconfig@^3.0.2, @straw-hat/tsconfig@workspace:packages/@straw-hat/tsconfig":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/tsconfig@workspace:packages/tsconfig"
+  resolution: "@straw-hat/tsconfig@workspace:packages/@straw-hat/tsconfig"
   languageName: unknown
   linkType: soft
 
-"@straw-hat/types@^0.5.0, @straw-hat/types@workspace:packages/types":
+"@straw-hat/types@^0.5.0, @straw-hat/types@workspace:packages/@straw-hat/types":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/types@workspace:packages/types"
+  resolution: "@straw-hat/types@workspace:packages/@straw-hat/types"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.1
     "@types/react": ^17.0.40
@@ -3763,9 +3763,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/webpack-chain-graphql@workspace:packages/webpack-chain-graphql":
+"@straw-hat/webpack-chain-graphql@workspace:packages/@straw-hat/webpack-chain-graphql":
   version: 0.0.0-use.local
-  resolution: "@straw-hat/webpack-chain-graphql@workspace:packages/webpack-chain-graphql"
+  resolution: "@straw-hat/webpack-chain-graphql@workspace:packages/@straw-hat/webpack-chain-graphql"
   dependencies:
     "@straw-hat/tsconfig": ^3.0.2
     "@types/jest": ^27.4.1

@@ -1,0 +1,31 @@
+{
+  "name": "@straw-hat/eslint-config-nextjs",
+  "version": "3.0.2",
+  "description": "Straw Hat Team ESLint NextJS configurations",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "directory": "packages/@straw-hat/eslint-config-nextjs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-next": "^12.0.4"
+  }
+}

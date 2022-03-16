@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/@straw-hat/*"
   ],
   "scripts": {
     "prepare": "husky install",
