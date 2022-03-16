@@ -26,7 +26,7 @@ export class FetcherError extends Error {
     this.url = args.url;
   }
 
-  get message() {
+  override get message() {
     return `${this.status} ${this.statusText} ${this.url}`;
   }
 }

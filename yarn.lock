@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 5
+  version: 6
   cacheKey: 8
 
 "@ampproject/remapping@npm:^2.1.0":
@@ -3523,7 +3523,7 @@ __metadata:
     "@types/jest": ^27.4.1
     jest: ^27.5.1
     ts-jest: ^27.1.3
-    typescript: ^4.5.4
+    typescript: ^4.6.2
   languageName: unknown
   linkType: soft
 
@@ -3531,12 +3531,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/fetcher@workspace:packages/fetcher"
   dependencies:
-    "@straw-hat/tsconfig": ^2.3.1
+    "@straw-hat/tsconfig": ^3.0.2
     "@types/jest": ^27.4.1
     jest: ^27.5.1
     jest-fetch-mock: ^3.0.3
     ts-jest: ^27.1.3
-    typescript: ^4.2.4
+    typescript: ^4.6.2
   languageName: unknown
   linkType: soft
 
@@ -3565,7 +3565,7 @@ __metadata:
     prettier: ^2.6.0
     rimraf: ^3.0.2
     typedoc: ^0.22.13
-    typescript: ^4.5.4
+    typescript: ^4.6.2
   languageName: unknown
   linkType: soft
 
@@ -3574,11 +3574,11 @@ __metadata:
   resolution: "@straw-hat/jest-config-chain@workspace:packages/jest-config-chain"
   dependencies:
     "@straw-hat/chainable-config": ^0.9.0
-    "@straw-hat/tsconfig": ^2.3.1
+    "@straw-hat/tsconfig": ^3.0.2
     "@types/jest": ^27.4.1
     jest: ^27.5.1
     ts-jest: ^27.1.3
-    typescript: ^4.1.3
+    typescript: ^4.6.2
   languageName: unknown
   linkType: soft
 
@@ -3648,7 +3648,7 @@ __metadata:
     openapi-types: ^10.0.0
     prettier: ^2.6.0
     ts-jest: ^27.1.3
-    typescript: ^4.5.4
+    typescript: ^4.6.2
   bin:
     sht-openapi-web-sdk-generator: bin/sht-openapi-web-sdk-generator
   languageName: unknown
@@ -3683,7 +3683,7 @@ __metadata:
   resolution: "@straw-hat/react-hooks@workspace:packages/react-hooks"
   dependencies:
     "@straw-hat/is-ssr": ^2.0.0
-    "@straw-hat/tsconfig": ^2.3.1
+    "@straw-hat/tsconfig": ^3.0.2
     "@testing-library/react-hooks": ^7.0.2
     "@types/jest": ^27.4.1
     "@types/react": ^17.0.40
@@ -3691,7 +3691,7 @@ __metadata:
     react: ^17.0.2
     react-test-renderer: ^17.0.2
     ts-jest: ^27.1.3
-    typescript: ^4.2.3
+    typescript: ^4.6.2
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -3701,10 +3701,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/react-native-sdk@workspace:packages/react-native-sdk"
   dependencies:
-    "@straw-hat/tsconfig": ^2.3.1
+    "@straw-hat/tsconfig": ^3.0.2
     "@types/react-native": ^0.67.3
     react-native: ^0.67.3
-    typescript: ^4.0.3
+    typescript: ^4.6.2
   peerDependencies:
     react-native: ^0.61.3
   languageName: unknown
@@ -3715,7 +3715,7 @@ __metadata:
   resolution: "@straw-hat/react-query-fetcher@workspace:packages/react-query-fetcher"
   dependencies:
     "@straw-hat/fetcher": ^4.8.0
-    "@straw-hat/tsconfig": ^2.3.1
+    "@straw-hat/tsconfig": ^3.0.2
     "@testing-library/react-hooks": ^7.0.2
     "@types/jest": ^27.4.1
     "@types/react": ^17.0.40
@@ -3726,7 +3726,7 @@ __metadata:
     react-query: ^3.34.16
     react-test-renderer: ^17.0.2
     ts-jest: ^27.1.3
-    typescript: ^4.4.4
+    typescript: ^4.6.2
   peerDependencies:
     "@straw-hat/fetcher": ^4.4.1
     react-query: ^3.30.0
@@ -3752,13 +3752,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/tsconfig@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "@straw-hat/tsconfig@npm:2.3.1"
-  checksum: 0a87404f4ac84952dee0a610946b38036092e56b1cb46de1a9f6b7e8b3f019ef40493cb121135a74ed8e4b532cc5a43c4cc66962c4fd9b6dd654d83df90fc2fe
-  languageName: node
-  linkType: hard
-
 "@straw-hat/types@^0.5.0, @straw-hat/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@straw-hat/types@workspace:packages/types"
@@ -3774,12 +3767,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/webpack-chain-graphql@workspace:packages/webpack-chain-graphql"
   dependencies:
-    "@straw-hat/tsconfig": ^2.3.1
+    "@straw-hat/tsconfig": ^3.0.2
     "@types/jest": ^27.4.1
     jest: ^27.5.1
     ts-jest: ^27.1.3
     typedoc: ^0.22.13
-    typescript: ^4.0.3
+    typescript: ^4.6.2
     webpack-chain: ^6.5.1
   peerDependencies:
     graphql-tag: ^2.9.2
@@ -13708,7 +13701,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.0.3, typescript@npm:^4.1.3, typescript@npm:^4.2.3, typescript@npm:^4.2.4, typescript@npm:^4.4.4, typescript@npm:^4.6.2":
+"typescript@npm:^4.6.2":
   version: 4.6.2
   resolution: "typescript@npm:4.6.2"
   bin:
@@ -13718,33 +13711,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.5.4":
-  version: 4.5.4
-  resolution: "typescript@npm:4.5.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 59f3243f9cd6fe3161e6150ff6bf795fc843b4234a655dbd938a310515e0d61afd1ac942799e7415e4334255e41c2c49b7dd5d9fd38a17acd25a6779ca7e0961
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^4.0.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.1.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.2.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.2.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.6.2#~builtin<compat/typescript>":
   version: 4.6.2
-  resolution: "typescript@patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=493e53"
+  resolution: "typescript@patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: efb83260a22ee49d4c8bdc59b3cefe54fdf51d6f563f5c3a35aa3d5e46fb12f3f1d33a36d6f9f64171e567ead1847e99cb612d0a9a74e7d44e16cad9d0bbc937
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^4.5.4#~builtin<compat/typescript>":
-  version: 4.5.4
-  resolution: "typescript@patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 2e488dde7d2c4a2fa2e79cf2470600f8ce81bc0563c276b72df8ff412d74456ae532ba824650ae936ce207440c79720ddcfaa25e3cb4477572b8534fa4e34d49
+  checksum: 40b493a71747fb89fa70df104e2c4a5e284b43750af5bea024090a5261cefa387f7a9372411b13030f7bf5555cee4275443d08805642ae5c74ef76740854a4c7
   languageName: node
   linkType: hard
 

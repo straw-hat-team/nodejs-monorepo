@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@straw-hat/fetcher": "^4.8.0",
-    "@straw-hat/tsconfig": "^2.3.1",
+    "@straw-hat/tsconfig": "^3.0.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.40",
@@ -50,6 +50,6 @@
     "react-query": "^3.34.16",
     "react-test-renderer": "^17.0.2",
     "ts-jest": "^27.1.3",
-    "typescript": "^4.4.4"
+    "typescript": "^4.6.2"
   }
 }

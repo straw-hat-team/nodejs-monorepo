@@ -1,5 +1,5 @@
 {
-  "extends": "@straw-hat/tsconfig/lib/base",
+  "extends": "@straw-hat/tsconfig/lib/browser.lib",
   "compilerOptions": {
     "module": "CommonJS",
     "target": "ES6",
