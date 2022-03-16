@@ -6025,13 +6025,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@straw-hat/fancy-map", [
-        ["npm:2.0.0", {
-          "packageLocation": "./.yarn/cache/@straw-hat-fancy-map-npm-2.0.0-68e18247da-e487cb90a6.zip/node_modules/@straw-hat/fancy-map/",
-          "packageDependencies": [
-            ["@straw-hat/fancy-map", "npm:2.0.0"]
-          ],
-          "linkType": "HARD",
-        }],
         ["workspace:packages/fancy-map", {
           "packageLocation": "./packages/fancy-map/",
           "packageDependencies": [
@@ -6061,13 +6054,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@straw-hat/is-ssr", [
-        ["npm:1.0.3", {
-          "packageLocation": "./.yarn/cache/@straw-hat-is-ssr-npm-1.0.3-dd7595478b-7a26f62ef2.zip/node_modules/@straw-hat/is-ssr/",
-          "packageDependencies": [
-            ["@straw-hat/is-ssr", "npm:1.0.3"]
-          ],
-          "linkType": "HARD",
-        }],
         ["workspace:packages/is-ssr", {
           "packageLocation": "./packages/is-ssr/",
           "packageDependencies": [
@@ -6162,7 +6148,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@oclif/help", "npm:1.0.1"],
             ["@oclif/plugin-help", "npm:5.1.12"],
             ["@stoplight/json-ref-resolver", "npm:3.1.3"],
-            ["@straw-hat/fancy-map", "npm:2.0.0"],
+            ["@straw-hat/fancy-map", "workspace:packages/fancy-map"],
             ["@straw-hat/prettier-config", "virtual:6886860851b5e8e8f4907d6c88f73aedbb8977a2910c13ca807964b0b748e2f72760ebcbf52a3362288cf197ca1fc2a3c5d907d6e8eb84ef7d033e1af938a836#workspace:packages/prettier-config"],
             ["@straw-hat/tsconfig", "workspace:packages/tsconfig"],
             ["@straw-hat/types", "virtual:1bb539b4b45a9115c5f2ec77b02d7a7ba599a159de5cf57131b268dda77e14c22532e4bd781367101241d86b1267f1a297be5c853d353b558377b45c061f0518#workspace:packages/types"],
@@ -6255,7 +6241,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/react-hooks/",
           "packageDependencies": [
             ["@straw-hat/react-hooks", "workspace:packages/react-hooks"],
-            ["@straw-hat/is-ssr", "npm:1.0.3"],
+            ["@straw-hat/is-ssr", "workspace:packages/is-ssr"],
             ["@straw-hat/tsconfig", "npm:2.3.1"],
             ["@testing-library/react-hooks", "virtual:63bc67970471ba9b13ccf4f7f5eafa52db19204ed476b4031545d9b6e8f5325248c8a3966443acc7b26de1f4fb8dfc7adb17da5cfd9a22192d29b97e02481b6f#npm:7.0.2"],
             ["@types/jest", "npm:27.4.1"],

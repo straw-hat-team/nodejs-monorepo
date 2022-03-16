@@ -33,7 +33,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@straw-hat/is-ssr": "^1.0.3"
+    "@straw-hat/is-ssr": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^17.0.1"
