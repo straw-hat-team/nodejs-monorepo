@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "@straw-hat/react-native-sdk",
   "version": "0.1.0",
   "description": "React Native utilities",
