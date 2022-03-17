@@ -3,7 +3,8 @@
   "compilerOptions": {
     "module": "CommonJS",
     "target": "ES6",
-    "outDir": "dist"
+    "outDir": "dist",
+    "lib": ["ESNext"]
   },
   "include": ["src", "tests"]
 }

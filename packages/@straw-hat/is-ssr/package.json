@@ -26,12 +26,9 @@
     "prepack": "yarn build",
     "docs:typedoc": "yarn run -T typedoc"
   },
-  "type": "module",
+  "type": "commonjs",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "exports": {
-    ".": "./dist/index.js"
-  },
   "files": [
     "dist",
     "README.md"

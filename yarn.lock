@@ -3746,7 +3746,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/tsconfig@^3.0.0, @straw-hat/tsconfig@^3.0.1, @straw-hat/tsconfig@^3.0.2, @straw-hat/tsconfig@workspace:packages/@straw-hat/tsconfig":
+"@straw-hat/tsconfig@npm:^3.0.0, @straw-hat/tsconfig@npm:^3.0.1, @straw-hat/tsconfig@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@straw-hat/tsconfig@npm:3.0.2"
+  checksum: 3fd6a6f929044f1ae4baed335316f924965b25ee151df63b0bb05125c243e8174b1a6361cf3526c0c12a24106ab5ced858af1cb9c6d8306e48a6fc44792c7fc7
+  languageName: node
+  linkType: hard
+
+"@straw-hat/tsconfig@workspace:packages/@straw-hat/tsconfig":
   version: 0.0.0-use.local
   resolution: "@straw-hat/tsconfig@workspace:packages/@straw-hat/tsconfig"
   languageName: unknown
