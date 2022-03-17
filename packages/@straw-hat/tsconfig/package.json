@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/tsconfig",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "TypeScript configurations",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {

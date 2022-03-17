@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.26.10",
-    "@straw-hat/tsconfig": "^3.0.1",
+    "@straw-hat/tsconfig": "^3.0.2",
     "@straw-hat/types": "^0.5.0",
     "@types/debug": "^4.1.7",
     "@types/jest": "^27.4.1",
