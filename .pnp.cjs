@@ -159,10 +159,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#workspace:packages/@straw-hat/prettier-config"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["husky", "npm:7.0.4"],\
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],\
-            ["lint-staged", "npm:12.3.5"],\
+            ["lint-staged", "npm:12.3.6"],\
             ["monodeploy", "npm:3.0.0-rc.1"],\
             ["prettier", "npm:2.6.0"],\
             ["rimraf", "npm:3.0.2"],\
@@ -5946,7 +5946,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/chainable-config/",\
           "packageDependencies": [\
             ["@straw-hat/chainable-config", "workspace:packages/@straw-hat/chainable-config"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/jest", "npm:27.4.1"],\
             ["cli-highlight", "npm:2.1.11"],\
             ["deepmerge", "npm:4.2.2"],\
@@ -6027,7 +6027,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/fancy-map/",\
           "packageDependencies": [\
             ["@straw-hat/fancy-map", "workspace:packages/@straw-hat/fancy-map"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],\
             ["ts-jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:27.1.3"],\
@@ -6041,7 +6041,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/fetcher/",\
           "packageDependencies": [\
             ["@straw-hat/fetcher", "workspace:packages/@straw-hat/fetcher"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],\
             ["jest-fetch-mock", "npm:3.0.3"],\
@@ -6056,7 +6056,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/is-ssr/",\
           "packageDependencies": [\
             ["@straw-hat/is-ssr", "workspace:packages/@straw-hat/is-ssr"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],\
             ["ts-jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:27.1.3"],\
@@ -6071,10 +6071,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/javascript-monorepo", "workspace:."],\
             ["@straw-hat/prettier-config", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#workspace:packages/@straw-hat/prettier-config"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["husky", "npm:7.0.4"],\
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],\
-            ["lint-staged", "npm:12.3.5"],\
+            ["lint-staged", "npm:12.3.6"],\
             ["monodeploy", "npm:3.0.0-rc.1"],\
             ["prettier", "npm:2.6.0"],\
             ["rimraf", "npm:3.0.2"],\
@@ -6090,7 +6090,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/jest-config-chain", "workspace:packages/@straw-hat/jest-config-chain"],\
             ["@straw-hat/chainable-config", "workspace:packages/@straw-hat/chainable-config"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],\
             ["ts-jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:27.1.3"],\
@@ -6104,7 +6104,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/logger/",\
           "packageDependencies": [\
             ["@straw-hat/logger", "workspace:packages/@straw-hat/logger"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],\
             ["ts-jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:27.1.3"],\
@@ -6118,7 +6118,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/next-sdk/",\
           "packageDependencies": [\
             ["@straw-hat/next-sdk", "workspace:packages/@straw-hat/next-sdk"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@straw-hat/types", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#workspace:packages/@straw-hat/types"],\
             ["@testing-library/react", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#npm:12.1.4"],\
             ["@types/jest", "npm:27.4.1"],\
@@ -6148,7 +6148,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@stoplight/json-ref-resolver", "npm:3.1.3"],\
             ["@straw-hat/fancy-map", "workspace:packages/@straw-hat/fancy-map"],\
             ["@straw-hat/prettier-config", "virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#workspace:packages/@straw-hat/prettier-config"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@straw-hat/types", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#workspace:packages/@straw-hat/types"],\
             ["@types/debug", "npm:4.1.7"],\
             ["@types/jest", "npm:27.4.1"],\
@@ -6226,7 +6226,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/react-fullscreen/",\
           "packageDependencies": [\
             ["@straw-hat/react-fullscreen", "workspace:packages/@straw-hat/react-fullscreen"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/fscreen", "npm:1.0.1"],\
             ["@types/react", "npm:17.0.40"],\
             ["fscreen", "npm:1.2.0"]\
@@ -6240,7 +6240,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/react-hooks", "workspace:packages/@straw-hat/react-hooks"],\
             ["@straw-hat/is-ssr", "workspace:packages/@straw-hat/is-ssr"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@testing-library/react-hooks", "virtual:6fc72f00709e4d8d88e291d5795ad70a1c6a966b0796f9ff31bc1c8d8e4a17757f8a27fe308b4271acb949e2fc9d65bfb93738ca591f12e34c4d18f1e3741989#npm:7.0.2"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/react", "npm:17.0.40"],\
@@ -6258,7 +6258,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/react-native-sdk/",\
           "packageDependencies": [\
             ["@straw-hat/react-native-sdk", "workspace:packages/@straw-hat/react-native-sdk"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/react-native", "npm:0.67.3"],\
             ["react-native", "virtual:28ae392bc69eb8d47b5e38f3b63ccb030c068cac250b65b05f735695fc99f90ff5df636ceb8b5c994559251d1288e78fd57dfc2cf820ef3f5dcc549f460f787f#npm:0.67.3"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
@@ -6272,7 +6272,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/react-query-fetcher", "workspace:packages/@straw-hat/react-query-fetcher"],\
             ["@straw-hat/fetcher", "workspace:packages/@straw-hat/fetcher"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@testing-library/react-hooks", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:7.0.2"],\
             ["@types/jest", "npm:27.4.1"],\
             ["@types/react", "npm:17.0.40"],\
@@ -6293,7 +6293,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/sdk/",\
           "packageDependencies": [\
             ["@straw-hat/sdk", "workspace:packages/@straw-hat/sdk"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@straw-hat/types", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#workspace:packages/@straw-hat/types"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],\
@@ -6304,6 +6304,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@straw-hat/tsconfig", [\
+        ["npm:3.0.2", {\
+          "packageLocation": "./.yarn/cache/@straw-hat-tsconfig-npm-3.0.2-b274d95dd7-3fd6a6f929.zip/node_modules/@straw-hat/tsconfig/",\
+          "packageDependencies": [\
+            ["@straw-hat/tsconfig", "npm:3.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["workspace:packages/@straw-hat/tsconfig", {\
           "packageLocation": "./packages/@straw-hat/tsconfig/",\
           "packageDependencies": [\
@@ -6317,7 +6324,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@straw-hat-types-virtual-2b633be5c2/1/packages/@straw-hat/types/",\
           "packageDependencies": [\
             ["@straw-hat/types", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#workspace:packages/@straw-hat/types"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/react", "npm:17.0.40"]\
           ],\
           "packagePeers": [\
@@ -6329,7 +6336,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/types/",\
           "packageDependencies": [\
             ["@straw-hat/types", "workspace:packages/@straw-hat/types"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/react", "npm:17.0.40"]\
           ],\
           "linkType": "SOFT"\
@@ -6340,7 +6347,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/webpack-chain-graphql/",\
           "packageDependencies": [\
             ["@straw-hat/webpack-chain-graphql", "workspace:packages/@straw-hat/webpack-chain-graphql"],\
-            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+            ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:c9b7653778599f701cf57e9d6ef62dcfab8bc1e5b39f7a23b4e05f78e1a84a087441ec4455819ab3206c23fc29083d6d00395537efec67200207fa842ae3a641#npm:27.5.1"],\
             ["ts-jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:27.1.3"],\
@@ -9799,6 +9806,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
+        ["virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.3.3", {\
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-12cd5bfb96/0/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",\
+          "packageDependencies": [\
+            ["debug", "virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.3.3"],\
+            ["@types/supports-color", null],\
+            ["ms", "npm:2.1.2"],\
+            ["supports-color", "npm:9.2.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/supports-color",\
+            "supports-color"\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["virtual:428f325a939c2653ad822eb3d75efb02ac311523dd0d4f9645afc39ea00bd86eceac35a9d59c9b6977d76b670a4ef0ae057ea572338a44729aa592711a8c05a3#npm:4.3.2", {\
           "packageLocation": "./.yarn/__virtual__/debug-virtual-c8b34b81df/0/cache/debug-npm-4.3.2-f0148b6afe-820ea160e2.zip/node_modules/debug/",\
           "packageDependencies": [\
@@ -9820,20 +9841,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supports-color", null],\
             ["ms", "npm:2.1.2"],\
             ["supports-color", "npm:8.1.1"]\
-          ],\
-          "packagePeers": [\
-            "@types/supports-color",\
-            "supports-color"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:930196af82efb7d76d17fca1ac22b8700a254ff7c58dfa910fd1ccb851ef29f9b7db963c602b7a7381d2a4561093593c39b1e8634b0faaaebbc15e959f04a3cc#npm:4.3.3", {\
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-2a2b78ceef/0/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",\
-          "packageDependencies": [\
-            ["debug", "virtual:930196af82efb7d76d17fca1ac22b8700a254ff7c58dfa910fd1ccb851ef29f9b7db963c602b7a7381d2a4561093593c39b1e8634b0faaaebbc15e959f04a3cc#npm:4.3.3"],\
-            ["@types/supports-color", null],\
-            ["ms", "npm:2.1.2"],\
-            ["supports-color", "npm:9.2.1"]\
           ],\
           "packagePeers": [\
             "@types/supports-color",\
@@ -13200,20 +13207,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["lint-staged", [\
-        ["npm:12.3.5", {\
-          "packageLocation": "./.yarn/cache/lint-staged-npm-12.3.5-930196af82-6653c7078b.zip/node_modules/lint-staged/",\
+        ["npm:12.3.6", {\
+          "packageLocation": "./.yarn/cache/lint-staged-npm-12.3.6-34f1b5abbe-b5075addb7.zip/node_modules/lint-staged/",\
           "packageDependencies": [\
-            ["lint-staged", "npm:12.3.5"],\
+            ["lint-staged", "npm:12.3.6"],\
             ["cli-truncate", "npm:3.1.0"],\
             ["colorette", "npm:2.0.16"],\
             ["commander", "npm:8.3.0"],\
-            ["debug", "virtual:930196af82efb7d76d17fca1ac22b8700a254ff7c58dfa910fd1ccb851ef29f9b7db963c602b7a7381d2a4561093593c39b1e8634b0faaaebbc15e959f04a3cc#npm:4.3.3"],\
+            ["debug", "virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.3.3"],\
             ["execa", "npm:5.1.1"],\
             ["lilconfig", "npm:2.0.4"],\
-            ["listr2", "virtual:930196af82efb7d76d17fca1ac22b8700a254ff7c58dfa910fd1ccb851ef29f9b7db963c602b7a7381d2a4561093593c39b1e8634b0faaaebbc15e959f04a3cc#npm:4.0.5"],\
+            ["listr2", "virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.0.5"],\
             ["micromatch", "npm:4.0.4"],\
             ["normalize-path", "npm:3.0.0"],\
             ["object-inspect", "npm:1.12.0"],\
+            ["pidtree", "npm:0.5.0"],\
             ["string-argv", "npm:0.3.1"],\
             ["supports-color", "npm:9.2.1"],\
             ["yaml", "npm:1.10.2"]\
@@ -13229,10 +13237,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:930196af82efb7d76d17fca1ac22b8700a254ff7c58dfa910fd1ccb851ef29f9b7db963c602b7a7381d2a4561093593c39b1e8634b0faaaebbc15e959f04a3cc#npm:4.0.5", {\
-          "packageLocation": "./.yarn/__virtual__/listr2-virtual-2593c7fe16/0/cache/listr2-npm-4.0.5-e9e44decc1-7af31851ab.zip/node_modules/listr2/",\
+        ["virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.0.5", {\
+          "packageLocation": "./.yarn/__virtual__/listr2-virtual-87cb371aee/0/cache/listr2-npm-4.0.5-e9e44decc1-7af31851ab.zip/node_modules/listr2/",\
           "packageDependencies": [\
-            ["listr2", "virtual:930196af82efb7d76d17fca1ac22b8700a254ff7c58dfa910fd1ccb851ef29f9b7db963c602b7a7381d2a4561093593c39b1e8634b0faaaebbc15e959f04a3cc#npm:4.0.5"],\
+            ["listr2", "virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.0.5"],\
             ["@types/enquirer", null],\
             ["cli-truncate", "npm:2.1.0"],\
             ["colorette", "npm:2.0.16"],\
@@ -15247,6 +15255,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/picomatch-npm-2.3.0-5e60e6c82d-16818720ea.zip/node_modules/picomatch/",\
           "packageDependencies": [\
             ["picomatch", "npm:2.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["pidtree", [\
+        ["npm:0.5.0", {\
+          "packageLocation": "./.yarn/cache/pidtree-npm-0.5.0-ed08283e89-371cd14bbc.zip/node_modules/pidtree/",\
+          "packageDependencies": [\
+            ["pidtree", "npm:0.5.0"]\
           ],\
           "linkType": "HARD"\
         }]\

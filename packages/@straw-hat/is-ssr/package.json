@@ -27,17 +27,13 @@
     "docs:typedoc": "yarn run -T typedoc"
   },
   "type": "module",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "exports": {
-    ".": "./dist/index.js"
-  },
+  "exports": "./dist/index.js",
   "files": [
     "dist",
     "README.md"
   ],
   "devDependencies": {
-    "@straw-hat/tsconfig": "^3.0.1",
+    "@straw-hat/tsconfig": "^3.0.2",
     "@types/jest": "^27.4.1",
     "jest": "^27.5.1",
     "ts-jest": "^27.1.3",

@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as Mustache from 'mustache';
-import { FancyMap } from '@straw-hat/fancy-map/dist';
+import { FancyMap } from '@straw-hat/fancy-map';
 import { Dir } from './dir';
 import { createDebugger } from './helpers';
 

@@ -16,10 +16,10 @@
   },
   "devDependencies": {
     "@straw-hat/prettier-config": "^2.0.2",
-    "@straw-hat/tsconfig": "^3.0.1",
+    "@straw-hat/tsconfig": "^3.0.2",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
-    "lint-staged": "^12.3.5",
+    "lint-staged": "^12.3.6",
     "monodeploy": "^3.0.0-rc.1",
     "prettier": "^2.6.0",
     "rimraf": "^3.0.2",

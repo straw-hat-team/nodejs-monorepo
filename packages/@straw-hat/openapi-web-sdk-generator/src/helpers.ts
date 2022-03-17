@@ -8,7 +8,7 @@ import { cosmiconfig } from 'cosmiconfig';
 import { OpenApiWebSdkGeneratorConfiguration } from './openapi-web-sdk-generator';
 import SwaggerParser from '@apidevtools/swagger-parser';
 import prettier from 'prettier';
-import prettierConfig from '@straw-hat/prettier-config/lib';
+import prettierConfig from '@straw-hat/prettier-config';
 
 const cosmiconfigExplorer = cosmiconfig('openapi-web-sdk-generator');
 const debug = createDebugger('helpers');
