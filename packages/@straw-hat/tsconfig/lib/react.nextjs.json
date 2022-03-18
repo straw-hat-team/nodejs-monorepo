@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base",
+  "display": "React Next.js",
   "compilerOptions": {
     "target": "es5",
     "jsx": "preserve",

@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base",
+  "display": "Cypress",
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs"

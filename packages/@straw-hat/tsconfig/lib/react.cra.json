@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base",
+  "display": "React CRA",
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
