@@ -29,4 +29,6 @@
 
 ### Unreleased
 
+- [@straw-hat/cli](packages/@straw-hat/cli/README.md)
+- [@straw-hat/cli-core](packages/@straw-hat/cli-core/README.md)
 - [@straw-hat/react-native-sdk](packages/@straw-hat/react-native-sdk/README.md)
