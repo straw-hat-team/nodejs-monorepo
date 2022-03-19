@@ -1,0 +1,77 @@
+{
+  "private": true,
+  "name": "@straw-hat/cli",
+  "version": "0.10.3",
+  "description": "Straw Hat Team CLI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript.git",
+    "directory": "packages/tooling/cli"
+  },
+  "keywords": [
+    "oclif",
+    "cli",
+    "straw-hat-team"
+  ],
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:jest": "yarn run -T jest",
+    "prepack": "yarn build && yarn oclif:manifest",
+    "postpack": "yarn run -T rimraf oclif.manifest.json",
+    "docs:typedoc": "yarn run -T typedoc",
+    "oclif:manifest": "oclif manifest dist",
+    "oclif:readme": "oclif readme --multi  --dir=docs/commands"
+  },
+  "bin": {
+    "shc": "bin/run"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "bin",
+    "dist",
+    "docs",
+    "oclif.manifest.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@oclif/core": "1.0.10",
+    "@oclif/plugin-help": "5.1.10",
+    "@oclif/plugin-version": "1.0.3",
+    "@straw-hat/cli-core": "0.10.3",
+    "@straw-hat/jest-config-chain": "1.0.2",
+    "cypress": "^9.5.2",
+    "debug": "4.3.3",
+    "del": "6.0.0",
+    "enquirer": "2.3.6",
+    "envinfo": "7.8.1",
+    "jest": "27.4.4",
+    "jest-cli": "27.4.4",
+    "jest-watch-typeahead": "1.0.0",
+    "ts-jest": "27.1.1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "1.26.9",
+    "@straw-hat/tsconfig": "^3.0.2",
+    "@types/node": "^17.0.21"
+  },
+  "oclif": {
+    "commands": "./dist/commands",
+    "bin": "shc",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-version"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "gen": {
+        "description": "multiple generators"
+      },
+      "cypress": {
+        "description": "cypress commands"
+      }
+    }
+  }
+}
