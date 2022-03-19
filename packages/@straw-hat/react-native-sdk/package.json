@@ -5,7 +5,7 @@
   "description": "React Native utilities",
   "repository": {
     "type": "git",
-    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
     "directory": "packages/@straw-hat/react-native-sdk"
   },
   "license": "MIT",

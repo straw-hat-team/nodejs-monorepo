@@ -5,7 +5,7 @@
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
     "directory": "packages/@straw-hat/eslint-config-base"
   },
   "license": "MIT",

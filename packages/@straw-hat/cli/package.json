@@ -5,7 +5,7 @@
   "description": "Straw Hat Team CLI",
   "repository": {
     "type": "git",
-    "url": "https://github.com/straw-hat-team/javascript.git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
     "directory": "packages/tooling/cli"
   },
   "keywords": [

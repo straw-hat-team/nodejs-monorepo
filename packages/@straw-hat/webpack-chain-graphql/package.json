@@ -4,7 +4,7 @@
   "description": "Webpack Chain preset for adding GraphQL file support",
   "repository": {
     "type": "git",
-    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
     "directory": "packages/@straw-hat/webpack-chain-graphql"
   },
   "license": "MIT",

@@ -4,7 +4,7 @@
   "description": "React Query and Straw Hat Fetcher Integration",
   "repository": {
     "type": "git",
-    "url": "https://github.com/straw-hat-team/javascript-monorepo.git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
     "directory": "packages/@straw-hat/react-query-fetcher"
   },
   "license": "MIT",
