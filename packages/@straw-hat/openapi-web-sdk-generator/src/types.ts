@@ -19,7 +19,11 @@ export type OpenAPIV3NonArraySchemaObject = OpenAPIV3.NonArraySchemaObject & {
   'x-schema-id'?: string;
 };
 
-export type OpenAPIV3SchemaObject = Referenceable<OpenAPIV3.SchemaObject> & {
+export type OpenAPIV3SchemaObject = OpenAPIV3.SchemaObject & {
+  'x-schema-id'?: string;
+};
+
+export type OpenAPIV3ReferenceableSchemaObject = Referenceable<OpenAPIV3SchemaObject> & {
   'x-schema-id'?: string;
 };
 
