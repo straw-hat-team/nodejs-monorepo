@@ -4,9 +4,9 @@ import type { {{{typePrefix}}}Response, {{{typePrefix}}}Params } from '{{{import
 import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 import { {{{functionName}}} } from '{{{importPath}}}';
 
-type Use{{{pascalFunctionName}}}Params = Omit<{{{typePrefix}}}Params, 'options'>;
+export type Use{{{pascalFunctionName}}}Params = Omit<{{{typePrefix}}}Params, 'options'>;
 
-type Use{{{pascalFunctionName}}}Args<TData, TError> = Omit<
+export type Use{{{pascalFunctionName}}}Args<TData, TError> = Omit<
   UseFetcherQueryArgs<{{{typePrefix}}}Response, TError, TData, Use{{{pascalFunctionName}}}Params>,
   'queryKey' | 'endpoint'
 >;
