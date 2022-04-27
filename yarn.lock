@@ -3960,7 +3960,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/fancy-map@^3.0.1, @straw-hat/fancy-map@workspace:packages/@straw-hat/fancy-map":
+"@straw-hat/fancy-map@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@straw-hat/fancy-map@npm:1.0.2"
+  checksum: 6d2461c983415d03d3c4475d24757297dcfcbe10dda0a88c421450d39d74eda4bf1a36101462fb6a3de1d02f20ad90ab9fec809c2362603dbd37039ad3f7e733
+  languageName: node
+  linkType: hard
+
+"@straw-hat/fancy-map@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@straw-hat/fancy-map@npm:2.0.0"
+  checksum: e487cb90a640ecdfd66d64715c84c349867b39e3b01267b2996e5a3f267d4f71507872ab7a81474202d3c156473b6e932e3d752ca722cca3bff65f936f79d2d3
+  languageName: node
+  linkType: hard
+
+"@straw-hat/fancy-map@workspace:packages/@straw-hat/fancy-map":
   version: 0.0.0-use.local
   resolution: "@straw-hat/fancy-map@workspace:packages/@straw-hat/fancy-map"
   dependencies:
@@ -3972,13 +3986,6 @@ __metadata:
     typescript: ^4.6.2
   languageName: unknown
   linkType: soft
-
-"@straw-hat/fancy-map@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@straw-hat/fancy-map@npm:1.0.2"
-  checksum: 6d2461c983415d03d3c4475d24757297dcfcbe10dda0a88c421450d39d74eda4bf1a36101462fb6a3de1d02f20ad90ab9fec809c2362603dbd37039ad3f7e733
-  languageName: node
-  linkType: hard
 
 "@straw-hat/fetcher@^4.8.0, @straw-hat/fetcher@workspace:packages/@straw-hat/fetcher":
   version: 0.0.0-use.local
@@ -4098,7 +4105,7 @@ __metadata:
     "@oclif/help": ^1.0.1
     "@oclif/plugin-help": ^5.1.12
     "@stoplight/json-ref-resolver": ^3.1.3
-    "@straw-hat/fancy-map": ^3.0.1
+    "@straw-hat/fancy-map": ^2.0.0
     "@straw-hat/prettier-config": ^2.0.2
     "@straw-hat/tsconfig": ^3.0.1
     "@straw-hat/types": ^0.5.0

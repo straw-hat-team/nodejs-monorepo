@@ -6527,6 +6527,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/@straw-hat-fancy-map-npm-2.0.0-68e18247da-e487cb90a6.zip/node_modules/@straw-hat/fancy-map/",\
+          "packageDependencies": [\
+            ["@straw-hat/fancy-map", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["workspace:packages/@straw-hat/fancy-map", {\
           "packageLocation": "./packages/@straw-hat/fancy-map/",\
           "packageDependencies": [\
@@ -6668,7 +6675,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@oclif/help", "npm:1.0.1"],\
             ["@oclif/plugin-help", "npm:5.1.12"],\
             ["@stoplight/json-ref-resolver", "npm:3.1.3"],\
-            ["@straw-hat/fancy-map", "workspace:packages/@straw-hat/fancy-map"],\
+            ["@straw-hat/fancy-map", "npm:2.0.0"],\
             ["@straw-hat/prettier-config", "virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#workspace:packages/@straw-hat/prettier-config"],\
             ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@straw-hat/types", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#workspace:packages/@straw-hat/types"],\
