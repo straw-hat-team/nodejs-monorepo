@@ -25,7 +25,7 @@
     "build": "tsc -p tsconfig.prod.json",
     "test:jest": "yarn run -T jest",
     "prepack": "yarn build && yarn oclif:manifest && yarn oclif:readme",
-    "postpack": "rimraf oclif.manifest.json",
+    "postpack": "yarn run -T rimraf oclif.manifest.json",
     "docs:typedoc": "yarn run -T typedoc",
     "oclif:manifest": "oclif-dev manifest",
     "oclif:readme": "oclif-dev readme --multi --dir=docs/commands"
