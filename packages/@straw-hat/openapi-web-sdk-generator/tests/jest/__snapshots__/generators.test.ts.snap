@@ -961,9 +961,9 @@ import type { AddPetResponse, AddPetParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { addPet } from '@my-sdk/pepeg';
 
-type UseAddPetVariables = Omit<AddPetParams, 'options'>;
+export type UseAddPetVariables = Omit<AddPetParams, 'options'>;
 
-type UseAddPetArgs<TError = unknown> = {
+export type UseAddPetArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<AddPetResponse, TError, UseAddPetVariables>, 'mutationKey'>;
 };
 
@@ -989,9 +989,9 @@ import type { CreateUserResponse, CreateUserParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { createUser } from '@my-sdk/pepeg';
 
-type UseCreateUserVariables = Omit<CreateUserParams, 'options'>;
+export type UseCreateUserVariables = Omit<CreateUserParams, 'options'>;
 
-type UseCreateUserArgs<TError = unknown> = {
+export type UseCreateUserArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<CreateUserResponse, TError, UseCreateUserVariables>, 'mutationKey'>;
 };
 
@@ -1017,9 +1017,9 @@ import type { CreateUsersWithListInputResponse, CreateUsersWithListInputParams }
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { createUsersWithListInput } from '@my-sdk/pepeg';
 
-type UseCreateUsersWithListInputVariables = Omit<CreateUsersWithListInputParams, 'options'>;
+export type UseCreateUsersWithListInputVariables = Omit<CreateUsersWithListInputParams, 'options'>;
 
-type UseCreateUsersWithListInputArgs<TError = unknown> = {
+export type UseCreateUsersWithListInputArgs<TError = unknown> = {
   options?: Omit<
     UseMutationOptions<CreateUsersWithListInputResponse, TError, UseCreateUsersWithListInputVariables>,
     'mutationKey'
@@ -1051,9 +1051,9 @@ import type { DeleteOrderResponse, DeleteOrderParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { deleteOrder } from '@my-sdk/pepeg';
 
-type UseDeleteOrderVariables = Omit<DeleteOrderParams, 'options'>;
+export type UseDeleteOrderVariables = Omit<DeleteOrderParams, 'options'>;
 
-type UseDeleteOrderArgs<TError = unknown> = {
+export type UseDeleteOrderArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<DeleteOrderResponse, TError, UseDeleteOrderVariables>, 'mutationKey'>;
 };
 
@@ -1079,9 +1079,9 @@ import type { DeletePetResponse, DeletePetParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { deletePet } from '@my-sdk/pepeg';
 
-type UseDeletePetVariables = Omit<DeletePetParams, 'options'>;
+export type UseDeletePetVariables = Omit<DeletePetParams, 'options'>;
 
-type UseDeletePetArgs<TError = unknown> = {
+export type UseDeletePetArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<DeletePetResponse, TError, UseDeletePetVariables>, 'mutationKey'>;
 };
 
@@ -1107,9 +1107,9 @@ import type { DeleteUserResponse, DeleteUserParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { deleteUser } from '@my-sdk/pepeg';
 
-type UseDeleteUserVariables = Omit<DeleteUserParams, 'options'>;
+export type UseDeleteUserVariables = Omit<DeleteUserParams, 'options'>;
 
-type UseDeleteUserArgs<TError = unknown> = {
+export type UseDeleteUserArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<DeleteUserResponse, TError, UseDeleteUserVariables>, 'mutationKey'>;
 };
 
@@ -1135,9 +1135,9 @@ import type { FindPetsByStatusResponse, FindPetsByStatusParams } from '@my-sdk/p
 import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 import { findPetsByStatus } from '@my-sdk/pepeg';
 
-type UseFindPetsByStatusParams = Omit<FindPetsByStatusParams, 'options'>;
+export type UseFindPetsByStatusParams = Omit<FindPetsByStatusParams, 'options'>;
 
-type UseFindPetsByStatusArgs<TData, TError> = Omit<
+export type UseFindPetsByStatusArgs<TData, TError> = Omit<
   UseFetcherQueryArgs<FindPetsByStatusResponse, TError, TData, UseFindPetsByStatusParams>,
   'queryKey' | 'endpoint'
 >;
@@ -1168,9 +1168,9 @@ import type { FindPetsByTagsResponse, FindPetsByTagsParams } from '@my-sdk/pepeg
 import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 import { findPetsByTags } from '@my-sdk/pepeg';
 
-type UseFindPetsByTagsParams = Omit<FindPetsByTagsParams, 'options'>;
+export type UseFindPetsByTagsParams = Omit<FindPetsByTagsParams, 'options'>;
 
-type UseFindPetsByTagsArgs<TData, TError> = Omit<
+export type UseFindPetsByTagsArgs<TData, TError> = Omit<
   UseFetcherQueryArgs<FindPetsByTagsResponse, TError, TData, UseFindPetsByTagsParams>,
   'queryKey' | 'endpoint'
 >;
@@ -1201,9 +1201,9 @@ import type { GetInventoryResponse, GetInventoryParams } from '@my-sdk/pepeg';
 import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 import { getInventory } from '@my-sdk/pepeg';
 
-type UseGetInventoryParams = Omit<GetInventoryParams, 'options'>;
+export type UseGetInventoryParams = Omit<GetInventoryParams, 'options'>;
 
-type UseGetInventoryArgs<TData, TError> = Omit<
+export type UseGetInventoryArgs<TData, TError> = Omit<
   UseFetcherQueryArgs<GetInventoryResponse, TError, TData, UseGetInventoryParams>,
   'queryKey' | 'endpoint'
 >;
@@ -1234,9 +1234,9 @@ import type { GetOrderByIdResponse, GetOrderByIdParams } from '@my-sdk/pepeg';
 import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 import { getOrderById } from '@my-sdk/pepeg';
 
-type UseGetOrderByIdParams = Omit<GetOrderByIdParams, 'options'>;
+export type UseGetOrderByIdParams = Omit<GetOrderByIdParams, 'options'>;
 
-type UseGetOrderByIdArgs<TData, TError> = Omit<
+export type UseGetOrderByIdArgs<TData, TError> = Omit<
   UseFetcherQueryArgs<GetOrderByIdResponse, TError, TData, UseGetOrderByIdParams>,
   'queryKey' | 'endpoint'
 >;
@@ -1267,9 +1267,9 @@ import type { GetPetByIdResponse, GetPetByIdParams } from '@my-sdk/pepeg';
 import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 import { getPetById } from '@my-sdk/pepeg';
 
-type UseGetPetByIdParams = Omit<GetPetByIdParams, 'options'>;
+export type UseGetPetByIdParams = Omit<GetPetByIdParams, 'options'>;
 
-type UseGetPetByIdArgs<TData, TError> = Omit<
+export type UseGetPetByIdArgs<TData, TError> = Omit<
   UseFetcherQueryArgs<GetPetByIdResponse, TError, TData, UseGetPetByIdParams>,
   'queryKey' | 'endpoint'
 >;
@@ -1300,9 +1300,9 @@ import type { GetUserByNameResponse, GetUserByNameParams } from '@my-sdk/pepeg';
 import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 import { getUserByName } from '@my-sdk/pepeg';
 
-type UseGetUserByNameParams = Omit<GetUserByNameParams, 'options'>;
+export type UseGetUserByNameParams = Omit<GetUserByNameParams, 'options'>;
 
-type UseGetUserByNameArgs<TData, TError> = Omit<
+export type UseGetUserByNameArgs<TData, TError> = Omit<
   UseFetcherQueryArgs<GetUserByNameResponse, TError, TData, UseGetUserByNameParams>,
   'queryKey' | 'endpoint'
 >;
@@ -1333,9 +1333,9 @@ import type { LoginUserResponse, LoginUserParams } from '@my-sdk/pepeg';
 import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 import { loginUser } from '@my-sdk/pepeg';
 
-type UseLoginUserParams = Omit<LoginUserParams, 'options'>;
+export type UseLoginUserParams = Omit<LoginUserParams, 'options'>;
 
-type UseLoginUserArgs<TData, TError> = Omit<
+export type UseLoginUserArgs<TData, TError> = Omit<
   UseFetcherQueryArgs<LoginUserResponse, TError, TData, UseLoginUserParams>,
   'queryKey' | 'endpoint'
 >;
@@ -1366,9 +1366,9 @@ import type { LogoutUserResponse, LogoutUserParams } from '@my-sdk/pepeg';
 import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 import { logoutUser } from '@my-sdk/pepeg';
 
-type UseLogoutUserParams = Omit<LogoutUserParams, 'options'>;
+export type UseLogoutUserParams = Omit<LogoutUserParams, 'options'>;
 
-type UseLogoutUserArgs<TData, TError> = Omit<
+export type UseLogoutUserArgs<TData, TError> = Omit<
   UseFetcherQueryArgs<LogoutUserResponse, TError, TData, UseLogoutUserParams>,
   'queryKey' | 'endpoint'
 >;
@@ -1399,9 +1399,9 @@ import type { PlaceOrderResponse, PlaceOrderParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { placeOrder } from '@my-sdk/pepeg';
 
-type UsePlaceOrderVariables = Omit<PlaceOrderParams, 'options'>;
+export type UsePlaceOrderVariables = Omit<PlaceOrderParams, 'options'>;
 
-type UsePlaceOrderArgs<TError = unknown> = {
+export type UsePlaceOrderArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<PlaceOrderResponse, TError, UsePlaceOrderVariables>, 'mutationKey'>;
 };
 
@@ -1427,9 +1427,9 @@ import type { UpdatePetResponse, UpdatePetParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { updatePet } from '@my-sdk/pepeg';
 
-type UseUpdatePetVariables = Omit<UpdatePetParams, 'options'>;
+export type UseUpdatePetVariables = Omit<UpdatePetParams, 'options'>;
 
-type UseUpdatePetArgs<TError = unknown> = {
+export type UseUpdatePetArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<UpdatePetResponse, TError, UseUpdatePetVariables>, 'mutationKey'>;
 };
 
@@ -1455,9 +1455,9 @@ import type { UpdatePetWithFormResponse, UpdatePetWithFormParams } from '@my-sdk
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { updatePetWithForm } from '@my-sdk/pepeg';
 
-type UseUpdatePetWithFormVariables = Omit<UpdatePetWithFormParams, 'options'>;
+export type UseUpdatePetWithFormVariables = Omit<UpdatePetWithFormParams, 'options'>;
 
-type UseUpdatePetWithFormArgs<TError = unknown> = {
+export type UseUpdatePetWithFormArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<UpdatePetWithFormResponse, TError, UseUpdatePetWithFormVariables>, 'mutationKey'>;
 };
 
@@ -1483,9 +1483,9 @@ import type { UpdateUserResponse, UpdateUserParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { updateUser } from '@my-sdk/pepeg';
 
-type UseUpdateUserVariables = Omit<UpdateUserParams, 'options'>;
+export type UseUpdateUserVariables = Omit<UpdateUserParams, 'options'>;
 
-type UseUpdateUserArgs<TError = unknown> = {
+export type UseUpdateUserArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<UpdateUserResponse, TError, UseUpdateUserVariables>, 'mutationKey'>;
 };
 
@@ -1511,9 +1511,9 @@ import type { UploadFileResponse, UploadFileParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { uploadFile } from '@my-sdk/pepeg';
 
-type UseUploadFileVariables = Omit<UploadFileParams, 'options'>;
+export type UseUploadFileVariables = Omit<UploadFileParams, 'options'>;
 
-type UseUploadFileArgs<TError = unknown> = {
+export type UseUploadFileArgs<TError = unknown> = {
   options?: Omit<UseMutationOptions<UploadFileResponse, TError, UseUploadFileVariables>, 'mutationKey'>;
 };
 

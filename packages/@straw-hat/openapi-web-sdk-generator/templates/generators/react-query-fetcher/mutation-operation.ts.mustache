@@ -4,9 +4,9 @@ import type { {{{typePrefix}}}Response, {{{typePrefix}}}Params } from '{{{import
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
 import { {{{functionName}}} } from '{{{importPath}}}';
 
-type Use{{{pascalFunctionName}}}Variables = Omit<{{{typePrefix}}}Params, 'options'>;
+export type Use{{{pascalFunctionName}}}Variables = Omit<{{{typePrefix}}}Params, 'options'>;
 
-type Use{{{pascalFunctionName}}}Args<TError = unknown> = {
+export type Use{{{pascalFunctionName}}}Args<TError = unknown> = {
   options?: Omit<UseMutationOptions<{{{typePrefix}}}Response, TError, Use{{{pascalFunctionName}}}Variables>, 'mutationKey'>
 };
 
