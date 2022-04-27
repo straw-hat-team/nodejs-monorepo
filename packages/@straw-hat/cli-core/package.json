@@ -40,7 +40,7 @@
     "debug": "4.3.3",
     "dotenv": "10.0.0",
     "dotenv-expand": "5.1.0",
-    "ejs": "3.1.6",
+    "ejs": "3.1.7",
     "enquirer": "2.3.6",
     "make-dir": "3.1.0",
     "ora": "6.0.1",
