@@ -2,13 +2,15 @@ import * as path from 'path';
 import { forEachHttpOperation, getOperationDirectory, getOperationFileRelativePath, formatCode } from '../../helpers';
 import { CodegenBase } from '../../codegen-base';
 import { camelCase, pascalCase } from 'change-case';
-import { OpenAPIV3SchemaObject, OperationObject, PathItemObject } from '../../types';
+import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject } from '../../types';
 import { OutputDir } from '../../output-dir';
 import { TemplateDir } from '../../template-dir';
-import { getTypeDefinition, Scope, toTypeScripType } from '../../engine/to-typescript-type';
+import { getTypeDefinition, addTypeScripType } from '../../engine/add-typescript-type';
 import { getParameterSchemaFor, getRequestBodySchema, getResponseSchema } from './helpers';
 import { Resolver } from '@stoplight/json-ref-resolver';
 import { NEVER_DEFINITION, UNKNOWN_DEFINITION } from './constants';
+import { addSchemaHelpers } from '../../engine/add-schema-helpers';
+import { Scope } from '../../engine/scope';
 
 const templateDir = new TemplateDir(path.join(__dirname, '..', '..', '..', 'templates', 'generators', 'fetcher'));
 
@@ -44,17 +46,19 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
     };
   };
 
-  async #processSchema() {
+  async #processSchemas() {
     const schemaFilePath = this.#outputDir.resolve('components/schemas.ts');
     const scope = new Scope({
       resolveSchema: this.#resolveSchema({
         relativeToFilePath: schemaFilePath,
       }),
     });
-    const schemas: Record<string, OpenAPIV3SchemaObject> = (this.document.components?.schemas as any) ?? {};
+    const schemas: Record<string, OpenAPIV3ReferenceableSchemaObject> =
+      (this.document.components?.schemas as any) ?? {};
 
     for (const schemaObject of Object.values(schemas)) {
-      await toTypeScripType(scope, schemaObject);
+      await addTypeScripType(scope, schemaObject);
+      await addSchemaHelpers(scope, schemaObject);
     }
 
     const formatted = await formatCode(scope.toString(), {
@@ -89,24 +93,24 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
     });
 
     const requestBodySchema = getRequestBodySchema({ operation: args.operation });
-    const requestBodyType = requestBodySchema ? await toTypeScripType(scope, requestBodySchema) : NEVER_DEFINITION;
+    const requestBodyType = requestBodySchema ? await addTypeScripType(scope, requestBodySchema) : NEVER_DEFINITION;
 
     const pathParamSchema = getParameterSchemaFor({
       pathItem: args.pathItem,
       operation: args.operation,
       inName: 'path',
     });
-    const pathParamsType = pathParamSchema ? await toTypeScripType(scope, pathParamSchema) : NEVER_DEFINITION;
+    const pathParamsType = pathParamSchema ? await addTypeScripType(scope, pathParamSchema) : NEVER_DEFINITION;
 
     const queryParamSchema = getParameterSchemaFor({
       pathItem: args.pathItem,
       operation: args.operation,
       inName: 'query',
     });
-    const queryParamsType = queryParamSchema ? await toTypeScripType(scope, queryParamSchema) : NEVER_DEFINITION;
+    const queryParamsType = queryParamSchema ? await addTypeScripType(scope, queryParamSchema) : NEVER_DEFINITION;
 
     const responseSchema = getResponseSchema(args.operation);
-    const responseType = responseSchema ? await toTypeScripType(scope, responseSchema) : UNKNOWN_DEFINITION;
+    const responseType = responseSchema ? await addTypeScripType(scope, responseSchema) : UNKNOWN_DEFINITION;
 
     const requiredParams = [
       '"options"',
@@ -157,7 +161,7 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
   async generate() {
     await this.#outputDir.resetDir();
     await this.#outputDir.createDir('components');
-    await this.#processSchema();
+    await this.#processSchemas();
     await forEachHttpOperation(this.document, this.#processOperation);
     await this.#outputDir.formatFile('index.ts');
   }

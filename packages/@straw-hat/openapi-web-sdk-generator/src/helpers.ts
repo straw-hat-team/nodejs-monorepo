@@ -1,4 +1,4 @@
-import { OpenAPIV3SchemaObject, OperationObject, PathItemObject } from './types';
+import { OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject, OperationObject, PathItemObject } from './types';
 import { paramCase, pascalCase } from 'change-case';
 import * as path from 'path';
 import { OpenAPIV3 } from 'openapi-types';
@@ -31,12 +31,16 @@ export function hasOperationId(operation: OperationObject) {
 }
 
 export function hasSchemaId(
-  schema: OpenAPIV3SchemaObject
-): schema is OpenAPIV3SchemaObject & { 'x-schema-id': string } {
+  schema: OpenAPIV3ReferenceableSchemaObject
+): schema is OpenAPIV3ReferenceableSchemaObject & { 'x-schema-id': string } {
   return Boolean(schema['x-schema-id']);
 }
 
-export function getSchemaName(schema: OpenAPIV3SchemaObject & { 'x-schema-id': string }) {
+export function isOpenAPIV3SchemaObject(schema: OpenAPIV3ReferenceableSchemaObject): schema is OpenAPIV3SchemaObject {
+  return !schema.hasOwnProperty('$ref');
+}
+
+export function getSchemaName(schema: OpenAPIV3ReferenceableSchemaObject & { 'x-schema-id': string }) {
   return pascalCase(schema['x-schema-id']);
 }
 
@@ -104,4 +108,8 @@ export async function forEachHttpOperation(
 
 export function isReferenceObject(obj: any): obj is OpenAPIV3.ReferenceObject {
   return '$ref' in obj;
+}
+
+export function asString(value: any) {
+  return `"${value}"`;
 }

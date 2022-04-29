@@ -1,8 +1,8 @@
-import { OpenAPIV3SchemaObject, OperationObject, PathItemObject, PathItemParameters } from '../../types';
+import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject, PathItemParameters } from '../../types';
 import { OpenAPIV3 } from 'openapi-types';
 import { isReferenceObject } from '../../helpers';
 
-export function getResponseSchema(operation: OperationObject): OpenAPIV3SchemaObject | undefined {
+export function getResponseSchema(operation: OperationObject): OpenAPIV3ReferenceableSchemaObject | undefined {
   const schemas = Object.entries(operation.responses ?? {})
     .map(([status, response]) => {
       const statusCode = parseInt(status, 10);
@@ -23,7 +23,9 @@ export function getResponseSchema(operation: OperationObject): OpenAPIV3SchemaOb
       };
 }
 
-export function getRequestBodySchema(args: { operation: OperationObject }): OpenAPIV3SchemaObject | undefined {
+export function getRequestBodySchema(args: {
+  operation: OperationObject;
+}): OpenAPIV3ReferenceableSchemaObject | undefined {
   if (!args.operation.requestBody) {
     return;
   }
