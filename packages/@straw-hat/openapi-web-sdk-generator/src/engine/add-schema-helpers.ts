@@ -4,6 +4,11 @@ import { camelCase, constantCase, pascalCase, snakeCase } from 'change-case';
 import { Scope } from './scope';
 import { getTypeDefinition, addTypeScripType } from './add-typescript-type';
 
+type EnumValueDefinition = {
+  name: string;
+  value: string;
+};
+
 async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
   if (!hasSchemaId(schema)) {
     return;
@@ -60,10 +65,15 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
         const propertyDefinition = await addTypeScripType(scope, propertySchema);
         const enumDefinition = getTypeDefinition(propertyDefinition);
         const enumVariableName = constantCase(`${snakeCase(schemaName)}_${propertyName}`);
+        const enumValueDef = propertySchema.enum.map(toEnumValueDef(enumVariableName));
+
+        for (const def of enumValueDef) {
+          scope.registerVariable({ name: def.name, value: def.value });
+        }
 
         scope.registerVariable({
           name: enumVariableName,
-          value: `[${propertySchema.enum.map(asString).join(',')}]`,
+          value: `[${enumValueDef.map(getEnumValueDefName).join(',')}]`,
         });
 
         scope.registerFunction({
@@ -86,30 +96,31 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
 
         for (const enumIndex in propertySchema.enum) {
           const enumValue = propertySchema.enum[enumIndex];
+          const enumValueName = getEnumValueName(enumVariableName, enumIndex);
           const pascalCasedEnumValue = pascalCase(enumValue);
 
           scope.registerFunction({
             name: `is${schemaName}${pascalCasedPropertyName}${pascalCasedEnumValue}`,
             args: [['value', enumDefinition]],
-            body: `return value === ${enumVariableName}[${enumIndex}];`,
+            body: `return value === ${enumValueName}`,
           });
 
           scope.registerFunction({
             name: `isNot${schemaName}${pascalCasedPropertyName}${pascalCasedEnumValue}`,
             args: [['value', enumDefinition]],
-            body: `return value !== ${enumVariableName}[${enumIndex}];`,
+            body: `return value !== ${enumValueName};`,
           });
 
           scope.registerFunction({
             name: `is${schemaName}With${pascalCasedPropertyName}${pascalCasedEnumValue}`,
             args: [[camelCaseSchemaName, schemaName]],
-            body: `return ${getterFuncName}(${camelCaseSchemaName}) === ${enumVariableName}[${enumIndex}];`,
+            body: `return ${getterFuncName}(${camelCaseSchemaName}) === ${enumValueName};`,
           });
 
           scope.registerFunction({
             name: `isNot${schemaName}With${pascalCasedPropertyName}${pascalCasedEnumValue}`,
             args: [[camelCaseSchemaName, schemaName]],
-            body: `return ${getterFuncName}(${camelCaseSchemaName}) !== ${enumVariableName}[${enumIndex}];`,
+            body: `return ${getterFuncName}(${camelCaseSchemaName}) !== ${enumValueName};`,
           });
         }
       } else {
@@ -137,10 +148,6 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
   }
 }
 
-function whenInject(condition: boolean, body: string) {
-  return condition ? body : '';
-}
-
 export async function addSchemaHelpers(scope: Scope, schema: OpenAPIV3ReferenceableSchemaObject) {
   if (isReferenceObject(schema)) {
     return;
@@ -165,4 +172,23 @@ export async function addSchemaHelpers(scope: Scope, schema: OpenAPIV3Referencea
       return objectType(scope, schema);
     }
   }
+}
+
+function whenInject(condition: boolean, body: string) {
+  return condition ? body : '';
+}
+
+function getEnumValueName(enumVariableName: string, enumValueIndex: number | string) {
+  return `${enumVariableName}_${enumValueIndex}`;
+}
+
+function getEnumValueDefName(def: EnumValueDefinition) {
+  return def.name;
+}
+
+function toEnumValueDef(enumVariableName: string) {
+  return (value: string, index: number): EnumValueDefinition => ({
+    name: getEnumValueName(enumVariableName, index),
+    value: asString(value),
+  });
 }
