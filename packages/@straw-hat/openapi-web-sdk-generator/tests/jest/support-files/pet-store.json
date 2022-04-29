@@ -173,7 +173,10 @@
             "schema": {
               "type": "string",
               "default": "available",
-              "enum": ["available", "pending", "sold"]
+              "enum": ["available", "pending", "sold"],
+              "x-enum-aliases": {
+                "sold": "not_available"
+              }
             }
           }
         ],
@@ -894,7 +897,12 @@
             "type": "string",
             "description": "Order Status",
             "example": "approved",
-            "enum": ["placed", "approved", "delivered"]
+            "enum": ["placed", "approved", "delivered"],
+            "x-enum-aliases": {
+              "placed": "placed",
+              "approved": "approved",
+              "delivered": "delivered"
+            }
           },
           "complete": {
             "type": "boolean"
@@ -1076,7 +1084,11 @@
           "status": {
             "type": "string",
             "description": "pet status in the store",
-            "enum": ["available", "pending", "sold"]
+            "enum": ["available", "pending", "sold"],
+            "x-enum-aliases": {
+              "pending": "pending",
+              "available": "available"
+            }
           }
         },
         "xml": {

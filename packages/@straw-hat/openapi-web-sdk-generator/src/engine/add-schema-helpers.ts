@@ -1,12 +1,14 @@
-import { OpenAPIV3NonArraySchemaObject, OpenAPIV3ReferenceableSchemaObject } from '../types';
+import { OpenAPIV3NonArraySchemaObject, OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject } from '../types';
 import { asString, getSchemaName, hasSchemaId, isOpenAPIV3SchemaObject, isReferenceObject } from '../helpers';
 import { camelCase, constantCase, pascalCase, snakeCase } from 'change-case';
 import { Scope } from './scope';
 import { getTypeDefinition, addTypeScripType } from './add-typescript-type';
 
 type EnumValueDefinition = {
-  name: string;
+  aliasName: string;
+  varName: string;
   value: string;
+  index: number;
 };
 
 async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
@@ -65,22 +67,7 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
         const propertyDefinition = await addTypeScripType(scope, propertySchema);
         const enumDefinition = getTypeDefinition(propertyDefinition);
         const enumVariableName = constantCase(`${snakeCase(schemaName)}_${propertyName}`);
-        const enumValueDef = propertySchema.enum.map(toEnumValueDef(enumVariableName));
-
-        for (const def of enumValueDef) {
-          scope.registerVariable({ name: def.name, value: def.value });
-        }
-
-        scope.registerVariable({
-          name: enumVariableName,
-          value: `[${enumValueDef.map(getEnumValueDefName).join(',')}]`,
-        });
-
-        scope.registerFunction({
-          name: `is${schemaName}${pascalCasedPropertyName}`,
-          args: [['value', 'string']],
-          body: `return ${enumVariableName}.includes(value);`,
-        });
+        const enumValueDef = propertySchema.enum.map(toEnumValueDef(propertySchema, enumVariableName));
 
         scope.registerFunction({
           name: `get${schemaName}${pascalCasedPropertyName}LowerCased`,
@@ -94,35 +81,46 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
           body: `return ${getterFuncName}(${camelCaseSchemaName})${optional}.toUpperCase()`,
         });
 
-        for (const enumIndex in propertySchema.enum) {
-          const enumValue = propertySchema.enum[enumIndex];
-          const enumValueName = getEnumValueName(enumVariableName, enumIndex);
-          const pascalCasedEnumValue = pascalCase(enumValue);
+        for (const def of enumValueDef) {
+          const pascalCasedEnumValue = pascalCase(def.aliasName);
+
+          scope.registerVariable({ name: def.varName, value: def.value });
 
           scope.registerFunction({
             name: `is${schemaName}${pascalCasedPropertyName}${pascalCasedEnumValue}`,
             args: [['value', enumDefinition]],
-            body: `return value === ${enumValueName}`,
+            body: `return value === ${def.varName}`,
           });
 
           scope.registerFunction({
             name: `isNot${schemaName}${pascalCasedPropertyName}${pascalCasedEnumValue}`,
             args: [['value', enumDefinition]],
-            body: `return value !== ${enumValueName};`,
+            body: `return value !== ${def.varName};`,
           });
 
           scope.registerFunction({
             name: `is${schemaName}With${pascalCasedPropertyName}${pascalCasedEnumValue}`,
             args: [[camelCaseSchemaName, schemaName]],
-            body: `return ${getterFuncName}(${camelCaseSchemaName}) === ${enumValueName};`,
+            body: `return ${getterFuncName}(${camelCaseSchemaName}) === ${def.varName};`,
           });
 
           scope.registerFunction({
             name: `isNot${schemaName}With${pascalCasedPropertyName}${pascalCasedEnumValue}`,
             args: [[camelCaseSchemaName, schemaName]],
-            body: `return ${getterFuncName}(${camelCaseSchemaName}) !== ${enumValueName};`,
+            body: `return ${getterFuncName}(${camelCaseSchemaName}) !== ${def.varName};`,
           });
         }
+
+        scope.registerVariable({
+          name: enumVariableName,
+          value: `[${enumValueDef.map((def) => def.varName).join(',')}]`,
+        });
+
+        scope.registerFunction({
+          name: `is${schemaName}${pascalCasedPropertyName}`,
+          args: [['value', 'string']],
+          body: `return ${enumVariableName}.includes(value);`,
+        });
       } else {
         scope.registerFunction({
           name: `get${schemaName}${pascalCasedPropertyName}Length`,
@@ -178,17 +176,15 @@ function whenInject(condition: boolean, body: string) {
   return condition ? body : '';
 }
 
-function getEnumValueName(enumVariableName: string, enumValueIndex: number | string) {
-  return `${enumVariableName}_${enumValueIndex}`;
-}
+function toEnumValueDef(propertySchema: OpenAPIV3SchemaObject, enumVariableName: string) {
+  return (value: string, index: number): EnumValueDefinition => {
+    const enumValueName = propertySchema['x-enum-aliases']?.[value] ?? index.toString();
 
-function getEnumValueDefName(def: EnumValueDefinition) {
-  return def.name;
-}
-
-function toEnumValueDef(enumVariableName: string) {
-  return (value: string, index: number): EnumValueDefinition => ({
-    name: getEnumValueName(enumVariableName, index),
-    value: asString(value),
-  });
+    return {
+      varName: `${enumVariableName}_${enumValueName.toUpperCase()}`,
+      aliasName: enumValueName,
+      index,
+      value: asString(value),
+    };
+  };
 }

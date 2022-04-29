@@ -21,6 +21,7 @@ export type OpenAPIV3NonArraySchemaObject = OpenAPIV3.NonArraySchemaObject & {
 
 export type OpenAPIV3SchemaObject = OpenAPIV3.SchemaObject & {
   'x-schema-id'?: string;
+  'x-enum-aliases'?: Record<string, string>;
 };
 
 export type OpenAPIV3ReferenceableSchemaObject = Referenceable<OpenAPIV3SchemaObject> & {
