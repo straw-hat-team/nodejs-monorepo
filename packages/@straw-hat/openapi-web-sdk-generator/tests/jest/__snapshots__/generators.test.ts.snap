@@ -158,14 +158,14 @@ export type ApiResponse = {
   message?: string;
 };
 
-export const ORDER_STATUS_0 = 'placed';
-export const ORDER_STATUS_1 = 'approved';
-export const ORDER_STATUS_2 = 'delivered';
-export const ORDER_STATUS = [ORDER_STATUS_0, ORDER_STATUS_1, ORDER_STATUS_2];
-export const PET_STATUS_0 = 'available';
-export const PET_STATUS_1 = 'pending';
+export const ORDER_STATUS_PLACED = 'placed';
+export const ORDER_STATUS_APPROVED = 'approved';
+export const ORDER_STATUS_DELIVERED = 'delivered';
+export const ORDER_STATUS = [ORDER_STATUS_PLACED, ORDER_STATUS_APPROVED, ORDER_STATUS_DELIVERED];
+export const PET_STATUS_AVAILABLE = 'available';
+export const PET_STATUS_PENDING = 'pending';
 export const PET_STATUS_2 = 'sold';
-export const PET_STATUS = [PET_STATUS_0, PET_STATUS_1, PET_STATUS_2];
+export const PET_STATUS = [PET_STATUS_AVAILABLE, PET_STATUS_PENDING, PET_STATUS_2];
 
 function getLength(value: string) {
   return value.length;
@@ -231,10 +231,6 @@ export function isEqualToOrderStatus(order: Order, target: string) {
   return getOrderStatus(order) === target;
 }
 
-export function isOrderStatus(value: string) {
-  return ORDER_STATUS.includes(value);
-}
-
 export function getOrderStatusLowerCased(order: Order) {
   return getOrderStatus(order)?.toLowerCase();
 }
@@ -244,51 +240,55 @@ export function getOrderStatusUpperCased(order: Order) {
 }
 
 export function isOrderStatusPlaced(value: 'placed' | 'approved' | 'delivered') {
-  return value === ORDER_STATUS_0;
+  return value === ORDER_STATUS_PLACED;
 }
 
 export function isNotOrderStatusPlaced(value: 'placed' | 'approved' | 'delivered') {
-  return value !== ORDER_STATUS_0;
+  return value !== ORDER_STATUS_PLACED;
 }
 
 export function isOrderWithStatusPlaced(order: Order) {
-  return getOrderStatus(order) === ORDER_STATUS_0;
+  return getOrderStatus(order) === ORDER_STATUS_PLACED;
 }
 
 export function isNotOrderWithStatusPlaced(order: Order) {
-  return getOrderStatus(order) !== ORDER_STATUS_0;
+  return getOrderStatus(order) !== ORDER_STATUS_PLACED;
 }
 
 export function isOrderStatusApproved(value: 'placed' | 'approved' | 'delivered') {
-  return value === ORDER_STATUS_1;
+  return value === ORDER_STATUS_APPROVED;
 }
 
 export function isNotOrderStatusApproved(value: 'placed' | 'approved' | 'delivered') {
-  return value !== ORDER_STATUS_1;
+  return value !== ORDER_STATUS_APPROVED;
 }
 
 export function isOrderWithStatusApproved(order: Order) {
-  return getOrderStatus(order) === ORDER_STATUS_1;
+  return getOrderStatus(order) === ORDER_STATUS_APPROVED;
 }
 
 export function isNotOrderWithStatusApproved(order: Order) {
-  return getOrderStatus(order) !== ORDER_STATUS_1;
+  return getOrderStatus(order) !== ORDER_STATUS_APPROVED;
 }
 
 export function isOrderStatusDelivered(value: 'placed' | 'approved' | 'delivered') {
-  return value === ORDER_STATUS_2;
+  return value === ORDER_STATUS_DELIVERED;
 }
 
 export function isNotOrderStatusDelivered(value: 'placed' | 'approved' | 'delivered') {
-  return value !== ORDER_STATUS_2;
+  return value !== ORDER_STATUS_DELIVERED;
 }
 
 export function isOrderWithStatusDelivered(order: Order) {
-  return getOrderStatus(order) === ORDER_STATUS_2;
+  return getOrderStatus(order) === ORDER_STATUS_DELIVERED;
 }
 
 export function isNotOrderWithStatusDelivered(order: Order) {
-  return getOrderStatus(order) !== ORDER_STATUS_2;
+  return getOrderStatus(order) !== ORDER_STATUS_DELIVERED;
+}
+
+export function isOrderStatus(value: string) {
+  return ORDER_STATUS.includes(value);
 }
 
 export function getOrderComplete(order: Order) {
@@ -707,10 +707,6 @@ export function isEqualToPetStatus(pet: Pet, target: string) {
   return getPetStatus(pet) === target;
 }
 
-export function isPetStatus(value: string) {
-  return PET_STATUS.includes(value);
-}
-
 export function getPetStatusLowerCased(pet: Pet) {
   return getPetStatus(pet)?.toLowerCase();
 }
@@ -720,51 +716,55 @@ export function getPetStatusUpperCased(pet: Pet) {
 }
 
 export function isPetStatusAvailable(value: 'available' | 'pending' | 'sold') {
-  return value === PET_STATUS_0;
+  return value === PET_STATUS_AVAILABLE;
 }
 
 export function isNotPetStatusAvailable(value: 'available' | 'pending' | 'sold') {
-  return value !== PET_STATUS_0;
+  return value !== PET_STATUS_AVAILABLE;
 }
 
 export function isPetWithStatusAvailable(pet: Pet) {
-  return getPetStatus(pet) === PET_STATUS_0;
+  return getPetStatus(pet) === PET_STATUS_AVAILABLE;
 }
 
 export function isNotPetWithStatusAvailable(pet: Pet) {
-  return getPetStatus(pet) !== PET_STATUS_0;
+  return getPetStatus(pet) !== PET_STATUS_AVAILABLE;
 }
 
 export function isPetStatusPending(value: 'available' | 'pending' | 'sold') {
-  return value === PET_STATUS_1;
+  return value === PET_STATUS_PENDING;
 }
 
 export function isNotPetStatusPending(value: 'available' | 'pending' | 'sold') {
-  return value !== PET_STATUS_1;
+  return value !== PET_STATUS_PENDING;
 }
 
 export function isPetWithStatusPending(pet: Pet) {
-  return getPetStatus(pet) === PET_STATUS_1;
+  return getPetStatus(pet) === PET_STATUS_PENDING;
 }
 
 export function isNotPetWithStatusPending(pet: Pet) {
-  return getPetStatus(pet) !== PET_STATUS_1;
+  return getPetStatus(pet) !== PET_STATUS_PENDING;
 }
 
-export function isPetStatusSold(value: 'available' | 'pending' | 'sold') {
+export function isPetStatus2(value: 'available' | 'pending' | 'sold') {
   return value === PET_STATUS_2;
 }
 
-export function isNotPetStatusSold(value: 'available' | 'pending' | 'sold') {
+export function isNotPetStatus2(value: 'available' | 'pending' | 'sold') {
   return value !== PET_STATUS_2;
 }
 
-export function isPetWithStatusSold(pet: Pet) {
+export function isPetWithStatus2(pet: Pet) {
   return getPetStatus(pet) === PET_STATUS_2;
 }
 
-export function isNotPetWithStatusSold(pet: Pet) {
+export function isNotPetWithStatus2(pet: Pet) {
   return getPetStatus(pet) !== PET_STATUS_2;
+}
+
+export function isPetStatus(value: string) {
+  return PET_STATUS.includes(value);
 }
 
 export function getApiResponseCode(apiResponse: ApiResponse) {
