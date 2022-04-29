@@ -41,6 +41,9 @@ test('fetcher generator', async () => {
   expect(pkg.isCustomerUsernameEmpty({ username: '' })).toBeTruthy();
   expect(pkg.isUserPhoneEmpty({ username: 'ubi', phone: undefined })).toBe(undefined);
   expect(pkg.ORDER_STATUS).toStrictEqual(['placed', 'approved', 'delivered']);
+  expect(pkg.ORDER_STATUS_0).toBe('placed');
+  expect(pkg.ORDER_STATUS_1).toBe('approved');
+  expect(pkg.ORDER_STATUS_2).toBe('delivered');
   expect(pkg.isOrderStatus('placed')).toBeTruthy();
   expect(pkg.isOrderStatus('pepeg')).toBeFalsy();
   expect(pkg.getOrderStatusLowerCased({ status: 'PlAced' })).toBe('placed');
