@@ -1,14 +1,37 @@
-export type {{{typePrefix}}}PathParams = {{{pathParamsType}}};
+{{#hasPathParamSchema}}
+  export type {{{typePrefix}}}PathParams = {{{pathParamsType}}};
+{{/hasPathParamSchema}}
 
-export type {{{typePrefix}}}QueryParams = {{{queryParamsType}}};
+{{#hasQueryParamSchema}}
+  export type {{{typePrefix}}}QueryParams = {{{queryParamsType}}};
+{{/hasQueryParamSchema}}
 
-export type {{{typePrefix}}}BodyParams = {{{bodyParamsType}}};
+{{#hasRequestBody}}
+  export type {{{typePrefix}}}BodyParams = {{{bodyParamsType}}};
+{{/hasRequestBody}}
 
 export type {{{typePrefix}}}Params = Pick<
   OperationParams<
-    {{{typePrefix}}}PathParams,
-    {{{typePrefix}}}QueryParams,
-    {{{typePrefix}}}BodyParams
+    {{#hasPathParamSchema}}
+      {{{typePrefix}}}PathParams,
+    {{/hasPathParamSchema}}
+    {{^hasPathParamSchema}}
+      never,
+    {{/hasPathParamSchema}}
+
+    {{#hasQueryParamSchema}}
+      {{{typePrefix}}}QueryParams,
+    {{/hasQueryParamSchema}}
+    {{^hasQueryParamSchema}}
+      never,
+    {{/hasQueryParamSchema}}
+
+    {{#hasRequestBody}}
+      {{{typePrefix}}}BodyParams
+    {{/hasRequestBody}}
+    {{^hasRequestBody}}
+      never
+    {{/hasRequestBody}}
   >,
   {{{requiredParams}}}
 >
@@ -17,8 +40,19 @@ export type {{{typePrefix}}}Response = {{{responseType}}};
 
 export function {{{functionName}}}UrlPath(params: Omit<{{{typePrefix}}}Params, 'options'>) {
   return createUrlPath<
-    {{{typePrefix}}}PathParams,
-    {{{typePrefix}}}QueryParams
+    {{#hasPathParamSchema}}
+      {{{typePrefix}}}PathParams,
+    {{/hasPathParamSchema}}
+    {{^hasPathParamSchema}}
+      never,
+    {{/hasPathParamSchema}}
+
+    {{#hasQueryParamSchema}}
+      {{{typePrefix}}}QueryParams
+    {{/hasQueryParamSchema}}
+    {{^hasQueryParamSchema}}
+      never
+    {{/hasQueryParamSchema}}
   >('{{{operationPath}}}', params);
 }
 

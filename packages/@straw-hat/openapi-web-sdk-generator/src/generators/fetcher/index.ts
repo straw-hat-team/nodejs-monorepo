@@ -145,6 +145,8 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
         bodyParamsType: getTypeDefinition(requestBodyType),
         requiredParams,
         hasRequestBody: Boolean(requestBodySchema),
+        hasPathParamSchema: Boolean(pathParamSchema),
+        hasQueryParamSchema: Boolean(queryParamSchema),
       })
     );
 

@@ -6,21 +6,14 @@ import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
-export type AddPetPathParams = never;
-
-export type AddPetQueryParams = never;
-
 export type AddPetBodyParams = schemas.Pet;
 
-export type AddPetParams = Pick<
-  OperationParams<AddPetPathParams, AddPetQueryParams, AddPetBodyParams>,
-  'options' | 'body'
->;
+export type AddPetParams = Pick<OperationParams<never, never, AddPetBodyParams>, 'options' | 'body'>;
 
 export type AddPetResponse = schemas.Pet;
 
 export function addPetUrlPath(params: Omit<AddPetParams, 'options'>) {
-  return createUrlPath<AddPetPathParams, AddPetQueryParams>('/pet', params);
+  return createUrlPath<never, never>('/pet', params);
 }
 
 export async function addPet(client: Fetcher, params: AddPetParams): Promise<AddPetResponse> {
@@ -831,21 +824,14 @@ import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
-export type CreateUserPathParams = never;
-
-export type CreateUserQueryParams = never;
-
 export type CreateUserBodyParams = schemas.User;
 
-export type CreateUserParams = Pick<
-  OperationParams<CreateUserPathParams, CreateUserQueryParams, CreateUserBodyParams>,
-  'options' | 'body'
->;
+export type CreateUserParams = Pick<OperationParams<never, never, CreateUserBodyParams>, 'options' | 'body'>;
 
 export type CreateUserResponse = unknown;
 
 export function createUserUrlPath(params: Omit<CreateUserParams, 'options'>) {
-  return createUrlPath<CreateUserPathParams, CreateUserQueryParams>('/user', params);
+  return createUrlPath<never, never>('/user', params);
 }
 
 export async function createUser(client: Fetcher, params: CreateUserParams): Promise<CreateUserResponse> {
@@ -868,28 +854,17 @@ import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
-export type CreateUsersWithListInputPathParams = never;
-
-export type CreateUsersWithListInputQueryParams = never;
-
 export type CreateUsersWithListInputBodyParams = Array<schemas.User>;
 
 export type CreateUsersWithListInputParams = Pick<
-  OperationParams<
-    CreateUsersWithListInputPathParams,
-    CreateUsersWithListInputQueryParams,
-    CreateUsersWithListInputBodyParams
-  >,
+  OperationParams<never, never, CreateUsersWithListInputBodyParams>,
   'options' | 'body'
 >;
 
 export type CreateUsersWithListInputResponse = schemas.User;
 
 export function createUsersWithListInputUrlPath(params: Omit<CreateUsersWithListInputParams, 'options'>) {
-  return createUrlPath<CreateUsersWithListInputPathParams, CreateUsersWithListInputQueryParams>(
-    '/user/createWithList',
-    params
-  );
+  return createUrlPath<never, never>('/user/createWithList', params);
 }
 
 export async function createUsersWithListInput(
@@ -922,19 +897,12 @@ export type DeleteOrderPathParams = {
   orderId: number;
 };
 
-export type DeleteOrderQueryParams = never;
-
-export type DeleteOrderBodyParams = never;
-
-export type DeleteOrderParams = Pick<
-  OperationParams<DeleteOrderPathParams, DeleteOrderQueryParams, DeleteOrderBodyParams>,
-  'options' | 'path'
->;
+export type DeleteOrderParams = Pick<OperationParams<DeleteOrderPathParams, never, never>, 'options' | 'path'>;
 
 export type DeleteOrderResponse = unknown;
 
 export function deleteOrderUrlPath(params: Omit<DeleteOrderParams, 'options'>) {
-  return createUrlPath<DeleteOrderPathParams, DeleteOrderQueryParams>('/store/order/{orderId}', params);
+  return createUrlPath<DeleteOrderPathParams, never>('/store/order/{orderId}', params);
 }
 
 export async function deleteOrder(client: Fetcher, params: DeleteOrderParams): Promise<DeleteOrderResponse> {
@@ -963,19 +931,12 @@ export type DeletePetPathParams = {
   petId: number;
 };
 
-export type DeletePetQueryParams = never;
-
-export type DeletePetBodyParams = never;
-
-export type DeletePetParams = Pick<
-  OperationParams<DeletePetPathParams, DeletePetQueryParams, DeletePetBodyParams>,
-  'options' | 'path'
->;
+export type DeletePetParams = Pick<OperationParams<DeletePetPathParams, never, never>, 'options' | 'path'>;
 
 export type DeletePetResponse = unknown;
 
 export function deletePetUrlPath(params: Omit<DeletePetParams, 'options'>) {
-  return createUrlPath<DeletePetPathParams, DeletePetQueryParams>('/pet/{petId}', params);
+  return createUrlPath<DeletePetPathParams, never>('/pet/{petId}', params);
 }
 
 export async function deletePet(client: Fetcher, params: DeletePetParams): Promise<DeletePetResponse> {
@@ -1003,19 +964,12 @@ export type DeleteUserPathParams = {
   username: string;
 };
 
-export type DeleteUserQueryParams = never;
-
-export type DeleteUserBodyParams = never;
-
-export type DeleteUserParams = Pick<
-  OperationParams<DeleteUserPathParams, DeleteUserQueryParams, DeleteUserBodyParams>,
-  'options' | 'path'
->;
+export type DeleteUserParams = Pick<OperationParams<DeleteUserPathParams, never, never>, 'options' | 'path'>;
 
 export type DeleteUserResponse = unknown;
 
 export function deleteUserUrlPath(params: Omit<DeleteUserParams, 'options'>) {
-  return createUrlPath<DeleteUserPathParams, DeleteUserQueryParams>('/user/{username}', params);
+  return createUrlPath<DeleteUserPathParams, never>('/user/{username}', params);
 }
 
 export async function deleteUser(client: Fetcher, params: DeleteUserParams): Promise<DeleteUserResponse> {
@@ -1037,8 +991,6 @@ import { getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
-export type FindPetsByStatusPathParams = never;
-
 export type FindPetsByStatusQueryParams = {
   /**
    * Status values that need to be considered for filter
@@ -1047,17 +999,15 @@ export type FindPetsByStatusQueryParams = {
   status?: 'available' | 'pending' | 'sold';
 };
 
-export type FindPetsByStatusBodyParams = never;
-
 export type FindPetsByStatusParams = Pick<
-  OperationParams<FindPetsByStatusPathParams, FindPetsByStatusQueryParams, FindPetsByStatusBodyParams>,
+  OperationParams<never, FindPetsByStatusQueryParams, never>,
   'options' | 'query'
 >;
 
 export type FindPetsByStatusResponse = Array<schemas.Pet>;
 
 export function findPetsByStatusUrlPath(params: Omit<FindPetsByStatusParams, 'options'>) {
-  return createUrlPath<FindPetsByStatusPathParams, FindPetsByStatusQueryParams>('/pet/findByStatus', params);
+  return createUrlPath<never, FindPetsByStatusQueryParams>('/pet/findByStatus', params);
 }
 
 export async function findPetsByStatus(
@@ -1082,8 +1032,6 @@ import { getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
-export type FindPetsByTagsPathParams = never;
-
 export type FindPetsByTagsQueryParams = {
   /**
    * Tags to filter by
@@ -1091,17 +1039,12 @@ export type FindPetsByTagsQueryParams = {
   tags?: Array<string>;
 };
 
-export type FindPetsByTagsBodyParams = never;
-
-export type FindPetsByTagsParams = Pick<
-  OperationParams<FindPetsByTagsPathParams, FindPetsByTagsQueryParams, FindPetsByTagsBodyParams>,
-  'options' | 'query'
->;
+export type FindPetsByTagsParams = Pick<OperationParams<never, FindPetsByTagsQueryParams, never>, 'options' | 'query'>;
 
 export type FindPetsByTagsResponse = Array<schemas.Pet>;
 
 export function findPetsByTagsUrlPath(params: Omit<FindPetsByTagsParams, 'options'>) {
-  return createUrlPath<FindPetsByTagsPathParams, FindPetsByTagsQueryParams>('/pet/findByTags', params);
+  return createUrlPath<never, FindPetsByTagsQueryParams>('/pet/findByTags', params);
 }
 
 export async function findPetsByTags(client: Fetcher, params: FindPetsByTagsParams): Promise<FindPetsByTagsResponse> {
@@ -1122,21 +1065,12 @@ exports[`fetcher generator: get-inventory.ts 1`] = `
 import { getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 
-export type GetInventoryPathParams = never;
-
-export type GetInventoryQueryParams = never;
-
-export type GetInventoryBodyParams = never;
-
-export type GetInventoryParams = Pick<
-  OperationParams<GetInventoryPathParams, GetInventoryQueryParams, GetInventoryBodyParams>,
-  'options'
->;
+export type GetInventoryParams = Pick<OperationParams<never, never, never>, 'options'>;
 
 export type GetInventoryResponse = {};
 
 export function getInventoryUrlPath(params: Omit<GetInventoryParams, 'options'>) {
-  return createUrlPath<GetInventoryPathParams, GetInventoryQueryParams>('/store/inventory', params);
+  return createUrlPath<never, never>('/store/inventory', params);
 }
 
 export async function getInventory(client: Fetcher, params: GetInventoryParams): Promise<GetInventoryResponse> {
@@ -1166,19 +1100,12 @@ export type GetOrderByIdPathParams = {
   orderId: number;
 };
 
-export type GetOrderByIdQueryParams = never;
-
-export type GetOrderByIdBodyParams = never;
-
-export type GetOrderByIdParams = Pick<
-  OperationParams<GetOrderByIdPathParams, GetOrderByIdQueryParams, GetOrderByIdBodyParams>,
-  'options' | 'path'
->;
+export type GetOrderByIdParams = Pick<OperationParams<GetOrderByIdPathParams, never, never>, 'options' | 'path'>;
 
 export type GetOrderByIdResponse = schemas.Order;
 
 export function getOrderByIdUrlPath(params: Omit<GetOrderByIdParams, 'options'>) {
-  return createUrlPath<GetOrderByIdPathParams, GetOrderByIdQueryParams>('/store/order/{orderId}', params);
+  return createUrlPath<GetOrderByIdPathParams, never>('/store/order/{orderId}', params);
 }
 
 export async function getOrderById(client: Fetcher, params: GetOrderByIdParams): Promise<GetOrderByIdResponse> {
@@ -1208,19 +1135,12 @@ export type GetPetByIdPathParams = {
   petId: number;
 };
 
-export type GetPetByIdQueryParams = never;
-
-export type GetPetByIdBodyParams = never;
-
-export type GetPetByIdParams = Pick<
-  OperationParams<GetPetByIdPathParams, GetPetByIdQueryParams, GetPetByIdBodyParams>,
-  'options' | 'path'
->;
+export type GetPetByIdParams = Pick<OperationParams<GetPetByIdPathParams, never, never>, 'options' | 'path'>;
 
 export type GetPetByIdResponse = schemas.Pet;
 
 export function getPetByIdUrlPath(params: Omit<GetPetByIdParams, 'options'>) {
-  return createUrlPath<GetPetByIdPathParams, GetPetByIdQueryParams>('/pet/{petId}', params);
+  return createUrlPath<GetPetByIdPathParams, never>('/pet/{petId}', params);
 }
 
 export async function getPetById(client: Fetcher, params: GetPetByIdParams): Promise<GetPetByIdResponse> {
@@ -1249,19 +1169,12 @@ export type GetUserByNamePathParams = {
   username: string;
 };
 
-export type GetUserByNameQueryParams = never;
-
-export type GetUserByNameBodyParams = never;
-
-export type GetUserByNameParams = Pick<
-  OperationParams<GetUserByNamePathParams, GetUserByNameQueryParams, GetUserByNameBodyParams>,
-  'options' | 'path'
->;
+export type GetUserByNameParams = Pick<OperationParams<GetUserByNamePathParams, never, never>, 'options' | 'path'>;
 
 export type GetUserByNameResponse = schemas.User;
 
 export function getUserByNameUrlPath(params: Omit<GetUserByNameParams, 'options'>) {
-  return createUrlPath<GetUserByNamePathParams, GetUserByNameQueryParams>('/user/{username}', params);
+  return createUrlPath<GetUserByNamePathParams, never>('/user/{username}', params);
 }
 
 export async function getUserByName(client: Fetcher, params: GetUserByNameParams): Promise<GetUserByNameResponse> {
@@ -1305,8 +1218,6 @@ exports[`fetcher generator: login-user.ts 1`] = `
 import { getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 
-export type LoginUserPathParams = never;
-
 export type LoginUserQueryParams = {
   /**
    * The user name for login
@@ -1318,17 +1229,12 @@ export type LoginUserQueryParams = {
   password?: string;
 };
 
-export type LoginUserBodyParams = never;
-
-export type LoginUserParams = Pick<
-  OperationParams<LoginUserPathParams, LoginUserQueryParams, LoginUserBodyParams>,
-  'options' | 'query'
->;
+export type LoginUserParams = Pick<OperationParams<never, LoginUserQueryParams, never>, 'options' | 'query'>;
 
 export type LoginUserResponse = string;
 
 export function loginUserUrlPath(params: Omit<LoginUserParams, 'options'>) {
-  return createUrlPath<LoginUserPathParams, LoginUserQueryParams>('/user/login', params);
+  return createUrlPath<never, LoginUserQueryParams>('/user/login', params);
 }
 
 export async function loginUser(client: Fetcher, params: LoginUserParams): Promise<LoginUserResponse> {
@@ -1349,21 +1255,12 @@ exports[`fetcher generator: logout-user.ts 1`] = `
 import { getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 
-export type LogoutUserPathParams = never;
-
-export type LogoutUserQueryParams = never;
-
-export type LogoutUserBodyParams = never;
-
-export type LogoutUserParams = Pick<
-  OperationParams<LogoutUserPathParams, LogoutUserQueryParams, LogoutUserBodyParams>,
-  'options'
->;
+export type LogoutUserParams = Pick<OperationParams<never, never, never>, 'options'>;
 
 export type LogoutUserResponse = unknown;
 
 export function logoutUserUrlPath(params: Omit<LogoutUserParams, 'options'>) {
-  return createUrlPath<LogoutUserPathParams, LogoutUserQueryParams>('/user/logout', params);
+  return createUrlPath<never, never>('/user/logout', params);
 }
 
 export async function logoutUser(client: Fetcher, params: LogoutUserParams): Promise<LogoutUserResponse> {
@@ -1385,21 +1282,14 @@ import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
-export type PlaceOrderPathParams = never;
-
-export type PlaceOrderQueryParams = never;
-
 export type PlaceOrderBodyParams = schemas.Order;
 
-export type PlaceOrderParams = Pick<
-  OperationParams<PlaceOrderPathParams, PlaceOrderQueryParams, PlaceOrderBodyParams>,
-  'options' | 'body'
->;
+export type PlaceOrderParams = Pick<OperationParams<never, never, PlaceOrderBodyParams>, 'options' | 'body'>;
 
 export type PlaceOrderResponse = schemas.Order;
 
 export function placeOrderUrlPath(params: Omit<PlaceOrderParams, 'options'>) {
-  return createUrlPath<PlaceOrderPathParams, PlaceOrderQueryParams>('/store/order', params);
+  return createUrlPath<never, never>('/store/order', params);
 }
 
 export async function placeOrder(client: Fetcher, params: PlaceOrderParams): Promise<PlaceOrderResponse> {
@@ -1422,21 +1312,14 @@ import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
 import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
-export type UpdatePetPathParams = never;
-
-export type UpdatePetQueryParams = never;
-
 export type UpdatePetBodyParams = schemas.Pet;
 
-export type UpdatePetParams = Pick<
-  OperationParams<UpdatePetPathParams, UpdatePetQueryParams, UpdatePetBodyParams>,
-  'options' | 'body'
->;
+export type UpdatePetParams = Pick<OperationParams<never, never, UpdatePetBodyParams>, 'options' | 'body'>;
 
 export type UpdatePetResponse = schemas.Pet;
 
 export function updatePetUrlPath(params: Omit<UpdatePetParams, 'options'>) {
-  return createUrlPath<UpdatePetPathParams, UpdatePetQueryParams>('/pet', params);
+  return createUrlPath<never, never>('/pet', params);
 }
 
 export async function updatePet(client: Fetcher, params: UpdatePetParams): Promise<UpdatePetResponse> {
@@ -1477,10 +1360,8 @@ export type UpdatePetWithFormQueryParams = {
   status?: string;
 };
 
-export type UpdatePetWithFormBodyParams = never;
-
 export type UpdatePetWithFormParams = Pick<
-  OperationParams<UpdatePetWithFormPathParams, UpdatePetWithFormQueryParams, UpdatePetWithFormBodyParams>,
+  OperationParams<UpdatePetWithFormPathParams, UpdatePetWithFormQueryParams, never>,
   'options' | 'path' | 'query'
 >;
 
@@ -1519,19 +1400,17 @@ export type UpdateUserPathParams = {
   username: string;
 };
 
-export type UpdateUserQueryParams = never;
-
 export type UpdateUserBodyParams = schemas.User;
 
 export type UpdateUserParams = Pick<
-  OperationParams<UpdateUserPathParams, UpdateUserQueryParams, UpdateUserBodyParams>,
+  OperationParams<UpdateUserPathParams, never, UpdateUserBodyParams>,
   'options' | 'body' | 'path'
 >;
 
 export type UpdateUserResponse = unknown;
 
 export function updateUserUrlPath(params: Omit<UpdateUserParams, 'options'>) {
-  return createUrlPath<UpdateUserPathParams, UpdateUserQueryParams>('/user/{username}', params);
+  return createUrlPath<UpdateUserPathParams, never>('/user/{username}', params);
 }
 
 export async function updateUser(client: Fetcher, params: UpdateUserParams): Promise<UpdateUserResponse> {
