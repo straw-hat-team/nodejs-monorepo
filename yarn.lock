@@ -3827,7 +3827,7 @@ __metadata:
     debug: 4.3.3
     dotenv: 10.0.0
     dotenv-expand: 5.1.0
-    ejs: 3.1.6
+    ejs: 3.1.7
     enquirer: 2.3.6
     make-dir: 3.1.0
     ora: 6.0.1
@@ -5899,7 +5899,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async@npm:^3.2.0":
+"async@npm:^3.2.0, async@npm:^3.2.3":
   version: 3.2.3
   resolution: "async@npm:3.2.3"
   checksum: c4bee57ab2249af3dc83ca3ef9acfa8e822c0d5e5aa41bae3eaf7f673648343cd64ecd7d26091ffd357f3f044428b17b5f00098494b6cf8b6b3e9681f0636ca1
@@ -6634,7 +6634,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.1.0, chalk@npm:^4.1.2":
+"chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -7993,7 +7993,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ejs@npm:3.1.6, ejs@npm:^3.1.6":
+"ejs@npm:3.1.7":
+  version: 3.1.7
+  resolution: "ejs@npm:3.1.7"
+  dependencies:
+    jake: ^10.8.5
+  bin:
+    ejs: bin/cli.js
+  checksum: fe40764af39955ce8f8b116716fc8b911959946698edb49ecab85df597746c07aa65d5b74ead28a1e2ffa75b0f92d9bedd752f1c29437da6137b3518271e988c
+  languageName: node
+  linkType: hard
+
+"ejs@npm:^3.1.6":
   version: 3.1.6
   resolution: "ejs@npm:3.1.6"
   dependencies:
@@ -10199,6 +10210,20 @@ __metadata:
   bin:
     jake: ./bin/cli.js
   checksum: b604c51863260e374ccd62cd0cfe0b659f72cb71beb7d5fb5137dd65b04cf9d5603abd01f9f6eaaac8f4182f396d6cfae01e0b0844c2215c9c1e200572307cf9
+  languageName: node
+  linkType: hard
+
+"jake@npm:^10.8.5":
+  version: 10.8.5
+  resolution: "jake@npm:10.8.5"
+  dependencies:
+    async: ^3.2.3
+    chalk: ^4.0.2
+    filelist: ^1.0.1
+    minimatch: ^3.0.4
+  bin:
+    jake: ./bin/cli.js
+  checksum: 56c913ecf5a8d74325d0af9bc17a233bad50977438d44864d925bb6c45c946e0fee8c4c1f5fe2225471ef40df5222e943047982717ebff0d624770564d3c46ba
   languageName: node
   linkType: hard
 

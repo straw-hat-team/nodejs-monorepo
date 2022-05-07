@@ -6447,7 +6447,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:a3843946baa1d7ff7c41b46706f0c11ddd6d83034212da2b741215c854d7b0a49be6d94159bacf1650361a37d74547f84ba06efeade572d864bc76613908df19#npm:4.3.3"],\
             ["dotenv", "npm:10.0.0"],\
             ["dotenv-expand", "npm:5.1.0"],\
-            ["ejs", "npm:3.1.6"],\
+            ["ejs", "npm:3.1.7"],\
             ["enquirer", "npm:2.3.6"],\
             ["make-dir", "npm:3.1.0"],\
             ["ora", "npm:6.0.1"],\
@@ -11579,6 +11579,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jake", "npm:10.8.2"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:3.1.7", {\
+          "packageLocation": "./.yarn/cache/ejs-npm-3.1.7-ac170c215c-fe40764af3.zip/node_modules/ejs/",\
+          "packageDependencies": [\
+            ["ejs", "npm:3.1.7"],\
+            ["jake", "npm:10.8.5"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["electron-to-chromium", [\
@@ -13987,6 +13995,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jake", "npm:10.8.2"],\
             ["async", "npm:0.9.2"],\
             ["chalk", "npm:2.4.2"],\
+            ["filelist", "npm:1.0.2"],\
+            ["minimatch", "npm:3.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:10.8.5", {\
+          "packageLocation": "./.yarn/cache/jake-npm-10.8.5-6a5e87e533-56c913ecf5.zip/node_modules/jake/",\
+          "packageDependencies": [\
+            ["jake", "npm:10.8.5"],\
+            ["async", "npm:3.2.3"],\
+            ["chalk", "npm:4.1.2"],\
             ["filelist", "npm:1.0.2"],\
             ["minimatch", "npm:3.0.4"]\
           ],\
