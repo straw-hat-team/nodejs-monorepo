@@ -175,13 +175,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["husky", "npm:7.0.4"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
-            ["lint-staged", "npm:12.3.6"],\
+            ["lint-staged", "npm:12.4.1"],\
             ["monodeploy", "npm:3.0.0"],\
             ["npm-run-all", "npm:4.1.5"],\
             ["prettier", "npm:2.6.0"],\
             ["rimraf", "npm:3.0.2"],\
             ["typedoc", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:0.22.13"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5673,37 +5673,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@oclif/command", [\
-        ["npm:1.8.10", {\
-          "packageLocation": "./.yarn/cache/@oclif-command-npm-1.8.10-5cca0831ef-6a0506b79d.zip/node_modules/@oclif/command/",\
-          "packageDependencies": [\
-            ["@oclif/command", "npm:1.8.10"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
         ["npm:1.8.16", {\
           "packageLocation": "./.yarn/cache/@oclif-command-npm-1.8.16-9d2766598f-c7cac8e1f9.zip/node_modules/@oclif/command/",\
           "packageDependencies": [\
             ["@oclif/command", "npm:1.8.16"]\
           ],\
           "linkType": "SOFT"\
-        }],\
-        ["virtual:230003320c81df43a2b2d93d226b4fd60561dbcc2842049352bf7c4982679cb89f7489732c9f41e47471eebe8d41e3e33ece9bc707a7d9c53583fe0bbf378c7b#npm:1.8.10", {\
-          "packageLocation": "./.yarn/__virtual__/@oclif-command-virtual-34157a83a5/0/cache/@oclif-command-npm-1.8.10-5cca0831ef-6a0506b79d.zip/node_modules/@oclif/command/",\
-          "packageDependencies": [\
-            ["@oclif/command", "virtual:230003320c81df43a2b2d93d226b4fd60561dbcc2842049352bf7c4982679cb89f7489732c9f41e47471eebe8d41e3e33ece9bc707a7d9c53583fe0bbf378c7b#npm:1.8.10"],\
-            ["@oclif/config", "npm:1.18.3"],\
-            ["@oclif/errors", "npm:1.3.5"],\
-            ["@oclif/parser", "npm:3.8.7"],\
-            ["@oclif/plugin-help", "npm:3.2.14"],\
-            ["@types/oclif__config", null],\
-            ["debug", "virtual:2395052be89e7cb60a9e457720a81c812457953cc762643b2dddf96818b24121417de8a1244c250c72573d9df94e1c92243e353c6f07da586de517860c3c8e2e#npm:4.2.0"],\
-            ["semver", "npm:7.3.2"]\
-          ],\
-          "packagePeers": [\
-            "@oclif/config",\
-            "@types/oclif__config"\
-          ],\
-          "linkType": "HARD"\
         }],\
         ["virtual:b1862be0733d748bb4eee8ce40ca5a6f5d57a75db0426f4b3c8d029e97393bcc2c8d9b20864e94318edbbcc92187f82ab040216470165b9aeb49039f6a2f64b6#npm:1.8.16", {\
           "packageLocation": "./.yarn/__virtual__/@oclif-command-virtual-8f138792ab/0/cache/@oclif-command-npm-1.8.16-9d2766598f-c7cac8e1f9.zip/node_modules/@oclif/command/",\
@@ -5723,10 +5698,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:f7d571e0d77017e1d29b1e07a522ecaa92b0544f222388541809a9c07f96976aeb3437afcfac1ce21bfe1d1a4fa7793cd36e5b24db59e3adef0819d088b77e0f#npm:1.8.16", {\
-          "packageLocation": "./.yarn/__virtual__/@oclif-command-virtual-f50c20e560/0/cache/@oclif-command-npm-1.8.16-9d2766598f-c7cac8e1f9.zip/node_modules/@oclif/command/",\
+        ["virtual:df36121af98d2704c80396452eff9df29746827d16467eb2c40d41d10959b3afbc6a2644fe8aa0d9b6541e69a29a1afcafa253902174840cdbaa4b9f36b2eefa#npm:1.8.16", {\
+          "packageLocation": "./.yarn/__virtual__/@oclif-command-virtual-d4cdb1eb4a/0/cache/@oclif-command-npm-1.8.16-9d2766598f-c7cac8e1f9.zip/node_modules/@oclif/command/",\
           "packageDependencies": [\
-            ["@oclif/command", "virtual:f7d571e0d77017e1d29b1e07a522ecaa92b0544f222388541809a9c07f96976aeb3437afcfac1ce21bfe1d1a4fa7793cd36e5b24db59e3adef0819d088b77e0f#npm:1.8.16"],\
+            ["@oclif/command", "virtual:df36121af98d2704c80396452eff9df29746827d16467eb2c40d41d10959b3afbc6a2644fe8aa0d9b6541e69a29a1afcafa253902174840cdbaa4b9f36b2eefa#npm:1.8.16"],\
             ["@oclif/config", "npm:1.18.3"],\
             ["@oclif/errors", "npm:1.3.5"],\
             ["@oclif/help", "npm:1.0.1"],\
@@ -5736,7 +5711,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["semver", "npm:7.3.2"]\
           ],\
           "packagePeers": [\
-            "@oclif/config",\
             "@types/oclif__config"\
           ],\
           "linkType": "HARD"\
@@ -5866,6 +5840,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["wrap-ansi", "npm:7.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:1.8.0", {\
+          "packageLocation": "./.yarn/cache/@oclif-core-npm-1.8.0-6b3d539b27-e84b5eae4a.zip/node_modules/@oclif/core/",\
+          "packageDependencies": [\
+            ["@oclif/core", "npm:1.8.0"],\
+            ["@oclif/linewrap", "npm:1.0.0"],\
+            ["@oclif/screen", "npm:3.0.2"],\
+            ["ansi-escapes", "npm:4.3.2"],\
+            ["ansi-styles", "npm:4.3.0"],\
+            ["cardinal", "npm:2.1.1"],\
+            ["chalk", "npm:4.1.2"],\
+            ["clean-stack", "npm:3.0.1"],\
+            ["cli-progress", "npm:3.10.0"],\
+            ["debug", "virtual:6b3d539b27366b222479c2bdc4109cedf01544ede512ff319fa1b703b7e76ba6dd73324f30f7a50fd0a193665289c9eee7572409ed37b243f7e880b7060b32fd#npm:4.3.4"],\
+            ["ejs", "npm:3.1.6"],\
+            ["fs-extra", "npm:9.1.0"],\
+            ["get-package-type", "npm:0.1.0"],\
+            ["globby", "npm:11.1.0"],\
+            ["hyperlinker", "npm:1.0.0"],\
+            ["indent-string", "npm:4.0.0"],\
+            ["is-wsl", "npm:2.2.0"],\
+            ["js-yaml", "npm:3.14.1"],\
+            ["lodash", "npm:4.17.21"],\
+            ["natural-orderby", "npm:2.0.3"],\
+            ["object-treeify", "npm:1.1.33"],\
+            ["password-prompt", "npm:1.1.2"],\
+            ["semver", "npm:7.3.5"],\
+            ["string-width", "npm:4.2.3"],\
+            ["strip-ansi", "npm:6.0.1"],\
+            ["supports-color", "npm:8.1.1"],\
+            ["supports-hyperlinks", "npm:2.2.0"],\
+            ["tslib", "npm:2.3.1"],\
+            ["widest-line", "npm:3.1.0"],\
+            ["wrap-ansi", "npm:7.0.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@oclif/dev-cli", [\
@@ -5873,31 +5883,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@oclif-dev-cli-npm-1.26.10-d15c33e672-9f708ae66e.zip/node_modules/@oclif/dev-cli/",\
           "packageDependencies": [\
             ["@oclif/dev-cli", "npm:1.26.10"],\
-            ["@oclif/command", "virtual:f7d571e0d77017e1d29b1e07a522ecaa92b0544f222388541809a9c07f96976aeb3437afcfac1ce21bfe1d1a4fa7793cd36e5b24db59e3adef0819d088b77e0f#npm:1.8.16"],\
+            ["@oclif/command", "virtual:df36121af98d2704c80396452eff9df29746827d16467eb2c40d41d10959b3afbc6a2644fe8aa0d9b6541e69a29a1afcafa253902174840cdbaa4b9f36b2eefa#npm:1.8.16"],\
             ["@oclif/config", "npm:1.18.3"],\
             ["@oclif/errors", "npm:1.3.5"],\
             ["@oclif/plugin-help", "npm:3.2.18"],\
             ["cli-ux", "npm:5.6.7"],\
-            ["debug", "virtual:2395052be89e7cb60a9e457720a81c812457953cc762643b2dddf96818b24121417de8a1244c250c72573d9df94e1c92243e353c6f07da586de517860c3c8e2e#npm:4.2.0"],\
-            ["find-yarn-workspace-root", "npm:2.0.0"],\
-            ["fs-extra", "npm:8.1.0"],\
-            ["github-slugger", "npm:1.4.0"],\
-            ["lodash", "npm:4.17.21"],\
-            ["normalize-package-data", "npm:3.0.3"],\
-            ["qqjs", "npm:0.3.11"],\
-            ["tslib", "npm:2.3.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:1.26.9", {\
-          "packageLocation": "./.yarn/cache/@oclif-dev-cli-npm-1.26.9-230003320c-113b86e190.zip/node_modules/@oclif/dev-cli/",\
-          "packageDependencies": [\
-            ["@oclif/dev-cli", "npm:1.26.9"],\
-            ["@oclif/command", "virtual:230003320c81df43a2b2d93d226b4fd60561dbcc2842049352bf7c4982679cb89f7489732c9f41e47471eebe8d41e3e33ece9bc707a7d9c53583fe0bbf378c7b#npm:1.8.10"],\
-            ["@oclif/config", "npm:1.18.3"],\
-            ["@oclif/errors", "npm:1.3.5"],\
-            ["@oclif/plugin-help", "npm:3.2.14"],\
-            ["cli-ux", "npm:5.6.6"],\
             ["debug", "virtual:2395052be89e7cb60a9e457720a81c812457953cc762643b2dddf96818b24121417de8a1244c250c72573d9df94e1c92243e353c6f07da586de517860c3c8e2e#npm:4.2.0"],\
             ["find-yarn-workspace-root", "npm:2.0.0"],\
             ["fs-extra", "npm:8.1.0"],\
@@ -5965,23 +5955,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@oclif/plugin-help", [\
-        ["npm:3.2.14", {\
-          "packageLocation": "./.yarn/cache/@oclif-plugin-help-npm-3.2.14-f7d571e0d7-5dbb0265b9.zip/node_modules/@oclif/plugin-help/",\
-          "packageDependencies": [\
-            ["@oclif/plugin-help", "npm:3.2.14"],\
-            ["@oclif/command", "virtual:f7d571e0d77017e1d29b1e07a522ecaa92b0544f222388541809a9c07f96976aeb3437afcfac1ce21bfe1d1a4fa7793cd36e5b24db59e3adef0819d088b77e0f#npm:1.8.16"],\
-            ["@oclif/config", "npm:1.18.3"],\
-            ["@oclif/errors", "npm:1.3.5"],\
-            ["chalk", "npm:4.1.2"],\
-            ["indent-string", "npm:4.0.0"],\
-            ["lodash", "npm:4.17.21"],\
-            ["string-width", "npm:4.2.0"],\
-            ["strip-ansi", "npm:6.0.0"],\
-            ["widest-line", "npm:3.1.0"],\
-            ["wrap-ansi", "npm:6.2.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.2.18", {\
           "packageLocation": "./.yarn/cache/@oclif-plugin-help-npm-3.2.18-b1862be073-b0146e57d8.zip/node_modules/@oclif/plugin-help/",\
           "packageDependencies": [\
@@ -6000,14 +5973,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:5.1.10", {\
-          "packageLocation": "./.yarn/cache/@oclif-plugin-help-npm-5.1.10-cbc0909faa-fb419b4aef.zip/node_modules/@oclif/plugin-help/",\
-          "packageDependencies": [\
-            ["@oclif/plugin-help", "npm:5.1.10"],\
-            ["@oclif/core", "npm:1.6.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:5.1.12", {\
           "packageLocation": "./.yarn/cache/@oclif-plugin-help-npm-5.1.12-6c6b33c9f8-5964a6bdd3.zip/node_modules/@oclif/plugin-help/",\
           "packageDependencies": [\
@@ -6018,11 +5983,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@oclif/plugin-version", [\
-        ["npm:1.0.3", {\
-          "packageLocation": "./.yarn/cache/@oclif-plugin-version-npm-1.0.3-791293b313-e50d800dea.zip/node_modules/@oclif/plugin-version/",\
+        ["npm:1.0.4", {\
+          "packageLocation": "./.yarn/cache/@oclif-plugin-version-npm-1.0.4-316e9d0a76-38032b6b37.zip/node_modules/@oclif/plugin-version/",\
           "packageDependencies": [\
-            ["@oclif/plugin-version", "npm:1.0.3"],\
-            ["@oclif/core", "npm:1.0.10"]\
+            ["@oclif/plugin-version", "npm:1.0.4"],\
+            ["@oclif/core", "npm:1.8.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6399,7 +6364,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-mergeable-object", "npm:1.1.1"],\
             ["javascript-stringify", "npm:2.1.0"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6410,9 +6375,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/cli", "workspace:packages/@straw-hat/cli"],\
             ["@oclif/core", "npm:1.0.10"],\
-            ["@oclif/dev-cli", "npm:1.26.9"],\
-            ["@oclif/plugin-help", "npm:5.1.10"],\
-            ["@oclif/plugin-version", "npm:1.0.3"],\
+            ["@oclif/dev-cli", "npm:1.26.10"],\
+            ["@oclif/plugin-help", "npm:5.1.12"],\
+            ["@oclif/plugin-version", "npm:1.0.4"],\
             ["@straw-hat/cli-core", "workspace:packages/@straw-hat/cli-core"],\
             ["@straw-hat/jest-config-chain", "npm:1.0.2"],\
             ["@straw-hat/tsconfig", "npm:3.0.2"],\
@@ -6450,7 +6415,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ejs", "npm:3.1.7"],\
             ["enquirer", "npm:2.3.6"],\
             ["make-dir", "npm:3.1.0"],\
-            ["ora", "npm:6.0.1"],\
+            ["ora", "npm:6.1.0"],\
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"]\
           ],\
           "linkType": "SOFT"\
@@ -6543,7 +6508,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.20"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6559,7 +6524,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
             ["jest-fetch-mock", "npm:3.0.3"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6574,7 +6539,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.20"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6598,7 +6563,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.20"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6613,7 +6578,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.20"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6635,7 +6600,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#npm:12.1.0"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#npm:17.0.2"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6652,13 +6617,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["husky", "npm:7.0.4"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
-            ["lint-staged", "npm:12.3.6"],\
+            ["lint-staged", "npm:12.4.1"],\
             ["monodeploy", "npm:3.0.0"],\
             ["npm-run-all", "npm:4.1.5"],\
             ["prettier", "npm:2.6.0"],\
             ["rimraf", "npm:3.0.2"],\
             ["typedoc", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:0.22.13"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6669,7 +6634,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/openapi-web-sdk-generator", "workspace:packages/@straw-hat/openapi-web-sdk-generator"],\
             ["@apidevtools/swagger-parser", "virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#npm:10.0.3"],\
-            ["@oclif/command", "virtual:f7d571e0d77017e1d29b1e07a522ecaa92b0544f222388541809a9c07f96976aeb3437afcfac1ce21bfe1d1a4fa7793cd36e5b24db59e3adef0819d088b77e0f#npm:1.8.16"],\
+            ["@oclif/command", "virtual:df36121af98d2704c80396452eff9df29746827d16467eb2c40d41d10959b3afbc6a2644fe8aa0d9b6541e69a29a1afcafa253902174840cdbaa4b9f36b2eefa#npm:1.8.16"],\
             ["@oclif/dev-cli", "npm:1.26.10"],\
             ["@oclif/errors", "npm:1.3.5"],\
             ["@oclif/help", "npm:1.0.1"],\
@@ -6697,7 +6662,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["mustache", "npm:4.2.0"],\
             ["openapi-types", "npm:10.0.0"],\
             ["prettier", "npm:2.6.0"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6779,7 +6744,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
             ["react", "npm:17.0.2"],\
             ["react-test-renderer", "virtual:6fc72f00709e4d8d88e291d5795ad70a1c6a966b0796f9ff31bc1c8d8e4a17757f8a27fe308b4271acb949e2fc9d65bfb93738ca591f12e34c4d18f1e3741989#npm:17.0.2"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6792,7 +6757,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@straw-hat/tsconfig", "npm:3.0.2"],\
             ["@types/react-native", "npm:0.67.3"],\
             ["react-native", "virtual:28ae392bc69eb8d47b5e38f3b63ccb030c068cac250b65b05f735695fc99f90ff5df636ceb8b5c994559251d1288e78fd57dfc2cf820ef3f5dcc549f460f787f#npm:0.67.3"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6815,7 +6780,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#npm:17.0.2"],\
             ["react-query", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:3.34.16"],\
             ["react-test-renderer", "virtual:6fc72f00709e4d8d88e291d5795ad70a1c6a966b0796f9ff31bc1c8d8e4a17757f8a27fe308b4271acb949e2fc9d65bfb93738ca591f12e34c4d18f1e3741989#npm:17.0.2"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6831,7 +6796,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.20"],\
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -6884,7 +6849,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.4.1"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:27.5.1"],\
             ["typedoc", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:0.22.13"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"],\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"],\
             ["webpack-chain", "npm:6.5.1"]\
           ],\
           "linkType": "SOFT"\
@@ -10227,44 +10192,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["cli-ux", [\
-        ["npm:5.6.6", {\
-          "packageLocation": "./.yarn/cache/cli-ux-npm-5.6.6-ed6ebdf6db-1a6e4e1c87.zip/node_modules/cli-ux/",\
-          "packageDependencies": [\
-            ["cli-ux", "npm:5.6.6"],\
-            ["@oclif/command", "virtual:f7d571e0d77017e1d29b1e07a522ecaa92b0544f222388541809a9c07f96976aeb3437afcfac1ce21bfe1d1a4fa7793cd36e5b24db59e3adef0819d088b77e0f#npm:1.8.16"],\
-            ["@oclif/errors", "npm:1.3.5"],\
-            ["@oclif/linewrap", "npm:1.0.0"],\
-            ["@oclif/screen", "npm:1.0.4"],\
-            ["ansi-escapes", "npm:4.3.2"],\
-            ["ansi-styles", "npm:4.3.0"],\
-            ["cardinal", "npm:2.1.1"],\
-            ["chalk", "npm:4.1.2"],\
-            ["clean-stack", "npm:3.0.1"],\
-            ["cli-progress", "npm:3.10.0"],\
-            ["extract-stack", "npm:2.0.0"],\
-            ["fs-extra", "npm:8.1.0"],\
-            ["hyperlinker", "npm:1.0.0"],\
-            ["indent-string", "npm:4.0.0"],\
-            ["is-wsl", "npm:2.2.0"],\
-            ["js-yaml", "npm:3.14.0"],\
-            ["lodash", "npm:4.17.21"],\
-            ["natural-orderby", "npm:2.0.3"],\
-            ["object-treeify", "npm:1.1.33"],\
-            ["password-prompt", "npm:1.1.2"],\
-            ["semver", "npm:7.3.2"],\
-            ["string-width", "npm:4.2.0"],\
-            ["strip-ansi", "npm:6.0.0"],\
-            ["supports-color", "npm:8.1.1"],\
-            ["supports-hyperlinks", "npm:2.2.0"],\
-            ["tslib", "npm:2.3.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:5.6.7", {\
           "packageLocation": "./.yarn/cache/cli-ux-npm-5.6.7-df36121af9-a7371fff87.zip/node_modules/cli-ux/",\
           "packageDependencies": [\
             ["cli-ux", "npm:5.6.7"],\
-            ["@oclif/command", "virtual:f7d571e0d77017e1d29b1e07a522ecaa92b0544f222388541809a9c07f96976aeb3437afcfac1ce21bfe1d1a4fa7793cd36e5b24db59e3adef0819d088b77e0f#npm:1.8.16"],\
+            ["@oclif/command", "virtual:df36121af98d2704c80396452eff9df29746827d16467eb2c40d41d10959b3afbc6a2644fe8aa0d9b6541e69a29a1afcafa253902174840cdbaa4b9f36b2eefa#npm:1.8.16"],\
             ["@oclif/errors", "npm:1.3.5"],\
             ["@oclif/linewrap", "npm:1.0.0"],\
             ["@oclif/screen", "npm:1.0.4"],\
@@ -10996,7 +10928,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["commander", "npm:5.1.0"],\
             ["common-tags", "npm:1.8.2"],\
             ["dayjs", "npm:1.11.0"],\
-            ["debug", "virtual:15c354f93ab1812c7821257dfee4230fa6d8365b4e02d216f216ae888b5d52bf555472ce55b0bf2fb8c45c9f449b16cb62dacfaabf7f0c7fd6331842c8365634#npm:4.3.4"],\
+            ["debug", "virtual:6b3d539b27366b222479c2bdc4109cedf01544ede512ff319fa1b703b7e76ba6dd73324f30f7a50fd0a193665289c9eee7572409ed37b243f7e880b7060b32fd#npm:4.3.4"],\
             ["enquirer", "npm:2.3.6"],\
             ["eventemitter2", "npm:6.4.5"],\
             ["execa", "npm:4.1.0"],\
@@ -11127,20 +11059,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:15c354f93ab1812c7821257dfee4230fa6d8365b4e02d216f216ae888b5d52bf555472ce55b0bf2fb8c45c9f449b16cb62dacfaabf7f0c7fd6331842c8365634#npm:4.3.4", {\
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-499c042a23/0/cache/debug-npm-4.3.4-4513954577-3dbad3f94e.zip/node_modules/debug/",\
-          "packageDependencies": [\
-            ["debug", "virtual:15c354f93ab1812c7821257dfee4230fa6d8365b4e02d216f216ae888b5d52bf555472ce55b0bf2fb8c45c9f449b16cb62dacfaabf7f0c7fd6331842c8365634#npm:4.3.4"],\
-            ["@types/supports-color", null],\
-            ["ms", "npm:2.1.2"],\
-            ["supports-color", "npm:8.1.1"]\
-          ],\
-          "packagePeers": [\
-            "@types/supports-color",\
-            "supports-color"\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["virtual:2395052be89e7cb60a9e457720a81c812457953cc762643b2dddf96818b24121417de8a1244c250c72573d9df94e1c92243e353c6f07da586de517860c3c8e2e#npm:4.2.0", {\
           "packageLocation": "./.yarn/__virtual__/debug-virtual-d0b6394e06/0/cache/debug-npm-4.2.0-9392baba7e-f901c2a64e.zip/node_modules/debug/",\
           "packageDependencies": [\
@@ -11162,20 +11080,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supports-color", null],\
             ["ms", "npm:2.0.0"],\
             ["supports-color", null]\
-          ],\
-          "packagePeers": [\
-            "@types/supports-color",\
-            "supports-color"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.3.3", {\
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-12cd5bfb96/0/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",\
-          "packageDependencies": [\
-            ["debug", "virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.3.3"],\
-            ["@types/supports-color", null],\
-            ["ms", "npm:2.1.2"],\
-            ["supports-color", "npm:9.2.1"]\
           ],\
           "packagePeers": [\
             "@types/supports-color",\
@@ -11211,6 +11115,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
+        ["virtual:6b3d539b27366b222479c2bdc4109cedf01544ede512ff319fa1b703b7e76ba6dd73324f30f7a50fd0a193665289c9eee7572409ed37b243f7e880b7060b32fd#npm:4.3.4", {\
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-2aa0e0c206/0/cache/debug-npm-4.3.4-4513954577-3dbad3f94e.zip/node_modules/debug/",\
+          "packageDependencies": [\
+            ["debug", "virtual:6b3d539b27366b222479c2bdc4109cedf01544ede512ff319fa1b703b7e76ba6dd73324f30f7a50fd0a193665289c9eee7572409ed37b243f7e880b7060b32fd#npm:4.3.4"],\
+            ["@types/supports-color", null],\
+            ["ms", "npm:2.1.2"],\
+            ["supports-color", "npm:8.1.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/supports-color",\
+            "supports-color"\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["virtual:a3843946baa1d7ff7c41b46706f0c11ddd6d83034212da2b741215c854d7b0a49be6d94159bacf1650361a37d74547f84ba06efeade572d864bc76613908df19#npm:4.3.3", {\
           "packageLocation": "./.yarn/__virtual__/debug-virtual-80642cbaf5/0/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",\
           "packageDependencies": [\
@@ -11232,6 +11150,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supports-color", null],\
             ["ms", "npm:2.1.2"],\
             ["supports-color", "npm:8.1.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/supports-color",\
+            "supports-color"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:be80d63e3d8ec0ac2a4ad997ec1fce09e5a15b6a58dcd4404017801d8fe69dd1316739e4dbaebd74c22dd11b5b47ac668674821fe3a4ee1dd08258f46de4e01b#npm:4.3.3", {\
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-421384b7dd/0/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",\
+          "packageDependencies": [\
+            ["debug", "virtual:be80d63e3d8ec0ac2a4ad997ec1fce09e5a15b6a58dcd4404017801d8fe69dd1316739e4dbaebd74c22dd11b5b47ac668674821fe3a4ee1dd08258f46de4e01b#npm:4.3.3"],\
+            ["@types/supports-color", null],\
+            ["ms", "npm:2.1.2"],\
+            ["supports-color", "npm:9.2.1"]\
           ],\
           "packagePeers": [\
             "@types/supports-color",\
@@ -15238,17 +15170,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["lint-staged", [\
-        ["npm:12.3.6", {\
-          "packageLocation": "./.yarn/cache/lint-staged-npm-12.3.6-34f1b5abbe-b5075addb7.zip/node_modules/lint-staged/",\
+        ["npm:12.4.1", {\
+          "packageLocation": "./.yarn/cache/lint-staged-npm-12.4.1-be80d63e3d-b57183b537.zip/node_modules/lint-staged/",\
           "packageDependencies": [\
-            ["lint-staged", "npm:12.3.6"],\
+            ["lint-staged", "npm:12.4.1"],\
             ["cli-truncate", "npm:3.1.0"],\
             ["colorette", "npm:2.0.16"],\
             ["commander", "npm:8.3.0"],\
-            ["debug", "virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.3.3"],\
+            ["debug", "virtual:be80d63e3d8ec0ac2a4ad997ec1fce09e5a15b6a58dcd4404017801d8fe69dd1316739e4dbaebd74c22dd11b5b47ac668674821fe3a4ee1dd08258f46de4e01b#npm:4.3.3"],\
             ["execa", "npm:5.1.1"],\
             ["lilconfig", "npm:2.0.4"],\
-            ["listr2", "virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.0.5"],\
+            ["listr2", "virtual:be80d63e3d8ec0ac2a4ad997ec1fce09e5a15b6a58dcd4404017801d8fe69dd1316739e4dbaebd74c22dd11b5b47ac668674821fe3a4ee1dd08258f46de4e01b#npm:4.0.5"],\
             ["micromatch", "npm:4.0.4"],\
             ["normalize-path", "npm:3.0.0"],\
             ["object-inspect", "npm:1.12.0"],\
@@ -15296,10 +15228,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.0.5", {\
-          "packageLocation": "./.yarn/__virtual__/listr2-virtual-87cb371aee/0/cache/listr2-npm-4.0.5-e9e44decc1-7af31851ab.zip/node_modules/listr2/",\
+        ["virtual:be80d63e3d8ec0ac2a4ad997ec1fce09e5a15b6a58dcd4404017801d8fe69dd1316739e4dbaebd74c22dd11b5b47ac668674821fe3a4ee1dd08258f46de4e01b#npm:4.0.5", {\
+          "packageLocation": "./.yarn/__virtual__/listr2-virtual-da0922603a/0/cache/listr2-npm-4.0.5-e9e44decc1-7af31851ab.zip/node_modules/listr2/",\
           "packageDependencies": [\
-            ["listr2", "virtual:34f1b5abbe5f5396251dde6a11681d904a866e25c3365ab16a6a6921ec7e5ec19d81de371fc56f3082e6a312232a864eb429342d6057c1965d022e4701664c47#npm:4.0.5"],\
+            ["listr2", "virtual:be80d63e3d8ec0ac2a4ad997ec1fce09e5a15b6a58dcd4404017801d8fe69dd1316739e4dbaebd74c22dd11b5b47ac668674821fe3a4ee1dd08258f46de4e01b#npm:4.0.5"],\
             ["@types/enquirer", null],\
             ["cli-truncate", "npm:2.1.0"],\
             ["colorette", "npm:2.0.16"],\
@@ -17055,12 +16987,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.0.1", {\
-          "packageLocation": "./.yarn/cache/ora-npm-6.0.1-05bbf96407-d2215b85a4.zip/node_modules/ora/",\
+        ["npm:6.1.0", {\
+          "packageLocation": "./.yarn/cache/ora-npm-6.1.0-942627b2df-0e84d9c32f.zip/node_modules/ora/",\
           "packageDependencies": [\
-            ["ora", "npm:6.0.1"],\
+            ["ora", "npm:6.1.0"],\
             ["bl", "npm:5.0.0"],\
-            ["chalk", "npm:4.1.2"],\
+            ["chalk", "npm:5.0.1"],\
             ["cli-cursor", "npm:4.0.0"],\
             ["cli-spinners", "npm:2.6.1"],\
             ["is-interactive", "npm:2.0.0"],\
@@ -20279,7 +20211,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["marked", "npm:4.0.12"],\
             ["minimatch", "npm:5.0.1"],\
             ["shiki", "npm:0.10.1"],\
-            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "packagePeers": [\
             "@types/typescript",\
@@ -20293,6 +20225,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/typescript-patch-8338853a82-40b493a717.zip/node_modules/typescript/",\
           "packageDependencies": [\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-044c37f428-1cb434fbc6.zip/node_modules/typescript/",\
+          "packageDependencies": [\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "HARD"\
         }]\

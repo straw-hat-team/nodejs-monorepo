@@ -3159,23 +3159,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/command@npm:1.8.10":
-  version: 1.8.10
-  resolution: "@oclif/command@npm:1.8.10"
-  dependencies:
-    "@oclif/config": ^1.18.2
-    "@oclif/errors": ^1.3.5
-    "@oclif/parser": ^3.8.6
-    "@oclif/plugin-help": 3.2.14
-    debug: ^4.1.1
-    semver: ^7.3.2
-  peerDependencies:
-    "@oclif/config": ^1
-  checksum: 6a0506b79d61ed5814515cd3a1be0f17cd3d3123b19016bde1386414205dbb0e41b98d87040ff331c9ef4b4c67680f5484565c1ad913e16a504e94225bf9bb1e
-  languageName: node
-  linkType: hard
-
-"@oclif/command@npm:^1.8.14, @oclif/command@npm:^1.8.15, @oclif/command@npm:^1.8.16, @oclif/command@npm:^1.8.9":
+"@oclif/command@npm:^1.8.14, @oclif/command@npm:^1.8.15, @oclif/command@npm:^1.8.16":
   version: 1.8.16
   resolution: "@oclif/command@npm:1.8.16"
   dependencies:
@@ -3244,7 +3228,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/core@npm:^1.0.10, @oclif/core@npm:^1.0.8":
+"@oclif/core@npm:^1.0.8":
   version: 1.6.1
   resolution: "@oclif/core@npm:1.6.1"
   dependencies:
@@ -3278,6 +3262,43 @@ __metadata:
     widest-line: ^3.1.0
     wrap-ansi: ^7.0.0
   checksum: a19e75715583d032c06f22bd0fbbb0c0ff75ee97d0098c6d79a00fdbbe9a553d0be9595cbef8645d45185556c9518371b11289ec772ef1efa23a01cc016f2a9b
+  languageName: node
+  linkType: hard
+
+"@oclif/core@npm:^1.1.1":
+  version: 1.8.0
+  resolution: "@oclif/core@npm:1.8.0"
+  dependencies:
+    "@oclif/linewrap": ^1.0.0
+    "@oclif/screen": ^3.0.2
+    ansi-escapes: ^4.3.2
+    ansi-styles: ^4.3.0
+    cardinal: ^2.1.1
+    chalk: ^4.1.2
+    clean-stack: ^3.0.1
+    cli-progress: ^3.10.0
+    debug: ^4.3.4
+    ejs: ^3.1.6
+    fs-extra: ^9.1.0
+    get-package-type: ^0.1.0
+    globby: ^11.1.0
+    hyperlinker: ^1.0.0
+    indent-string: ^4.0.0
+    is-wsl: ^2.2.0
+    js-yaml: ^3.14.1
+    lodash: ^4.17.21
+    natural-orderby: ^2.0.3
+    object-treeify: ^1.1.33
+    password-prompt: ^1.1.2
+    semver: ^7.3.5
+    string-width: ^4.2.3
+    strip-ansi: ^6.0.1
+    supports-color: ^8.1.1
+    supports-hyperlinks: ^2.2.0
+    tslib: ^2.3.1
+    widest-line: ^3.1.0
+    wrap-ansi: ^7.0.0
+  checksum: e84b5eae4a3d2717cec60c5b675b184fc5da4e987974d1a9e9ded0e8961a9d8bb4f91ec48dc6c75e86909c4c825f581d764fba424c50153340b72786f084984c
   languageName: node
   linkType: hard
 
@@ -3318,30 +3339,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/dev-cli@npm:1.26.9":
-  version: 1.26.9
-  resolution: "@oclif/dev-cli@npm:1.26.9"
-  dependencies:
-    "@oclif/command": 1.8.10
-    "@oclif/config": ^1.18.2
-    "@oclif/errors": ^1.3.5
-    "@oclif/plugin-help": 3.2.14
-    cli-ux: 5.6.6
-    debug: ^4.1.1
-    find-yarn-workspace-root: ^2.0.0
-    fs-extra: ^8.1
-    github-slugger: ^1.2.1
-    lodash: ^4.17.11
-    normalize-package-data: ^3.0.0
-    qqjs: ^0.3.10
-    tslib: ^2.0.3
-  bin:
-    oclif-dev: bin/run
-  checksum: 113b86e190ba1af264f9471c5f7c1a7cd4138f384a2b8a3bf29681437d6b2be0cd6b4f84f56246c354551c22976091bb0f93de059dd64c44b5a40b34e69de425
-  languageName: node
-  linkType: hard
-
-"@oclif/dev-cli@npm:^1.26.10":
+"@oclif/dev-cli@npm:1.26.10, @oclif/dev-cli@npm:^1.26.10":
   version: 1.26.10
   resolution: "@oclif/dev-cli@npm:1.26.10"
   dependencies:
@@ -3413,24 +3411,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-help@npm:3.2.14":
-  version: 3.2.14
-  resolution: "@oclif/plugin-help@npm:3.2.14"
-  dependencies:
-    "@oclif/command": ^1.8.9
-    "@oclif/config": ^1.18.2
-    "@oclif/errors": ^1.3.5
-    chalk: ^4.1.2
-    indent-string: ^4.0.0
-    lodash: ^4.17.21
-    string-width: ^4.2.0
-    strip-ansi: ^6.0.0
-    widest-line: ^3.1.0
-    wrap-ansi: ^6.2.0
-  checksum: 5dbb0265b9edb88d35b948e8795b5aeed8370dff0bc6c4053fb5191983f2cdc3b9345ecc7f8a9415821c25fea9668ef9e6894dfae8e160606931364bcc6549b6
-  languageName: node
-  linkType: hard
-
 "@oclif/plugin-help@npm:3.2.18":
   version: 3.2.18
   resolution: "@oclif/plugin-help@npm:3.2.18"
@@ -3450,16 +3430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-help@npm:5.1.10":
-  version: 5.1.10
-  resolution: "@oclif/plugin-help@npm:5.1.10"
-  dependencies:
-    "@oclif/core": ^1.0.10
-  checksum: fb419b4aefd5ff427513387a516aea8cca0714bb7f3e7a7bba6d2a63822e2952eb03193c11589da8840ef799671b18875dd734876389999481cdb3a41b7b2636
-  languageName: node
-  linkType: hard
-
-"@oclif/plugin-help@npm:^5.1.12":
+"@oclif/plugin-help@npm:5.1.12, @oclif/plugin-help@npm:^5.1.12":
   version: 5.1.12
   resolution: "@oclif/plugin-help@npm:5.1.12"
   dependencies:
@@ -3468,12 +3439,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-version@npm:1.0.3":
-  version: 1.0.3
-  resolution: "@oclif/plugin-version@npm:1.0.3"
+"@oclif/plugin-version@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@oclif/plugin-version@npm:1.0.4"
   dependencies:
-    "@oclif/core": 1.0.10
-  checksum: e50d800deac10b226b14c8fb8fa9268d93674a4451ceab54b5b147c8038b8852ee116e41035c17ab01506e1b12b50b1c48a7cc13541d2fc41587aecfdb3d617f
+    "@oclif/core": ^1.1.1
+  checksum: 38032b6b371e7bab81418807efb906e23d4fda3c5526d1c2bf13c299f3a21cc5c5704162785b9775af072065c7b6ed525147c7391dc69e7a2a0a8e0a905bc552
   languageName: node
   linkType: hard
 
@@ -3806,7 +3777,7 @@ __metadata:
     is-mergeable-object: ^1.1.1
     javascript-stringify: ^2.1.0
     jest: ^27.5.1
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -3830,7 +3801,7 @@ __metadata:
     ejs: 3.1.7
     enquirer: 2.3.6
     make-dir: 3.1.0
-    ora: 6.0.1
+    ora: 6.1.0
     resolve: 1.20.0
   languageName: unknown
   linkType: soft
@@ -3840,9 +3811,9 @@ __metadata:
   resolution: "@straw-hat/cli@workspace:packages/@straw-hat/cli"
   dependencies:
     "@oclif/core": 1.0.10
-    "@oclif/dev-cli": 1.26.9
-    "@oclif/plugin-help": 5.1.10
-    "@oclif/plugin-version": 1.0.3
+    "@oclif/dev-cli": 1.26.10
+    "@oclif/plugin-help": 5.1.12
+    "@oclif/plugin-version": 1.0.4
     "@straw-hat/cli-core": 0.10.3
     "@straw-hat/jest-config-chain": 1.0.2
     "@straw-hat/tsconfig": ^3.0.2
@@ -3983,7 +3954,7 @@ __metadata:
     "@swc/jest": ^0.2.20
     "@types/jest": ^27.4.1
     jest: ^27.5.1
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -3997,7 +3968,7 @@ __metadata:
     "@types/jest": ^27.4.1
     jest: ^27.5.1
     jest-fetch-mock: ^3.0.3
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -4010,7 +3981,7 @@ __metadata:
     "@swc/jest": ^0.2.20
     "@types/jest": ^27.4.1
     jest: ^27.5.1
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -4033,7 +4004,7 @@ __metadata:
     "@swc/jest": ^0.2.20
     "@types/jest": ^27.4.1
     jest: ^27.5.1
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -4046,7 +4017,7 @@ __metadata:
     "@swc/jest": ^0.2.20
     "@types/jest": ^27.4.1
     jest: ^27.5.1
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -4066,7 +4037,7 @@ __metadata:
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   peerDependencies:
     next: ^12.0.4
     react: ^17.0.2
@@ -4084,13 +4055,13 @@ __metadata:
     "@straw-hat/tsconfig": ^3.0.1
     husky: ^7.0.4
     jest: ^27.5.1
-    lint-staged: ^12.3.6
+    lint-staged: ^12.4.1
     monodeploy: ^3.0.0
     npm-run-all: ^4.1.5
     prettier: ^2.6.0
     rimraf: ^3.0.2
     typedoc: ^0.22.13
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -4127,7 +4098,7 @@ __metadata:
     mustache: ^4.2.0
     openapi-types: ^10.0.0
     prettier: ^2.6.0
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   bin:
     sht-openapi-web-sdk-generator: bin/sht-openapi-web-sdk-generator
   languageName: unknown
@@ -4171,7 +4142,7 @@ __metadata:
     jest: ^27.5.1
     react: ^17.0.2
     react-test-renderer: ^17.0.2
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -4184,7 +4155,7 @@ __metadata:
     "@straw-hat/tsconfig": ^3.0.2
     "@types/react-native": ^0.67.3
     react-native: ^0.67.3
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   peerDependencies:
     react-native: ^0.61.3
   languageName: unknown
@@ -4207,7 +4178,7 @@ __metadata:
     react-dom: ^17.0.2
     react-query: ^3.34.16
     react-test-renderer: ^17.0.2
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   peerDependencies:
     "@straw-hat/fetcher": ^4.4.1
     react-query: ^3.30.0
@@ -4224,7 +4195,7 @@ __metadata:
     "@swc/jest": ^0.2.20
     "@types/jest": ^27.4.1
     jest: ^27.5.1
-    typescript: ^4.6.2
+    typescript: ^4.6.4
   languageName: unknown
   linkType: soft
 
@@ -4260,7 +4231,7 @@ __metadata:
     "@types/jest": ^27.4.1
     jest: ^27.5.1
     typedoc: ^0.22.13
-    typescript: ^4.6.2
+    typescript: ^4.6.4
     webpack-chain: ^6.5.1
   peerDependencies:
     graphql-tag: ^2.9.2
@@ -6850,7 +6821,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cli-spinners@npm:^2.0.0, cli-spinners@npm:^2.6.0":
+"cli-spinners@npm:^2.0.0, cli-spinners@npm:^2.6.1":
   version: 2.6.1
   resolution: "cli-spinners@npm:2.6.1"
   checksum: 423409baaa7a58e5104b46ca1745fbfc5888bbd0b0c5a626e052ae1387060839c8efd512fb127e25769b3dc9562db1dc1b5add6e0b93b7ef64f477feb6416a45
@@ -6887,40 +6858,6 @@ __metadata:
     slice-ansi: ^5.0.0
     string-width: ^5.0.0
   checksum: c3243e41974445691c63f8b405df1d5a24049dc33d324fe448dc572e561a7b772ae982692900b1a5960901cc4fc7def25a629b9c69a4208ee89d12ab3332617a
-  languageName: node
-  linkType: hard
-
-"cli-ux@npm:5.6.6":
-  version: 5.6.6
-  resolution: "cli-ux@npm:5.6.6"
-  dependencies:
-    "@oclif/command": ^1.8.9
-    "@oclif/errors": ^1.3.5
-    "@oclif/linewrap": ^1.0.0
-    "@oclif/screen": ^1.0.4
-    ansi-escapes: ^4.3.0
-    ansi-styles: ^4.2.0
-    cardinal: ^2.1.1
-    chalk: ^4.1.0
-    clean-stack: ^3.0.0
-    cli-progress: ^3.4.0
-    extract-stack: ^2.0.0
-    fs-extra: ^8.1
-    hyperlinker: ^1.0.0
-    indent-string: ^4.0.0
-    is-wsl: ^2.2.0
-    js-yaml: ^3.13.1
-    lodash: ^4.17.21
-    natural-orderby: ^2.0.1
-    object-treeify: ^1.1.4
-    password-prompt: ^1.1.2
-    semver: ^7.3.2
-    string-width: ^4.2.0
-    strip-ansi: ^6.0.0
-    supports-color: ^8.1.0
-    supports-hyperlinks: ^2.1.0
-    tslib: ^2.0.0
-  checksum: 1a6e4e1c87c14f333d1a7d0440b667729a2b783bec0c67bd0390c9384158e6059edf5abc0d2ffa11b9361698262fbce07af2bac342e954f3756ad049653778fd
   languageName: node
   linkType: hard
 
@@ -7698,7 +7635,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.3.2":
+"debug@npm:^4.3.2, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -11336,9 +11273,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^12.3.6":
-  version: 12.3.6
-  resolution: "lint-staged@npm:12.3.6"
+"lint-staged@npm:^12.4.1":
+  version: 12.4.1
+  resolution: "lint-staged@npm:12.4.1"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
@@ -11356,7 +11293,7 @@ __metadata:
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: b5075addb79cefd3a01eb3e4b511cdbe255c86e80ac4f27c4ce90bbd5a6ef3765ec0c70ddc33e37d13aef54218b6026f52fcd0ed0ac9bf3a205a533b994ed387
+  checksum: b57183b537064cda6caef6679918bf271903145f7c28d09567e918b8b13094048b579f8df808ea590dbd7ea2ec332327c5e372cf3d77e85b7b0254f6541ce4c3
   languageName: node
   linkType: hard
 
@@ -11543,7 +11480,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"log-symbols@npm:^5.0.0":
+"log-symbols@npm:^5.1.0":
   version: 5.1.0
   resolution: "log-symbols@npm:5.1.0"
   dependencies:
@@ -12980,20 +12917,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ora@npm:6.0.1":
-  version: 6.0.1
-  resolution: "ora@npm:6.0.1"
+"ora@npm:6.1.0":
+  version: 6.1.0
+  resolution: "ora@npm:6.1.0"
   dependencies:
     bl: ^5.0.0
-    chalk: ^4.1.2
+    chalk: ^5.0.0
     cli-cursor: ^4.0.0
-    cli-spinners: ^2.6.0
+    cli-spinners: ^2.6.1
     is-interactive: ^2.0.0
     is-unicode-supported: ^1.1.0
-    log-symbols: ^5.0.0
+    log-symbols: ^5.1.0
     strip-ansi: ^7.0.1
     wcwidth: ^1.0.1
-  checksum: d2215b85a481a21d4e53f2e484658a7d1526b0b6dfeab63e4b350b620f2bb9df33fd3f2a9ece1695b28ffa1b8954a31bfc26a44460a60fe98785c1c37527f4da
+  checksum: 0e84d9c32f2c62617324658ea547963412152f0bf60c1580ed18ec660769713452a6a47d117a1767bb118bb0867720ecc109ef6e12d18fd71ae244683e722b23
   languageName: node
   linkType: hard
 
@@ -15888,7 +15825,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.4.3, typescript@npm:^4.6.2":
+"typescript@npm:^4.4.3":
   version: 4.6.2
   resolution: "typescript@npm:4.6.2"
   bin:
@@ -15898,13 +15835,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.2#~builtin<compat/typescript>":
+"typescript@npm:^4.6.4":
+  version: 4.6.4
+  resolution: "typescript@npm:4.6.4"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: e7bfcc39cd4571a63a54e5ea21f16b8445268b9900bf55aee0e02ad981be576acc140eba24f1af5e3c1457767c96cea6d12861768fb386cf3ffb34013718631a
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
   version: 4.6.2
   resolution: "typescript@patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 40b493a71747fb89fa70df104e2c4a5e284b43750af5bea024090a5261cefa387f7a9372411b13030f7bf5555cee4275443d08805642ae5c74ef76740854a4c7
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
+  version: 4.6.4
+  resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 1cb434fbc637d347be90e3a0c6cd05e33c38f941713c8786d3031faf1842c2c148ba91d2fac01e7276b0ae3249b8633f1660e32686cc7a8c6a8fd5361dc52c66
   languageName: node
   linkType: hard
 
