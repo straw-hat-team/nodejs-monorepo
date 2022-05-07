@@ -3,13 +3,8 @@ import { OperationObject, PathItemObject } from '../../types';
 import { forEachHttpOperation, getOperationDirectory, getOperationFileRelativePath } from '../../helpers';
 import path from 'path';
 import { OutputDir } from '../../output-dir';
-import { TemplateDir } from '../../template-dir';
 import { camelCase, pascalCase } from 'change-case';
 import { OpenAPIV3 } from 'openapi-types';
-
-const templateDir = new TemplateDir(
-  path.join(__dirname, '..', '..', '..', 'templates', 'generators', 'react-query-fetcher')
-);
 
 function isQuery(operationMethod: string) {
   return OpenAPIV3.HttpMethods.GET.toUpperCase() == operationMethod.toUpperCase();
@@ -49,12 +44,37 @@ export default class ReactQueryFetcherCodegen extends CodegenBase<ReactQueryFetc
     await this.#outputDir.createDir(operationDirPath);
 
     const sourceCode = isQuery(args.operationMethod)
-      ? await templateDir.render('query-operation.ts.mustache', {
-          functionName,
-          typePrefix,
-          pascalFunctionName,
-          importPath: this.packageName,
-        })
+      ? `
+          import type { Fetcher } from '@straw-hat/fetcher';
+          import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+          import type { ${typePrefix}Response, ${typePrefix}Params } from '${this.packageName}';
+          import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+          import { ${functionName} } from '${this.packageName}';
+
+          export type Use${pascalFunctionName}Params = Omit<${typePrefix}Params, 'options'>;
+
+          export type Use${pascalFunctionName}Args<TData, TError> = Omit<
+            UseFetcherQueryArgs<${typePrefix}Response, TError, TData, Use${pascalFunctionName}Params>,
+            'queryKey' | 'endpoint'
+          >;
+
+          const QUERY_KEY = ['${functionName}'];
+
+          export function use${pascalFunctionName}QueryKey(params?: Use${pascalFunctionName}Params) {
+            return createQueryKey(QUERY_KEY, params);
+          }
+
+          export function use${pascalFunctionName}<TData = ${typePrefix}Response, TError = unknown>(
+            client: Fetcher,
+            args: Use${pascalFunctionName}Args<TData, TError>,
+          ) {
+            return useFetcherQuery<${typePrefix}Response, TError, TData, Use${pascalFunctionName}Params>(client, {
+              ...args,
+              queryKey: QUERY_KEY,
+              endpoint: ${functionName},
+            });
+          }
+        `
       : `
           import type { UseMutationOptions } from 'react-query';
           import type { Fetcher } from '@straw-hat/fetcher';
