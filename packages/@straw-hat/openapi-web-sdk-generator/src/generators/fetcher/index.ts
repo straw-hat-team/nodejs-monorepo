@@ -152,12 +152,7 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
 
     await this.#outputDir.formatFile(operationFilePath);
 
-    await this.#outputDir.appendFile(
-      'index.ts',
-      await templateDir.render('index-export-statement.ts.mustache', {
-        operationImportPath: operationIndexImportPath,
-      })
-    );
+    await this.#outputDir.appendFile('index.ts', `export * from './${operationIndexImportPath}';`);
   };
 
   async generate() {
