@@ -11,6 +11,7 @@ import { Resolver } from '@stoplight/json-ref-resolver';
 import { NEVER_DEFINITION, UNKNOWN_DEFINITION } from './constants';
 import { addSchemaHelpers } from '../../engine/add-schema-helpers';
 import { Scope } from '../../engine/scope';
+import { whenInject } from '../../helpers/template';
 
 const templateDir = new TemplateDir(path.join(__dirname, '..', '..', '..', 'templates', 'generators', 'fetcher'));
 
@@ -125,9 +126,14 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
 
     await this.#outputDir.writeFile(
       operationFilePath,
-      await templateDir.render('operation-imports.ts.mustache', {
-        hasRequestBody: Boolean(requestBodySchema),
-      })
+      `
+        import type { Fetcher } from '@straw-hat/fetcher';
+        import {
+          ${whenInject(Boolean(requestBodySchema), `getRequestBody,`)}
+          getResponseBody,
+        } from '@straw-hat/fetcher';
+        import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+      `
     );
 
     await this.#outputDir.appendFile(operationFilePath, scope.toString());

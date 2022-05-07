@@ -2,7 +2,8 @@ import { OpenAPIV3NonArraySchemaObject, OpenAPIV3ReferenceableSchemaObject, Open
 import { asString, getSchemaName, hasSchemaId, isOpenAPIV3SchemaObject, isReferenceObject } from '../helpers';
 import { camelCase, constantCase, pascalCase, snakeCase } from 'change-case';
 import { Scope } from './scope';
-import { getTypeDefinition, addTypeScripType } from './add-typescript-type';
+import { addTypeScripType, getTypeDefinition } from './add-typescript-type';
+import { whenInject } from '../helpers/template';
 
 type EnumValueDefinition = {
   aliasName: string;
@@ -170,10 +171,6 @@ export async function addSchemaHelpers(scope: Scope, schema: OpenAPIV3Referencea
       return objectType(scope, schema);
     }
   }
-}
-
-function whenInject(condition: boolean, body: string) {
-  return condition ? body : '';
 }
 
 function toEnumValueDef(propertySchema: OpenAPIV3SchemaObject, enumVariableName: string) {

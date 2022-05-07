@@ -1,11 +1,11 @@
-import { OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject, OperationObject, PathItemObject } from './types';
+import { OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject, OperationObject, PathItemObject } from '../types';
 import { paramCase, pascalCase } from 'change-case';
 import * as path from 'path';
 import { OpenAPIV3 } from 'openapi-types';
 import debugFactory from 'debug';
-import { OperationIdMissingError } from './errors';
+import { OperationIdMissingError } from '../errors';
 import { cosmiconfig } from 'cosmiconfig';
-import { OpenApiWebSdkGeneratorConfiguration } from './openapi-web-sdk-generator';
+import { OpenApiWebSdkGeneratorConfiguration } from '../openapi-web-sdk-generator';
 import SwaggerParser from '@apidevtools/swagger-parser';
 import prettier from 'prettier';
 import prettierConfig from '@straw-hat/prettier-config';
