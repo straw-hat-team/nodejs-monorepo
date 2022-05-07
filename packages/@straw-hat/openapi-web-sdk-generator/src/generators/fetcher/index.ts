@@ -1,5 +1,11 @@
 import * as path from 'path';
-import { forEachHttpOperation, getOperationDirectory, getOperationFileRelativePath, formatCode } from '../../helpers';
+import {
+  forEachHttpOperation,
+  getOperationDirectory,
+  getOperationFileRelativePath,
+  formatCode,
+  whenInject,
+} from '../../helpers';
 import { CodegenBase } from '../../codegen-base';
 import { camelCase, pascalCase } from 'change-case';
 import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject } from '../../types';
@@ -10,7 +16,6 @@ import { Resolver } from '@stoplight/json-ref-resolver';
 import { NEVER_DEFINITION, UNKNOWN_DEFINITION } from './constants';
 import { addSchemaHelpers } from '../../engine/add-schema-helpers';
 import { Scope } from '../../engine/scope';
-import { whenInject } from '../../helpers/template';
 
 export interface FetcherCodegenOptions {
   outputDir: string;
@@ -138,23 +143,17 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
     const output = `
       ${whenInject(
         Boolean(pathParamSchema),
-        `
-        export type ${typePrefix}PathParams = ${getTypeDefinition(pathParamsType)};
-      `
+        `export type ${typePrefix}PathParams = ${getTypeDefinition(pathParamsType)};`
       )}
 
       ${whenInject(
         Boolean(queryParamSchema),
-        `
-        export type ${typePrefix}QueryParams = ${getTypeDefinition(queryParamsType)};
-      `
+        `export type ${typePrefix}QueryParams = ${getTypeDefinition(queryParamsType)};`
       )}
 
       ${whenInject(
         Boolean(requestBodySchema),
-        `
-        export type ${typePrefix}BodyParams = ${getTypeDefinition(requestBodyType)};
-      `
+        `export type ${typePrefix}BodyParams = ${getTypeDefinition(requestBodyType)};`
       )}
 
       export type ${typePrefix}Params = Pick<

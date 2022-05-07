@@ -1,11 +1,11 @@
-import { OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject, OperationObject, PathItemObject } from '../types';
+import { OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject, OperationObject, PathItemObject } from './types';
 import { paramCase, pascalCase } from 'change-case';
 import * as path from 'path';
 import { OpenAPIV3 } from 'openapi-types';
 import debugFactory from 'debug';
-import { OperationIdMissingError } from '../errors';
+import { OperationIdMissingError } from './errors';
 import { cosmiconfig } from 'cosmiconfig';
-import { OpenApiWebSdkGeneratorConfiguration } from '../openapi-web-sdk-generator';
+import { OpenApiWebSdkGeneratorConfiguration } from './openapi-web-sdk-generator';
 import SwaggerParser from '@apidevtools/swagger-parser';
 import prettier from 'prettier';
 import prettierConfig from '@straw-hat/prettier-config';
@@ -112,4 +112,8 @@ export function isReferenceObject(obj: any): obj is OpenAPIV3.ReferenceObject {
 
 export function asString(value: any) {
   return `"${value}"`;
+}
+
+export function whenInject(condition: boolean, content: string, otherwise: string = '') {
+  return condition ? content : otherwise;
 }
