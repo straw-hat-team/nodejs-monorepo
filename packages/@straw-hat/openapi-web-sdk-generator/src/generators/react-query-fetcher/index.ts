@@ -55,12 +55,35 @@ export default class ReactQueryFetcherCodegen extends CodegenBase<ReactQueryFetc
           pascalFunctionName,
           importPath: this.packageName,
         })
-      : await templateDir.render('mutation-operation.ts.mustache', {
-          functionName,
-          typePrefix,
-          pascalFunctionName,
-          importPath: this.packageName,
-        });
+      : `
+          import type { UseMutationOptions } from 'react-query';
+          import type { Fetcher } from '@straw-hat/fetcher';
+          import type { ${typePrefix}Response, ${typePrefix}Params } from '${this.packageName}';
+          import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+          import { ${functionName} } from '${this.packageName}';
+
+          export type Use${pascalFunctionName}Variables = Omit<${typePrefix}Params, 'options'>;
+
+          export type Use${pascalFunctionName}Args<TError = unknown> = {
+            options?: Omit<UseMutationOptions<${typePrefix}Response, TError, Use${pascalFunctionName}Variables>, 'mutationKey'>
+          };
+
+          const MUTATION_KEY = '${functionName}';
+
+          export function use${pascalFunctionName}<TError = unknown>(
+            client: Fetcher,
+            args: Use${pascalFunctionName}Args<TError>,
+          ) {
+            const options = args.options ?? {};
+            return useFetcherMutation<${typePrefix}Response, TError, Use${pascalFunctionName}Variables>(client, {
+              options: {
+                ...options,
+                mutationKey: MUTATION_KEY,
+              },
+              endpoint: ${functionName},
+            });
+          }
+      `;
 
     await this.#outputDir.writeFile(`${operationFilePath}.ts`, sourceCode);
     await this.#outputDir.formatFile(`${operationFilePath}.ts`);
