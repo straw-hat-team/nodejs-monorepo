@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "^3.0.2",
-    "@types/react-native": "^0.67.3",
+    "@types/react-native": "^0.67.6",
     "react-native": "^0.68.1",
     "typescript": "^4.6.4"
   }

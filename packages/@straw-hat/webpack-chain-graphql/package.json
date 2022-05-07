@@ -39,9 +39,9 @@
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "^3.0.2",
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^27.5.0",
     "jest": "^27.5.1",
-    "typedoc": "^0.22.13",
+    "typedoc": "^0.22.15",
     "typescript": "^4.6.4",
     "webpack-chain": "^6.5.1"
   }
