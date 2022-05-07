@@ -47,7 +47,7 @@
     "del": "6.0.0",
     "enquirer": "2.3.6",
     "envinfo": "7.8.1",
-    "jest": "27.4.4",
+    "jest": "28.1.0",
     "jest-cli": "27.4.4",
     "jest-watch-typeahead": "1.1.0"
   },
