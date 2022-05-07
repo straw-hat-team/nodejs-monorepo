@@ -1,3 +1,3 @@
-export function whenInject(condition: boolean, body: string) {
-  return condition ? body : '';
+export function whenInject(condition: boolean, content: string, otherwise: string = '') {
+  return condition ? content : otherwise;
 }

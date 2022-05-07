@@ -4,7 +4,6 @@ import { CodegenBase } from '../../codegen-base';
 import { camelCase, pascalCase } from 'change-case';
 import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject } from '../../types';
 import { OutputDir } from '../../output-dir';
-import { TemplateDir } from '../../template-dir';
 import { getTypeDefinition, addTypeScripType } from '../../engine/add-typescript-type';
 import { getParameterSchemaFor, getRequestBodySchema, getResponseSchema } from './helpers';
 import { Resolver } from '@stoplight/json-ref-resolver';
@@ -12,8 +11,6 @@ import { NEVER_DEFINITION, UNKNOWN_DEFINITION } from './constants';
 import { addSchemaHelpers } from '../../engine/add-schema-helpers';
 import { Scope } from '../../engine/scope';
 import { whenInject } from '../../helpers/template';
-
-const templateDir = new TemplateDir(path.join(__dirname, '..', '..', '..', 'templates', 'generators', 'fetcher'));
 
 export interface FetcherCodegenOptions {
   outputDir: string;
@@ -138,23 +135,62 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
 
     await this.#outputDir.appendFile(operationFilePath, scope.toString());
 
-    await this.#outputDir.appendFile(
-      operationFilePath,
-      await templateDir.render('operation.ts.mustache', {
-        functionName,
-        typePrefix,
-        operationMethod: args.operationMethod.toUpperCase(),
-        operationPath: args.operationPath,
-        responseType: getTypeDefinition(responseType),
-        pathParamsType: getTypeDefinition(pathParamsType),
-        queryParamsType: getTypeDefinition(queryParamsType),
-        bodyParamsType: getTypeDefinition(requestBodyType),
-        requiredParams,
-        hasRequestBody: Boolean(requestBodySchema),
-        hasPathParamSchema: Boolean(pathParamSchema),
-        hasQueryParamSchema: Boolean(queryParamSchema),
-      })
-    );
+    const output = `
+      ${whenInject(
+        Boolean(pathParamSchema),
+        `
+        export type ${typePrefix}PathParams = ${getTypeDefinition(pathParamsType)};
+      `
+      )}
+
+      ${whenInject(
+        Boolean(queryParamSchema),
+        `
+        export type ${typePrefix}QueryParams = ${getTypeDefinition(queryParamsType)};
+      `
+      )}
+
+      ${whenInject(
+        Boolean(requestBodySchema),
+        `
+        export type ${typePrefix}BodyParams = ${getTypeDefinition(requestBodyType)};
+      `
+      )}
+
+      export type ${typePrefix}Params = Pick<
+        OperationParams<
+          ${whenInject(Boolean(pathParamSchema), `${typePrefix}PathParams,`, 'never,')}
+          ${whenInject(Boolean(queryParamSchema), `${typePrefix}QueryParams,`, 'never,')}
+          ${whenInject(Boolean(requestBodySchema), `${typePrefix}BodyParams`, 'never')}
+        >,
+        ${requiredParams}
+      >
+
+      export type ${typePrefix}Response = ${getTypeDefinition(responseType)};
+
+      export function ${functionName}UrlPath(params: Omit<${typePrefix}Params, 'options'>) {
+        return createUrlPath<
+          ${whenInject(Boolean(pathParamSchema), `${typePrefix}PathParams,`, 'never,')}
+          ${whenInject(Boolean(queryParamSchema), `${typePrefix}QueryParams,`, 'never,')}
+        >('${args.operationPath}', params);
+      }
+
+      export async function ${functionName}(
+        client: Fetcher,
+        params: ${typePrefix}Params
+      ): Promise<${typePrefix}Response> {
+        const url = ${functionName}UrlPath(params);
+
+        const response = await client(url, {
+          method: '${args.operationMethod.toUpperCase()}',
+          ${whenInject(Boolean(requestBodySchema), `body: getRequestBody(params.body),`)}
+          signal: params.options?.signal,
+        });
+
+        return getResponseBody(response);
+      }
+    `;
+    await this.#outputDir.appendFile(operationFilePath, output);
 
     await this.#outputDir.formatFile(operationFilePath);
 

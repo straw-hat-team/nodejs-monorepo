@@ -910,6 +910,7 @@ export async function deleteOrder(client: Fetcher, params: DeleteOrderParams): P
 
   const response = await client(url, {
     method: 'DELETE',
+
     signal: params.options?.signal,
   });
 
@@ -944,6 +945,7 @@ export async function deletePet(client: Fetcher, params: DeletePetParams): Promi
 
   const response = await client(url, {
     method: 'DELETE',
+
     signal: params.options?.signal,
   });
 
@@ -977,6 +979,7 @@ export async function deleteUser(client: Fetcher, params: DeleteUserParams): Pro
 
   const response = await client(url, {
     method: 'DELETE',
+
     signal: params.options?.signal,
   });
 
@@ -1018,6 +1021,7 @@ export async function findPetsByStatus(
 
   const response = await client(url, {
     method: 'GET',
+
     signal: params.options?.signal,
   });
 
@@ -1052,6 +1056,7 @@ export async function findPetsByTags(client: Fetcher, params: FindPetsByTagsPara
 
   const response = await client(url, {
     method: 'GET',
+
     signal: params.options?.signal,
   });
 
@@ -1078,6 +1083,7 @@ export async function getInventory(client: Fetcher, params: GetInventoryParams):
 
   const response = await client(url, {
     method: 'GET',
+
     signal: params.options?.signal,
   });
 
@@ -1113,6 +1119,7 @@ export async function getOrderById(client: Fetcher, params: GetOrderByIdParams):
 
   const response = await client(url, {
     method: 'GET',
+
     signal: params.options?.signal,
   });
 
@@ -1148,6 +1155,7 @@ export async function getPetById(client: Fetcher, params: GetPetByIdParams): Pro
 
   const response = await client(url, {
     method: 'GET',
+
     signal: params.options?.signal,
   });
 
@@ -1182,6 +1190,7 @@ export async function getUserByName(client: Fetcher, params: GetUserByNameParams
 
   const response = await client(url, {
     method: 'GET',
+
     signal: params.options?.signal,
   });
 
@@ -1242,6 +1251,7 @@ export async function loginUser(client: Fetcher, params: LoginUserParams): Promi
 
   const response = await client(url, {
     method: 'GET',
+
     signal: params.options?.signal,
   });
 
@@ -1268,6 +1278,7 @@ export async function logoutUser(client: Fetcher, params: LogoutUserParams): Pro
 
   const response = await client(url, {
     method: 'GET',
+
     signal: params.options?.signal,
   });
 
@@ -1379,6 +1390,7 @@ export async function updatePetWithForm(
 
   const response = await client(url, {
     method: 'POST',
+
     signal: params.options?.signal,
   });
 

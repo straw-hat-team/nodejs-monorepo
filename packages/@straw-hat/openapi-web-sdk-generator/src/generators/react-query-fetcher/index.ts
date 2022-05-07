@@ -107,7 +107,6 @@ export default class ReactQueryFetcherCodegen extends CodegenBase<ReactQueryFetc
 
     await this.#outputDir.writeFile(`${operationFilePath}.ts`, sourceCode);
     await this.#outputDir.formatFile(`${operationFilePath}.ts`);
-
     await this.#outputDir.appendFile('index.ts', `export * from './${operationIndexImportPath}';`);
   };
 
