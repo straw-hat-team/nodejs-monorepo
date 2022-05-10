@@ -2,7 +2,8 @@
   "extends": "@straw-hat/tsconfig/lib/base",
   "compilerOptions": {
     "module": "CommonJS",
-    "outDir": "dist"
+    "outDir": "dist",
+    "lib": ["dom", "esnext"]
   },
   "include": ["src", "tests"]
 }
