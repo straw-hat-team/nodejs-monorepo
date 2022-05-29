@@ -6893,8 +6893,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ci-info", "npm:3.3.1"],\
             ["conf", "npm:10.1.2"],\
             ["debug", "virtual:5aaab005efacf104ef24c7d7541e250d0d27671afd75c121bf95a454002eca98d3648d3e901bd5350f9b5540949fdbc9727069eea6e24bd5ed26cc0213a44ad9#npm:4.3.4"],\
-            ["dotenv", "npm:10.0.0"],\
-            ["dotenv-expand", "npm:5.1.0"],\
+            ["dotenv", "npm:16.0.1"],\
+            ["dotenv-expand", "npm:8.0.3"],\
             ["ejs", "npm:3.1.8"],\
             ["enquirer", "npm:2.3.6"],\
             ["make-dir", "npm:3.1.0"],\
@@ -11994,19 +11994,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["dotenv", [\
-        ["npm:10.0.0", {\
-          "packageLocation": "./.yarn/cache/dotenv-npm-10.0.0-36b272df25-f412c5fe8c.zip/node_modules/dotenv/",\
+        ["npm:16.0.1", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.1-d99e72bb95-f459ffce07.zip/node_modules/dotenv/",\
           "packageDependencies": [\
-            ["dotenv", "npm:10.0.0"]\
+            ["dotenv", "npm:16.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["dotenv-expand", [\
-        ["npm:5.1.0", {\
-          "packageLocation": "./.yarn/cache/dotenv-expand-npm-5.1.0-c3fff50eb5-8017675b7f.zip/node_modules/dotenv-expand/",\
+        ["npm:8.0.3", {\
+          "packageLocation": "./.yarn/cache/dotenv-expand-npm-8.0.3-3f30d1947a-128ce90ac8.zip/node_modules/dotenv-expand/",\
           "packageDependencies": [\
-            ["dotenv-expand", "npm:5.1.0"]\
+            ["dotenv-expand", "npm:8.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\

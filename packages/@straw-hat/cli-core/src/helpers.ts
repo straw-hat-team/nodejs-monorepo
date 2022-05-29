@@ -5,8 +5,8 @@ import { createDebugger } from './debug';
 import resolve from 'resolve';
 import { ContextDir, Environments, TsConfig } from './types';
 import makeDir from 'make-dir';
-import dotenv from 'dotenv';
-import dotenvExpand from 'dotenv-expand';
+import { config as dotenvConfig } from 'dotenv';
+import { expand as dotenvExpand } from 'dotenv-expand';
 
 const debug = createDebugger('helpers');
 const cache = new FancyMap<string, any>();
@@ -90,6 +90,6 @@ export function loadDotEnv(env: Environments, context: ContextDir) {
 
   dotenvFiles.filter(fs.existsSync).forEach((filePath: string) => {
     debug(`Loading environment variable's file: ${filePath}`);
-    dotenvExpand(dotenv.config({ path: filePath }));
+    dotenvExpand(dotenvConfig({ path: filePath }));
   });
 }

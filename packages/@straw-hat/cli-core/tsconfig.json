@@ -4,7 +4,8 @@
     "outDir": "dist",
     "module": "CommonJS",
     "target": "es2017",
-    "emitDeclarationOnly": false
+    "emitDeclarationOnly": false,
+    "lib": ["ESNext"]
   },
   "include": ["src"]
 }
