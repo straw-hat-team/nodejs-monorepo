@@ -37,7 +37,7 @@
     "@straw-hat/chainable-config": "^0.9.0"
   },
   "devDependencies": {
-    "@straw-hat/tsconfig": "^3.0.2",
+    "@straw-hat/tsconfig": "workspace:*",
     "@swc/core": "^1.2.194",
     "@swc/jest": "^0.2.21",
     "@types/jest": "^27.5.1",

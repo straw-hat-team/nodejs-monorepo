@@ -6838,7 +6838,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/chainable-config/",\
           "packageDependencies": [\
             ["@straw-hat/chainable-config", "workspace:packages/@straw-hat/chainable-config"],\
-            ["@straw-hat/tsconfig", "npm:3.0.2"],\
+            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@swc/core", "npm:1.2.194"],\
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.21"],\
             ["@types/jest", "npm:27.5.1"],\
@@ -6863,7 +6863,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@oclif/plugin-version", "npm:1.0.4"],\
             ["@straw-hat/cli-core", "workspace:packages/@straw-hat/cli-core"],\
             ["@straw-hat/jest-config-chain", "workspace:packages/@straw-hat/jest-config-chain"],\
-            ["@straw-hat/tsconfig", "npm:3.0.2"],\
+            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@types/node", "npm:17.0.36"],\
             ["cypress", "npm:9.7.0"],\
             ["debug", "virtual:5aaab005efacf104ef24c7d7541e250d0d27671afd75c121bf95a454002eca98d3648d3e901bd5350f9b5540949fdbc9727069eea6e24bd5ed26cc0213a44ad9#npm:4.3.4"],\
@@ -6884,7 +6884,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@straw-hat/cli-core", "workspace:packages/@straw-hat/cli-core"],\
             ["@oclif/core", "npm:1.9.0"],\
             ["@straw-hat/fancy-map", "npm:1.0.2"],\
-            ["@straw-hat/tsconfig", "npm:3.0.2"],\
+            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@types/debug", "npm:4.1.7"],\
             ["@types/ejs", "npm:3.1.1"],\
             ["@types/node", "npm:17.0.36"],\
@@ -7001,7 +7001,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/fetcher/",\
           "packageDependencies": [\
             ["@straw-hat/fetcher", "workspace:packages/@straw-hat/fetcher"],\
-            ["@straw-hat/tsconfig", "npm:3.0.2"],\
+            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@swc/core", "npm:1.2.194"],\
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.21"],\
             ["@types/jest", "npm:27.5.1"],\
@@ -7034,7 +7034,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/jest-config-chain", "workspace:packages/@straw-hat/jest-config-chain"],\
             ["@straw-hat/chainable-config", "workspace:packages/@straw-hat/chainable-config"],\
-            ["@straw-hat/tsconfig", "npm:3.0.2"],\
+            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@swc/core", "npm:1.2.194"],\
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.21"],\
             ["@types/jest", "npm:27.5.1"],\
@@ -7213,7 +7213,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/react-hooks", "workspace:packages/@straw-hat/react-hooks"],\
             ["@straw-hat/is-ssr", "workspace:packages/@straw-hat/is-ssr"],\
-            ["@straw-hat/tsconfig", "npm:3.0.2"],\
+            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@swc/core", "npm:1.2.194"],\
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.21"],\
             ["@testing-library/react-hooks", "virtual:6fc72f00709e4d8d88e291d5795ad70a1c6a966b0796f9ff31bc1c8d8e4a17757f8a27fe308b4271acb949e2fc9d65bfb93738ca591f12e34c4d18f1e3741989#npm:8.0.0"],\
@@ -7232,7 +7232,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/react-native-sdk/",\
           "packageDependencies": [\
             ["@straw-hat/react-native-sdk", "workspace:packages/@straw-hat/react-native-sdk"],\
-            ["@straw-hat/tsconfig", "npm:3.0.2"],\
+            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@types/react-native", "npm:0.67.7"],\
             ["react-native", "virtual:28ae392bc69eb8d47b5e38f3b63ccb030c068cac250b65b05f735695fc99f90ff5df636ceb8b5c994559251d1288e78fd57dfc2cf820ef3f5dcc549f460f787f#npm:0.68.2"],\
             ["typescript", "patch:typescript@npm%3A4.7.2#~builtin<compat/typescript>::version=4.7.2&hash=7ad353"]\
@@ -7246,7 +7246,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/react-query-fetcher", "workspace:packages/@straw-hat/react-query-fetcher"],\
             ["@straw-hat/fetcher", "workspace:packages/@straw-hat/fetcher"],\
-            ["@straw-hat/tsconfig", "npm:3.0.2"],\
+            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@swc/core", "npm:1.2.194"],\
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.21"],\
             ["@testing-library/react-hooks", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:8.0.0"],\
@@ -7281,13 +7281,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@straw-hat/tsconfig", [\
-        ["npm:3.0.2", {\
-          "packageLocation": "./.yarn/cache/@straw-hat-tsconfig-npm-3.0.2-b274d95dd7-3fd6a6f929.zip/node_modules/@straw-hat/tsconfig/",\
-          "packageDependencies": [\
-            ["@straw-hat/tsconfig", "npm:3.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["workspace:packages/@straw-hat/tsconfig", {\
           "packageLocation": "./packages/@straw-hat/tsconfig/",\
           "packageDependencies": [\
@@ -7324,7 +7317,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/@straw-hat/webpack-chain-graphql/",\
           "packageDependencies": [\
             ["@straw-hat/webpack-chain-graphql", "workspace:packages/@straw-hat/webpack-chain-graphql"],\
-            ["@straw-hat/tsconfig", "npm:3.0.2"],\
+            ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@types/jest", "npm:27.5.1"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:28.1.0"],\
             ["typedoc", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:0.22.15"],\

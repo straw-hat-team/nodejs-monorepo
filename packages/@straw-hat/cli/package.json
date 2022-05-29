@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@oclif/dev-cli": "1.26.10",
-    "@straw-hat/tsconfig": "^3.0.2",
+    "@straw-hat/tsconfig": "workspace:*",
     "@types/node": "^17.0.36"
   },
   "oclif": {
