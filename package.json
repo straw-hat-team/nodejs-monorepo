@@ -15,12 +15,12 @@
     "format": "prettier --write */** --ignore-unknown --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.3.0",
-    "@commitlint/config-conventional": "^16.2.4",
-    "@commitlint/config-lerna-scopes": "^16.2.4",
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/config-lerna-scopes": "^17.0.0",
     "@straw-hat/prettier-config": "^2.0.2",
     "@straw-hat/tsconfig": "workspace:*",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "jest": "^28.1.0",
     "lint-staged": "^12.4.2",
     "monodeploy": "^3.0.1",
