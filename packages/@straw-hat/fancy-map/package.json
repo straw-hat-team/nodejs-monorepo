@@ -34,11 +34,11 @@
     "README.md"
   ],
   "devDependencies": {
-    "@straw-hat/tsconfig": "^4.0.2",
-    "@swc/core": "^1.2.178",
-    "@swc/jest": "^0.2.20",
-    "@types/jest": "^27.5.0",
+    "@straw-hat/tsconfig": "workspace:*",
+    "@swc/core": "^1.2.194",
+    "@swc/jest": "^0.2.21",
+    "@types/jest": "^27.5.1",
     "jest": "^27.5.1",
-    "typescript": "^4.6.4"
+    "typescript": "^4.7.2"
   }
 }

@@ -39,8 +39,8 @@
     "fscreen": "^1.2.0"
   },
   "devDependencies": {
-    "@straw-hat/tsconfig": "^4.0.2",
+    "@straw-hat/tsconfig": "workspace:*",
     "@types/fscreen": "^1.0.1",
-    "@types/react": "17.0.40"
+    "@types/react": "17.0.45"
   }
 }

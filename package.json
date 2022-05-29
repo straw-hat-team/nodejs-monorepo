@@ -1,5 +1,5 @@
 {
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "yarn@3.2.1",
   "name": "@straw-hat/nodejs-monorepo",
   "type": "module",
   "private": true,
@@ -15,19 +15,19 @@
     "format": "prettier --write */** --ignore-unknown --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.4",
+    "@commitlint/cli": "^16.3.0",
     "@commitlint/config-conventional": "^16.2.4",
     "@commitlint/config-lerna-scopes": "^16.2.4",
     "@straw-hat/prettier-config": "^2.0.2",
-    "@straw-hat/tsconfig": "^4.0.2",
+    "@straw-hat/tsconfig": "workspace:*",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
-    "lint-staged": "^12.4.1",
-    "monodeploy": "^3.0.0",
+    "lint-staged": "^12.4.2",
+    "monodeploy": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "typedoc": "^0.22.15",
-    "typescript": "^4.6.4"
+    "typescript": "^4.7.2"
   }
 }
