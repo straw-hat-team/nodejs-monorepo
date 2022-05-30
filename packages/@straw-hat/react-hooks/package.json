@@ -42,7 +42,7 @@
     "@straw-hat/tsconfig": "^3.0.2",
     "@swc/core": "^1.2.194",
     "@swc/jest": "^0.2.21",
-    "@testing-library/react-hooks": "^7.0.2",
+    "@testing-library/react-hooks": "^8.0.0",
     "@types/jest": "^27.5.1",
     "@types/react": "^17.0.45",
     "jest": "^28.1.0",
