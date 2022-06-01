@@ -4110,7 +4110,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/chainable-config@workspace:packages/@straw-hat/chainable-config"
   dependencies:
-    "@straw-hat/tsconfig": ^4.0.2
+    "@straw-hat/tsconfig": "workspace:*"
     "@swc/core": ^1.2.194
     "@swc/jest": ^0.2.21
     "@types/jest": ^27.5.1
@@ -4129,7 +4129,7 @@ __metadata:
   dependencies:
     "@oclif/core": 1.9.0
     "@straw-hat/fancy-map": 1.0.2
-    "@straw-hat/tsconfig": ^4.0.2
+    "@straw-hat/tsconfig": "workspace:*"
     "@types/debug": ^4.1.7
     "@types/ejs": ^3.1.1
     "@types/node": ^17.0.36
@@ -4158,7 +4158,7 @@ __metadata:
     "@oclif/plugin-version": 1.0.4
     "@straw-hat/cli-core": 0.10.3
     "@straw-hat/jest-config-chain": 1.0.3
-    "@straw-hat/tsconfig": ^4.0.2
+    "@straw-hat/tsconfig": "workspace:*"
     "@types/node": ^17.0.36
     cypress: ^9.7.0
     debug: 4.3.4
@@ -4304,7 +4304,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/fetcher@workspace:packages/@straw-hat/fetcher"
   dependencies:
-    "@straw-hat/tsconfig": ^4.0.2
+    "@straw-hat/tsconfig": "workspace:*"
     "@swc/core": ^1.2.194
     "@swc/jest": ^0.2.21
     "@types/jest": ^27.5.1
@@ -4333,7 +4333,7 @@ __metadata:
   resolution: "@straw-hat/jest-config-chain@workspace:packages/@straw-hat/jest-config-chain"
   dependencies:
     "@straw-hat/chainable-config": ^0.9.0
-    "@straw-hat/tsconfig": ^4.0.2
+    "@straw-hat/tsconfig": "workspace:*"
     "@swc/core": ^1.2.194
     "@swc/jest": ^0.2.21
     "@types/jest": ^27.5.1
@@ -4469,7 +4469,7 @@ __metadata:
   resolution: "@straw-hat/react-hooks@workspace:packages/@straw-hat/react-hooks"
   dependencies:
     "@straw-hat/is-ssr": ^2.0.0
-    "@straw-hat/tsconfig": ^4.0.2
+    "@straw-hat/tsconfig": "workspace:*"
     "@swc/core": ^1.2.194
     "@swc/jest": ^0.2.21
     "@testing-library/react-hooks": ^8.0.0
@@ -4488,7 +4488,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/react-native-sdk@workspace:packages/@straw-hat/react-native-sdk"
   dependencies:
-    "@straw-hat/tsconfig": ^4.0.2
+    "@straw-hat/tsconfig": "workspace:*"
     "@types/react-native": ^0.67.7
     react-native: ^0.68.2
     typescript: ^4.7.2
@@ -4502,7 +4502,7 @@ __metadata:
   resolution: "@straw-hat/react-query-fetcher@workspace:packages/@straw-hat/react-query-fetcher"
   dependencies:
     "@straw-hat/fetcher": ^4.8.0
-    "@straw-hat/tsconfig": ^4.0.2
+    "@straw-hat/tsconfig": "workspace:*"
     "@swc/core": ^1.2.194
     "@swc/jest": ^0.2.21
     "@testing-library/react-hooks": ^8.0.0
@@ -4536,7 +4536,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/tsconfig@^4.0.2, @straw-hat/tsconfig@workspace:*, @straw-hat/tsconfig@workspace:packages/@straw-hat/tsconfig":
+"@straw-hat/tsconfig@workspace:*, @straw-hat/tsconfig@workspace:packages/@straw-hat/tsconfig":
   version: 0.0.0-use.local
   resolution: "@straw-hat/tsconfig@workspace:packages/@straw-hat/tsconfig"
   languageName: unknown
@@ -4557,7 +4557,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@straw-hat/webpack-chain-graphql@workspace:packages/@straw-hat/webpack-chain-graphql"
   dependencies:
-    "@straw-hat/tsconfig": ^4.0.2
+    "@straw-hat/tsconfig": "workspace:*"
     "@types/jest": ^27.5.1
     jest: ^28.1.0
     typedoc: ^0.22.15

@@ -3,11 +3,7 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts?(x)'],
-      extends: [
-        'plugin:@typescript-eslint/eslint-recommended',
-        'prettier/@typescript-eslint',
-        'plugin:import/typescript',
-      ],
+      extends: ['plugin:@typescript-eslint/eslint-recommended', 'plugin:import/typescript'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
         warnOnUnsupportedTypeScriptVersion: true,
