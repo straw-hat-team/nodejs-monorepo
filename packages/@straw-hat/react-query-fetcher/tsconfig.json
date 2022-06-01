@@ -4,7 +4,8 @@
     "module": "CommonJS",
     "target": "ES6",
     "outDir": "dist",
-    "jsx": "react"
+    "jsx": "react",
+    "lib": ["ESNext", "DOM"]
   },
   "include": ["src", "tests"]
 }
