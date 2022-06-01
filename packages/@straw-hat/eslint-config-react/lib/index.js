@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', 'airbnb/hooks', 'prettier/react', '@straw-hat/eslint-config-base'],
+  extends: ['airbnb', 'airbnb/hooks', '@straw-hat/eslint-config-base'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,

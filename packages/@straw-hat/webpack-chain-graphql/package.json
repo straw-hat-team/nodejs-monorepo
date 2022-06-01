@@ -38,7 +38,7 @@
     "graphql-tag": "^2.9.2"
   },
   "devDependencies": {
-    "@straw-hat/tsconfig": "^3.0.2",
+    "@straw-hat/tsconfig": "workspace:*",
     "@types/jest": "^27.5.1",
     "jest": "^28.1.0",
     "typedoc": "^0.22.15",
