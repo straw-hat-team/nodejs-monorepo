@@ -13,7 +13,7 @@ yarn add -D @straw-hat/eslint-config-base
 Make sure to install the peer dependencies.
 
 ```sh
-npx install-peerdeps --dev @straw-hat/eslint-config-base
+npx install-peerdeps --dev @straw-hat/eslint-config-base eslint-plugin-simple-import-sort
 ```
 
 ## Configuration
