@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
-    "@swc/core": "^1.2.194",
+    "@swc/core": "^1.2.204",
     "@swc/jest": "^0.2.21",
     "@testing-library/react": "^13.3.0",
     "@types/jest": "^27.5.1",
