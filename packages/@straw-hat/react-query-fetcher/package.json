@@ -40,7 +40,7 @@
   "devDependencies": {
     "@straw-hat/fetcher": "^4.8.0",
     "@straw-hat/tsconfig": "workspace:*",
-    "@swc/core": "^1.2.194",
+    "@swc/core": "^1.2.207",
     "@swc/jest": "^0.2.21",
     "@testing-library/react-hooks": "^8.0.0",
     "@types/jest": "^27.5.1",
