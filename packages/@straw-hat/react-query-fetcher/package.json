@@ -35,13 +35,14 @@
   ],
   "peerDependencies": {
     "@straw-hat/fetcher": "^4.4.1",
-    "react-query": "^3.30.0"
+    "@tanstack/react-query": "^4.2.3"
   },
   "devDependencies": {
     "@straw-hat/fetcher": "^4.8.0",
     "@straw-hat/tsconfig": "workspace:*",
     "@swc/core": "^1.2.247",
     "@swc/jest": "^0.2.21",
+    "@tanstack/react-query": "^4.2.3",
     "@testing-library/react-hooks": "^8.0.0",
     "@types/jest": "^27.5.1",
     "@types/react": "^18.0.9",
@@ -50,7 +51,6 @@
     "jest-environment-jsdom": "^28.1.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-query": "^3.39.0",
     "react-test-renderer": "^18.1.0",
     "typescript": "^4.7.2"
   }

@@ -1,7 +1,7 @@
-import type { UseQueryOptions } from 'react-query';
+import type { UseQueryOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher/dist';
 import type { QueryKey, Endpoint } from './types';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 
 export type UseFetcherQueryArgs<TQueryFnData, TError, TData, TParams> = {
   queryKey: QueryKey;
@@ -26,7 +26,7 @@ export function useFetcherQuery<TQueryFnData = unknown, TError = unknown, TData 
 
   return useQuery<TQueryFnData, TError, TData>(
     queryKey,
-    function queryFn(context) {
+    function queryFn(context: { signal?: AbortSignal }) {
       return args.endpoint(
         client,
         // @ts-ignore ¯\_(ツ)_/¯

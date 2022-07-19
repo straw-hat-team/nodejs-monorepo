@@ -24,7 +24,7 @@ export * from './use-delete-user';
 `;
 
 exports[`react-query-fetcher generator: use-add-pet.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { AddPetResponse, AddPetParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -52,7 +52,7 @@ export function useAddPet<TError = unknown>(client: Fetcher, args: UseAddPetArgs
 `;
 
 exports[`react-query-fetcher generator: use-create-user.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { CreateUserResponse, CreateUserParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -80,7 +80,7 @@ export function useCreateUser<TError = unknown>(client: Fetcher, args: UseCreate
 `;
 
 exports[`react-query-fetcher generator: use-create-users-with-list-input.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { CreateUsersWithListInputResponse, CreateUsersWithListInputParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -114,7 +114,7 @@ export function useCreateUsersWithListInput<TError = unknown>(
 `;
 
 exports[`react-query-fetcher generator: use-delete-order.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { DeleteOrderResponse, DeleteOrderParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -142,7 +142,7 @@ export function useDeleteOrder<TError = unknown>(client: Fetcher, args: UseDelet
 `;
 
 exports[`react-query-fetcher generator: use-delete-pet.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { DeletePetResponse, DeletePetParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -170,7 +170,7 @@ export function useDeletePet<TError = unknown>(client: Fetcher, args: UseDeleteP
 `;
 
 exports[`react-query-fetcher generator: use-delete-user.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { DeleteUserResponse, DeleteUserParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -462,7 +462,7 @@ export function useLogoutUser<TData = LogoutUserResponse, TError = unknown>(
 `;
 
 exports[`react-query-fetcher generator: use-place-order.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { PlaceOrderResponse, PlaceOrderParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -490,7 +490,7 @@ export function usePlaceOrder<TError = unknown>(client: Fetcher, args: UsePlaceO
 `;
 
 exports[`react-query-fetcher generator: use-update-pet.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { UpdatePetResponse, UpdatePetParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -518,7 +518,7 @@ export function useUpdatePet<TError = unknown>(client: Fetcher, args: UseUpdateP
 `;
 
 exports[`react-query-fetcher generator: use-update-pet-with-form.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { UpdatePetWithFormResponse, UpdatePetWithFormParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -546,7 +546,7 @@ export function useUpdatePetWithForm<TError = unknown>(client: Fetcher, args: Us
 `;
 
 exports[`react-query-fetcher generator: use-update-user.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { UpdateUserResponse, UpdateUserParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
@@ -574,7 +574,7 @@ export function useUpdateUser<TError = unknown>(client: Fetcher, args: UseUpdate
 `;
 
 exports[`react-query-fetcher generator: use-upload-file.ts 1`] = `
-"import type { UseMutationOptions } from 'react-query';
+"import type { UseMutationOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher';
 import type { UploadFileResponse, UploadFileParams } from '@my-sdk/pepeg';
 import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
