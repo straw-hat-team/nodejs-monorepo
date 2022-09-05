@@ -7127,7 +7127,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/debug", "npm:4.1.7"],\
             ["@types/jest", "npm:27.5.1"],\
             ["@types/js-yaml", "npm:4.0.5"],\
-            ["@types/mustache", "npm:4.1.2"],\
+            ["@types/mustache", "npm:4.2.1"],\
             ["@types/node", "npm:17.0.36"],\
             ["@types/prettier", "npm:2.6.3"],\
             ["change-case", "npm:4.1.2"],\
@@ -7931,10 +7931,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/mustache", [\
-        ["npm:4.1.2", {\
-          "packageLocation": "./.yarn/cache/@types-mustache-npm-4.1.2-efedf4a5f4-1f37849aae.zip/node_modules/@types/mustache/",\
+        ["npm:4.2.1", {\
+          "packageLocation": "./.yarn/cache/@types-mustache-npm-4.2.1-483db08c7d-27e84f17a3.zip/node_modules/@types/mustache/",\
           "packageDependencies": [\
-            ["@types/mustache", "npm:4.1.2"]\
+            ["@types/mustache", "npm:4.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
