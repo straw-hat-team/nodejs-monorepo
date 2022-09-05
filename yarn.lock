@@ -4135,7 +4135,7 @@ __metadata:
     "@types/node": ^17.0.36
     "@types/resolve": ^1.20.2
     chalk: 5.0.1
-    ci-info: 3.3.1
+    ci-info: 3.3.2
     conf: 10.1.2
     debug: 4.3.4
     dotenv: 16.0.1
@@ -7086,10 +7086,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:3.3.1":
-  version: 3.3.1
-  resolution: "ci-info@npm:3.3.1"
-  checksum: 244546317cca96955860d2cb8d0bf47dd66d9078bbe83a215fa87464ab24b352c6fc6f56027d1c82f002e3f833be253f1320d35ed7199bd81134f7788c657f3a
+"ci-info@npm:3.3.2":
+  version: 3.3.2
+  resolution: "ci-info@npm:3.3.2"
+  checksum: fd81f1edd2d3b0f6cb077b2e84365136d87b9db8c055928c1ad69da8a76c2c2f19cba8ea51b90238302157ca927f91f92b653e933f2398dde4867500f08d6e62
   languageName: node
   linkType: hard
 

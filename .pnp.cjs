@@ -6890,7 +6890,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:17.0.36"],\
             ["@types/resolve", "npm:1.20.2"],\
             ["chalk", "npm:5.0.1"],\
-            ["ci-info", "npm:3.3.1"],\
+            ["ci-info", "npm:3.3.2"],\
             ["conf", "npm:10.1.2"],\
             ["debug", "virtual:5aaab005efacf104ef24c7d7541e250d0d27671afd75c121bf95a454002eca98d3648d3e901bd5350f9b5540949fdbc9727069eea6e24bd5ed26cc0213a44ad9#npm:4.3.4"],\
             ["dotenv", "npm:16.0.1"],\
@@ -10579,10 +10579,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:3.3.1", {\
-          "packageLocation": "./.yarn/cache/ci-info-npm-3.3.1-c80845db6d-244546317c.zip/node_modules/ci-info/",\
+        ["npm:3.3.2", {\
+          "packageLocation": "./.yarn/cache/ci-info-npm-3.3.2-fb5617e149-fd81f1edd2.zip/node_modules/ci-info/",\
           "packageDependencies": [\
-            ["ci-info", "npm:3.3.1"]\
+            ["ci-info", "npm:3.3.2"]\
           ],\
           "linkType": "HARD"\
         }]\
