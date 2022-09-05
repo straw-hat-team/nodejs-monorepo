@@ -50,7 +50,7 @@
     "@straw-hat/tsconfig": "workspace:*",
     "@types/debug": "^4.1.7",
     "@types/ejs": "^3.1.1",
-    "@types/node": "^17.0.36",
+    "@types/node": "^18.7.15",
     "@types/resolve": "^1.20.2"
   }
 }
