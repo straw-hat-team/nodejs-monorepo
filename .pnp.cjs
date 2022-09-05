@@ -6864,7 +6864,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@straw-hat/cli-core", "workspace:packages/@straw-hat/cli-core"],\
             ["@straw-hat/jest-config-chain", "workspace:packages/@straw-hat/jest-config-chain"],\
             ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
-            ["@types/node", "npm:17.0.36"],\
+            ["@types/node", "npm:18.7.15"],\
             ["cypress", "npm:9.7.0"],\
             ["debug", "virtual:5aaab005efacf104ef24c7d7541e250d0d27671afd75c121bf95a454002eca98d3648d3e901bd5350f9b5540949fdbc9727069eea6e24bd5ed26cc0213a44ad9#npm:4.3.4"],\
             ["del", "npm:6.1.1"],\
@@ -6887,7 +6887,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
             ["@types/debug", "npm:4.1.7"],\
             ["@types/ejs", "npm:3.1.1"],\
-            ["@types/node", "npm:17.0.36"],\
+            ["@types/node", "npm:18.7.15"],\
             ["@types/resolve", "npm:1.20.2"],\
             ["chalk", "npm:5.0.1"],\
             ["ci-info", "npm:3.3.2"],\
@@ -7071,7 +7071,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@swc/jest", "virtual:24ff98800da8c9e7375e686e065eb66933a78087f3de805bdd5dd4567426d7a99b37183eeded246ecba84476e3e0d192f8bb61e2506d67b93bc9593778540ef5#npm:0.2.21"],\
             ["@testing-library/react", "virtual:b377124b86ecb22e6009fcaf25806c6bb7b9f47594f36daa69c4169faecfbe3c2a1436e0aece48dd894bb935940e8620fd52d5dfb40c3ee80d04030680158fbd#npm:13.3.0"],\
             ["@types/jest", "npm:27.5.1"],\
-            ["@types/node", "npm:17.0.36"],\
+            ["@types/node", "npm:18.7.15"],\
             ["@types/react", "npm:18.0.9"],\
             ["jest", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#npm:28.1.0"],\
             ["jest-environment-jsdom", "npm:28.1.0"],\
@@ -7128,7 +7128,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.5.1"],\
             ["@types/js-yaml", "npm:4.0.5"],\
             ["@types/mustache", "npm:4.2.1"],\
-            ["@types/node", "npm:17.0.36"],\
+            ["@types/node", "npm:18.7.15"],\
             ["@types/prettier", "npm:2.6.3"],\
             ["change-case", "npm:4.1.2"],\
             ["cosmiconfig", "npm:7.0.1"],\
@@ -7968,10 +7968,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:17.0.36", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-17.0.36-3b14155e20-11055fde0a.zip/node_modules/@types/node/",\
+        ["npm:18.7.15", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.7.15-3b77ff6bd6-1435fc7fe4.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:17.0.36"]\
+            ["@types/node", "npm:18.7.15"]\
           ],\
           "linkType": "HARD"\
         }]\
