@@ -76,7 +76,7 @@ export default class ReactQueryFetcherCodegen extends CodegenBase<ReactQueryFetc
           }
         `
       : `
-          import type { UseMutationOptions } from 'react-query';
+          import type { UseMutationOptions } from '@tanstack/react-query';
           import type { Fetcher } from '@straw-hat/fetcher';
           import type { ${typePrefix}Response, ${typePrefix}Params } from '${this.packageName}';
           import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
