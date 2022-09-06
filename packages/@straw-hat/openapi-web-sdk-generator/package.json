@@ -55,7 +55,7 @@
     "change-case": "^4.1.2",
     "cosmiconfig": "^7.0.1",
     "debug": "^4.3.4",
-    "del": "^6.1.1",
+    "del": "^7.0.0",
     "import-from": "^4.0.0",
     "make-dir": "^3.1.0",
     "mustache": "^4.2.0",
