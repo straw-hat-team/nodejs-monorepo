@@ -1,4 +1,4 @@
-import del from 'del';
+import { deleteAsync } from 'del';
 import { prompt } from 'enquirer';
 import { BaseCommand, Flags } from '@straw-hat/cli-core/dist/base-command';
 import * as chalk from '@straw-hat/cli-core/dist/chalk';
@@ -43,7 +43,7 @@ export class DelCommand extends BaseCommand {
       await this.#confirm(flags, args);
     }
 
-    const deletedFiles = await del(args.path, {
+    const deletedFiles = await deleteAsync(args.path, {
       force: flags.force,
       dryRun: flags.dryRun,
     });

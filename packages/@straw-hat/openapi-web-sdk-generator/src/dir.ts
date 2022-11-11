@@ -1,6 +1,6 @@
 import * as path from 'path';
 import * as fs from 'fs';
-import del from 'del';
+import { deleteAsync } from 'del';
 import makeDir from 'make-dir';
 import { createDebugger, formatCode } from './helpers';
 
@@ -20,7 +20,7 @@ export class Dir {
   emptyDir(...pathsSegments: string[]) {
     const dirPath = this.resolve(...pathsSegments);
     this.debug(`Removing directory content of ${dirPath}`);
-    return del(`${dirPath}/**`);
+    return deleteAsync(`${dirPath}/**`);
   }
 
   resolve(...pathsSegments: string[]) {
