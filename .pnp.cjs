@@ -6473,6 +6473,41 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@oclif/core", [\
+        ["npm:1.20.4", {\
+          "packageLocation": "./.yarn/cache/@oclif-core-npm-1.20.4-bc109b4d6a-523446ad7b.zip/node_modules/@oclif/core/",\
+          "packageDependencies": [\
+            ["@oclif/core", "npm:1.20.4"],\
+            ["@oclif/linewrap", "npm:1.0.0"],\
+            ["@oclif/screen", "npm:3.0.3"],\
+            ["ansi-escapes", "npm:4.3.2"],\
+            ["ansi-styles", "npm:4.3.0"],\
+            ["cardinal", "npm:2.1.1"],\
+            ["chalk", "npm:4.1.2"],\
+            ["clean-stack", "npm:3.0.1"],\
+            ["cli-progress", "npm:3.10.0"],\
+            ["debug", "virtual:d03c7657f1d0c36234321779e018c00a39ac66658a979b3a14b7c155976c7c7389ad82854d33288acbd322391b01303512cb3819a99e8aca29cb09ae8dc44467#npm:4.3.4"],\
+            ["ejs", "npm:3.1.6"],\
+            ["fs-extra", "npm:9.1.0"],\
+            ["get-package-type", "npm:0.1.0"],\
+            ["globby", "npm:11.1.0"],\
+            ["hyperlinker", "npm:1.0.0"],\
+            ["indent-string", "npm:4.0.0"],\
+            ["is-wsl", "npm:2.2.0"],\
+            ["js-yaml", "npm:3.14.1"],\
+            ["natural-orderby", "npm:2.0.3"],\
+            ["object-treeify", "npm:1.1.33"],\
+            ["password-prompt", "npm:1.1.2"],\
+            ["semver", "npm:7.3.7"],\
+            ["string-width", "npm:4.2.3"],\
+            ["strip-ansi", "npm:6.0.1"],\
+            ["supports-color", "npm:8.1.1"],\
+            ["supports-hyperlinks", "npm:2.2.0"],\
+            ["tslib", "npm:2.4.1"],\
+            ["widest-line", "npm:3.1.0"],\
+            ["wrap-ansi", "npm:7.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:1.6.0", {\
           "packageLocation": "./.yarn/cache/@oclif-core-npm-1.6.0-8e63615095-9563201d3a.zip/node_modules/@oclif/core/",\
           "packageDependencies": [\
@@ -6486,42 +6521,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clean-stack", "npm:3.0.1"],\
             ["cli-progress", "npm:3.10.0"],\
             ["debug", "virtual:8e63615095a5ba5c3b1a975b7eb53ab50c3df65d29bd0151af9f4974d5202ae05b0f844831d43be0cde9aba6d6c9389bf035754088fce7aef9bcd91bc22755d0#npm:4.3.3"],\
-            ["ejs", "npm:3.1.6"],\
-            ["fs-extra", "npm:9.1.0"],\
-            ["get-package-type", "npm:0.1.0"],\
-            ["globby", "npm:11.1.0"],\
-            ["hyperlinker", "npm:1.0.0"],\
-            ["indent-string", "npm:4.0.0"],\
-            ["is-wsl", "npm:2.2.0"],\
-            ["js-yaml", "npm:3.14.1"],\
-            ["lodash", "npm:4.17.21"],\
-            ["natural-orderby", "npm:2.0.3"],\
-            ["object-treeify", "npm:1.1.33"],\
-            ["password-prompt", "npm:1.1.2"],\
-            ["semver", "npm:7.3.5"],\
-            ["string-width", "npm:4.2.3"],\
-            ["strip-ansi", "npm:6.0.1"],\
-            ["supports-color", "npm:8.1.1"],\
-            ["supports-hyperlinks", "npm:2.2.0"],\
-            ["tslib", "npm:2.3.1"],\
-            ["widest-line", "npm:3.1.0"],\
-            ["wrap-ansi", "npm:7.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:1.8.0", {\
-          "packageLocation": "./.yarn/cache/@oclif-core-npm-1.8.0-6b3d539b27-e84b5eae4a.zip/node_modules/@oclif/core/",\
-          "packageDependencies": [\
-            ["@oclif/core", "npm:1.8.0"],\
-            ["@oclif/linewrap", "npm:1.0.0"],\
-            ["@oclif/screen", "npm:3.0.2"],\
-            ["ansi-escapes", "npm:4.3.2"],\
-            ["ansi-styles", "npm:4.3.0"],\
-            ["cardinal", "npm:2.1.1"],\
-            ["chalk", "npm:4.1.2"],\
-            ["clean-stack", "npm:3.0.1"],\
-            ["cli-progress", "npm:3.10.0"],\
-            ["debug", "virtual:d03c7657f1d0c36234321779e018c00a39ac66658a979b3a14b7c155976c7c7389ad82854d33288acbd322391b01303512cb3819a99e8aca29cb09ae8dc44467#npm:4.3.4"],\
             ["ejs", "npm:3.1.6"],\
             ["fs-extra", "npm:9.1.0"],\
             ["get-package-type", "npm:0.1.0"],\
@@ -6686,11 +6685,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@oclif/plugin-version", [\
-        ["npm:1.0.4", {\
-          "packageLocation": "./.yarn/cache/@oclif-plugin-version-npm-1.0.4-316e9d0a76-38032b6b37.zip/node_modules/@oclif/plugin-version/",\
+        ["npm:1.1.3", {\
+          "packageLocation": "./.yarn/cache/@oclif-plugin-version-npm-1.1.3-5719d5f682-c6a945f475.zip/node_modules/@oclif/plugin-version/",\
           "packageDependencies": [\
-            ["@oclif/plugin-version", "npm:1.0.4"],\
-            ["@oclif/core", "npm:1.8.0"]\
+            ["@oclif/plugin-version", "npm:1.1.3"],\
+            ["@oclif/core", "npm:1.20.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6707,6 +6706,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@oclif-screen-npm-3.0.2-68fdcc8cd0-962678c65f.zip/node_modules/@oclif/screen/",\
           "packageDependencies": [\
             ["@oclif/screen", "npm:3.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:3.0.3", {\
+          "packageLocation": "./.yarn/cache/@oclif-screen-npm-3.0.3-0254453e26-c40650869b.zip/node_modules/@oclif/screen/",\
+          "packageDependencies": [\
+            ["@oclif/screen", "npm:3.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7142,7 +7148,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@oclif/core", "npm:1.9.0"],\
             ["@oclif/dev-cli", "npm:1.26.10"],\
             ["@oclif/plugin-help", "npm:5.1.12"],\
-            ["@oclif/plugin-version", "npm:1.0.4"],\
+            ["@oclif/plugin-version", "npm:1.1.3"],\
             ["@straw-hat/cli-core", "workspace:packages/@straw-hat/cli-core"],\
             ["@straw-hat/jest-config-chain", "workspace:packages/@straw-hat/jest-config-chain"],\
             ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
@@ -20635,6 +20641,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-2.3.1-0e21e18015-de17a98d46.zip/node_modules/tslib/",\
           "packageDependencies": [\
             ["tslib", "npm:2.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.4.1", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.4.1-36f0ed04db-19480d6e03.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
