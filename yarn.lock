@@ -4422,7 +4422,7 @@ __metadata:
     ejs: 3.1.8
     enquirer: 2.3.6
     make-dir: 3.1.0
-    ora: 6.1.0
+    ora: 6.1.2
     resolve: 1.22.0
   languageName: unknown
   linkType: soft
@@ -13314,9 +13314,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ora@npm:6.1.0":
-  version: 6.1.0
-  resolution: "ora@npm:6.1.0"
+"ora@npm:6.1.2":
+  version: 6.1.2
+  resolution: "ora@npm:6.1.2"
   dependencies:
     bl: ^5.0.0
     chalk: ^5.0.0
@@ -13327,7 +13327,7 @@ __metadata:
     log-symbols: ^5.1.0
     strip-ansi: ^7.0.1
     wcwidth: ^1.0.1
-  checksum: 0e84d9c32f2c62617324658ea547963412152f0bf60c1580ed18ec660769713452a6a47d117a1767bb118bb0867720ecc109ef6e12d18fd71ae244683e722b23
+  checksum: d5af3d67ad7affcf3029ffe3ef547f3335fb72abdc382040ae8bd75ad5c629f5d165ed9e398fd4fb08100701eafbec34bb9dc3f29e919f6f75c443290faa1db2
   languageName: node
   linkType: hard
 

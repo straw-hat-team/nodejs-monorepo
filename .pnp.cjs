@@ -7186,7 +7186,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ejs", "npm:3.1.8"],\
             ["enquirer", "npm:2.3.6"],\
             ["make-dir", "npm:3.1.0"],\
-            ["ora", "npm:6.1.0"],\
+            ["ora", "npm:6.1.2"],\
             ["resolve", "patch:resolve@npm%3A1.22.0#~builtin<compat/resolve>::version=1.22.0&hash=07638b"]\
           ],\
           "linkType": "SOFT"\
@@ -17576,10 +17576,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:6.1.0", {\
-          "packageLocation": "./.yarn/cache/ora-npm-6.1.0-942627b2df-0e84d9c32f.zip/node_modules/ora/",\
+        ["npm:6.1.2", {\
+          "packageLocation": "./.yarn/cache/ora-npm-6.1.2-539cf319fe-d5af3d67ad.zip/node_modules/ora/",\
           "packageDependencies": [\
-            ["ora", "npm:6.1.0"],\
+            ["ora", "npm:6.1.2"],\
             ["bl", "npm:5.0.0"],\
             ["chalk", "npm:5.0.1"],\
             ["cli-cursor", "npm:4.0.0"],\
