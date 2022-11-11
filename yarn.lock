@@ -4651,7 +4651,7 @@ __metadata:
     jest-environment-jsdom: ^28.1.0
     next: ^12.1.6
     react: ^18.1.0
-    react-dom: ^18.1.0
+    react-dom: ^18.2.0
     typescript: ^4.7.2
   peerDependencies:
     next: ^12.0.4
@@ -4788,11 +4788,11 @@ __metadata:
     "@testing-library/react-hooks": ^8.0.0
     "@types/jest": ^27.5.1
     "@types/react": ^18.0.9
-    "@types/react-dom": ^18.0.5
+    "@types/react-dom": ^18.0.6
     jest: ^28.1.0
     jest-environment-jsdom: ^28.1.0
     react: ^18.1.0
-    react-dom: ^18.1.0
+    react-dom: ^18.2.0
     react-test-renderer: ^18.1.0
     typescript: ^4.7.2
   peerDependencies:
@@ -5452,12 +5452,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.0, @types/react-dom@npm:^18.0.5":
+"@types/react-dom@npm:^18.0.0":
   version: 18.0.5
   resolution: "@types/react-dom@npm:18.0.5"
   dependencies:
     "@types/react": "*"
   checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^18.0.6":
+  version: 18.0.8
+  resolution: "@types/react-dom@npm:18.0.8"
+  dependencies:
+    "@types/react": "*"
+  checksum: 522e5e949d05f35c6037a2290838c9c7ff92a9d06f7d96b993c7c3f5a86d8f3a6337e059c94e6fb0920227f445e5d1ce10fbfe3d9bbd95fb82a5539249d90646
   languageName: node
   linkType: hard
 
@@ -14064,15 +14073,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.1.0":
-  version: 18.1.0
-  resolution: "react-dom@npm:18.1.0"
+"react-dom@npm:^18.2.0":
+  version: 18.2.0
+  resolution: "react-dom@npm:18.2.0"
   dependencies:
     loose-envify: ^1.1.0
-    scheduler: ^0.22.0
+    scheduler: ^0.23.0
   peerDependencies:
-    react: ^18.1.0
-  checksum: bb0d48eeb0b297c79c2a03978baa29f5b3ff7ba3d070b21e34c9af1a6e7fdf0ca8b8d73e41f9214d91ad40eeb6d1f3559f884cbbc338713374a51320637c23df
+    react: ^18.2.0
+  checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
   languageName: node
   linkType: hard
 
@@ -14827,6 +14836,15 @@ __metadata:
   dependencies:
     loose-envify: ^1.1.0
   checksum: a8ef5cab769c020cd6382ad9ecc3f72dbde56a50a36639b3a42ad9c11f7724f03700bcad373044059b8067d4a6365154dc7c0ca8027ef20ff4900cf58a0fc2c5
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.23.0":
+  version: 0.23.0
+  resolution: "scheduler@npm:0.23.0"
+  dependencies:
+    loose-envify: ^1.1.0
+  checksum: d79192eeaa12abef860c195ea45d37cbf2bbf5f66e3c4dcd16f54a7da53b17788a70d109ee3d3dde1a0fd50e6a8fc171f4300356c5aee4fc0171de526bf35f8a
   languageName: node
   linkType: hard
 
