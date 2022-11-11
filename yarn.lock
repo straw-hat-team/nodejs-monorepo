@@ -3810,12 +3810,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/core@npm:^1.1.1":
-  version: 1.8.0
-  resolution: "@oclif/core@npm:1.8.0"
+"@oclif/core@npm:^1.14.1":
+  version: 1.20.4
+  resolution: "@oclif/core@npm:1.20.4"
   dependencies:
     "@oclif/linewrap": ^1.0.0
-    "@oclif/screen": ^3.0.2
+    "@oclif/screen": ^3.0.3
     ansi-escapes: ^4.3.2
     ansi-styles: ^4.3.0
     cardinal: ^2.1.1
@@ -3831,19 +3831,18 @@ __metadata:
     indent-string: ^4.0.0
     is-wsl: ^2.2.0
     js-yaml: ^3.14.1
-    lodash: ^4.17.21
     natural-orderby: ^2.0.3
     object-treeify: ^1.1.33
     password-prompt: ^1.1.2
-    semver: ^7.3.5
+    semver: ^7.3.7
     string-width: ^4.2.3
     strip-ansi: ^6.0.1
     supports-color: ^8.1.1
     supports-hyperlinks: ^2.2.0
-    tslib: ^2.3.1
+    tslib: ^2.4.1
     widest-line: ^3.1.0
     wrap-ansi: ^7.0.0
-  checksum: e84b5eae4a3d2717cec60c5b675b184fc5da4e987974d1a9e9ded0e8961a9d8bb4f91ec48dc6c75e86909c4c825f581d764fba424c50153340b72786f084984c
+  checksum: 523446ad7b961544dde2b6a656500a4d71b1a1be89adf24668d0ab945fcf365c81c042a326e27362fd19f2b9c7f007b43ad2ae241c69b322bf748b1df96b8311
   languageName: node
   linkType: hard
 
@@ -3984,12 +3983,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-version@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@oclif/plugin-version@npm:1.0.4"
+"@oclif/plugin-version@npm:1.1.3":
+  version: 1.1.3
+  resolution: "@oclif/plugin-version@npm:1.1.3"
   dependencies:
-    "@oclif/core": ^1.1.1
-  checksum: 38032b6b371e7bab81418807efb906e23d4fda3c5526d1c2bf13c299f3a21cc5c5704162785b9775af072065c7b6ed525147c7391dc69e7a2a0a8e0a905bc552
+    "@oclif/core": ^1.14.1
+  checksum: c6a945f475298d18f122e08af44c7190ff4a6edd7ceb119bcef9905e030c556237dbdc5f07a4e302076c556ea78030cfb6f078a790693d12e1a758a95ef291de
   languageName: node
   linkType: hard
 
@@ -4004,6 +4003,13 @@ __metadata:
   version: 3.0.2
   resolution: "@oclif/screen@npm:3.0.2"
   checksum: 962678c65f1cf5b06864295a212020e3ddda36ab37190ca317e938943325a5acdbf3cb2761c371612daf1565e397fa5ff7bd0563887d746ccfde7c4ab312f005
+  languageName: node
+  linkType: hard
+
+"@oclif/screen@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@oclif/screen@npm:3.0.3"
+  checksum: c40650869b1c0c5c16e6ac4a82e10ee7a2879c85bdbddcb10b342dac84b62f6a6b69ec484d485b8ce0970b6383e87535a18737cca077e646818f240afc2a7c26
   languageName: node
   linkType: hard
 
@@ -4428,7 +4434,7 @@ __metadata:
     "@oclif/core": 1.9.0
     "@oclif/dev-cli": 1.26.10
     "@oclif/plugin-help": 5.1.12
-    "@oclif/plugin-version": 1.0.4
+    "@oclif/plugin-version": 1.1.3
     "@straw-hat/cli-core": 0.10.3
     "@straw-hat/jest-config-chain": 1.0.3
     "@straw-hat/tsconfig": "workspace:*"
@@ -16093,6 +16099,13 @@ __metadata:
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "tslib@npm:2.4.1"
+  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
   languageName: node
   linkType: hard
 
