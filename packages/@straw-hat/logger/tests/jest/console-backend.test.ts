@@ -1,5 +1,5 @@
-import { ConsoleHandler } from '../../src/handlers/console-handler';
 import { LogEvent, LogLevels } from '../../src';
+import { ConsoleHandler } from '../../src/handlers/console-handler';
 
 function createConsole() {
   return {

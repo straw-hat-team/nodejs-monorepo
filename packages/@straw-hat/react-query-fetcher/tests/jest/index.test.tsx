@@ -1,7 +1,7 @@
-import * as React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { renderHook, act } from '@testing-library/react-hooks';
-import { useFetcherQuery, useFetcherMutation, createQueryKey } from '../../src';
+import { act, renderHook } from '@testing-library/react-hooks';
+import * as React from 'react';
+import { createQueryKey, useFetcherMutation, useFetcherQuery } from '../../src';
 
 const queryClient = new QueryClient();
 

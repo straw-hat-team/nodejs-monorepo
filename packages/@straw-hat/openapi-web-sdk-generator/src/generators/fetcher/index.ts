@@ -1,21 +1,21 @@
+import { Resolver } from '@stoplight/json-ref-resolver';
+import { camelCase, pascalCase } from 'change-case';
 import * as path from 'path';
+import { CodegenBase } from '../../codegen-base';
+import { addSchemaHelpers } from '../../engine/add-schema-helpers';
+import { addTypeScripType, getTypeDefinition } from '../../engine/add-typescript-type';
+import { Scope } from '../../engine/scope';
 import {
   forEachHttpOperation,
+  formatCode,
   getOperationDirectory,
   getOperationFileRelativePath,
-  formatCode,
   whenInject,
 } from '../../helpers';
-import { CodegenBase } from '../../codegen-base';
-import { camelCase, pascalCase } from 'change-case';
-import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject } from '../../types';
 import { OutputDir } from '../../output-dir';
-import { getTypeDefinition, addTypeScripType } from '../../engine/add-typescript-type';
-import { getParameterSchemaFor, getRequestBodySchema, getResponseSchema } from './helpers';
-import { Resolver } from '@stoplight/json-ref-resolver';
+import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject } from '../../types';
 import { NEVER_DEFINITION, UNKNOWN_DEFINITION } from './constants';
-import { addSchemaHelpers } from '../../engine/add-schema-helpers';
-import { Scope } from '../../engine/scope';
+import { getParameterSchemaFor, getRequestBodySchema, getResponseSchema } from './helpers';
 
 export interface FetcherCodegenOptions {
   outputDir: string;

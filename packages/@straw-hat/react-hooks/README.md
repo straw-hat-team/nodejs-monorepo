@@ -28,8 +28,8 @@ function MyComponent() {
 Used to create controlled values, useful for building controlled Form inputs.
 
 ```tsx
-import * as React from 'react';
 import CheckIcon from '@material-ui/icons/Check';
+import * as React from 'react';
 import { FormState } from 'react-hook-form';
 
 import { useControlled } from '@straw-hat/react-hooks';
@@ -80,8 +80,8 @@ export const CheckboxInput = React.forwardRef<HTMLInputElement, CheckboxInputPro
 Used to inject `script` tags.
 
 ```tsx
-import * as React from 'react';
 import { useScript } from '@straw-hat/react-hooks';
+import * as React from 'react';
 
 function MyComponent() {
   const { status, isReady } = useScript({ src: 'https://bit.ly/3se7YYw' });
@@ -102,8 +102,8 @@ React state hook that returns the previous state as described in the
 [React hooks FAQ](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state).
 
 ```tsx
-import * as React from 'react';
 import { usePrevious } from '@straw-hat/react-hooks';
+import * as React from 'react';
 
 function MyComponent() {
   // State value and setter for our example
@@ -131,8 +131,8 @@ inside an asynchronous callback, instead of that value at the time the callback
 was created from.
 
 ```tsx
-import * as React from 'react';
 import { useLatest } from '@straw-hat/react-hooks';
+import * as React from 'react';
 
 function MyComponent() {
   const [count, setCount] = React.useState(0);
@@ -160,8 +160,8 @@ function MyComponent() {
 Register an event handler.
 
 ```tsx
-import * as React from 'react';
 import { useEventListener } from '@straw-hat/react-hooks';
+import * as React from 'react';
 
 function MyComponent() {
   useEventListener({
@@ -183,8 +183,8 @@ pattern. It will return the "context hook" and the Provider component.
 
 ```tsx
 // use-my-hook.ts
-import * as React from 'react';
 import { createContextHook } from '@straw-hat/react-hooks';
+import * as React from 'react';
 
 // 1. Create your hook
 type UseMyHookProps = {
@@ -220,8 +220,8 @@ export { MyHookProvider, useMyHookContext };
 Calls the function callback only once.
 
 ```tsx
-import * as React from 'react';
 import { useCallOnce } from '@straw-hat/react-hooks';
+import * as React from 'react';
 
 function MyComponent() {
   const onSuccess = useCallOnce(() => console.count('Only Runs Once'));
@@ -238,8 +238,8 @@ function MyComponent() {
 Tracks state of a boolean value.
 
 ```tsx
-import * as React from 'react';
 import { useBoolean } from '@straw-hat/react-hooks';
+import * as React from 'react';
 
 function MyComponent() {
   const { value, toggle, setTrue, setFalse } = useBoolean(true);

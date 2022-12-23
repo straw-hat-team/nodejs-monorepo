@@ -1,18 +1,18 @@
-import { ReferrerPolicy, ReferrerPolicyHeader } from '../../src/next-config/headers/referrer-policy-header';
-import { ExpectCtHeader } from '../../src/next-config/headers/expected-ct-header';
-import { XFrameOptions, XFrameOptionsHeader } from '../../src/next-config/headers/x-frame-options-header';
-import { XContentTypeOptionsHeader } from '../../src/next-config/headers/x-content-type-options-header';
-import {
-  XDnsPrefetchControl,
-  XDnsPrefetchControlHeader,
-} from '../../src/next-config/headers/x-dns-prefetch-control-header';
-import { StrictTransportSecurityHeader } from '../../src/next-config/headers/strict-transport-security-header';
+import { CacheControlHeader } from '../../src/next-config/headers/cache-control-header';
 import {
   ContentSecurityPolicyHeader,
   ContentSecurityPolicyReportOnlyHeader,
 } from '../../src/next-config/headers/content-security-policy-header';
 import { Directive } from '../../src/next-config/headers/directive';
-import { CacheControlHeader } from '../../src/next-config/headers/cache-control-header';
+import { ExpectCtHeader } from '../../src/next-config/headers/expected-ct-header';
+import { ReferrerPolicy, ReferrerPolicyHeader } from '../../src/next-config/headers/referrer-policy-header';
+import { StrictTransportSecurityHeader } from '../../src/next-config/headers/strict-transport-security-header';
+import { XContentTypeOptionsHeader } from '../../src/next-config/headers/x-content-type-options-header';
+import {
+  XDnsPrefetchControl,
+  XDnsPrefetchControlHeader,
+} from '../../src/next-config/headers/x-dns-prefetch-control-header';
+import { XFrameOptions, XFrameOptionsHeader } from '../../src/next-config/headers/x-frame-options-header';
 
 describe('given directive instance', () => {
   test('when calling to JSON then it throws an error calling toJSON', () => {

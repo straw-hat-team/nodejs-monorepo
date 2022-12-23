@@ -1,7 +1,7 @@
 import { flags } from '@oclif/command';
-import { OpenapiWebSdkGenerator } from '../openapi-web-sdk-generator';
-import { readOpenApiFile } from '../helpers';
 import { BaseCommand } from '../base-command';
+import { readOpenApiFile } from '../helpers';
+import { OpenapiWebSdkGenerator } from '../openapi-web-sdk-generator';
 
 export default class LocalCommand extends BaseCommand {
   static override description = 'Generate the code from a local OpenAPI V3 file.';

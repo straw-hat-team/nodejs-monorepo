@@ -1,5 +1,5 @@
-import { HttpHeader } from './http-header';
 import { SingleDirective } from './directive';
+import { HttpHeader } from './http-header';
 
 class NosniffDirective extends SingleDirective<'nosniff'> {
   constructor() {

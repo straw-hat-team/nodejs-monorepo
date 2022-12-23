@@ -1,5 +1,5 @@
-import { ChainedMap } from './chained-map';
 import { Chainable } from './chainable';
+import { ChainedMap } from './chained-map';
 
 export enum OrderPositions {
   Before = 'before',

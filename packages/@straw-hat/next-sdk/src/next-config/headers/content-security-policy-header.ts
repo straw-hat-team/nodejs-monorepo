@@ -1,5 +1,5 @@
-import { HttpHeader } from './http-header';
 import { Directive, PairDirective } from './directive';
+import { HttpHeader } from './http-header';
 
 type AnythingSource = '*';
 type ShaSource = `'sha${'256' | '384' | '512'}-${string}'`;

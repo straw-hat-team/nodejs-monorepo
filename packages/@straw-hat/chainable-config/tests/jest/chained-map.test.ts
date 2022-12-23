@@ -1,5 +1,5 @@
-import { ChainedSet } from '../../src/chained-set';
 import { ChainedMap } from '../../src/chained-map';
+import { ChainedSet } from '../../src/chained-set';
 
 it('validates if a value is a chainable map object', () => {
   const chainMap = new ChainedMap(undefined);

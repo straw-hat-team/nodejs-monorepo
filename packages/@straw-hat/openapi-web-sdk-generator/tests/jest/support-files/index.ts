@@ -1,6 +1,6 @@
 import * as path from 'path';
-import { readOpenApiFile } from '../../../src/helpers';
 import { Dir } from '../../../src/dir';
+import { readOpenApiFile } from '../../../src/helpers';
 
 const TMP_BASE_DIR = path.resolve(__dirname, '..', '..', '..', 'tmp');
 const PET_STORE_FILE_PATH = path.resolve(__dirname, 'pet-store.json');

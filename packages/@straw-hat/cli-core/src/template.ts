@@ -1,9 +1,9 @@
+import { FancyMap } from '@straw-hat/fancy-map';
 import EJS from 'ejs';
 import { prompt } from 'enquirer';
 import * as fs from 'fs';
 import { success } from './chalk';
 import { log } from './log';
-import { FancyMap } from '@straw-hat/fancy-map';
 
 const templateCache = new FancyMap<string, string>();
 

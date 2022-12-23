@@ -1,7 +1,7 @@
-import type { UseQueryOptions } from '@tanstack/react-query';
 import type { Fetcher } from '@straw-hat/fetcher/dist';
-import type { QueryKey, Endpoint } from './types';
+import type { UseQueryOptions } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
+import type { Endpoint, QueryKey } from './types';
 
 export type UseFetcherQueryArgs<TQueryFnData, TError, TData, TParams> = {
   queryKey: QueryKey;

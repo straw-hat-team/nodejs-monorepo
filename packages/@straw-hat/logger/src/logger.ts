@@ -1,6 +1,6 @@
 import { LogLevels } from './levels';
-import { LogHandler } from './log-handler';
 import { LogEvent } from './log-event';
+import { LogHandler } from './log-handler';
 import { ILogger, Message, Metadata } from './types';
 
 export interface LoggerOptions {

@@ -1,6 +1,6 @@
 import * as path from 'path';
-import { createTmpDir, readPetStoreSpec } from './support-files';
 import FetcherCodegen from '../../src/generators/fetcher';
+import { createTmpDir, readPetStoreSpec } from './support-files';
 
 test('fetcher generator', async () => {
   // GIVEN

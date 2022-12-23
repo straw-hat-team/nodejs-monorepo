@@ -1,6 +1,6 @@
-import envinfo from 'envinfo';
 import { BaseCommand, Flags } from '@straw-hat/cli-core/dist/base-command';
 import { log } from '@straw-hat/cli-core/dist/log';
+import envinfo from 'envinfo';
 
 const PACKAGES = ['@straw-hat/cli', '@straw-hat/cli-*', 'typescript'];
 

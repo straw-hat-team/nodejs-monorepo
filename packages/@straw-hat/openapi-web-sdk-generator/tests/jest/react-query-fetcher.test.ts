@@ -1,6 +1,6 @@
 import * as path from 'path';
-import { createTmpDir, readPetStoreSpec } from './support-files';
 import ReactQueryFetcherCodegen from '../../src/generators/react-query-fetcher';
+import { createTmpDir, readPetStoreSpec } from './support-files';
 
 test('react-query-fetcher generator', async () => {
   // GIVEN

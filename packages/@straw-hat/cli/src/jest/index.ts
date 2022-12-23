@@ -1,8 +1,8 @@
-import * as path from 'path';
-import * as fs from 'fs';
-import { JestConfigChain } from '@straw-hat/jest-config-chain';
 import { createDebugger } from '@straw-hat/cli-core/dist/debug';
 import { ContextDir } from '@straw-hat/cli-core/dist/types';
+import { JestConfigChain } from '@straw-hat/jest-config-chain';
+import * as fs from 'fs';
+import * as path from 'path';
 
 const debug = createDebugger('jest');
 

@@ -1,5 +1,5 @@
-import { LogEvent } from './log-event';
 import { LogLevels } from './levels';
+import { LogEvent } from './log-event';
 import { StrawHatGlobals } from './types';
 
 export class LogHandler {

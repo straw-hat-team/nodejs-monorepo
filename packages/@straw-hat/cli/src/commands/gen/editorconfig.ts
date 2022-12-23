@@ -1,7 +1,7 @@
-import * as path from 'path';
 import { BaseCommand, Flags } from '@straw-hat/cli-core/dist/base-command';
-import { render } from '@straw-hat/cli-core/dist/template';
 import { getCwd } from '@straw-hat/cli-core/dist/helpers';
+import { render } from '@straw-hat/cli-core/dist/template';
+import * as path from 'path';
 
 const templatePath = path.join(
   __dirname,

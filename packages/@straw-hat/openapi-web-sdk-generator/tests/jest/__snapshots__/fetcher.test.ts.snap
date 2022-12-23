@@ -1200,25 +1200,25 @@ export async function getUserByName(client: Fetcher, params: GetUserByNameParams
 `;
 
 exports[`fetcher generator: index.ts 1`] = `
-"export * from './update-pet';
-export * from './add-pet';
-export * from './find-pets-by-status';
-export * from './find-pets-by-tags';
-export * from './get-pet-by-id';
-export * from './update-pet-with-form';
-export * from './delete-pet';
-export * from './upload-file';
-export * from './get-inventory';
-export * from './place-order';
-export * from './get-order-by-id';
-export * from './delete-order';
+"export * from './add-pet';
 export * from './create-user';
 export * from './create-users-with-list-input';
+export * from './delete-order';
+export * from './delete-pet';
+export * from './delete-user';
+export * from './find-pets-by-status';
+export * from './find-pets-by-tags';
+export * from './get-inventory';
+export * from './get-order-by-id';
+export * from './get-pet-by-id';
+export * from './get-user-by-name';
 export * from './login-user';
 export * from './logout-user';
-export * from './get-user-by-name';
+export * from './place-order';
+export * from './update-pet';
+export * from './update-pet-with-form';
 export * from './update-user';
-export * from './delete-user';
+export * from './upload-file';
 "
 `;
 
