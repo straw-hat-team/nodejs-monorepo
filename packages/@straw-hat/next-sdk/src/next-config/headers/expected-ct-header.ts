@@ -1,5 +1,5 @@
-import { HttpHeader } from './http-header';
 import { BooleanDirective, PairDirective } from './directive';
+import { HttpHeader } from './http-header';
 
 class EnforceDirective extends BooleanDirective {
   constructor(enabled?: boolean) {

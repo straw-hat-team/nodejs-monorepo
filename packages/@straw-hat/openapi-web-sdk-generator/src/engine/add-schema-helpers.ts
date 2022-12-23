@@ -1,4 +1,4 @@
-import { OpenAPIV3NonArraySchemaObject, OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject } from '../types';
+import { camelCase, constantCase, pascalCase, snakeCase } from 'change-case';
 import {
   asString,
   getSchemaName,
@@ -7,9 +7,9 @@ import {
   isReferenceObject,
   whenInject,
 } from '../helpers';
-import { camelCase, constantCase, pascalCase, snakeCase } from 'change-case';
-import { Scope } from './scope';
+import { OpenAPIV3NonArraySchemaObject, OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject } from '../types';
 import { addTypeScripType, getTypeDefinition } from './add-typescript-type';
+import { Scope } from './scope';
 
 type EnumValueDefinition = {
   aliasName: string;

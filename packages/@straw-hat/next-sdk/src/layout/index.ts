@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
 import { NextPage } from 'next';
+import type { ReactNode } from 'react';
 
 export type PageLayout = (page: ReactNode) => ReactNode;
 

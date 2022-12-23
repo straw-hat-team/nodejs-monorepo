@@ -9,7 +9,7 @@ is happening in the server-side, or in the browser-side
   to generate the reference docs.
 
 ```tsx
-import { isSSR, isBrowser, onSSR, onBrowser } from '@straw-hat/is-ssr';
+import { isBrowser, isSSR, onBrowser, onSSR } from '@straw-hat/is-ssr';
 
 if (isSSR()) {
   console.log('💻 I am running on the server-side.');

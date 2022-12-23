@@ -1,5 +1,5 @@
 import type { ComponentType } from 'react';
-import type { UrlQuery, UrlObject } from './types';
+import type { UrlObject, UrlQuery } from './types';
 
 export function wrapDisplayName(component: ComponentType, hocName: string) {
   return `${hocName}(${getDisplayName(component)})`;

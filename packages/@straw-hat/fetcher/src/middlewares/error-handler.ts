@@ -1,5 +1,5 @@
-import { createMiddleware } from './middleware';
 import { errorFromResponse } from '../errors';
+import { createMiddleware } from './middleware';
 
 export function errorHandler() {
   return createMiddleware((next) => async (request) => {

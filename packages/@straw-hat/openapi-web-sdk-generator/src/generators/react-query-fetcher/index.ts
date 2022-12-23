@@ -1,10 +1,10 @@
-import { CodegenBase } from '../../codegen-base';
-import { OperationObject, PathItemObject } from '../../types';
-import { forEachHttpOperation, getOperationDirectory, getOperationFileRelativePath } from '../../helpers';
-import path from 'path';
-import { OutputDir } from '../../output-dir';
 import { camelCase, pascalCase } from 'change-case';
 import { OpenAPIV3 } from 'openapi-types';
+import path from 'path';
+import { CodegenBase } from '../../codegen-base';
+import { forEachHttpOperation, getOperationDirectory, getOperationFileRelativePath } from '../../helpers';
+import { OutputDir } from '../../output-dir';
+import { OperationObject, PathItemObject } from '../../types';
 
 function isQuery(operationMethod: string) {
   return OpenAPIV3.HttpMethods.GET.toUpperCase() == operationMethod.toUpperCase();

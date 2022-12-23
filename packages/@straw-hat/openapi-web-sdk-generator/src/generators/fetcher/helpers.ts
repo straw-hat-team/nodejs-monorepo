@@ -1,6 +1,6 @@
-import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject, PathItemParameters } from '../../types';
 import { OpenAPIV3 } from 'openapi-types';
 import { isReferenceObject } from '../../helpers';
+import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject, PathItemParameters } from '../../types';
 
 export function getResponseSchema(operation: OperationObject): OpenAPIV3ReferenceableSchemaObject | undefined {
   const schemas = Object.entries(operation.responses ?? {})

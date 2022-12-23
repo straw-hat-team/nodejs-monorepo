@@ -12,7 +12,7 @@ First, lets create an example of a some SDK:
 
 ```tsx
 // my-sdk.ts
-import { getResponseBody, getRequestBody, Fetcher } from '@straw-hat/fetcher';
+import { Fetcher, getRequestBody, getResponseBody } from '@straw-hat/fetcher';
 import { WithOptions } from '@straw-hat/react-query-fetcher';
 
 export async function fetchTodoList(client: Fetcher, params: WithOptions) {

@@ -1,7 +1,7 @@
-import * as path from 'path';
-import * as fs from 'fs';
 import { deleteAsync } from 'del';
+import * as fs from 'fs';
 import makeDir from 'make-dir';
+import * as path from 'path';
 import { createDebugger, formatCode } from './helpers';
 
 export class Dir {

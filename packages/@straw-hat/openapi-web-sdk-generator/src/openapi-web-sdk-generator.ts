@@ -1,7 +1,7 @@
+import importFrom from 'import-from';
 import type { OpenAPIV3 } from 'openapi-types';
 import { CodegenBase } from './codegen-base';
 import { createDebugger } from './helpers';
-import importFrom from 'import-from';
 
 const debug = createDebugger('open-api-web-sdk-generator');
 

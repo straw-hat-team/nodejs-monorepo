@@ -16,4 +16,6 @@ module.exports = {
   endOfLine: 'lf',
   quoteProps: 'as-needed',
   htmlWhitespaceSensitivity: 'strict',
+  organizeImportsSkipDestructiveCodeActions: true,
+  plugins: [require('prettier-plugin-organize-imports')],
 };

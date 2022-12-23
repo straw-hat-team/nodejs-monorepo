@@ -1,7 +1,7 @@
+import { render } from '@testing-library/react';
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 import * as React from 'react';
 import { RedirectTo } from '../../src/router/redirect-to';
-import { RouterContext } from 'next/dist/shared/lib/router-context';
-import { render } from '@testing-library/react';
 
 export function createFakeRouterWrapper() {
   const router = {

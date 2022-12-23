@@ -1,34 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`react-query-fetcher generator: index.ts 1`] = `
-"export * from './use-update-pet';
-export * from './use-add-pet';
-export * from './use-find-pets-by-status';
-export * from './use-find-pets-by-tags';
-export * from './use-get-pet-by-id';
-export * from './use-update-pet-with-form';
-export * from './use-delete-pet';
-export * from './use-upload-file';
-export * from './use-get-inventory';
-export * from './use-place-order';
-export * from './use-get-order-by-id';
-export * from './use-delete-order';
+"export * from './use-add-pet';
 export * from './use-create-user';
 export * from './use-create-users-with-list-input';
+export * from './use-delete-order';
+export * from './use-delete-pet';
+export * from './use-delete-user';
+export * from './use-find-pets-by-status';
+export * from './use-find-pets-by-tags';
+export * from './use-get-inventory';
+export * from './use-get-order-by-id';
+export * from './use-get-pet-by-id';
+export * from './use-get-user-by-name';
 export * from './use-login-user';
 export * from './use-logout-user';
-export * from './use-get-user-by-name';
+export * from './use-place-order';
+export * from './use-update-pet';
+export * from './use-update-pet-with-form';
 export * from './use-update-user';
-export * from './use-delete-user';
+export * from './use-upload-file';
 "
 `;
 
 exports[`react-query-fetcher generator: use-add-pet.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { AddPetResponse, AddPetParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { AddPetParams, AddPetResponse } from '@my-sdk/pepeg';
 import { addPet } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseAddPetVariables = Omit<AddPetParams, 'options'>;
 
@@ -52,11 +52,11 @@ export function useAddPet<TError = unknown>(client: Fetcher, args: UseAddPetArgs
 `;
 
 exports[`react-query-fetcher generator: use-create-user.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { CreateUserResponse, CreateUserParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { CreateUserParams, CreateUserResponse } from '@my-sdk/pepeg';
 import { createUser } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseCreateUserVariables = Omit<CreateUserParams, 'options'>;
 
@@ -80,11 +80,11 @@ export function useCreateUser<TError = unknown>(client: Fetcher, args: UseCreate
 `;
 
 exports[`react-query-fetcher generator: use-create-users-with-list-input.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { CreateUsersWithListInputResponse, CreateUsersWithListInputParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { CreateUsersWithListInputParams, CreateUsersWithListInputResponse } from '@my-sdk/pepeg';
 import { createUsersWithListInput } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseCreateUsersWithListInputVariables = Omit<CreateUsersWithListInputParams, 'options'>;
 
@@ -114,11 +114,11 @@ export function useCreateUsersWithListInput<TError = unknown>(
 `;
 
 exports[`react-query-fetcher generator: use-delete-order.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { DeleteOrderResponse, DeleteOrderParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { DeleteOrderParams, DeleteOrderResponse } from '@my-sdk/pepeg';
 import { deleteOrder } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseDeleteOrderVariables = Omit<DeleteOrderParams, 'options'>;
 
@@ -142,11 +142,11 @@ export function useDeleteOrder<TError = unknown>(client: Fetcher, args: UseDelet
 `;
 
 exports[`react-query-fetcher generator: use-delete-pet.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { DeletePetResponse, DeletePetParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { DeletePetParams, DeletePetResponse } from '@my-sdk/pepeg';
 import { deletePet } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseDeletePetVariables = Omit<DeletePetParams, 'options'>;
 
@@ -170,11 +170,11 @@ export function useDeletePet<TError = unknown>(client: Fetcher, args: UseDeleteP
 `;
 
 exports[`react-query-fetcher generator: use-delete-user.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { DeleteUserResponse, DeleteUserParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { DeleteUserParams, DeleteUserResponse } from '@my-sdk/pepeg';
 import { deleteUser } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseDeleteUserVariables = Omit<DeleteUserParams, 'options'>;
 
@@ -198,11 +198,11 @@ export function useDeleteUser<TError = unknown>(client: Fetcher, args: UseDelete
 `;
 
 exports[`react-query-fetcher generator: use-find-pets-by-status.ts 1`] = `
-"import type { Fetcher } from '@straw-hat/fetcher';
-import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
-import type { FindPetsByStatusResponse, FindPetsByStatusParams } from '@my-sdk/pepeg';
-import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+"import type { FindPetsByStatusParams, FindPetsByStatusResponse } from '@my-sdk/pepeg';
 import { findPetsByStatus } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 
 export type UseFindPetsByStatusParams = Omit<FindPetsByStatusParams, 'options'>;
 
@@ -231,11 +231,11 @@ export function useFindPetsByStatus<TData = FindPetsByStatusResponse, TError = u
 `;
 
 exports[`react-query-fetcher generator: use-find-pets-by-tags.ts 1`] = `
-"import type { Fetcher } from '@straw-hat/fetcher';
-import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
-import type { FindPetsByTagsResponse, FindPetsByTagsParams } from '@my-sdk/pepeg';
-import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+"import type { FindPetsByTagsParams, FindPetsByTagsResponse } from '@my-sdk/pepeg';
 import { findPetsByTags } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 
 export type UseFindPetsByTagsParams = Omit<FindPetsByTagsParams, 'options'>;
 
@@ -264,11 +264,11 @@ export function useFindPetsByTags<TData = FindPetsByTagsResponse, TError = unkno
 `;
 
 exports[`react-query-fetcher generator: use-get-inventory.ts 1`] = `
-"import type { Fetcher } from '@straw-hat/fetcher';
-import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
-import type { GetInventoryResponse, GetInventoryParams } from '@my-sdk/pepeg';
-import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+"import type { GetInventoryParams, GetInventoryResponse } from '@my-sdk/pepeg';
 import { getInventory } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 
 export type UseGetInventoryParams = Omit<GetInventoryParams, 'options'>;
 
@@ -297,11 +297,11 @@ export function useGetInventory<TData = GetInventoryResponse, TError = unknown>(
 `;
 
 exports[`react-query-fetcher generator: use-get-order-by-id.ts 1`] = `
-"import type { Fetcher } from '@straw-hat/fetcher';
-import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
-import type { GetOrderByIdResponse, GetOrderByIdParams } from '@my-sdk/pepeg';
-import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+"import type { GetOrderByIdParams, GetOrderByIdResponse } from '@my-sdk/pepeg';
 import { getOrderById } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 
 export type UseGetOrderByIdParams = Omit<GetOrderByIdParams, 'options'>;
 
@@ -330,11 +330,11 @@ export function useGetOrderById<TData = GetOrderByIdResponse, TError = unknown>(
 `;
 
 exports[`react-query-fetcher generator: use-get-pet-by-id.ts 1`] = `
-"import type { Fetcher } from '@straw-hat/fetcher';
-import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
-import type { GetPetByIdResponse, GetPetByIdParams } from '@my-sdk/pepeg';
-import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+"import type { GetPetByIdParams, GetPetByIdResponse } from '@my-sdk/pepeg';
 import { getPetById } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 
 export type UseGetPetByIdParams = Omit<GetPetByIdParams, 'options'>;
 
@@ -363,11 +363,11 @@ export function useGetPetById<TData = GetPetByIdResponse, TError = unknown>(
 `;
 
 exports[`react-query-fetcher generator: use-get-user-by-name.ts 1`] = `
-"import type { Fetcher } from '@straw-hat/fetcher';
-import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
-import type { GetUserByNameResponse, GetUserByNameParams } from '@my-sdk/pepeg';
-import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+"import type { GetUserByNameParams, GetUserByNameResponse } from '@my-sdk/pepeg';
 import { getUserByName } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 
 export type UseGetUserByNameParams = Omit<GetUserByNameParams, 'options'>;
 
@@ -396,11 +396,11 @@ export function useGetUserByName<TData = GetUserByNameResponse, TError = unknown
 `;
 
 exports[`react-query-fetcher generator: use-login-user.ts 1`] = `
-"import type { Fetcher } from '@straw-hat/fetcher';
-import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
-import type { LoginUserResponse, LoginUserParams } from '@my-sdk/pepeg';
-import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+"import type { LoginUserParams, LoginUserResponse } from '@my-sdk/pepeg';
 import { loginUser } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 
 export type UseLoginUserParams = Omit<LoginUserParams, 'options'>;
 
@@ -429,11 +429,11 @@ export function useLoginUser<TData = LoginUserResponse, TError = unknown>(
 `;
 
 exports[`react-query-fetcher generator: use-logout-user.ts 1`] = `
-"import type { Fetcher } from '@straw-hat/fetcher';
-import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
-import type { LogoutUserResponse, LogoutUserParams } from '@my-sdk/pepeg';
-import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
+"import type { LogoutUserParams, LogoutUserResponse } from '@my-sdk/pepeg';
 import { logoutUser } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import type { UseFetcherQueryArgs } from '@straw-hat/react-query-fetcher';
+import { createQueryKey, useFetcherQuery } from '@straw-hat/react-query-fetcher';
 
 export type UseLogoutUserParams = Omit<LogoutUserParams, 'options'>;
 
@@ -462,11 +462,11 @@ export function useLogoutUser<TData = LogoutUserResponse, TError = unknown>(
 `;
 
 exports[`react-query-fetcher generator: use-place-order.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { PlaceOrderResponse, PlaceOrderParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { PlaceOrderParams, PlaceOrderResponse } from '@my-sdk/pepeg';
 import { placeOrder } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UsePlaceOrderVariables = Omit<PlaceOrderParams, 'options'>;
 
@@ -490,11 +490,11 @@ export function usePlaceOrder<TError = unknown>(client: Fetcher, args: UsePlaceO
 `;
 
 exports[`react-query-fetcher generator: use-update-pet.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { UpdatePetResponse, UpdatePetParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { UpdatePetParams, UpdatePetResponse } from '@my-sdk/pepeg';
 import { updatePet } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseUpdatePetVariables = Omit<UpdatePetParams, 'options'>;
 
@@ -518,11 +518,11 @@ export function useUpdatePet<TError = unknown>(client: Fetcher, args: UseUpdateP
 `;
 
 exports[`react-query-fetcher generator: use-update-pet-with-form.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { UpdatePetWithFormResponse, UpdatePetWithFormParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { UpdatePetWithFormParams, UpdatePetWithFormResponse } from '@my-sdk/pepeg';
 import { updatePetWithForm } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseUpdatePetWithFormVariables = Omit<UpdatePetWithFormParams, 'options'>;
 
@@ -546,11 +546,11 @@ export function useUpdatePetWithForm<TError = unknown>(client: Fetcher, args: Us
 `;
 
 exports[`react-query-fetcher generator: use-update-user.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { UpdateUserResponse, UpdateUserParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { UpdateUserParams, UpdateUserResponse } from '@my-sdk/pepeg';
 import { updateUser } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseUpdateUserVariables = Omit<UpdateUserParams, 'options'>;
 
@@ -574,11 +574,11 @@ export function useUpdateUser<TError = unknown>(client: Fetcher, args: UseUpdate
 `;
 
 exports[`react-query-fetcher generator: use-upload-file.ts 1`] = `
-"import type { UseMutationOptions } from '@tanstack/react-query';
-import type { Fetcher } from '@straw-hat/fetcher';
-import type { UploadFileResponse, UploadFileParams } from '@my-sdk/pepeg';
-import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+"import type { UploadFileParams, UploadFileResponse } from '@my-sdk/pepeg';
 import { uploadFile } from '@my-sdk/pepeg';
+import type { Fetcher } from '@straw-hat/fetcher';
+import { useFetcherMutation } from '@straw-hat/react-query-fetcher';
+import type { UseMutationOptions } from '@tanstack/react-query';
 
 export type UseUploadFileVariables = Omit<UploadFileParams, 'options'>;
 

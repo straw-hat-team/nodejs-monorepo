@@ -1,8 +1,8 @@
-import { deleteAsync } from 'del';
-import { prompt } from 'enquirer';
 import { BaseCommand, Flags } from '@straw-hat/cli-core/dist/base-command';
 import * as chalk from '@straw-hat/cli-core/dist/chalk';
 import { log, newline } from '@straw-hat/cli-core/dist/log';
+import { deleteAsync } from 'del';
+import { prompt } from 'enquirer';
 
 export class DelCommand extends BaseCommand {
   static override description = 'removes things';

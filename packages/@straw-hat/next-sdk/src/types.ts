@@ -1,6 +1,6 @@
-import type { UrlObject as NativeUrlObject } from 'node:url';
-import { ParsedUrlQueryInput } from 'node:querystring';
 import Router from 'next/router';
+import { ParsedUrlQueryInput } from 'node:querystring';
+import type { UrlObject as NativeUrlObject } from 'node:url';
 
 export type UrlQuery = string | null | ParsedUrlQueryInput | undefined;
 

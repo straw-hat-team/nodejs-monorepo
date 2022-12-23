@@ -1,6 +1,6 @@
 import { FancyMap } from '@straw-hat/fancy-map/dist';
-import { OpenAPIV3ReferenceableSchemaObject } from '../types';
 import { getSchemaName, hasSchemaId } from '../helpers';
+import { OpenAPIV3ReferenceableSchemaObject } from '../types';
 
 export type TypeName = string;
 

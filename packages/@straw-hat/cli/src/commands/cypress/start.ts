@@ -1,6 +1,6 @@
-import Cypress from 'cypress';
 import { BaseCommand, Flags } from '@straw-hat/cli-core/dist/base-command';
 import { getCwd, isCI, setNodeEnv } from '@straw-hat/cli-core/dist/helpers';
+import Cypress from 'cypress';
 import { createConfig } from '../../cypress';
 
 export class CypressStartCommand extends BaseCommand {
