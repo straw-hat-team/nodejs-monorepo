@@ -13,7 +13,7 @@ export type GetOrSetCallback<K, V> = (key: K) => Promise<V>;
  */
 export class FancyMap<K, V> extends Map<K, V> {
   /**
-   * Returns the value of a given key, running a the callback in case the key
+   * Returns the value of a given key, running the callback in case the key
    * isn't found.
    * @param key the name of the key.
    * @param callback the callback ran in case no key was not found.
@@ -28,7 +28,7 @@ export class FancyMap<K, V> extends Map<K, V> {
   }
 
   /**
-   * Returns the value of a given key, running a the callback in case the key
+   * Returns the value of a given key, running the callback in case the key
    * isn't found.
    * @param key the name of the key.
    * @param callback the callback ran in case no key was not found.

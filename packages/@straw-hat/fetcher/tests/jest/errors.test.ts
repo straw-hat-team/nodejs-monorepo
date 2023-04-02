@@ -11,6 +11,7 @@ describe('given a FetcherError', () => {
       });
 
       expect(err.message).toBe('404 Not Found https://example.com/api/v1/hello');
+      expect(err.stack).toBeDefined();
     });
   });
 });

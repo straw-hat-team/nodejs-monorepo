@@ -19,6 +19,8 @@ export class FetcherError extends Error {
     // Set the prototype explicitly.
     Object.setPrototypeOf(this, FetcherError.prototype);
 
+    Error.captureStackTrace?.(this);
+
     this.name = 'FetcherError';
     this.status = args.status;
     this.statusText = args.statusText;
