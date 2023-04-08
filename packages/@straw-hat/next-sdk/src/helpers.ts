@@ -15,7 +15,9 @@ function getDisplayName(component: ComponentType) {
  *
  * @param pathname the pathname from the URL.
  */
-export function makeUrlFor<TPath = unknown, TQuery extends UrlQuery = undefined>(pathname: string) {
+export function makeUrlFor<TPath extends Record<string, any> = never, TQuery extends UrlQuery = never>(
+  pathname: string
+) {
   return function (args: { path: TPath; query: TQuery }): UrlObject<TQuery> {
     return {
       query: args.query,

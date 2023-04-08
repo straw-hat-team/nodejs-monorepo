@@ -3,7 +3,7 @@
 exports[`fetcher generator: add-pet.ts 1`] = `
 "import type { Fetcher } from '@straw-hat/fetcher';
 import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
-import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import { OperationParams, createUrlPath } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
 export type AddPetBodyParams = schemas.Pet;
@@ -821,7 +821,7 @@ export function isApiResponseMessageEmpty(apiResponse: ApiResponse) {
 exports[`fetcher generator: create-user.ts 1`] = `
 "import type { Fetcher } from '@straw-hat/fetcher';
 import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
-import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import { OperationParams, createUrlPath } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
 export type CreateUserBodyParams = schemas.User;
@@ -851,7 +851,7 @@ export async function createUser(client: Fetcher, params: CreateUserParams): Pro
 exports[`fetcher generator: create-users-with-list-input.ts 1`] = `
 "import type { Fetcher } from '@straw-hat/fetcher';
 import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
-import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import { OperationParams, createUrlPath } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
 export type CreateUsersWithListInputBodyParams = Array<schemas.User>;
@@ -1290,7 +1290,7 @@ export async function logoutUser(client: Fetcher, params: LogoutUserParams): Pro
 exports[`fetcher generator: place-order.ts 1`] = `
 "import type { Fetcher } from '@straw-hat/fetcher';
 import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
-import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import { OperationParams, createUrlPath } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
 export type PlaceOrderBodyParams = schemas.Order;
@@ -1320,7 +1320,7 @@ export async function placeOrder(client: Fetcher, params: PlaceOrderParams): Pro
 exports[`fetcher generator: update-pet.ts 1`] = `
 "import type { Fetcher } from '@straw-hat/fetcher';
 import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
-import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import { OperationParams, createUrlPath } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
 export type UpdatePetBodyParams = schemas.Pet;
@@ -1402,7 +1402,7 @@ export async function updatePetWithForm(
 exports[`fetcher generator: update-user.ts 1`] = `
 "import type { Fetcher } from '@straw-hat/fetcher';
 import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
-import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import { OperationParams, createUrlPath } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
 export type UpdateUserPathParams = {
@@ -1442,7 +1442,7 @@ export async function updateUser(client: Fetcher, params: UpdateUserParams): Pro
 exports[`fetcher generator: upload-file.ts 1`] = `
 "import type { Fetcher } from '@straw-hat/fetcher';
 import { getRequestBody, getResponseBody } from '@straw-hat/fetcher';
-import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+import { OperationParams, createUrlPath } from '@straw-hat/fetcher/dist/openapi';
 import * as schemas from './components/schemas';
 
 export type UploadFilePathParams = {

@@ -34,23 +34,23 @@
   "dependencies": {
     "@oclif/core": "1.9.0",
     "@straw-hat/fancy-map": "1.0.2",
-    "chalk": "5.0.1",
-    "ci-info": "3.3.2",
+    "chalk": "5.2.0",
+    "ci-info": "3.8.0",
     "conf": "10.1.2",
     "debug": "4.3.4",
-    "dotenv": "16.0.1",
+    "dotenv": "16.0.3",
     "dotenv-expand": "8.0.3",
-    "ejs": "3.1.8",
+    "ejs": "3.1.9",
     "enquirer": "2.3.6",
     "make-dir": "3.1.0",
-    "ora": "6.1.2",
-    "resolve": "1.22.0"
+    "ora": "6.3.0",
+    "resolve": "1.22.2"
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
     "@types/debug": "^4.1.7",
-    "@types/ejs": "^3.1.1",
-    "@types/node": "^18.7.15",
+    "@types/ejs": "^3.1.2",
+    "@types/node": "^18.15.11",
     "@types/resolve": "^1.20.2"
   }
 }

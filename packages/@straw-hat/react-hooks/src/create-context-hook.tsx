@@ -3,7 +3,7 @@ import * as React from 'react';
 type Hook<T, P> = (props: P) => T;
 
 type ContextHook<T> = () => T;
-type Provider<P> = React.FunctionComponent<P>;
+type Provider<P> = React.FunctionComponent<React.PropsWithChildren<P>>;
 type CreateContextHookReturn<T, P> = [Provider<P>, ContextHook<T>];
 
 export function createContextHook<T = unknown, P = unknown>(
