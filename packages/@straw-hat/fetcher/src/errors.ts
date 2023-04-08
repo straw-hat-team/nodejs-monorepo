@@ -19,7 +19,8 @@ export class FetcherError extends Error {
     // Set the prototype explicitly.
     Object.setPrototypeOf(this, FetcherError.prototype);
 
-    Error.captureStackTrace?.(this);
+    // @ts-expect-error TS doesn't know about captureStackTrace
+    Error.captureStackTrace?.(this, FetcherError);
 
     this.name = 'FetcherError';
     this.status = args.status;

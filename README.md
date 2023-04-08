@@ -3,6 +3,7 @@
 ## References
 
 - [@straw-hat/babel-preset-base](packages/@straw-hat/babel-preset-base/README.md)
+- [@straw-hat/browserslist-config](packages/@straw-hat/browserslist-config/README.md)
 - [@straw-hat/chainable-config](packages/@straw-hat/chainable-config/README.md)
 - [@straw-hat/eslint-config-babel](packages/@straw-hat/eslint-config-babel/README.md)
 - [@straw-hat/eslint-config-base](packages/@straw-hat/eslint-config-base/README.md)
