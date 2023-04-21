@@ -151,7 +151,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@straw-hat/next-sdk", ["workspace:packages/@straw-hat/next-sdk"]],\
       ["@straw-hat/nodejs-monorepo", ["workspace:."]],\
       ["@straw-hat/openapi-web-sdk-generator", ["workspace:packages/@straw-hat/openapi-web-sdk-generator"]],\
-      ["@straw-hat/prettier-config", ["virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#workspace:packages/@straw-hat/prettier-config", "virtual:3882b4595b3c033dda32f838e56044d58da85f82c1f63c2f4559dacf57e8d741c0126cf1b38f1c2fec5603d0e7a8f5c5210d5fd8833b05ab8d7db463d8c3dd24#workspace:packages/@straw-hat/prettier-config", "virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#workspace:packages/@straw-hat/prettier-config", "workspace:packages/@straw-hat/prettier-config"]],\
+      ["@straw-hat/prettier-config", ["virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#workspace:packages/@straw-hat/prettier-config", "virtual:3882b4595b3c033dda32f838e56044d58da85f82c1f63c2f4559dacf57e8d741c0126cf1b38f1c2fec5603d0e7a8f5c5210d5fd8833b05ab8d7db463d8c3dd24#workspace:packages/@straw-hat/prettier-config", "virtual:56159f9fc7211b01687003e73eb024e80474e478f447e5e4b4414cea245b11dc4f0ccdbd006d5f9bbf2ab5ec4bebd68b8a1d1e4c4783088d4864cdc1186a7b89#workspace:packages/@straw-hat/prettier-config", "virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#workspace:packages/@straw-hat/prettier-config", "virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#workspace:packages/@straw-hat/prettier-config", "workspace:packages/@straw-hat/prettier-config"]],\
       ["@straw-hat/react-fullscreen", ["workspace:packages/@straw-hat/react-fullscreen"]],\
       ["@straw-hat/react-hooks", ["workspace:packages/@straw-hat/react-hooks"]],\
       ["@straw-hat/react-native-sdk", ["workspace:packages/@straw-hat/react-native-sdk"]],\
@@ -7962,8 +7962,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#workspace:packages/@straw-hat/prettier-config", {\
           "packageLocation": "./.yarn/__virtual__/@straw-hat-prettier-config-virtual-9ca9caf4f1/1/packages/@straw-hat/prettier-config/",\
           "packageDependencies": [\
-            ["@straw-hat/prettier-config", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#workspace:packages/@straw-hat/prettier-config"],\
+            ["@straw-hat/prettier-config", "virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#workspace:packages/@straw-hat/prettier-config"],\
             ["@types/prettier", null],\
+            ["@types/prettier-plugin-tailwindcss", null],\
             ["@types/typescript", null],\
             ["prettier", "npm:2.8.7"],\
             ["prettier-plugin-organize-imports", "virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#npm:3.2.2"],\
@@ -7971,6 +7972,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
           ],\
           "packagePeers": [\
+            "@types/prettier-plugin-tailwindcss",\
             "@types/prettier",\
             "@types/typescript",\
             "prettier",\
@@ -7983,6 +7985,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@straw-hat/prettier-config", "virtual:3882b4595b3c033dda32f838e56044d58da85f82c1f63c2f4559dacf57e8d741c0126cf1b38f1c2fec5603d0e7a8f5c5210d5fd8833b05ab8d7db463d8c3dd24#workspace:packages/@straw-hat/prettier-config"],\
             ["@types/prettier", null],\
+            ["@types/prettier-plugin-tailwindcss", null],\
             ["@types/typescript", null],\
             ["prettier", "npm:2.8.7"],\
             ["prettier-plugin-organize-imports", "virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#npm:3.2.2"],\
@@ -7990,8 +7993,54 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
           ],\
           "packagePeers": [\
+            "@types/prettier-plugin-tailwindcss",\
             "@types/prettier",\
             "@types/typescript",\
+            "prettier-plugin-tailwindcss",\
+            "prettier",\
+            "typescript"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:56159f9fc7211b01687003e73eb024e80474e478f447e5e4b4414cea245b11dc4f0ccdbd006d5f9bbf2ab5ec4bebd68b8a1d1e4c4783088d4864cdc1186a7b89#workspace:packages/@straw-hat/prettier-config", {\
+          "packageLocation": "./.yarn/__virtual__/@straw-hat-prettier-config-virtual-8132af8a34/1/packages/@straw-hat/prettier-config/",\
+          "packageDependencies": [\
+            ["@straw-hat/prettier-config", "virtual:56159f9fc7211b01687003e73eb024e80474e478f447e5e4b4414cea245b11dc4f0ccdbd006d5f9bbf2ab5ec4bebd68b8a1d1e4c4783088d4864cdc1186a7b89#workspace:packages/@straw-hat/prettier-config"],\
+            ["@types/prettier", "npm:2.7.2"],\
+            ["@types/prettier-plugin-tailwindcss", null],\
+            ["@types/typescript", null],\
+            ["prettier", "npm:2.8.7"],\
+            ["prettier-plugin-organize-imports", "virtual:56159f9fc7211b01687003e73eb024e80474e478f447e5e4b4414cea245b11dc4f0ccdbd006d5f9bbf2ab5ec4bebd68b8a1d1e4c4783088d4864cdc1186a7b89#npm:3.2.2"],\
+            ["prettier-plugin-tailwindcss", "virtual:56159f9fc7211b01687003e73eb024e80474e478f447e5e4b4414cea245b11dc4f0ccdbd006d5f9bbf2ab5ec4bebd68b8a1d1e4c4783088d4864cdc1186a7b89#npm:0.2.7"],\
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
+          ],\
+          "packagePeers": [\
+            "@types/prettier-plugin-tailwindcss",\
+            "@types/prettier",\
+            "@types/typescript",\
+            "prettier-plugin-tailwindcss",\
+            "prettier",\
+            "typescript"\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#workspace:packages/@straw-hat/prettier-config", {\
+          "packageLocation": "./.yarn/__virtual__/@straw-hat-prettier-config-virtual-85beb65c0e/1/packages/@straw-hat/prettier-config/",\
+          "packageDependencies": [\
+            ["@straw-hat/prettier-config", "virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#workspace:packages/@straw-hat/prettier-config"],\
+            ["@types/prettier", null],\
+            ["@types/prettier-plugin-tailwindcss", null],\
+            ["@types/typescript", null],\
+            ["prettier", "npm:2.8.7"],\
+            ["prettier-plugin-organize-imports", "virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#npm:3.2.2"],\
+            ["prettier-plugin-tailwindcss", "virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#npm:0.2.7"],\
+            ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
+          ],\
+          "packagePeers": [\
+            "@types/prettier-plugin-tailwindcss",\
+            "@types/prettier",\
+            "@types/typescript",\
+            "prettier-plugin-tailwindcss",\
             "prettier",\
             "typescript"\
           ],\
@@ -8000,8 +8049,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#workspace:packages/@straw-hat/prettier-config", {\
           "packageLocation": "./.yarn/__virtual__/@straw-hat-prettier-config-virtual-56159f9fc7/1/packages/@straw-hat/prettier-config/",\
           "packageDependencies": [\
-            ["@straw-hat/prettier-config", "virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#workspace:packages/@straw-hat/prettier-config"],\
+            ["@straw-hat/prettier-config", "virtual:56159f9fc7211b01687003e73eb024e80474e478f447e5e4b4414cea245b11dc4f0ccdbd006d5f9bbf2ab5ec4bebd68b8a1d1e4c4783088d4864cdc1186a7b89#workspace:packages/@straw-hat/prettier-config"],\
             ["@types/prettier", "npm:2.7.2"],\
+            ["@types/prettier-plugin-tailwindcss", null],\
             ["@types/typescript", null],\
             ["prettier", "npm:2.8.7"],\
             ["prettier-plugin-organize-imports", "virtual:56159f9fc7211b01687003e73eb024e80474e478f447e5e4b4414cea245b11dc4f0ccdbd006d5f9bbf2ab5ec4bebd68b8a1d1e4c4783088d4864cdc1186a7b89#npm:3.2.2"],\
@@ -8009,6 +8059,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"]\
           ],\
           "packagePeers": [\
+            "@types/prettier-plugin-tailwindcss",\
             "@types/prettier",\
             "@types/typescript",\
             "prettier",\

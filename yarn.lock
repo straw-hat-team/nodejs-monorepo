@@ -5286,6 +5286,7 @@ __metadata:
     typescript: ^5.0.4
   peerDependencies:
     prettier: ^2.2.1
+    prettier-plugin-tailwindcss: ^0.2.7
     typescript: ^4.9.4
   languageName: unknown
   linkType: soft
