@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/prettier-config",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Prettier configuration",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -27,6 +27,7 @@
   ],
   "peerDependencies": {
     "prettier": "^2.2.1",
+    "prettier-plugin-tailwindcss": "^0.2.7",
     "typescript": "^4.9.4"
   },
   "dependencies": {
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@straw-hat/prettier-config": "^2.0.0",
     "prettier": "^2.8.7",
+    "prettier-plugin-tailwindcss": "^0.2.7",
     "typescript": "^5.0.4"
   }
 }
