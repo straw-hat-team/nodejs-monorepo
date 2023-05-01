@@ -1,7 +1,7 @@
 import { errorFromResponse } from '../errors';
 import { createMiddleware } from './middleware';
 
-export function errorHandler() {
+export function errorHandler<TBody = any>() {
   return createMiddleware((next) => async (request) => {
     const response = await next(request);
 
@@ -9,7 +9,6 @@ export function errorHandler() {
       return response;
     }
 
-    const error = await errorFromResponse(response);
-    throw error;
+    throw await errorFromResponse<TBody>(response);
   });
 }

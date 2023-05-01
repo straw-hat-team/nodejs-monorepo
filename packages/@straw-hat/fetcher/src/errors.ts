@@ -7,11 +7,11 @@ export type FetcherErrorOptions = {
   url: string;
 };
 
-export class FetcherError extends Error {
-  statusText: string;
-  status: any;
-  body: any;
-  url: string;
+export class FetcherError<TBody = any> extends Error {
+  readonly statusText: string;
+  readonly status: number;
+  readonly body: TBody;
+  readonly url: string;
 
   constructor(args: FetcherErrorOptions) {
     super();
@@ -34,9 +34,9 @@ export class FetcherError extends Error {
   }
 }
 
-export async function errorFromResponse(response: Response) {
+export async function errorFromResponse<TBody = any>(response: Response) {
   const body = await getResponseBody(response);
-  return new FetcherError({
+  return new FetcherError<TBody>({
     body,
     statusText: response.statusText,
     status: response.status,
