@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   $schema: 'https://json.schemastore.org/prettierrc',
   printWidth: 120,
   tabWidth: 2,
@@ -16,6 +16,5 @@ module.exports = {
   endOfLine: 'lf',
   quoteProps: 'as-needed',
   htmlWhitespaceSensitivity: 'strict',
-  organizeImportsSkipDestructiveCodeActions: true,
-  plugins: [require('prettier-plugin-organize-imports')],
+  plugins: [],
 };

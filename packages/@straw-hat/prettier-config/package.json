@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/prettier-config",
-  "version": "2.2.0",
+  "version": "3.0.2",
   "description": "Prettier configuration",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -18,8 +18,8 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "type": "commonjs",
-  "main": "lib/index.cjs",
+  "type": "module",
+  "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "lib",

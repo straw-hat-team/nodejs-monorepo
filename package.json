@@ -12,13 +12,13 @@
     "build": "yarn workspaces foreach -v -p --topological-dev run build",
     "publish": "yarn workspaces foreach -v --no-private npm publish --tolerate-republish",
     "test:jest": "yarn jest",
-    "format": "prettier --write */** --ignore-unknown --no-error-on-unmatched-pattern"
+    "format": "prettier */** --write --ignore-unknown --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@commitlint/config-lerna-scopes": "^17.4.2",
-    "@straw-hat/prettier-config": "^2.0.2",
+    "@straw-hat/prettier-config": "workspace:*",
     "@straw-hat/tsconfig": "workspace:*",
     "@yarnpkg/sdks": "^3.0.0-rc.42",
     "husky": "^8.0.3",
@@ -26,7 +26,7 @@
     "lint-staged": "^12.5.0",
     "monodeploy": "^3.9.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.7",
+    "prettier": "2.8.8",
     "rimraf": "^3.0.2",
     "typedoc": "^0.23.28",
     "typescript": "^5.0.4"
