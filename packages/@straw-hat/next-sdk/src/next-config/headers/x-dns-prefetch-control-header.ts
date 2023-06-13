@@ -22,4 +22,4 @@ class XDnsPrefetchControlHeader extends HttpHeader {
   }
 }
 
-export { XDnsPrefetchControlHeader, XDnsPrefetchControl };
+export { XDnsPrefetchControl, XDnsPrefetchControlHeader };

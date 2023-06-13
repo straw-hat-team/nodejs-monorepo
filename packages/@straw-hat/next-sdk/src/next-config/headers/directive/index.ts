@@ -83,4 +83,4 @@ class PairDirective extends Directive {
   }
 }
 
-export { PairDirective, PairDirectiveQuotes, SingleDirective, Directive };
+export { Directive, PairDirective, PairDirectiveQuotes, SingleDirective };

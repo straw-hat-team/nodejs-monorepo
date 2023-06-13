@@ -37,8 +37,8 @@
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
-    "@types/react-native": "^0.71.5",
+    "@types/react-native": "^0.72.2",
     "react-native": "^0.71.6",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   }
 }

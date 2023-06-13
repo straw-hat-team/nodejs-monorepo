@@ -29,4 +29,4 @@ class ReferrerPolicyHeader extends HttpHeader {
   }
 }
 
-export { ReferrerPolicyHeader, ReferrerPolicy };
+export { ReferrerPolicy, ReferrerPolicyHeader };

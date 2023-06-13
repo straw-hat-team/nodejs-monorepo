@@ -22,4 +22,4 @@ class XFrameOptionsHeader extends HttpHeader {
   }
 }
 
-export { XFrameOptionsHeader, XFrameOptions };
+export { XFrameOptions, XFrameOptionsHeader };

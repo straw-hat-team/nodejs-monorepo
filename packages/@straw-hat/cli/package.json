@@ -37,9 +37,9 @@
     "README.md"
   ],
   "dependencies": {
-    "@oclif/core": "1.9.0",
-    "@oclif/plugin-help": "5.1.12",
-    "@oclif/plugin-version": "1.1.3",
+    "@oclif/core": "1.26.2",
+    "@oclif/plugin-help": "5.2.9",
+    "@oclif/plugin-version": "1.3.4",
     "@straw-hat/cli-core": "0.10.3",
     "@straw-hat/jest-config-chain": "1.0.3",
     "cypress": "^9.7.0",
@@ -54,7 +54,7 @@
   "devDependencies": {
     "@oclif/dev-cli": "1.26.10",
     "@straw-hat/tsconfig": "workspace:*",
-    "@types/node": "^18.15.11"
+    "@types/node": "^18.16.18"
   },
   "oclif": {
     "commands": "./dist/commands",
