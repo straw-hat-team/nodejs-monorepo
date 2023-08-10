@@ -5388,21 +5388,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/prettier-config@^3.1.0, @straw-hat/prettier-config@workspace:packages/@straw-hat/prettier-config":
-  version: 0.0.0-use.local
-  resolution: "@straw-hat/prettier-config@workspace:packages/@straw-hat/prettier-config"
-  dependencies:
-    "@straw-hat/prettier-config": ^3.1.0
-    prettier: ^3.0.1
-    prettier-plugin-organize-imports: ^3.2.3
-    prettier-plugin-tailwindcss: ^0.5.1
-    typescript: ^5.1.6
-  peerDependencies:
-    prettier: ^3.0.1
-    typescript: ^5.1.6
-  languageName: unknown
-  linkType: soft
-
 "@straw-hat/prettier-config@npm:2.3.3, @straw-hat/prettier-config@npm:^2.3.3":
   version: 2.3.3
   resolution: "@straw-hat/prettier-config@npm:2.3.3"
@@ -5415,6 +5400,20 @@ __metadata:
   checksum: 927673aa53efa4b4169e6c6b5a7d15599614fd416b063d97f117d45f8fc64e69426112bed20bf46ab9fa7ae5717e5ca7f35a06eb7e1cdce53352145b16bc8d89
   languageName: node
   linkType: hard
+
+"@straw-hat/prettier-config@workspace:packages/@straw-hat/prettier-config":
+  version: 0.0.0-use.local
+  resolution: "@straw-hat/prettier-config@workspace:packages/@straw-hat/prettier-config"
+  dependencies:
+    prettier: ^3.0.1
+    prettier-plugin-organize-imports: ^3.2.3
+    prettier-plugin-tailwindcss: ^0.5.1
+    typescript: ^5.1.6
+  peerDependencies:
+    prettier: ^3.0.1
+    typescript: ^5.1.6
+  languageName: unknown
+  linkType: soft
 
 "@straw-hat/react-fullscreen@workspace:packages/@straw-hat/react-fullscreen":
   version: 0.0.0-use.local
