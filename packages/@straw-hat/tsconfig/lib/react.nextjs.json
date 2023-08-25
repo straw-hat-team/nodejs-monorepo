@@ -10,6 +10,7 @@
     "noEmit": true,
     "emitDeclarationOnly": false,
     "isolatedModules": true,
-    "incremental": true
+    "incremental": true,
+    "plugins": [{ "name": "next" }]
   }
 }

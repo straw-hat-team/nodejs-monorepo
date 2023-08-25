@@ -6,8 +6,8 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "newLine": "LF",
     "emitDeclarationOnly": true,
     "noErrorTruncation": true,
@@ -25,6 +25,7 @@
     "inlineSources": true,
     "useUnknownInCatchVariables": true,
     "noImplicitOverride": true,
-    "lib": ["ESNext"]
+    "lib": ["ESNext"],
+    "noUncheckedIndexedAccess": true
   }
 }
