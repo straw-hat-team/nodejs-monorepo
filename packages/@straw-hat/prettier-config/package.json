@@ -18,8 +18,11 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "engines": {
+    "node": ">=16"
+  },
   "type": "module",
-  "main": "lib/index.js",
+  "exports": "./lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
