@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "docs:typedoc": {
+      "dependsOn": ["build"],
+      "outputs": ["docs/reference/**/*"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist"]
+    },
+    "test:jest": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "tests/jest/**/*.ts", "tests/jest/**/*.tsx"]
+    }
+  }
+}

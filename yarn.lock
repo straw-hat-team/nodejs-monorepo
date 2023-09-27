@@ -5344,6 +5344,7 @@ __metadata:
     npm-run-all: ^4.1.5
     prettier: 2.8.8
     rimraf: ^5.0.1
+    turbo: ^1.10.14
     typedoc: ^0.24.8
     typescript: ^5.1.3
   languageName: unknown
@@ -5491,7 +5492,7 @@ __metadata:
   resolution: "@straw-hat/sdk@workspace:packages/@straw-hat/sdk"
   dependencies:
     "@straw-hat/tsconfig": "workspace:*"
-    "@straw-hat/types": ^0.5.0
+    "@straw-hat/types": "workspace:*"
     "@swc/core": ^1.3.63
     "@swc/jest": ^0.2.26
     "@types/jest": ^29.5.2
@@ -5506,7 +5507,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/types@^0.5.0, @straw-hat/types@workspace:packages/@straw-hat/types":
+"@straw-hat/types@^0.5.0, @straw-hat/types@workspace:*, @straw-hat/types@workspace:packages/@straw-hat/types":
   version: 0.0.0-use.local
   resolution: "@straw-hat/types@workspace:packages/@straw-hat/types"
   dependencies:
@@ -18016,6 +18017,77 @@ __metadata:
   version: 0.0.6
   resolution: "tunnel@npm:0.0.6"
   checksum: c362948df9ad34b649b5585e54ce2838fa583aa3037091aaed66793c65b423a264e5229f0d7e9a95513a795ac2bd4cb72cda7e89a74313f182c1e9ae0b0994fa
+  languageName: node
+  linkType: hard
+
+"turbo-darwin-64@npm:1.10.14":
+  version: 1.10.14
+  resolution: "turbo-darwin-64@npm:1.10.14"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"turbo-darwin-arm64@npm:1.10.14":
+  version: 1.10.14
+  resolution: "turbo-darwin-arm64@npm:1.10.14"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"turbo-linux-64@npm:1.10.14":
+  version: 1.10.14
+  resolution: "turbo-linux-64@npm:1.10.14"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"turbo-linux-arm64@npm:1.10.14":
+  version: 1.10.14
+  resolution: "turbo-linux-arm64@npm:1.10.14"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"turbo-windows-64@npm:1.10.14":
+  version: 1.10.14
+  resolution: "turbo-windows-64@npm:1.10.14"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"turbo-windows-arm64@npm:1.10.14":
+  version: 1.10.14
+  resolution: "turbo-windows-arm64@npm:1.10.14"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"turbo@npm:^1.10.14":
+  version: 1.10.14
+  resolution: "turbo@npm:1.10.14"
+  dependencies:
+    turbo-darwin-64: 1.10.14
+    turbo-darwin-arm64: 1.10.14
+    turbo-linux-64: 1.10.14
+    turbo-linux-arm64: 1.10.14
+    turbo-windows-64: 1.10.14
+    turbo-windows-arm64: 1.10.14
+  dependenciesMeta:
+    turbo-darwin-64:
+      optional: true
+    turbo-darwin-arm64:
+      optional: true
+    turbo-linux-64:
+      optional: true
+    turbo-linux-arm64:
+      optional: true
+    turbo-windows-64:
+      optional: true
+    turbo-windows-arm64:
+      optional: true
+  bin:
+    turbo: bin/turbo
+  checksum: 219d245bb5cc32a9f76b136b81e86e179228d93a44cab4df3e3d487a55dd2688b5b85f4d585b66568ac53166145352399dd2d7ed0cd47f1aae63d08beb814ebb
   languageName: node
   linkType: hard
 

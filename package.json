@@ -8,10 +8,10 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "docs:typedoc": "yarn workspaces foreach -p -v run docs:typedoc",
-    "build": "yarn workspaces foreach -v -p --topological-dev run build",
-    "publish": "yarn workspaces foreach -v --no-private npm publish --tolerate-republish",
+    "turbo:docs:typedoc": "turbo run docs:typedoc",
+    "turbo:build": "turbo run build",
     "test:jest": "yarn jest",
+    "publish": "yarn workspaces foreach -v --no-private npm publish --tolerate-republish",
     "format": "prettier */** --write --ignore-unknown --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "2.8.8",
     "rimraf": "^5.0.1",
+    "turbo": "^1.10.14",
     "typedoc": "^0.24.8",
     "typescript": "^5.1.3"
   }

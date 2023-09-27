@@ -30,9 +30,12 @@
     "dist",
     "README.md"
   ],
+  "dependencies": {
+    "@straw-hat/types": "^0.5.0"
+  },
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
-    "@straw-hat/types": "^0.5.0",
+    "@straw-hat/types": "workspace:*",
     "@swc/core": "^1.3.63",
     "@swc/jest": "^0.2.26",
     "@types/jest": "^29.5.2",

@@ -88,6 +88,7 @@ oclif.manifest.json
 **/dist
 tmp
 **/docs/references
+**/docs/reference
 !.tool-versions
 
 # Yarn Zero-Install
@@ -98,3 +99,8 @@ tmp
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+.turbo
+build/**
+dist/**
+.next/**
