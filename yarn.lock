@@ -5401,7 +5401,7 @@ __metadata:
     "@commitlint/cli": ^17.7.1
     "@commitlint/config-conventional": ^17.7.0
     "@commitlint/config-lerna-scopes": ^17.7.0
-    "@straw-hat/prettier-config": 3.1.2
+    "@straw-hat/prettier-config": "workspace:*"
     "@straw-hat/tsconfig": "workspace:*"
     "@yarnpkg/sdks": ^3.0.0-rc.51
     husky: ^8.0.3
@@ -5456,7 +5456,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@straw-hat/prettier-config@3.1.2, @straw-hat/prettier-config@^3.1.2, @straw-hat/prettier-config@workspace:packages/@straw-hat/prettier-config":
+"@straw-hat/prettier-config@^3.1.2, @straw-hat/prettier-config@workspace:*, @straw-hat/prettier-config@workspace:packages/@straw-hat/prettier-config":
   version: 0.0.0-use.local
   resolution: "@straw-hat/prettier-config@workspace:packages/@straw-hat/prettier-config"
   dependencies:
