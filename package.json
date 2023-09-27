@@ -1,5 +1,5 @@
 {
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@3.6.3",
   "name": "@straw-hat/nodejs-monorepo",
   "type": "module",
   "private": true,

@@ -19,7 +19,6 @@ export class FetcherError<TBody = any> extends Error {
     // Set the prototype explicitly.
     Object.setPrototypeOf(this, FetcherError.prototype);
 
-    // @ts-expect-error TS doesn't know about captureStackTrace
     Error.captureStackTrace?.(this, FetcherError);
 
     this.name = 'FetcherError';
