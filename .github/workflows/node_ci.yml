@@ -11,7 +11,7 @@ jobs:
     name: Jest
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.6.0
       - shell: sh
         run: yarn install --immutable
@@ -29,7 +29,7 @@ jobs:
     name: Prettier
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.6.0
       - shell: sh
         run: yarn install --immutable
