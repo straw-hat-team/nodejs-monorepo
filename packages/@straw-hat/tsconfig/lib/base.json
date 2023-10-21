@@ -26,6 +26,7 @@
     "useUnknownInCatchVariables": true,
     "noImplicitOverride": true,
     "lib": ["ESNext"],
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "allowImportingTsExtensions": true
   }
 }
