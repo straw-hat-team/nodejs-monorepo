@@ -12,6 +12,9 @@
     "test:jest": {
       "dependsOn": ["build"],
       "inputs": ["src/**/*.tsx", "src/**/*.ts", "tests/jest/**/*.ts", "tests/jest/**/*.tsx"]
+    },
+    "test:vitest": {
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "tests/vitest/**/*.ts", "tests/vitest/**/*.tsx"]
     }
   }
 }

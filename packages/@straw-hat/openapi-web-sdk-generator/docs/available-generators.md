@@ -6,7 +6,7 @@ Uses `@straw-hat/fetcher` client as the HTTP client.
 
 ```yaml
 generators:
-  - path: '@straw-hat/openapi-web-sdk-generator/dist/generators/fetcher'
+  - path: '@straw-hat/openapi-web-sdk-generator/dist/generators/fetcher/index.js'
     config:
       # Where the files will be created.
       outputDir: './operations'
@@ -18,7 +18,7 @@ Connects React Query and Fetcher together leveraging Fetcher generator.
 
 ```yaml
 generators:
-  - path: '@straw-hat/openapi-web-sdk-generator/dist/generators/react-query-fetcher'
+  - path: '@straw-hat/openapi-web-sdk-generator/dist/generators/react-query-fetcher/index.js'
     config:
       # Where the files will be created.
       outputDir: './operations'

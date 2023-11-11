@@ -1,6 +1,6 @@
-import { Command } from '@oclif/command';
-import { loadConfig } from './helpers';
-import { OpenApiWebSdkGeneratorConfiguration } from './openapi-web-sdk-generator';
+import { Command } from '@oclif/core'
+import { loadConfig } from './helpers.js';
+import { OpenApiWebSdkGeneratorConfiguration } from './openapi-web-sdk-generator.js';
 
 export abstract class BaseCommand extends Command {
   configuration: OpenApiWebSdkGeneratorConfiguration = {};

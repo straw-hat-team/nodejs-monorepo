@@ -1,14 +1,13 @@
 import SwaggerParser from '@apidevtools/swagger-parser';
-import prettierConfig from '@straw-hat/prettier-config';
-import { paramCase, pascalCase } from 'change-case';
+import { kebabCase, pascalCase } from 'change-case';
 import { cosmiconfig } from 'cosmiconfig';
 import debugFactory from 'debug';
 import { OpenAPIV3 } from 'openapi-types';
-import * as path from 'path';
-import prettier from 'prettier';
-import { OperationIdMissingError } from './errors';
-import { OpenApiWebSdkGeneratorConfiguration } from './openapi-web-sdk-generator';
-import { OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject, OperationObject, PathItemObject } from './types';
+import * as path from 'node:path';
+import * as prettier from "prettier";
+import { OperationIdMissingError } from './errors.js';
+import { OpenApiWebSdkGeneratorConfiguration } from './openapi-web-sdk-generator.js';
+import { OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject, OperationObject, PathItemObject } from './types.js';
 
 const cosmiconfigExplorer = cosmiconfig('openapi-web-sdk-generator');
 const debug = createDebugger('helpers');
@@ -18,12 +17,8 @@ export function createDebugger(...scope: string[]) {
   return debugFactory(namespace);
 }
 
-export async function formatCode(text: string, opts: { cwd: string }) {
-  const options = await prettier.resolveConfig(opts.cwd);
-  return prettier.format(text, {
-    parser: 'typescript',
-    ...(options ?? prettierConfig),
-  });
+export async function formatCode(text: string) {
+  return prettier.format(text, { parser: 'typescript' });
 }
 
 export function hasOperationId(operation: OperationObject) {
@@ -45,7 +40,7 @@ export function getSchemaName(schema: OpenAPIV3ReferenceableSchemaObject & { 'x-
 }
 
 export function normalizeFileName(fileName: string) {
-  return paramCase(fileName).toLowerCase();
+  return kebabCase(fileName).toLowerCase();
 }
 
 export function getOperationDirectory(pathItem: PathItemObject, operation: OperationObject) {

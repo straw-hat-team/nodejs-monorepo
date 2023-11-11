@@ -6,10 +6,10 @@ import {
   isOpenAPIV3SchemaObject,
   isReferenceObject,
   whenInject,
-} from '../helpers';
-import { OpenAPIV3NonArraySchemaObject, OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject } from '../types';
-import { addTypeScripType, getTypeDefinition } from './add-typescript-type';
-import { Scope } from './scope';
+} from '../helpers.js';
+import { OpenAPIV3NonArraySchemaObject, OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject } from '../types.js';
+import { addTypeScripType, getTypeDefinition } from './add-typescript-type.js';
+import { Scope } from './scope.js';
 
 type EnumValueDefinition = {
   aliasName: string;

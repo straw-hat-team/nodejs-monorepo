@@ -1,8 +1,9 @@
-# `sht-openapi-web-sdk-generator local`
+`sht-openapi-web-sdk-generator local`
+=====================================
 
 Generate the code from a local OpenAPI V3 file.
 
-- [`sht-openapi-web-sdk-generator local`](#sht-openapi-web-sdk-generator-local)
+* [`sht-openapi-web-sdk-generator local`](#sht-openapi-web-sdk-generator-local)
 
 ## `sht-openapi-web-sdk-generator local`
 
@@ -10,10 +11,13 @@ Generate the code from a local OpenAPI V3 file.
 
 ```
 USAGE
-  $ sht-openapi-web-sdk-generator local
+  $ sht-openapi-web-sdk-generator local --config <value>
 
-OPTIONS
-  --config=config  (required) OpenAPI V3 configuration file.
+FLAGS
+  --config=<value>  (required) OpenAPI V3 configuration file.
+
+DESCRIPTION
+  Generate the code from a local OpenAPI V3 file.
 ```
 
-_See code: [dist/commands/local.ts](https://github.com/straw-hat-team/nodejs-monorepo/blob/v2.12.0/dist/commands/local.ts)_
+_See code: [src/commands/local.ts](https://github.com/straw-hat-team/nodejs-monorepo/blob/v3.0.0/src/commands/local.ts)_

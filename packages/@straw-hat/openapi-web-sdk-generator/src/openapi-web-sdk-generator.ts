@@ -1,7 +1,8 @@
-import importFrom from 'import-from';
+// @ts-expect-error https://github.com/sheerlox/import-from-esm/issues/46
+import importFrom from "import-from-esm";
 import type { OpenAPIV3 } from 'openapi-types';
-import { CodegenBase } from './codegen-base';
-import { createDebugger } from './helpers';
+import { CodegenBase } from './codegen-base.js';
+import { createDebugger } from './helpers.js';
 
 const debug = createDebugger('open-api-web-sdk-generator');
 
@@ -32,27 +33,25 @@ export class OpenapiWebSdkGenerator {
     this.#context = args.context;
   }
 
-  loadGenerators() {
-    this.#config.generators
-      ?.map((config: GeneratorConfiguration) => {
-        try {
-          debug(`Loading Generator: ${config.path}`);
-          const pkg: any = importFrom(this.#context, config.path);
-          const Generator = pkg.__esModule ? pkg.default : pkg;
-          return new Generator(config.config);
-        } catch (e: any) {
-          throw new Error(`Failed to load configuration file ${config.path}.\n${e.message}`);
-        }
-      })
-      .map((generator: CodegenBase) => this.#generators.add(generator));
+  async loadGenerators() {
+    const generators = this.#config.generators || [];
 
-    return this;
+    for (const config of generators) {
+      try {
+        debug(`Loading Generator: ${config.path}`);
+        const pkg: any = await importFrom(this.#context, config.path);
+        const Generator = pkg.__esModule ? pkg.default : pkg;
+        const generator = new Generator(config.config);
+        this.#generators.add(generator)
+      } catch (e: any) {
+        throw new Error(`Failed to load configuration file ${config.path}.\n${e.message}`);
+      }
+    }
   }
 
-  generate() {
-    return Array.from(this.#generators).map((generator) => {
-      generator.setDocument(this.#document);
-      return generator.generate();
-    });
+  async generate() {
+    for (const generator of Array.from(this.#generators)) {
+      await generator.setDocument(this.#document).generate();
+    }
   }
 }

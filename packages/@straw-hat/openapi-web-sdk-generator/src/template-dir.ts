@@ -1,8 +1,8 @@
-import { FancyMap } from '@straw-hat/fancy-map';
-import * as fs from 'fs';
-import * as Mustache from 'mustache';
-import { Dir } from './dir';
-import { createDebugger } from './helpers';
+import { FancyMap } from './fancy-map.js';
+import * as fs from 'node:fs/promises';
+import Mustache from 'mustache';
+import { Dir } from './dir.js';
+import { createDebugger } from './helpers.js';
 
 export class TemplateDir extends Dir {
   protected override debug = createDebugger('template-dir');
@@ -12,7 +12,7 @@ export class TemplateDir extends Dir {
     const templatePath = this.resolve(relativePath);
     const templateContent = await this.templates.getOrSet(templatePath, () => {
       this.debug(`Reading template ${templatePath}`);
-      return fs.promises.readFile(templatePath, { encoding: 'utf8' });
+      return fs.readFile(templatePath, { encoding: 'utf8' });
     });
 
     return Mustache.render(templateContent, data);

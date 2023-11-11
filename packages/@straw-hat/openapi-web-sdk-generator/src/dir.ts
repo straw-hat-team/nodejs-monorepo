@@ -1,8 +1,8 @@
 import { deleteAsync } from 'del';
-import * as fs from 'fs';
+import * as fs from 'node:fs/promises';
 import makeDir from 'make-dir';
-import * as path from 'path';
-import { createDebugger, formatCode } from './helpers';
+import * as path from 'node:path';
+import { createDebugger, formatCode } from './helpers.js';
 
 export class Dir {
   protected debug = createDebugger('dir');
@@ -39,30 +39,30 @@ export class Dir {
 
   readFile(relativePath: string) {
     const filePath = this.resolve(relativePath);
-    return fs.promises.readFile(filePath, { encoding: 'utf-8' });
+    return fs.readFile(filePath, { encoding: 'utf-8' });
   }
 
   async formatFile(relativePath: string) {
     const text = await this.readFile(relativePath);
-    const formatted = await formatCode(text, { cwd: this.resolve(relativePath) });
+    const formatted = await formatCode(text);
     return this.writeFile(relativePath, formatted);
   }
 
   writeFile(relativePath: string, data: string) {
     const filePath = this.resolve(relativePath);
     this.debug(`Writing to ${filePath}`);
-    return fs.promises.writeFile(filePath, data);
+    return fs.writeFile(filePath, data);
   }
 
   appendFile(relativePath: string, data: string) {
     const filePath = this.resolve(relativePath);
     this.debug(`Appending to ${filePath}`);
-    return fs.promises.appendFile(filePath, data);
+    return fs.appendFile(filePath, data);
   }
 
   async *walkFiles(relativePath: string): AsyncIterableIterator<string> {
     const dirPath = this.resolve(relativePath);
-    for await (const d of await fs.promises.opendir(dirPath)) {
+    for await (const d of await fs.opendir(dirPath)) {
       const entry = path.join(dirPath, d.name);
       if (d.isDirectory()) yield* this.walkFiles(entry);
       else if (d.isFile()) yield entry;
@@ -73,6 +73,6 @@ export class Dir {
     const filePath = this.resolve(relativePath);
     const fileData = await this.readFile(relativePath);
     this.debug(`Prepending to ${filePath}`);
-    return fs.promises.writeFile(filePath, Buffer.concat([Buffer.from(data), Buffer.from(fileData)]));
+    return fs.writeFile(filePath, Buffer.concat([Buffer.from(data), Buffer.from(fileData)]));
   }
 }
