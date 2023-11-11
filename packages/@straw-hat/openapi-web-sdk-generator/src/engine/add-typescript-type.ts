@@ -1,7 +1,7 @@
 import { OpenAPIV3 } from 'openapi-types';
-import { asString, getSchemaName, hasSchemaId, isReferenceObject } from '../helpers';
-import { OpenAPIV3NonArraySchemaObject, OpenAPIV3ReferenceableSchemaObject } from '../types';
-import { Scope, TypeDefinition } from './scope';
+import { asString, getSchemaName, hasSchemaId, isReferenceObject } from '../helpers.js';
+import { OpenAPIV3NonArraySchemaObject, OpenAPIV3ReferenceableSchemaObject } from '../types.js';
+import { Scope, TypeDefinition } from './scope.js';
 
 export function getTypeDefinition(type: TypeDefinition) {
   return type.name ?? type.definition;

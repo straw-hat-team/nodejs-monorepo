@@ -1,10 +1,10 @@
 import { camelCase, pascalCase } from 'change-case';
 import { OpenAPIV3 } from 'openapi-types';
-import path from 'path';
-import { CodegenBase } from '../../codegen-base';
-import { forEachHttpOperation, getOperationDirectory, getOperationFileRelativePath } from '../../helpers';
-import { OutputDir } from '../../output-dir';
-import { OperationObject, PathItemObject } from '../../types';
+import path from 'node:path';
+import { CodegenBase } from '../../codegen-base.js';
+import { forEachHttpOperation, getOperationDirectory, getOperationFileRelativePath } from '../../helpers.js';
+import { OutputDir } from '../../output-dir.js';
+import { OperationObject, PathItemObject } from '../../types.js';
 
 function isQuery(operationMethod: string) {
   return OpenAPIV3.HttpMethods.GET.toUpperCase() == operationMethod.toUpperCase();
@@ -58,7 +58,7 @@ export default class ReactQueryFetcherCodegen extends CodegenBase<ReactQueryFetc
             'queryKey' | 'endpoint'
           >;
 
-          const QUERY_KEY = ['${functionName}'];
+          const QUERY_KEY = ['${functionName}'] as const;
 
           export function use${pascalFunctionName}QueryKey(params?: Use${pascalFunctionName}Params) {
             return createQueryKey(QUERY_KEY, params);
@@ -88,7 +88,7 @@ export default class ReactQueryFetcherCodegen extends CodegenBase<ReactQueryFetc
             options?: Omit<UseMutationOptions<${typePrefix}Response, TError, Use${pascalFunctionName}Variables>, 'mutationKey'>
           };
 
-          const MUTATION_KEY = '${functionName}';
+          const MUTATION_KEY = ['${functionName}'] as const;
 
           export function use${pascalFunctionName}<TError = unknown>(
             client: Fetcher,

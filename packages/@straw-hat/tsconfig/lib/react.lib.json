@@ -4,6 +4,9 @@
   "display": "React Library",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"]
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowImportingTsExtensions": false,
+    "noEmit": false,
+    "emitDeclarationOnly": false
   }
 }

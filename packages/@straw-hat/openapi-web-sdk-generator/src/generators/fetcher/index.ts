@@ -1,21 +1,21 @@
 import { Resolver } from '@stoplight/json-ref-resolver';
 import { camelCase, pascalCase } from 'change-case';
-import * as path from 'path';
-import { CodegenBase } from '../../codegen-base';
-import { addSchemaHelpers } from '../../engine/add-schema-helpers';
-import { addTypeScripType, getTypeDefinition } from '../../engine/add-typescript-type';
-import { Scope } from '../../engine/scope';
+import * as path from 'node:path';
+import { CodegenBase } from '../../codegen-base.js';
+import { addSchemaHelpers } from '../../engine/add-schema-helpers.js';
+import { addTypeScripType, getTypeDefinition } from '../../engine/add-typescript-type.js';
+import { Scope } from '../../engine/scope.js';
 import {
   forEachHttpOperation,
   formatCode,
   getOperationDirectory,
   getOperationFileRelativePath,
   whenInject,
-} from '../../helpers';
-import { OutputDir } from '../../output-dir';
-import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject } from '../../types';
-import { NEVER_DEFINITION, UNKNOWN_DEFINITION } from './constants';
-import { getParameterSchemaFor, getRequestBodySchema, getResponseSchema } from './helpers';
+} from '../../helpers.js';
+import { OutputDir } from '../../output-dir.js';
+import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject } from '../../types.js';
+import { NEVER_DEFINITION, UNKNOWN_DEFINITION } from './constants.js';
+import { getParameterSchemaFor, getRequestBodySchema, getResponseSchema } from './helpers.js';
 
 export interface FetcherCodegenOptions {
   outputDir: string;
@@ -32,7 +32,7 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
   }
 
   #resolveSchema = (args: { relativeToFilePath: string }) => async (ref: string) => {
-    const [components, module] = ref.replace('#/', '').split('/');
+    const [components, module] = ref.replace('#/', '').split('/') as [string, string];
 
     const fromPath = this.#outputDir.resolve(components, module);
     const toPath = path.dirname(args.relativeToFilePath);
@@ -64,9 +64,7 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
       await addSchemaHelpers(scope, schemaObject);
     }
 
-    const formatted = await formatCode(scope.toString(), {
-      cwd: schemaFilePath,
-    });
+    const formatted = await formatCode(scope.toString());
 
     await this.#outputDir.writeFile('components/schemas.ts', formatted);
   }

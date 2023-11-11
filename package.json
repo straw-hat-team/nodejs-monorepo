@@ -10,6 +10,7 @@
     "prepare": "husky install",
     "turbo:docs:typedoc": "turbo run docs:typedoc",
     "turbo:build": "turbo run build",
+    "turbo:test:vitest": "turbo run test:vitest -- --run",
     "test:jest": "yarn jest",
     "publish": "yarn workspaces foreach -v --no-private npm publish --tolerate-republish",
     "format:prettier": "prettier */** --write --ignore-unknown --no-error-on-unmatched-pattern"

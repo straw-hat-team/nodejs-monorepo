@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/fancy-map",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "An Extended Native Map",
   "repository": {
     "type": "git",
@@ -24,11 +24,14 @@
     "prepack": "yarn build",
     "docs:typedoc": "yarn run -T typedoc"
   },
-  "type": "commonjs",
-  "main": "dist/index.js",
-  "exports": "dist/index.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "types": "dist/index.d.ts",
-  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "README.md"

@@ -1,10 +1,13 @@
 {
-  "extends": "@straw-hat/tsconfig/lib/base",
+  "extends": "@straw-hat/tsconfig/lib/lib",
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ES6",
     "outDir": "dist",
-    "allowSyntheticDefaultImports": true
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "target": "es2022"
   },
-  "include": ["src", "tests"]
+  "include": ["src", "tests"],
+  "ts-node": {
+    "esm": true
+  }
 }
