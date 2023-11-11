@@ -1,6 +1,4 @@
-import type { Fetcher } from '@straw-hat/fetcher/dist';
-
-export type QueryKey = readonly unknown[];
+import type { Fetcher } from '@straw-hat/fetcher';
 
 export type WithOptions<T = unknown> = T & {
   options?: {

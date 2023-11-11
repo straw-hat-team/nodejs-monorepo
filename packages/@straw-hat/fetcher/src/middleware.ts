@@ -1,4 +1,4 @@
-import { HttpRequest } from '../request';
+import { HttpRequest } from './request.js';
 
 export type Dispatch<T> = (request: HttpRequest) => Promise<T>;
 export type Middleware<T, P = Response> = (next: Dispatch<P>) => Dispatch<T>;

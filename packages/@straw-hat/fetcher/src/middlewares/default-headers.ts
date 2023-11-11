@@ -1,4 +1,4 @@
-import { createMiddleware } from './middleware';
+import { createMiddleware } from '../middleware.js';
 
 export function defaultHeaders(headers: Record<any, any>) {
   return createMiddleware((next) => async (request) => {

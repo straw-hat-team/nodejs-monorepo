@@ -44,7 +44,7 @@ export const client = fetcher({
       'User-Agent': 'MyApp/1.0',
     }),
     // Concatenate the base url with the current URL.
-    baseUrl('http://api.myapp.com/v1'),
+    baseUrl('https://api.myapp.com/v1'),
     // - Serialize body into JSON and add content type application/json
     // - Deserialize JSON responses
     json(),

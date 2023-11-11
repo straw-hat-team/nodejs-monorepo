@@ -132,7 +132,7 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
           ${whenInject(Boolean(requestBodySchema), `getRequestBody,`)}
           getResponseBody,
         } from '@straw-hat/fetcher';
-        import { createUrlPath, OperationParams } from '@straw-hat/fetcher/dist/openapi';
+        import { createUrlPath, OperationParams } from '@straw-hat/fetcher/openapi';
       `
     );
 

@@ -1,5 +1,5 @@
-import { getRequestBody, getResponseBody } from '../helpers';
-import { createMiddleware } from './middleware';
+import { getRequestBody, getResponseBody } from '../helpers.js';
+import { createMiddleware } from '../middleware.js';
 
 export function json() {
   return createMiddleware((next) => async (request) => {

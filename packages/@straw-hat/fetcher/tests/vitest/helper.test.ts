@@ -1,7 +1,8 @@
+import { expect, describe, test } from 'vitest';
 import { getRequestBody, getResponseBody } from '../../src/helpers';
 
 describe('getResponseBody', () => {
-  it('formats the response as json', async () => {
+  test('formats the response as json', async () => {
     const body = JSON.stringify({ hello: 'world' });
     const response = new Response(body, {
       headers: new Headers([['Content-Type', 'application/json; charset=utf-8;']]),
@@ -10,7 +11,7 @@ describe('getResponseBody', () => {
     expect(data).toEqual({ hello: 'world' });
   });
 
-  it('formats the response as text', async () => {
+  test('formats the response as text', async () => {
     const response = new Response('something', {
       headers: new Headers([['Content-Type', 'application/text']]),
     });
@@ -20,15 +21,15 @@ describe('getResponseBody', () => {
 });
 
 describe('getRequestBody', () => {
-  it('formats an string body', () => {
+  test('formats an string body', () => {
     expect(getRequestBody('helloworld')).toBe('helloworld');
   });
 
-  it('ignores undefined body', () => {
+  test('ignores undefined body', () => {
     expect(getRequestBody(undefined)).toBe(undefined);
   });
 
-  it('formats the object body to string', () => {
+  test('formats the object body to string', () => {
     const expected = JSON.stringify({
       hello: 'world',
     });
@@ -39,7 +40,7 @@ describe('getRequestBody', () => {
     ).toBe(expected);
   });
 
-  it('returns blob body as it is', () => {
+  test('returns blob body as it is', () => {
     const blob = new Blob();
     expect(getRequestBody(blob)).toBe(blob);
   });

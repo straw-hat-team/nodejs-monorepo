@@ -1,4 +1,4 @@
-import { createMiddleware } from './middleware';
+import { createMiddleware } from '../middleware.js';
 
 function normalizeUrl(url: string) {
   return url.endsWith('/') ? url.substring(0, url.length - 1) : url;

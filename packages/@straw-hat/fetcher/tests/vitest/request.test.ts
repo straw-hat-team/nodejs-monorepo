@@ -1,7 +1,8 @@
+import { expect, describe, test } from 'vitest';
 import { cloneRequest, HttpRequest } from '../../src/request';
 
 describe('cloneRequest', () => {
-  it('clones the http client request into a native request', () => {
+  test('clones the http client request into a native request', () => {
     const request: HttpRequest = {
       context: {
         foo: 'faa',
