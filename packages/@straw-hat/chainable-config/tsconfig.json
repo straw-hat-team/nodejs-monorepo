@@ -1,10 +1,7 @@
 {
-  "extends": "@straw-hat/tsconfig/lib/base.json",
+  "extends": "@straw-hat/tsconfig/lib/lib.json",
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ES6",
-    "outDir": "dist",
-    "lib": ["ESNext"]
+    "outDir": "dist"
   },
   "include": ["src", "tests"]
 }

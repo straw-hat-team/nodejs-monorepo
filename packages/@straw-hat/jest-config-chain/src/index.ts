@@ -1,4 +1,4 @@
-import { ChainedMap, ChainedSet, OrderableChainedMap } from '@straw-hat/chainable-config/dist';
+import { ChainedMap, ChainedSet, OrderableChainedMap } from '@straw-hat/chainable-config';
 
 export type CoverageThreshold = {
   [K: string]: {

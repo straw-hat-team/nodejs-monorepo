@@ -6,8 +6,8 @@ import { HttpRequest } from '../../../src/request';
 
 describe('json', () => {
   beforeEach(() => {
-    fetchMock.mockReset()
-    fetchMock.mockResolvedValue(new Response('anything', { status: 200 }))
+    fetchMock.mockReset();
+    fetchMock.mockResolvedValue(new Response('anything', { status: 200 }));
   });
 
   test('formats the body as an string', async () => {
@@ -35,7 +35,7 @@ describe('json', () => {
       new Response('{"hello":"world"}', {
         headers: { 'content-type': 'application/json' },
         status: 200,
-      })
+      }),
     );
 
     const client = fetcher<Response, HttpRequest<any>>({ middleware: json() });
@@ -53,7 +53,7 @@ describe('json', () => {
       new Response('{"hello":"world"}', {
         headers: { 'content-type': 'application/vnd.schemaregistry.v1+json' },
         status: 200,
-      })
+      }),
     );
 
     const client = fetcher<Response, HttpRequest<any>>({ middleware: json() });

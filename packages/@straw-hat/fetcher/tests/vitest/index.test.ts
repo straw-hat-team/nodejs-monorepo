@@ -1,6 +1,6 @@
 import { expect, describe, test, beforeEach, vi } from 'vitest';
 import { fetcher } from '../../src';
-import { composeMiddleware } from '../../src/middlewares/middleware';
+import { composeMiddleware } from '../../src/middleware';
 import { fetchMock } from './setup';
 
 const path = 'https://app.acmec.com';

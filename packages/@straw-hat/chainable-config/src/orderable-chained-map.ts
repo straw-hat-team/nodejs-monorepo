@@ -89,6 +89,10 @@ export class OrderableChainedMap<P, S = unknown> extends ChainedMap<P, MoveableV
     const fromIndex = entries.findIndex(byKey(key));
     const element = entries[fromIndex];
 
+    if (!element) {
+      return this;
+    }
+
     entries.splice(fromIndex, 1);
 
     const relativeIndex = entries.findIndex(byKey(relativeKey));

@@ -31,7 +31,7 @@ onSSR(
   },
   function browserCallback() {
     console.log('I am running on the browser-side.');
-  }
+  },
 );
 
 // Run the function on Browser-Side
@@ -42,7 +42,7 @@ onBrowser(
   },
   function ssrCallback() {
     console.log('💻 I am running on the server-side.');
-  }
+  },
 );
 
 onBrowser(function browserCallback() {

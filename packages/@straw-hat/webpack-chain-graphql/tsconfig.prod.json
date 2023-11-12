@@ -1,9 +1,4 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "dist",
-    "noEmit": false,
-    "emitDeclarationOnly": false
-  },
   "exclude": ["tests"]
 }

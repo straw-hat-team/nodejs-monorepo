@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Given a ChainedMap object When calling .toString() Then returns the correct string 1`] = `"[/* config.get('js') */ 'js', /* config.get('jsx') */ 'jsx', /* config.get('complex') */ ['nice'], /* config.get('pepeg') */ {/* config.pepeg.get('twitter') */ 'twitter': 'alchemist_ubi', /* config.pepeg.get('twitch') */ 'twitch': 'alchemist_ubi', /* config.pepeg.get('images') */ '^image![a-zA-Z0-9$_-]+$': 'GlobalImageStub'}]"`;

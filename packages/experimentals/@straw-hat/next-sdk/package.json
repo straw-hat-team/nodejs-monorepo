@@ -1,0 +1,55 @@
+{
+  "name": "@straw-hat/next-sdk",
+  "version": "0.5.1",
+  "description": "A Software Development Kit for NextJS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
+    "directory": "packages/@straw-hat/next-sdk"
+  },
+  "license": "MIT",
+  "keywords": [
+    "straw-hat-team",
+    "nextjs",
+    "next",
+    "react",
+    "sdk"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "experimental:build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "experimental:test:vitest": "yarn run vitest",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "next": "^12.0.4",
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "@straw-hat/types": "^0.5.0"
+  },
+  "devDependencies": {
+    "@straw-hat/tsconfig": "workspace:*",
+    "@testing-library/react": "^14.1.0",
+    "@types/node": "^18.18.9",
+    "@types/react": "^18.2.37",
+    "jsdom": "^22.1.0",
+    "next": "^13.5.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
+  }
+}

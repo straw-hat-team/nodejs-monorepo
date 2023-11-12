@@ -81,7 +81,7 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
 
     const operationIndexImportPath = path.relative(
       this.#outputDir.resolveDir('index.ts'),
-      this.#outputDir.resolve(operationFileRelativePath)
+      this.#outputDir.resolve(operationFileRelativePath),
     );
 
     const functionName = camelCase(args.operation.operationId);
@@ -133,7 +133,7 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
           getResponseBody,
         } from '@straw-hat/fetcher';
         import { createUrlPath, OperationParams } from '@straw-hat/fetcher/openapi';
-      `
+      `,
     );
 
     await this.#outputDir.appendFile(operationFilePath, scope.toString());
@@ -141,17 +141,17 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
     const output = `
       ${whenInject(
         Boolean(pathParamSchema),
-        `export type ${typePrefix}PathParams = ${getTypeDefinition(pathParamsType)};`
+        `export type ${typePrefix}PathParams = ${getTypeDefinition(pathParamsType)};`,
       )}
 
       ${whenInject(
         Boolean(queryParamSchema),
-        `export type ${typePrefix}QueryParams = ${getTypeDefinition(queryParamsType)};`
+        `export type ${typePrefix}QueryParams = ${getTypeDefinition(queryParamsType)};`,
       )}
 
       ${whenInject(
         Boolean(requestBodySchema),
-        `export type ${typePrefix}BodyParams = ${getTypeDefinition(requestBodyType)};`
+        `export type ${typePrefix}BodyParams = ${getTypeDefinition(requestBodyType)};`,
       )}
 
       export type ${typePrefix}Params = Pick<

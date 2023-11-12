@@ -28,7 +28,7 @@ describe('useFetcherQuery', () => {
             sortBy: 'title',
           },
         }),
-      { wrapper }
+      { wrapper },
     );
 
     await waitForNextUpdate();

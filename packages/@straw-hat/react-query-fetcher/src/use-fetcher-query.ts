@@ -1,8 +1,8 @@
-import {Fetcher} from '@straw-hat/fetcher';
-import {UseQueryOptions, useQuery, QueryKey} from '@tanstack/react-query';
-import {Endpoint} from './types.js';
+import { Fetcher } from '@straw-hat/fetcher';
+import { UseQueryOptions, useQuery, QueryKey } from '@tanstack/react-query';
+import { Endpoint } from './types.js';
 
-type Options<TQueryFnData, TError, TData> = Omit<UseQueryOptions<TQueryFnData, TError, TData>, 'queryKey' | 'queryFn'>
+type Options<TQueryFnData, TError, TData> = Omit<UseQueryOptions<TQueryFnData, TError, TData>, 'queryKey' | 'queryFn'>;
 
 export type UseFetcherQueryArgs<TQueryFnData, TError, TData, TParams> = {
   queryKey: QueryKey;
@@ -20,7 +20,7 @@ export function createQueryKey<TParams = unknown>(queryKey: QueryKey, params?: T
 
 export function useFetcherQuery<TQueryFnData = unknown, TError = unknown, TData = TQueryFnData, TParams = unknown>(
   client: Fetcher,
-  args: UseFetcherQueryArgs<TQueryFnData, TError, TData, TParams>
+  args: UseFetcherQueryArgs<TQueryFnData, TError, TData, TParams>,
 ) {
   const queryKey = createQueryKey(args.queryKey, args.params);
   const params = args.params ?? {};
@@ -34,8 +34,8 @@ export function useFetcherQuery<TQueryFnData = unknown, TError = unknown, TData 
         // @ts-ignore ¯\_(ツ)_/¯
         {
           ...params,
-          options: {signal: context.signal},
-        }
+          options: { signal: context.signal },
+        },
       );
     },
   });

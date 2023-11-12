@@ -8,7 +8,7 @@ type CreateContextHookReturn<T, P> = [Provider<P>, ContextHook<T>];
 
 export function createContextHook<T = unknown, P = unknown>(
   useHook: Hook<T, P>,
-  args: { name: string }
+  args: { name: string },
 ): CreateContextHookReturn<T, P> {
   const Context = React.createContext<T | undefined>(undefined);
 
@@ -17,7 +17,7 @@ export function createContextHook<T = unknown, P = unknown>(
 
     if (context === undefined) {
       throw new Error(
-        `${args.name} Context value is undefined. Make sure you use the ${args.name} Provider before using the context.`
+        `${args.name} Context value is undefined. Make sure you use the ${args.name} Provider before using the context.`,
       );
     }
 

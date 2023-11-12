@@ -26,7 +26,7 @@ export function getOrSetSync<TKey, TValue>(map: Map<TKey, TValue>, key: TKey, ca
 export async function getOrSet<TKey, TValue>(
   map: Map<TKey, TValue>,
   key: TKey,
-  callback: (key: TKey) => Promise<TValue>
+  callback: (key: TKey) => Promise<TValue>,
 ): Promise<TValue> {
   if (!map.has(key)) {
     const value = await callback(key);

@@ -1,36 +1,35 @@
 {
-  "packageManager": "yarn@3.6.3",
   "name": "@straw-hat/nodejs-monorepo",
-  "type": "module",
+  "type": "commonjs",
   "private": true,
   "workspaces": [
-    "packages/@straw-hat/*"
+    "packages/@straw-hat/*",
+    "packages/experimentals/@straw-hat/*"
   ],
   "scripts": {
     "prepare": "husky install",
     "turbo:docs:typedoc": "turbo run docs:typedoc",
     "turbo:build": "turbo run build",
     "turbo:test:vitest": "turbo run test:vitest -- --run",
-    "test:jest": "yarn jest",
     "publish": "yarn workspaces foreach -v --no-private npm publish --tolerate-republish",
     "format:prettier": "prettier */** --write --ignore-unknown --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
-    "@commitlint/config-lerna-scopes": "^17.7.0",
-    "@straw-hat/prettier-config": "workspace:*",
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@commitlint/config-lerna-scopes": "^17.8.1",
+    "@straw-hat/prettier-config": "workspace:^",
     "@straw-hat/tsconfig": "workspace:*",
-    "@yarnpkg/sdks": "^3.0.0-rc.51",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
     "lint-staged": "^14.0.1",
     "monodeploy": "^4.3.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "3.0.3",
-    "rimraf": "^5.0.4",
-    "turbo": "^1.10.14",
-    "typedoc": "^0.25.1",
+    "prettier": "3.1.0",
+    "rimraf": "^5.0.5",
+    "turbo": "^1.10.16",
+    "typedoc": "^0.25.3",
     "typescript": "^5.2.2"
-  }
+  },
+  "packageManager": "yarn@4.0.1"
 }

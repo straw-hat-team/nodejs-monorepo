@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "name": "@straw-hat/react-native-sdk",
+  "version": "0.1.0",
+  "description": "React Native utilities",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
+    "directory": "packages/@straw-hat/react-native-sdk"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-native",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "experimental:build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "react-native": "^0.61.3"
+  },
+  "devDependencies": {
+    "@straw-hat/tsconfig": "workspace:*",
+    "@types/react-native": "^0.72.6",
+    "react-native": "^0.72.6",
+    "typescript": "^5.2.2"
+  }
+}

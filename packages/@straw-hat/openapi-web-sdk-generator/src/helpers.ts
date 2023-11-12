@@ -4,7 +4,7 @@ import { cosmiconfig } from 'cosmiconfig';
 import debugFactory from 'debug';
 import { OpenAPIV3 } from 'openapi-types';
 import * as path from 'node:path';
-import * as prettier from "prettier";
+import * as prettier from 'prettier';
 import { OperationIdMissingError } from './errors.js';
 import { OpenApiWebSdkGeneratorConfiguration } from './openapi-web-sdk-generator.js';
 import { OpenAPIV3ReferenceableSchemaObject, OpenAPIV3SchemaObject, OperationObject, PathItemObject } from './types.js';
@@ -26,7 +26,7 @@ export function hasOperationId(operation: OperationObject) {
 }
 
 export function hasSchemaId(
-  schema: OpenAPIV3ReferenceableSchemaObject
+  schema: OpenAPIV3ReferenceableSchemaObject,
 ): schema is OpenAPIV3ReferenceableSchemaObject & { 'x-schema-id': string } {
   return Boolean(schema['x-schema-id']);
 }
@@ -77,7 +77,7 @@ export async function forEachHttpOperation(
     operationPath: string;
     pathItem: PathItemObject;
     operation: OperationObject;
-  }) => Promise<any>
+  }) => Promise<any>,
 ) {
   for (const [operationPath, pathItem] of Object.entries<PathItemObject>(document.paths as any)) {
     for (const operationMethod of Object.values(OpenAPIV3.HttpMethods)) {

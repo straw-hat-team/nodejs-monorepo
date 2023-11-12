@@ -209,7 +209,7 @@ const [MyHookProvider, useMyHookContext] = createContextHook<
   {
     // `name` is used for debugging propose when you failed to connect the hook
     name: 'MyHook',
-  }
+  },
 );
 
 export { MyHookProvider, useMyHookContext };

@@ -1,4 +1,4 @@
-import { Flags } from '@oclif/core'
+import { Flags } from '@oclif/core';
 import { BaseCommand } from '../base-command.js';
 import { readOpenApiFile } from '../helpers.js';
 import { OpenapiWebSdkGenerator } from '../openapi-web-sdk-generator.js';
@@ -20,7 +20,7 @@ export default class LocalCommand extends BaseCommand {
       context: process.cwd(),
       document: await readOpenApiFile(flags.config),
       config: this.configuration,
-    })
+    });
 
     await generator.loadGenerators();
     await generator.generate();
