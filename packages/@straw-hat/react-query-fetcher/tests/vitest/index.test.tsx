@@ -1,3 +1,4 @@
+import { expect, describe, test, vi } from 'vitest';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { act, renderHook } from '@testing-library/react-hooks';
 import * as React from 'react';
@@ -16,8 +17,8 @@ describe('createQueryKey', () => {
 
 describe('useFetcherQuery', () => {
   test('sends the params to the operation', async () => {
-    const client = jest.fn();
-    const endpoint = jest.fn(async (_fetcher, _params) => ({ data: 'Hello' }));
+    const client = vi.fn();
+    const endpoint = vi.fn(async (_fetcher, _params) => ({ data: 'Hello' }));
     const { waitForNextUpdate } = renderHook(
       () =>
         useFetcherQuery(client, {
@@ -40,8 +41,8 @@ describe('useFetcherQuery', () => {
 
 describe('useFetcherMutation', () => {
   test('sends the params to the operation', async () => {
-    const client = jest.fn();
-    const endpoint = jest.fn(async (_fetcher, _params) => ({ data: 'Hello' }));
+    const client = vi.fn();
+    const endpoint = vi.fn(async (_fetcher, _params) => ({ data: 'Hello' }));
     const {
       result: {
         current: { mutateAsync },

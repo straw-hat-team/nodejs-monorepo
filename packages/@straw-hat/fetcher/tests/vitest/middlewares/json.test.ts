@@ -1,32 +1,36 @@
-import fetchMock from 'jest-fetch-mock';
+import { expect, describe, test, beforeEach } from 'vitest';
+import { fetchMock } from '../setup';
 import { fetcher } from '../../../src';
 import { json } from '../../../src/middlewares/json';
 import { HttpRequest } from '../../../src/request';
 
 describe('json', () => {
-  afterEach(() => fetchMock.resetMocks());
-
-  it('formats the body as an string', async () => {
-    const client = fetcher<Response, HttpRequest<any>>({ middleware: json() });
-    await client('pepeg', {
-      method: 'POST',
-      body: { hello: 'world' },
-    });
-    // @ts-ignore
-    expect(fetchMock.mock.calls[0][0].body.toString()).toBe('{"hello":"world"}');
+  beforeEach(() => {
+    fetchMock.mockReset()
+    fetchMock.mockResolvedValue(new Response('anything', { status: 200 }))
   });
 
-  it('sets content type to application/json', async () => {
+  test('formats the body as an string', async () => {
     const client = fetcher<Response, HttpRequest<any>>({ middleware: json() });
-    await client('pepeg', {
+    await client('https://app.acmec.com', {
       method: 'POST',
       body: { hello: 'world' },
     });
-    // @ts-ignore
+
+    expect(await fetchMock.mock.calls[0][0].text()).toBe('{"hello":"world"}');
+  });
+
+  test('sets content type to application/json', async () => {
+    const client = fetcher<Response, HttpRequest<any>>({ middleware: json() });
+    await client('https://app.acmec.com', {
+      method: 'POST',
+      body: { hello: 'world' },
+    });
+
     expect(fetchMock.mock.calls[0][0].headers.get('content-type')).toBe('application/json');
   });
 
-  it('formats the response as json', async () => {
+  test('formats the response as json', async () => {
     fetchMock.mockResolvedValue(
       new Response('{"hello":"world"}', {
         headers: { 'content-type': 'application/json' },
@@ -36,7 +40,7 @@ describe('json', () => {
 
     const client = fetcher<Response, HttpRequest<any>>({ middleware: json() });
 
-    const response = await client('pepeg', {
+    const response = await client('https://app.acmec.com', {
       method: 'POST',
       body: { hello: 'world' },
     });
@@ -44,7 +48,7 @@ describe('json', () => {
     expect(response).toEqual({ hello: 'world' });
   });
 
-  it('formats the response as json with custom json spec', async () => {
+  test('formats the response as json with custom json spec', async () => {
     fetchMock.mockResolvedValue(
       new Response('{"hello":"world"}', {
         headers: { 'content-type': 'application/vnd.schemaregistry.v1+json' },
@@ -54,7 +58,7 @@ describe('json', () => {
 
     const client = fetcher<Response, HttpRequest<any>>({ middleware: json() });
 
-    const response = await client('pepeg', {
+    const response = await client('https://app.acmec.com', {
       method: 'POST',
       body: { hello: 'world' },
     });

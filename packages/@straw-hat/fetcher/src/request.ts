@@ -19,6 +19,10 @@ export function asNativeRequest(request: HttpRequest) {
   return new Request(request.url, requestInit);
 }
 
+/**
+ * Clone a HttpRequest.
+ * @param request
+ */
 export function cloneRequest(request: HttpRequest): HttpRequest {
   return {
     ...request,

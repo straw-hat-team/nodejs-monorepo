@@ -1,24 +1,26 @@
-import fetchMock from 'jest-fetch-mock';
+import { expect, describe, test, beforeEach, vi } from 'vitest';
 import { fetcher } from '../../src';
 import { composeMiddleware } from '../../src/middlewares/middleware';
+import { fetchMock } from './setup';
 
-const path = 'http://app.acmec.com';
+const path = 'https://app.acmec.com';
 
 describe('fetcher', () => {
-  afterEach(() => fetchMock.resetMocks());
+  beforeEach(() => {
+    fetchMock.mockReset();
+  });
 
   describe('calling the fetch client', () => {
-    it('using the global client', async () => {
+    test('using the global client', async () => {
       const client = fetcher();
 
       await client(path);
 
-      // @ts-ignore
       expect(fetchMock.mock.calls[0][0].method).toEqual('GET');
     });
 
-    it('using the provided client', async () => {
-      const fetchSpy = jest.fn();
+    test('using the provided client', async () => {
+      const fetchSpy = vi.fn();
       const client = fetcher({ fetch: fetchSpy });
 
       await client(path);
@@ -27,8 +29,8 @@ describe('fetcher', () => {
     });
   });
 
-  it('calls the middleware', async () => {
-    const middleware = jest.fn((next) => next);
+  test('calls the middleware', async () => {
+    const middleware = vi.fn((next) => next);
     const client = fetcher({ middleware: composeMiddleware(middleware) });
 
     await client(path);

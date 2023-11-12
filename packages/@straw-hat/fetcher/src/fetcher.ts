@@ -1,5 +1,5 @@
-import { compose, Dispatch, Middleware } from './middlewares/middleware';
-import { asNativeRequest, HttpRequest } from './request';
+import { compose, Dispatch, Middleware } from './middleware.js';
+import { asNativeRequest, HttpRequest } from './request.js';
 
 export type Fetch = typeof fetch;
 export type Path = string;

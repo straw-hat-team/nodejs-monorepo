@@ -1,4 +1,4 @@
-import { getResponseBody } from './helpers';
+import { getResponseBody } from './helpers.js';
 
 export type FetcherErrorOptions = {
   status: number;
@@ -19,7 +19,7 @@ export class FetcherError<TBody = any> extends Error {
     // Set the prototype explicitly.
     Object.setPrototypeOf(this, FetcherError.prototype);
 
-    // @ts-expect-error TS doesn't know about captureStackTrace
+    // @ts-ignore TS doesn't know about captureStackTrace
     Error.captureStackTrace?.(this, FetcherError);
 
     this.name = 'FetcherError';

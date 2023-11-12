@@ -1,5 +1,5 @@
-import { errorFromResponse } from '../errors';
-import { createMiddleware } from './middleware';
+import { errorFromResponse } from '../errors.js';
+import { createMiddleware } from '../middleware.js';
 
 export function errorHandler<TBody = any>() {
   return createMiddleware((next) => async (request) => {

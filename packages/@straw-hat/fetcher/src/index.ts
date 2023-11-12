@@ -1,6 +1,6 @@
-export * from './errors';
-export * from './fetcher';
-export * from './helpers';
-export { composeMiddleware, createMiddleware } from './middlewares/middleware';
-export * from './request';
-export { cloneRequest } from './request';
+export * from './errors.js';
+export * from './fetcher.js';
+export * from './helpers.js';
+export { composeMiddleware, createMiddleware, Dispatch, Middleware } from './middleware.js';
+export * from './request.js';
+export { cloneRequest } from './request.js';

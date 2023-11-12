@@ -1,8 +1,9 @@
+import { expect, describe, test } from 'vitest';
 import { FetcherError } from '../../src/errors';
 
 describe('given a FetcherError', () => {
   describe('when getting the message', () => {
-    it('should return the message', () => {
+    test('should return the message', () => {
       const err = new FetcherError({
         status: 404,
         statusText: 'Not Found',
