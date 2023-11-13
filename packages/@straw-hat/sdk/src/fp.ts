@@ -16,7 +16,7 @@ type ReturnTypeOfFirstInTuple<TFunctions extends AnyFunction[]> = ReturnType<TFu
 export function compose<
   TFunctions extends AnyFunction[],
   TParameters extends ParametersOfLastInTuple<TFunctions>,
-  TReturn extends ReturnTypeOfFirstInTuple<TFunctions>
+  TReturn extends ReturnTypeOfFirstInTuple<TFunctions>,
 >(...fns: TFunctions): (...args: TParameters) => TReturn {
   return function (...args) {
     const list = fns.slice();
@@ -49,11 +49,11 @@ export function identity<T>(value: T) {
  * results according to values returned.
  */
 export function groupBy<T, K extends string = string>(fn: (item: T) => K) {
-  return function (list: T[]) {
-    const acc = {} as Record<K, T[]>;
+  return function (list: Array<T>) {
+    const acc = {} as Record<K, Array<T>>;
 
     for (let i = 0; i < list.length; i++) {
-      const item = list[i];
+      const item = list[i] as T;
       const key = fn(item);
 
       if (!acc[key]) {

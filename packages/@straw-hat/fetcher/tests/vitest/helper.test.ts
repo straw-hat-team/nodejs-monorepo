@@ -36,7 +36,7 @@ describe('getRequestBody', () => {
     expect(
       getRequestBody({
         hello: 'world',
-      })
+      }),
     ).toBe(expected);
   });
 

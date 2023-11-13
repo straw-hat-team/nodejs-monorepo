@@ -51,7 +51,7 @@ export const client = fetcher({
     // Standard error handler from fetcher
     errorHandler(),
     // A middleware that does nothing, useful for noop default values thou
-    doNothing
+    doNothing,
   ),
 });
 ```

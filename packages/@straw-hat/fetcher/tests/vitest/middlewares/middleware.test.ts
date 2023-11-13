@@ -1,5 +1,5 @@
 import { expect, describe, test, vi } from 'vitest';
-import { composeMiddleware, createMiddleware } from '../../../src/middlewares/middleware';
+import { composeMiddleware, createMiddleware } from '../../../src/middleware';
 
 describe('createMiddleware', () => {
   test('returns the param as it is', () => {

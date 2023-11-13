@@ -118,7 +118,7 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject): 
           propertyDefinition.docs ?? '',
           `${propName}${optionalFlag}: ${getTypeDefinition(propertyDefinition)}`,
         ].join('\n');
-      }
+      },
     );
     const properties = await Promise.all(tasks);
 
@@ -231,7 +231,7 @@ async function referenceType(scope: Scope, schema: OpenAPIV3.ReferenceObject): P
 
 export async function addTypeScripType(
   scope: Scope,
-  schema: OpenAPIV3ReferenceableSchemaObject
+  schema: OpenAPIV3ReferenceableSchemaObject,
 ): Promise<TypeDefinition> {
   if (isReferenceObject(schema)) {
     return referenceType(scope, schema);

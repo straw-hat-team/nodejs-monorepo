@@ -7,7 +7,7 @@ export function compose(...fns: any[]) {
   return fns.reduce(
     (a, b) =>
       (...args: any[]) =>
-        a(b(...args))
+        a(b(...args)),
   );
 }
 

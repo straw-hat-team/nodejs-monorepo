@@ -53,7 +53,7 @@ class MyCodegen extends CodegenBase<MyCodegenOptions> {
       `${operationFilePath}.ts`,
       templateDir.render('operation.ts.mustache', {
         functionName,
-      })
+      }),
     );
 
     // Format the code using prettier

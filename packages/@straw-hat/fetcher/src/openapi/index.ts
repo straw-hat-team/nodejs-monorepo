@@ -12,7 +12,7 @@ export type OperationParams<TPath = unknown, TQuery = unknown, TBody = unknown> 
 export function replacePathParams(urlPath: string, pathParams: Record<string, any> = {}) {
   return Object.entries(pathParams).reduce(
     (theUrlPath, [name, value]) => theUrlPath.replaceAll(`{${name}}`, value),
-    urlPath
+    urlPath,
   );
 }
 

@@ -38,7 +38,7 @@ export default class ReactQueryFetcherCodegen extends CodegenBase<ReactQueryFetc
     const pascalFunctionName = pascalCase(args.operation.operationId);
     const operationIndexImportPath = path.relative(
       this.#outputDir.resolveDir('index.ts'),
-      this.#outputDir.resolve(operationFilePath)
+      this.#outputDir.resolve(operationFilePath),
     );
 
     await this.#outputDir.createDir(operationDirPath);

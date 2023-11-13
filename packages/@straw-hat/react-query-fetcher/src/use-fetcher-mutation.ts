@@ -11,12 +11,12 @@ export type UseFetcherMutationArgs<TData, TError, TVariables> = {
 
 export function useFetcherMutation<TData = unknown, TError = unknown, TVariables = void>(
   client: Fetcher,
-  args: UseFetcherMutationArgs<TData, TError, TVariables>
+  args: UseFetcherMutationArgs<TData, TError, TVariables>,
 ) {
   return useMutation<TData, TError, WithOptions<TVariables>>({
     ...args.options,
     mutationFn(params) {
       return args.endpoint(client, params);
-    }
+    },
   });
 }

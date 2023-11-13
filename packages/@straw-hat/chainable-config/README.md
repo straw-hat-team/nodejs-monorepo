@@ -31,7 +31,7 @@ class Resolve<P> extends ChainedMap<P> {
         asArray: true,
         // Its allows you to return undefined in case there is not values set
         emptyAsUndefined: true,
-      })
+      }),
     );
   }
 }

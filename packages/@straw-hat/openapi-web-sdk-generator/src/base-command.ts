@@ -1,4 +1,4 @@
-import { Command } from '@oclif/core'
+import { Command } from '@oclif/core';
 import { loadConfig } from './helpers.js';
 import { OpenApiWebSdkGeneratorConfiguration } from './openapi-web-sdk-generator.js';
 

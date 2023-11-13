@@ -1,6 +1,11 @@
 import { OpenAPIV3 } from 'openapi-types';
 import { isReferenceObject } from '../../helpers.js';
-import { OpenAPIV3ReferenceableSchemaObject, OperationObject, PathItemObject, PathItemParameters } from '../../types.js';
+import {
+  OpenAPIV3ReferenceableSchemaObject,
+  OperationObject,
+  PathItemObject,
+  PathItemParameters,
+} from '../../types.js';
 
 export function getResponseSchema(operation: OperationObject): OpenAPIV3ReferenceableSchemaObject | undefined {
   const schemas = Object.entries(operation.responses ?? {})
@@ -77,6 +82,6 @@ export function getParameterSchemaFor(args: {
       type: 'object',
       properties: {},
       required: [],
-    } as Required<Pick<OpenAPIV3.NonArraySchemaObject, 'type' | 'properties' | 'required'>>
+    } as Required<Pick<OpenAPIV3.NonArraySchemaObject, 'type' | 'properties' | 'required'>>,
   );
 }

@@ -1,9 +1,8 @@
-`sht-openapi-web-sdk-generator local`
-=====================================
+# `sht-openapi-web-sdk-generator local`
 
 Generate the code from a local OpenAPI V3 file.
 
-* [`sht-openapi-web-sdk-generator local`](#sht-openapi-web-sdk-generator-local)
+- [`sht-openapi-web-sdk-generator local`](#sht-openapi-web-sdk-generator-local)
 
 ## `sht-openapi-web-sdk-generator local`
 

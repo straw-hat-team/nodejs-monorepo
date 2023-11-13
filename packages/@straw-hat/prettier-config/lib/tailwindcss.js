@@ -1,6 +1,6 @@
-import baseConfig from './base.js';
+const baseConfig = require('./base.js');
 
-export default {
+module.exports = {
   ...baseConfig,
   plugins: [...baseConfig.plugins, 'prettier-plugin-tailwindcss'],
   tailwindFunctions: ['clsx'],

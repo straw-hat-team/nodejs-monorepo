@@ -1,5 +1,5 @@
 // @ts-expect-error https://github.com/sheerlox/import-from-esm/issues/46
-import importFrom from "import-from-esm";
+import importFrom from 'import-from-esm';
 import type { OpenAPIV3 } from 'openapi-types';
 import { CodegenBase } from './codegen-base.js';
 import { createDebugger } from './helpers.js';
@@ -42,7 +42,7 @@ export class OpenapiWebSdkGenerator {
         const pkg: any = await importFrom(this.#context, config.path);
         const Generator = pkg.__esModule ? pkg.default : pkg;
         const generator = new Generator(config.config);
-        this.#generators.add(generator)
+        this.#generators.add(generator);
       } catch (e: any) {
         throw new Error(`Failed to load configuration file ${config.path}.\n${e.message}`);
       }

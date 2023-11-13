@@ -45,10 +45,10 @@
   "devDependencies": {
     "@straw-hat/fetcher": "workspace:*",
     "@straw-hat/tsconfig": "workspace:*",
-    "@tanstack/react-query": "^5.8.2",
+    "@tanstack/react-query": "^5.8.3",
     "@testing-library/react-hooks": "^8.0.1",
-    "@types/react": "^18.2.23",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",

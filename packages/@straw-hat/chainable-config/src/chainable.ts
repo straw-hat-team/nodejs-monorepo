@@ -26,7 +26,7 @@ export class Chainable<P> extends Configurable {
   when(
     predicate: boolean,
     whenTruthy: BatchHandler = Function.prototype as BatchHandler,
-    whenFalsy: BatchHandler = Function.prototype as BatchHandler
+    whenFalsy: BatchHandler = Function.prototype as BatchHandler,
   ) {
     const callback = predicate ? whenTruthy : whenFalsy;
     callback(this);

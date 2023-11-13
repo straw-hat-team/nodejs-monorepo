@@ -7,6 +7,6 @@
 export function replaceDynamicPathParams(operationPath: string, pathParams: Record<string, any> = {}) {
   return Object.entries(pathParams).reduce(
     (theUrlPath, [name, value]) => theUrlPath.replaceAll(`{${name}}`, value),
-    operationPath
+    operationPath,
   );
 }
