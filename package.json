@@ -20,6 +20,7 @@
     "@commitlint/config-lerna-scopes": "^17.8.1",
     "@straw-hat/prettier-config": "workspace:^",
     "@straw-hat/tsconfig": "workspace:*",
+    "@vitest/ui": "0.34.6",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
     "lint-staged": "^14.0.1",
@@ -29,7 +30,8 @@
     "rimraf": "^5.0.5",
     "turbo": "^1.10.16",
     "typedoc": "^0.25.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
   },
   "packageManager": "yarn@4.0.1"
 }
