@@ -16,30 +16,44 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Load 1Password Secrets
+        uses: 1password/load-secrets-action@v1
+        with:
+          export-env: true
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          SHT_NPM_TOKEN: '${{ secrets.SECRETS_VAULT }}/SHT_NPM_TOKEN'
       - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.6.4
       - shell: sh
         run: yarn install --immutable
         env:
-          SHT_NPM_TOKEN: ${{ secrets.SHT_NPM_TOKEN }}
+          SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}
       - shell: sh
         run: yarn turbo:build
         env:
-          SHT_NPM_TOKEN: ${{ secrets.SHT_NPM_TOKEN }}
+          SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}
       - shell: sh
         run: yarn turbo:test:vitest
         env:
-          SHT_NPM_TOKEN: ${{ secrets.SHT_NPM_TOKEN }}
+          SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}
 
   prettier:
     name: Prettier
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Load 1Password Secrets
+        uses: 1password/load-secrets-action@v1
+        with:
+          export-env: true
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          SHT_NPM_TOKEN: '${{ secrets.SECRETS_VAULT }}/SHT_NPM_TOKEN'
       - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.6.4
       - shell: sh
         run: yarn install --immutable
         env:
-          SHT_NPM_TOKEN: ${{ secrets.SHT_NPM_TOKEN }}
+          SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}
       - uses: straw-hat-team/github-actions-workflows/nodejs/prettier@v1.6.4
-        with:
-          sht-npm-token: ${{ secrets.SHT_NPM_TOKEN }}
+        env:
+          SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}
