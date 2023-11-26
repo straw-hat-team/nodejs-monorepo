@@ -18,7 +18,7 @@
     "@commitlint/cli": "^17.8.1",
     "@commitlint/config-conventional": "^17.8.1",
     "@commitlint/config-lerna-scopes": "^17.8.1",
-    "@straw-hat/prettier-config": "workspace:^",
+    "@straw-hat/prettier-config": "workspace:*",
     "@straw-hat/tsconfig": "workspace:*",
     "@vitest/ui": "0.34.6",
     "husky": "^8.0.3",

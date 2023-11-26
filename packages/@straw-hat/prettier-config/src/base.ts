@@ -1,4 +1,6 @@
-module.exports = {
+import type { Options } from 'prettier';
+
+export default {
   $schema: 'https://json.schemastore.org/prettierrc',
   printWidth: 120,
   tabWidth: 2,
@@ -17,4 +19,4 @@ module.exports = {
   quoteProps: 'as-needed',
   htmlWhitespaceSensitivity: 'strict',
   plugins: [],
-};
+} satisfies Options;

@@ -9209,6 +9209,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@straw-hat-prettier-config-virtual-9ca9caf4f1/1/packages/@straw-hat/prettier-config/",\
         "packageDependencies": [\
           ["@straw-hat/prettier-config", "virtual:230fe871410b70fd5726455ba33a26bec9370ad559c574b68ea2f603c78ebf6b2320675a88940fcc2fd2d39086ede924cec069d547b646a25774287165c1290b#workspace:packages/@straw-hat/prettier-config"],\
+          ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
           ["@types/prettier", null],\
           ["@types/typescript", null],\
           ["prettier", "npm:3.1.0"],\
@@ -9228,6 +9229,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/@straw-hat/prettier-config/",\
         "packageDependencies": [\
           ["@straw-hat/prettier-config", "workspace:packages/@straw-hat/prettier-config"],\
+          ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
           ["prettier", "npm:3.1.0"],\
           ["prettier-plugin-organize-imports", "virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#npm:3.2.4"],\
           ["prettier-plugin-tailwindcss", "virtual:9ca9caf4f19d0710c82de98f91c6d43d9ae602240cac33dd7c28eec42aa3a15fd591e00c7f13b6dcad71ab1a727358f40478ebd5c8843df1266347da71a0f192#npm:0.5.7"],\

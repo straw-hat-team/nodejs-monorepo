@@ -1,0 +1,8 @@
+{
+  "extends": "@straw-hat/tsconfig/lib/lib.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "lib": ["ESNext"]
+  },
+  "include": ["src", "tests"]
+}

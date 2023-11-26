@@ -21,22 +21,34 @@
   "engines": {
     "node": ">=16"
   },
-  "type": "commonjs",
-  "main": "lib/index.js",
+  "type": "module",
+  "exports": {
+    "default": "./lib/index.js",
+    "base": "./lib/base.js",
+    "nextjs": "./lib/nextjs.js",
+    "tailwindcss": "./lib/tailwindcss.js",
+    "lib": "./lib/lib.js"
+  },
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
     "README.md"
   ],
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "prepack": "yarn build"
+  },
   "peerDependencies": {
     "prettier": "^3.0.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "prettier-plugin-organize-imports": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.7"
   },
   "devDependencies": {
+    "@straw-hat/tsconfig": "workspace:*",
     "prettier": "^3.1.0",
     "typescript": "^5.2.2"
   }
