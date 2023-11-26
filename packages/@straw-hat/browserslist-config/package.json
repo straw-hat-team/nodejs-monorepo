@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/browserslist-config",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Browserslist configuration",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
