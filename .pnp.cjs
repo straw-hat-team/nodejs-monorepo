@@ -9133,7 +9133,7 @@ const RAW_RUNTIME_STATE =
           ["@straw-hat/types", "virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#workspace:packages/@straw-hat/types"],\
           ["@testing-library/react", "virtual:e37bf45cbbe930bc63a15357cb1718c5ae1ec294b2391713dbc8260750d9f6c01619758dfbf10905b8799839f9016f7d40db072271a4400f90cdb44662786c2b#npm:14.1.0"],\
           ["@types/node", "npm:18.18.9"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["jsdom", "virtual:e37bf45cbbe930bc63a15357cb1718c5ae1ec294b2391713dbc8260750d9f6c01619758dfbf10905b8799839f9016f7d40db072271a4400f90cdb44662786c2b#npm:22.1.0"],\
           ["next", "virtual:e37bf45cbbe930bc63a15357cb1718c5ae1ec294b2391713dbc8260750d9f6c01619758dfbf10905b8799839f9016f7d40db072271a4400f90cdb44662786c2b#npm:13.5.6"],\
           ["react", "npm:18.2.0"],\
@@ -9243,7 +9243,7 @@ const RAW_RUNTIME_STATE =
           ["@straw-hat/react-fullscreen", "workspace:packages/@straw-hat/react-fullscreen"],\
           ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
           ["@types/fscreen", "npm:1.0.4"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["fscreen", "npm:1.2.0"]\
         ],\
         "linkType": "SOFT"\
@@ -9257,7 +9257,7 @@ const RAW_RUNTIME_STATE =
           ["@straw-hat/is-ssr", "workspace:packages/@straw-hat/is-ssr"],\
           ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
           ["@testing-library/react-hooks", "virtual:6fc72f00709e4d8d88e291d5795ad70a1c6a966b0796f9ff31bc1c8d8e4a17757f8a27fe308b4271acb949e2fc9d65bfb93738ca591f12e34c4d18f1e3741989#npm:8.0.1"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["react", "npm:18.2.0"],\
           ["react-test-renderer", "virtual:6fc72f00709e4d8d88e291d5795ad70a1c6a966b0796f9ff31bc1c8d8e4a17757f8a27fe308b4271acb949e2fc9d65bfb93738ca591f12e34c4d18f1e3741989#npm:18.2.0"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
@@ -9288,7 +9288,7 @@ const RAW_RUNTIME_STATE =
           ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
           ["@tanstack/react-query", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:5.8.3"],\
           ["@testing-library/react-hooks", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:8.0.1"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["@types/react-dom", "npm:18.2.15"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:18.2.0"],\
@@ -9327,7 +9327,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@straw-hat/types", "virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#workspace:packages/@straw-hat/types"],\
           ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
-          ["@types/react", "npm:18.2.37"]\
+          ["@types/react", "npm:18.2.43"]\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -9336,7 +9336,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@straw-hat/types", "workspace:packages/@straw-hat/types"],\
           ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
-          ["@types/react", "npm:18.2.37"]\
+          ["@types/react", "npm:18.2.43"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -9396,7 +9396,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@tanstack/react-query", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:5.8.3"],\
           ["@tanstack/query-core", "npm:5.8.3"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["@types/react-dom", "npm:18.2.15"],\
           ["@types/react-native", null],\
           ["react", "npm:18.2.0"],\
@@ -9445,7 +9445,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/react", "virtual:e37bf45cbbe930bc63a15357cb1718c5ae1ec294b2391713dbc8260750d9f6c01619758dfbf10905b8799839f9016f7d40db072271a4400f90cdb44662786c2b#npm:14.1.0"],\
           ["@babel/runtime", "npm:7.17.7"],\
           ["@testing-library/dom", "npm:9.2.0"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["@types/react-dom", "npm:18.0.5"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:18.2.0"]\
@@ -9471,7 +9471,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@testing-library/react-hooks", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:8.0.1"],\
           ["@babel/runtime", "npm:7.17.7"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["@types/react-dom", "npm:18.2.15"],\
           ["@types/react-test-renderer", null],\
           ["react", "npm:18.2.0"],\
@@ -9494,7 +9494,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@testing-library/react-hooks", "virtual:6fc72f00709e4d8d88e291d5795ad70a1c6a966b0796f9ff31bc1c8d8e4a17757f8a27fe308b4271acb949e2fc9d65bfb93738ca591f12e34c4d18f1e3741989#npm:8.0.1"],\
           ["@babel/runtime", "npm:7.17.7"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["@types/react-dom", null],\
           ["@types/react-test-renderer", null],\
           ["react", "npm:18.2.0"],\
@@ -9959,10 +9959,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:18.2.37", {\
-        "packageLocation": "./.yarn/cache/@types-react-npm-18.2.37-3fa76216da-fab3a5960e.zip/node_modules/@types/react/",\
+      ["npm:18.2.43", {\
+        "packageLocation": "./.yarn/cache/@types-react-npm-18.2.43-365c9eecd4-a9d90a9338.zip/node_modules/@types/react/",\
         "packageDependencies": [\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["@types/prop-types", "npm:15.7.4"],\
           ["@types/scheduler", "npm:0.16.2"],\
           ["csstype", "npm:3.0.10"]\
@@ -20305,7 +20305,7 @@ const RAW_RUNTIME_STATE =
           ["@opentelemetry/api", null],\
           ["@swc/helpers", "npm:0.5.2"],\
           ["@types/opentelemetry__api", null],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["@types/react-dom", null],\
           ["@types/sass", null],\
           ["busboy", "npm:1.6.0"],\
@@ -22190,7 +22190,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/react-dom-virtual-ff654ab80e/0/cache/react-dom-npm-18.2.0-dd675bca1c-ca5e7762ec.zip/node_modules/react-dom/",\
         "packageDependencies": [\
           ["react-dom", "virtual:0646739d8d37d00799ef92dfae48e9b0846ddac66cec969b351662baed45efd99281c987728d8ad10e8cabba99d305e37618a3474fa4b50174cfaf993ab8ae9a#npm:18.2.0"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["loose-envify", "npm:1.4.0"],\
           ["react", "npm:18.2.0"],\
           ["scheduler", "npm:0.23.0"]\
@@ -22215,7 +22215,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["react-error-boundary", "virtual:0189ed795af6be3f9c6ceb136f63ece48c1b48c0d6876fc85d690b7e62e26ec67331d743c2032f0f24ea1594d6d2eadb8cdf15badd2610161d2057445af75995#npm:3.1.4"],\
           ["@babel/runtime", "npm:7.17.7"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["react", "npm:18.2.0"]\
         ],\
         "packagePeers": [\
@@ -22334,7 +22334,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/react-shallow-renderer-virtual-b4cc6d7f6d/0/cache/react-shallow-renderer-npm-16.15.0-cf95219885-06457fe5bc.zip/node_modules/react-shallow-renderer/",\
         "packageDependencies": [\
           ["react-shallow-renderer", "virtual:8a2600942fa06ecc1b379382186e991433d6fed43be797adb9789a1890d7df9ec4cf5f50696cf0a9ea26a014a4fe1f6099f9038d27efa07ad3205d12abaa8108#npm:16.15.0"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["object-assign", "npm:4.1.1"],\
           ["react", "npm:18.2.0"],\
           ["react-is", "npm:18.1.0"]\
@@ -22373,7 +22373,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/react-test-renderer-virtual-8a2600942f/0/cache/react-test-renderer-npm-18.2.0-cdc6051330-39473e43f6.zip/node_modules/react-test-renderer/",\
         "packageDependencies": [\
           ["react-test-renderer", "virtual:6fc72f00709e4d8d88e291d5795ad70a1c6a966b0796f9ff31bc1c8d8e4a17757f8a27fe308b4271acb949e2fc9d65bfb93738ca591f12e34c4d18f1e3741989#npm:18.2.0"],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["react", "npm:18.2.0"],\
           ["react-is", "npm:18.2.0"],\
           ["react-shallow-renderer", "virtual:8a2600942fa06ecc1b379382186e991433d6fed43be797adb9789a1890d7df9ec4cf5f50696cf0a9ea26a014a4fe1f6099f9038d27efa07ad3205d12abaa8108#npm:16.15.0"],\
@@ -24181,7 +24181,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", null],\
           ["@types/babel-plugin-macros", null],\
           ["@types/babel__core", null],\
-          ["@types/react", "npm:18.2.37"],\
+          ["@types/react", "npm:18.2.43"],\
           ["babel-plugin-macros", null],\
           ["client-only", "npm:0.0.1"],\
           ["react", "npm:18.2.0"]\
