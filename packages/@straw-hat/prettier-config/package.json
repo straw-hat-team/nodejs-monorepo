@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/prettier-config",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "description": "Prettier configuration",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -23,11 +23,11 @@
   },
   "type": "module",
   "exports": {
-    "default": "./lib/index.js",
-    "base": "./lib/base.js",
-    "nextjs": "./lib/nextjs.js",
-    "tailwindcss": "./lib/tailwindcss.js",
-    "lib": "./lib/lib.js"
+    ".": "./lib/index.js",
+    "./base": "./lib/base.js",
+    "./nextjs": "./lib/nextjs.js",
+    "./tailwindcss": "./lib/tailwindcss.js",
+    "./lib": "./lib/lib.js"
   },
   "typings": "lib/index.d.ts",
   "files": [
