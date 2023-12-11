@@ -1,5 +1,5 @@
 import { Fetcher } from '@straw-hat/fetcher';
-import { UseQueryOptions, useQuery, QueryKey } from '@tanstack/react-query';
+import { QueryKey, UseQueryOptions, useQuery } from '@tanstack/react-query';
 import { Endpoint } from './types.js';
 
 type Options<TQueryFnData, TError, TData> = Omit<UseQueryOptions<TQueryFnData, TError, TData>, 'queryKey' | 'queryFn'>;

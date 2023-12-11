@@ -1,7 +1,7 @@
-import { expect, describe, test, beforeEach } from 'vitest';
-import { fetchMock } from '../setup';
+import { beforeEach, describe, expect, test } from 'vitest';
 import { fetcher } from '../../../src';
 import { errorHandler } from '../../../src/middlewares/error-handler';
+import { fetchMock } from '../setup';
 
 describe('errorHandler', () => {
   beforeEach(() => {

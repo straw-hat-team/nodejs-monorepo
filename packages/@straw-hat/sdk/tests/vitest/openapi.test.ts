@@ -1,4 +1,4 @@
-import { describe, test, expect } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import { replaceDynamicPathParams } from '../../src/openapi';
 
 describe('given a "replaceDynamicPathParams" function', () => {

@@ -1,7 +1,7 @@
-import { expect, describe, test, beforeEach } from 'vitest';
-import { fetchMock } from '../setup';
+import { beforeEach, describe, expect, test } from 'vitest';
 import { fetcher } from '../../../src';
 import { baseUrl } from '../../../src/middlewares/base-url';
+import { fetchMock } from '../setup';
 
 describe('baseUrl', () => {
   beforeEach(() => {

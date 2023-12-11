@@ -1,6 +1,6 @@
 import { camelCase, pascalCase } from 'change-case';
-import { OpenAPIV3 } from 'openapi-types';
 import path from 'node:path';
+import { OpenAPIV3 } from 'openapi-types';
 import { CodegenBase } from '../../codegen-base.js';
 import { forEachHttpOperation, getOperationDirectory, getOperationFileRelativePath } from '../../helpers.js';
 import { OutputDir } from '../../output-dir.js';

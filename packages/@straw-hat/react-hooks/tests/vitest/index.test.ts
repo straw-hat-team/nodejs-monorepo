@@ -1,5 +1,5 @@
-import { describe, test, expect, vi } from 'vitest';
 import { act, renderHook } from '@testing-library/react-hooks';
+import { describe, expect, test, vi } from 'vitest';
 import { useBoolean, useCallOnce } from '../../src';
 
 describe('given useCallOnce hook', () => {

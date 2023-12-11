@@ -1,7 +1,7 @@
-import { FancyMap } from './fancy-map.js';
-import * as fs from 'node:fs/promises';
 import Mustache from 'mustache';
+import * as fs from 'node:fs/promises';
 import { Dir } from './dir.js';
+import { FancyMap } from './fancy-map.js';
 import { createDebugger } from './helpers.js';
 
 export class TemplateDir extends Dir {

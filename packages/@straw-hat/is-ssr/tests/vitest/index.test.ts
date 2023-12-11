@@ -1,4 +1,4 @@
-import { describe, test, expect, vi } from 'vitest';
+import { describe, expect, test, vi } from 'vitest';
 import { isBrowser, isSSR, onBrowser, onSSR } from '../../src';
 import { withMockedWindow } from '../support-files';
 
