@@ -22168,10 +22168,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["react-devtools-core", [\
-      ["npm:4.28.0", {\
-        "packageLocation": "./.yarn/cache/react-devtools-core-npm-4.28.0-7f1dea3e3a-32d5da30f0.zip/node_modules/react-devtools-core/",\
+      ["npm:4.28.5", {\
+        "packageLocation": "./.yarn/cache/react-devtools-core-npm-4.28.5-064d121dfd-7c951a6a9b.zip/node_modules/react-devtools-core/",\
         "packageDependencies": [\
-          ["react-devtools-core", "npm:4.28.0"],\
+          ["react-devtools-core", "npm:4.28.5"],\
           ["shell-quote", "npm:1.7.3"],\
           ["ws", "virtual:6bd360a9e5c3c1179c866af79e0ed50294e693db35d98f766f5ef8e240a72773dcd5652d9c72c16c150db1de6349f9ed3bb356ac17c4f576b863900ae21e5a27#npm:7.5.7"]\
         ],\
@@ -22295,7 +22295,7 @@ const RAW_RUNTIME_STATE =
           ["pretty-format", "npm:26.6.2"],\
           ["promise", "npm:8.3.0"],\
           ["react", null],\
-          ["react-devtools-core", "npm:4.28.0"],\
+          ["react-devtools-core", "npm:4.28.5"],\
           ["react-refresh", "npm:0.4.3"],\
           ["react-shallow-renderer", "virtual:d6e8ffd0205ba591c574159f6d553d6c3e3acaca6d2db8ff4cac61d3f627b45fa43f370b21f694992da64625bdec3682d844e5230519370c64f8000b8e1fcea1#npm:16.15.0"],\
           ["regenerator-runtime", "npm:0.13.9"],\
