@@ -1,4 +1,4 @@
-import { describe, test, expect, vi } from 'vitest';
+import { describe, expect, test, vi } from 'vitest';
 import { CacheControlHeader } from '../../src/next-config/headers/cache-control-header';
 import {
   ContentSecurityPolicyHeader,

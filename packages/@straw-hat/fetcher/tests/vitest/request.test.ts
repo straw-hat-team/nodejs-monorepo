@@ -1,5 +1,5 @@
-import { expect, describe, test } from 'vitest';
-import { cloneRequest, HttpRequest } from '../../src/request';
+import { describe, expect, test } from 'vitest';
+import { HttpRequest, cloneRequest } from '../../src/request';
 
 describe('cloneRequest', () => {
   test('clones the http client request into a native request', () => {

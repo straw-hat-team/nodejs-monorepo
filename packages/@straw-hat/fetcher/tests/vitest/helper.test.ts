@@ -1,4 +1,4 @@
-import { expect, describe, test } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import { getRequestBody, getResponseBody } from '../../src/helpers';
 
 describe('getResponseBody', () => {

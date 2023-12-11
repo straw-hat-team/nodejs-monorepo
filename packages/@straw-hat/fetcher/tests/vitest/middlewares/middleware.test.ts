@@ -1,4 +1,4 @@
-import { expect, describe, test, vi } from 'vitest';
+import { describe, expect, test, vi } from 'vitest';
 import { composeMiddleware, createMiddleware } from '../../../src/middleware';
 
 describe('createMiddleware', () => {

@@ -1,7 +1,7 @@
-import { expect, describe, test, vi } from 'vitest';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { act, renderHook } from '@testing-library/react-hooks';
 import * as React from 'react';
+import { describe, expect, test, vi } from 'vitest';
 import { createQueryKey, useFetcherMutation, useFetcherQuery } from '../../src';
 
 const queryClient = new QueryClient();

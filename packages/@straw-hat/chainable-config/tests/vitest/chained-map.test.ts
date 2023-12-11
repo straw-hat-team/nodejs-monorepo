@@ -1,4 +1,4 @@
-import { expect, describe, test } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import { ChainedMap } from '../../src/chained-map';
 import { ChainedSet } from '../../src/chained-set';
 

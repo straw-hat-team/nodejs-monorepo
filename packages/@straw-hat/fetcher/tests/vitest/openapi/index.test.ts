@@ -1,4 +1,4 @@
-import { expect, describe, test } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import { createUrlPath } from '../../../src/openapi';
 
 type PathParam = { article_id: number; comment_id: number };

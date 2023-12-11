@@ -1,4 +1,4 @@
-import { describe, test, expect, vi } from 'vitest';
+import { describe, expect, test, vi } from 'vitest';
 import { LogEvent, LogLevels } from '../../src';
 import { ConsoleHandler } from '../../src/handlers/console-handler';
 

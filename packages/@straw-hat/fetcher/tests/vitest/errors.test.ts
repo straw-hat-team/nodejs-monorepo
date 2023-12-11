@@ -1,4 +1,4 @@
-import { expect, describe, test } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import { FetcherError } from '../../src/errors';
 
 describe('given a FetcherError', () => {

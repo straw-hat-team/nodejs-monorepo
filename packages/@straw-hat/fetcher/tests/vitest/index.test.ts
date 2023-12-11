@@ -1,4 +1,4 @@
-import { expect, describe, test, beforeEach, vi } from 'vitest';
+import { beforeEach, describe, expect, test, vi } from 'vitest';
 import { fetcher } from '../../src';
 import { composeMiddleware } from '../../src/middleware';
 import { fetchMock } from './setup';

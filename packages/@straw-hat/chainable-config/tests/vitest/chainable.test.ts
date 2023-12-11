@@ -1,4 +1,4 @@
-import { expect, describe, test, vi } from 'vitest';
+import { describe, expect, test, vi } from 'vitest';
 import { Chainable } from '../../src/chainable';
 
 test('validates if a value is a chainable object', () => {

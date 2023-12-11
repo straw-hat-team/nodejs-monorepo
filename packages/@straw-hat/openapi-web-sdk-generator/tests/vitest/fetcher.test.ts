@@ -1,7 +1,7 @@
 import * as path from 'node:path';
+import { expect, test } from 'vitest';
 import FetcherCodegen from '../../src/generators/fetcher';
 import { createTmpDir, readPetStoreSpec } from './support-files';
-import { expect, test } from 'vitest';
 
 test('fetcher generator', async () => {
   // GIVEN

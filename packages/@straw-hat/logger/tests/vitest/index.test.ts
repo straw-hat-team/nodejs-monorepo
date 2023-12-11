@@ -1,5 +1,5 @@
-import { describe, test, expect, vi } from 'vitest';
-import { LogEvent, Logger, LogHandler, LogLevels } from '../../src';
+import { describe, expect, test, vi } from 'vitest';
+import { LogEvent, LogHandler, LogLevels, Logger } from '../../src';
 
 class NullableHandler extends LogHandler {
   override handleEvent = vi.fn();

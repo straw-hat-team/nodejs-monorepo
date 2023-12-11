@@ -1,6 +1,6 @@
 import { deleteAsync } from 'del';
-import * as fs from 'node:fs/promises';
 import makeDir from 'make-dir';
+import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { createDebugger, formatCode } from './helpers.js';
 

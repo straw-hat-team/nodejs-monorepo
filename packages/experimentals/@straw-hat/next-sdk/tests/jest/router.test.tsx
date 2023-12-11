@@ -1,7 +1,7 @@
-import { describe, test, expect, vi } from 'vitest';
 import { render } from '@testing-library/react';
 import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime';
 import * as React from 'react';
+import { describe, expect, test, vi } from 'vitest';
 import { RedirectTo } from '../../src/router/redirect-to';
 
 export function createFakeRouterWrapper() {
