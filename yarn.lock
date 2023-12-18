@@ -6038,7 +6038,7 @@ __metadata:
     "@straw-hat/types": "npm:^0.5.0"
     "@testing-library/react": "npm:^14.1.0"
     "@types/node": "npm:^18.18.9"
-    "@types/react": "npm:^18.2.37"
+    "@types/react": "npm:^18.2.45"
     jsdom: "npm:^22.1.0"
     next: "npm:^13.5.6"
     react: "npm:^18.2.0"
@@ -6129,7 +6129,7 @@ __metadata:
   dependencies:
     "@straw-hat/tsconfig": "workspace:*"
     "@types/fscreen": "npm:^1.0.4"
-    "@types/react": "npm:18.2.37"
+    "@types/react": "npm:18.2.45"
     fscreen: "npm:^1.2.0"
   peerDependencies:
     react: ^16.8.6
@@ -6143,7 +6143,7 @@ __metadata:
     "@straw-hat/is-ssr": "npm:^2.0.0"
     "@straw-hat/tsconfig": "workspace:*"
     "@testing-library/react-hooks": "npm:^8.0.1"
-    "@types/react": "npm:^18.2.37"
+    "@types/react": "npm:^18.2.45"
     react: "npm:^18.2.0"
     react-test-renderer: "npm:^18.2.0"
     typescript: "npm:^5.2.2"
@@ -6174,7 +6174,7 @@ __metadata:
     "@straw-hat/tsconfig": "workspace:*"
     "@tanstack/react-query": "npm:^5.8.3"
     "@testing-library/react-hooks": "npm:^8.0.1"
-    "@types/react": "npm:^18.2.37"
+    "@types/react": "npm:^18.2.45"
     "@types/react-dom": "npm:^18.2.15"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -6209,9 +6209,9 @@ __metadata:
   resolution: "@straw-hat/types@workspace:packages/@straw-hat/types"
   dependencies:
     "@straw-hat/tsconfig": "workspace:*"
-    "@types/react": "npm:^18.2.37"
+    "@types/react": "npm:^18.2.45"
   peerDependencies:
-    "@types/react": ^18.2.37
+    "@types/react": ^18.2.45
   languageName: unknown
   linkType: soft
 
@@ -6733,14 +6733,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.37, @types/react@npm:^18.2.37":
-  version: 18.2.37
-  resolution: "@types/react@npm:18.2.37"
+"@types/react@npm:18.2.45, @types/react@npm:^18.2.45":
+  version: 18.2.45
+  resolution: "@types/react@npm:18.2.45"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: fab3a5960e710aad6c16ffe57f48a470c6bbbe9e6363f70accf114191ea3192a204e33b5657324f14e64b2095986327db6b728fc15156e05f7d30b6dca0d66a3
+  checksum: bd27fd8a959fa776965997af89cb04e43e7868416850fdff421b5539f389efa35acae3d55915c9f32d7b00fb388550302bf8a7f06010abf9ad431e5bf58cb774
   languageName: node
   linkType: hard
 
