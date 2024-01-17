@@ -8730,10 +8730,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@sideway/formula", [\
-      ["npm:3.0.0", {\
-        "packageLocation": "./.yarn/cache/@sideway-formula-npm-3.0.0-8688cb96b6-34952945af.zip/node_modules/@sideway/formula/",\
+      ["npm:3.0.1", {\
+        "packageLocation": "./.yarn/cache/@sideway-formula-npm-3.0.1-ee371b2ddf-8d3ee7f80d.zip/node_modules/@sideway/formula/",\
         "packageDependencies": [\
-          ["@sideway/formula", "npm:3.0.0"]\
+          ["@sideway/formula", "npm:3.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18225,7 +18225,7 @@ const RAW_RUNTIME_STATE =
           ["@hapi/hoek", "npm:9.2.1"],\
           ["@hapi/topo", "npm:5.1.0"],\
           ["@sideway/address", "npm:4.1.3"],\
-          ["@sideway/formula", "npm:3.0.0"],\
+          ["@sideway/formula", "npm:3.0.1"],\
           ["@sideway/pinpoint", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
