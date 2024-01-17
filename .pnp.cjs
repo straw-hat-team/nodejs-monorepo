@@ -6118,7 +6118,7 @@ const RAW_RUNTIME_STATE =
           ["@commitlint/types", "npm:17.8.1"],\
           ["fs-extra", "npm:11.1.1"],\
           ["git-raw-commits", "npm:2.0.11"],\
-          ["minimist", "npm:1.2.6"]\
+          ["minimist", "npm:1.2.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16211,7 +16211,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/handlebars-npm-4.7.7-a9ccfabf80-617b1e689b.zip/node_modules/handlebars/",\
         "packageDependencies": [\
           ["handlebars", "npm:4.7.7"],\
-          ["minimist", "npm:1.2.5"],\
+          ["minimist", "npm:1.2.8"],\
           ["neo-async", "npm:2.6.2"],\
           ["source-map", "npm:0.6.1"],\
           ["uglify-js", "npm:3.14.5"],\
@@ -18495,7 +18495,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/json5-npm-2.1.3-b71ec6bcca-ba3f0d8156.zip/node_modules/json5/",\
         "packageDependencies": [\
           ["json5", "npm:2.1.3"],\
-          ["minimist", "npm:1.2.5"]\
+          ["minimist", "npm:1.2.8"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -19908,20 +19908,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["minimist", [\
-      ["npm:1.2.5", {\
-        "packageLocation": "./.yarn/cache/minimist-npm-1.2.5-ced0e1f617-9dff2c7d84.zip/node_modules/minimist/",\
-        "packageDependencies": [\
-          ["minimist", "npm:1.2.5"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:1.2.6", {\
-        "packageLocation": "./.yarn/cache/minimist-npm-1.2.6-f4cee4b4af-b956a7d486.zip/node_modules/minimist/",\
-        "packageDependencies": [\
-          ["minimist", "npm:1.2.6"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:1.2.8", {\
         "packageLocation": "./.yarn/cache/minimist-npm-1.2.8-d7af7b1dce-908491b6cc.zip/node_modules/minimist/",\
         "packageDependencies": [\
@@ -20083,7 +20069,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/mkdirp-npm-0.5.5-6bc76534fc-3bce20ea52.zip/node_modules/mkdirp/",\
         "packageDependencies": [\
           ["mkdirp", "npm:0.5.5"],\
-          ["minimist", "npm:1.2.5"]\
+          ["minimist", "npm:1.2.8"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -26613,7 +26599,7 @@ const RAW_RUNTIME_STATE =
           ["github-username", "npm:6.0.0"],\
           ["lodash", "npm:4.17.21"],\
           ["mem-fs-editor", "virtual:2c5438f6752936a3b249bcc8e14ed70e06c910394e7d6cb04d41b09d656d130696cff7856126d0085b1f7057ae305900ce8e24f805aa3181746098a837f79011#npm:9.7.0"],\
-          ["minimist", "npm:1.2.5"],\
+          ["minimist", "npm:1.2.8"],\
           ["pacote", "npm:15.2.0"],\
           ["read-pkg-up", "npm:7.0.1"],\
           ["run-async", "npm:2.4.1"],\
