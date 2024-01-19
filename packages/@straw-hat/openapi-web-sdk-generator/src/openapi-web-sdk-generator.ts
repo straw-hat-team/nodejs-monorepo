@@ -1,4 +1,3 @@
-// @ts-expect-error https://github.com/sheerlox/import-from-esm/issues/46
 import importFrom from 'import-from-esm';
 import type { OpenAPIV3 } from 'openapi-types';
 import { CodegenBase } from './codegen-base.js';
