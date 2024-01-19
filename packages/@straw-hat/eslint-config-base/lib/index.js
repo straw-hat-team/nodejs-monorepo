@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb-base', '@straw-hat/eslint-config-prettier'],
+  extends: ['airbnb-base', 'prettier'],
   plugins: ['simple-import-sort', 'plugin:unicorn/recommended'],
   rules: {
     'simple-import-sort/imports': 'error',
