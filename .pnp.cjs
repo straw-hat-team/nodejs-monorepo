@@ -9191,7 +9191,7 @@ const RAW_RUNTIME_STATE =
           ["cosmiconfig", "virtual:b5c0d59a2e74ae4ed83d3fe264aec571f09a277b31579e39cd3b1a0a0a0551f00aacfaefc88989382d36c57a4cb3d55950f8da7237dc8a4dc1768e9d44946f3a#npm:8.3.6"],\
           ["debug", "virtual:50e37043be1acfdf7937725b7d74aef4c69810b43ac5a25e26b5e903f030009562410c00098ae38ae5aee99bd1924c12abc3e4107f72b4d9b54731ba6e466239#npm:4.3.4"],\
           ["del", "npm:7.1.0"],\
-          ["import-from-esm", "npm:1.2.1"],\
+          ["import-from-esm", "npm:1.4.0-alpha.1"],\
           ["make-dir", "npm:4.0.0"],\
           ["mustache", "npm:4.2.0"],\
           ["oclif", "npm:4.0.3"],\
@@ -16691,11 +16691,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["import-from-esm", [\
-      ["npm:1.2.1", {\
-        "packageLocation": "./.yarn/cache/import-from-esm-npm-1.2.1-19132a3a23-17275e7d51.zip/node_modules/import-from-esm/",\
+      ["npm:1.4.0-alpha.1", {\
+        "packageLocation": "./.yarn/cache/import-from-esm-npm-1.4.0-alpha.1-233199ad02-1cef780851.zip/node_modules/import-from-esm/",\
         "packageDependencies": [\
-          ["import-from-esm", "npm:1.2.1"],\
-          ["import-meta-resolve", "npm:4.0.0"]\
+          ["import-from-esm", "npm:1.4.0-alpha.1"],\
+          ["debug", "virtual:50e37043be1acfdf7937725b7d74aef4c69810b43ac5a25e26b5e903f030009562410c00098ae38ae5aee99bd1924c12abc3e4107f72b4d9b54731ba6e466239#npm:4.3.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16707,15 +16707,6 @@ const RAW_RUNTIME_STATE =
           ["import-local", "npm:3.0.2"],\
           ["pkg-dir", "npm:4.2.0"],\
           ["resolve-cwd", "npm:3.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["import-meta-resolve", [\
-      ["npm:4.0.0", {\
-        "packageLocation": "./.yarn/cache/import-meta-resolve-npm-4.0.0-13a6ef4fd3-73f0f1d68f.zip/node_modules/import-meta-resolve/",\
-        "packageDependencies": [\
-          ["import-meta-resolve", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\

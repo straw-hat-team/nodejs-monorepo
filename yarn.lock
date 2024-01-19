@@ -6095,7 +6095,7 @@ __metadata:
     cosmiconfig: "npm:^8.3.6"
     debug: "npm:^4.3.4"
     del: "npm:^7.1.0"
-    import-from-esm: "npm:^1.2.1"
+    import-from-esm: "npm:1.4.0-alpha.1"
     make-dir: "npm:^4.0.0"
     mustache: "npm:^4.2.0"
     oclif: "npm:^4.0.3"
@@ -12458,12 +12458,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"import-from-esm@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "import-from-esm@npm:1.2.1"
+"import-from-esm@npm:1.4.0-alpha.1":
+  version: 1.4.0-alpha.1
+  resolution: "import-from-esm@npm:1.4.0-alpha.1"
   dependencies:
-    import-meta-resolve: "npm:^4.0.0"
-  checksum: 17275e7d512f379bd2e1969171cb88d7da257e12708ed9522296a668559d329559f6798864e5eff5fda297782234387ca3f902a166bcfde7f566a35457a41d83
+    debug: "npm:^4.3.4"
+  checksum: 1cef7808514597ca07ca44bb3ab4d4840a943f8d9bbff85170f6f20ca7d96f9a0a3aeb03f465107b8dfc16450d289361ff51a2799ce753389446c5fc4dfdb5f7
   languageName: node
   linkType: hard
 
@@ -12483,13 +12483,6 @@ __metadata:
   bin:
     import-local-fixture: fixtures/cli.js
   checksum: c74d9f9484c878cda1de3434613c7ff72d5dadcf20e5482542232d7c2575b713ff88701d6675fcf09a3684cb23fb407c8b333b9cbc59438712723d058d8e976c
-  languageName: node
-  linkType: hard
-
-"import-meta-resolve@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "import-meta-resolve@npm:4.0.0"
-  checksum: 73f0f1d68f7280cb4415e3a212a6e5d57fbfe61ab6f467df3dad5361529fbd89ac7d8ea2b694412b74985a4226d218ad3fb22fd8f06f5429beda521dc9f0229c
   languageName: node
   linkType: hard
 
