@@ -8419,7 +8419,7 @@ const RAW_RUNTIME_STATE =
           ["@react-native-community/cli-tools", "npm:11.3.7"],\
           ["chalk", "npm:4.1.2"],\
           ["execa", "npm:5.1.1"],\
-          ["fast-xml-parser", "npm:4.1.4"],\
+          ["fast-xml-parser", "npm:4.3.3"],\
           ["glob", "npm:7.1.6"],\
           ["ora", "npm:5.4.1"]\
         ],\
@@ -15334,10 +15334,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["fast-xml-parser", [\
-      ["npm:4.1.4", {\
-        "packageLocation": "./.yarn/cache/fast-xml-parser-npm-4.1.4-1a7d7de429-6d8d1edfb8.zip/node_modules/fast-xml-parser/",\
+      ["npm:4.3.3", {\
+        "packageLocation": "./.yarn/cache/fast-xml-parser-npm-4.3.3-35a04105d1-501de1f38d.zip/node_modules/fast-xml-parser/",\
         "packageDependencies": [\
-          ["fast-xml-parser", "npm:4.1.4"],\
+          ["fast-xml-parser", "npm:4.3.3"],\
           ["strnum", "npm:1.0.5"]\
         ],\
         "linkType": "HARD"\
