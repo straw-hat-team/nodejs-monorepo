@@ -8370,7 +8370,7 @@ const RAW_RUNTIME_STATE =
           ["envinfo", "npm:7.8.1"],\
           ["execa", "npm:5.1.1"],\
           ["hermes-profile-transformer", "npm:0.0.6"],\
-          ["ip", "npm:1.1.5"],\
+          ["ip", "npm:1.1.9"],\
           ["node-stream-zip", "npm:1.15.0"],\
           ["ora", "npm:5.4.1"],\
           ["prompts", "npm:2.4.2"],\
@@ -8392,7 +8392,7 @@ const RAW_RUNTIME_STATE =
           ["@react-native-community/cli-tools", "npm:11.3.7"],\
           ["chalk", "npm:4.1.2"],\
           ["hermes-profile-transformer", "npm:0.0.6"],\
-          ["ip", "npm:1.1.5"]\
+          ["ip", "npm:1.1.9"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16837,10 +16837,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ip", [\
-      ["npm:1.1.5", {\
-        "packageLocation": "./.yarn/cache/ip-npm-1.1.5-af36318aa6-40a00572cf.zip/node_modules/ip/",\
+      ["npm:1.1.9", {\
+        "packageLocation": "./.yarn/cache/ip-npm-1.1.9-e72dd3cc0a-29261559b8.zip/node_modules/ip/",\
         "packageDependencies": [\
-          ["ip", "npm:1.1.5"]\
+          ["ip", "npm:1.1.9"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -23534,7 +23534,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/socks-npm-2.6.1-09133d0d22-6ae166bd1a.zip/node_modules/socks/",\
         "packageDependencies": [\
           ["socks", "npm:2.6.1"],\
-          ["ip", "npm:1.1.5"],\
+          ["ip", "npm:1.1.9"],\
           ["smart-buffer", "npm:4.2.0"]\
         ],\
         "linkType": "HARD"\
