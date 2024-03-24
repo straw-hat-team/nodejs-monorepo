@@ -5924,7 +5924,7 @@ __metadata:
   resolution: "@straw-hat/eslint-config-nextjs@workspace:packages/@straw-hat/eslint-config-nextjs"
   peerDependencies:
     eslint: ^8.2.0
-    eslint-config-next: ^12.0.4
+    eslint-config-next: ^14.1.4
   languageName: unknown
   linkType: soft
 
