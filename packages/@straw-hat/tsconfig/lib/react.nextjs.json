@@ -12,6 +12,7 @@
     "isolatedModules": true,
     "incremental": true,
     "moduleResolution": "bundler",
+    "declaration": false,
     "plugins": [{ "name": "next" }]
   }
 }
