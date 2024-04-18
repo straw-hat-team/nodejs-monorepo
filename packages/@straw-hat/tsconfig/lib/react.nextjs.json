@@ -13,6 +13,7 @@
     "incremental": true,
     "moduleResolution": "bundler",
     "declaration": false,
+    "declarationMap": false,
     "plugins": [{ "name": "next" }]
   }
 }
