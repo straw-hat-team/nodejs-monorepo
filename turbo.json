@@ -1,5 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["SHT_NPM_TOKEN", "NODE_ENV"],
   "tasks": {
     "docs:typedoc": {
       "dependsOn": [
