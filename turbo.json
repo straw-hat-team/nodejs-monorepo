@@ -1,17 +1,34 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "tasks": {
     "docs:typedoc": {
-      "dependsOn": ["build"],
-      "outputs": ["docs/reference/**/*"]
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": [
+        "docs/reference/**/*"
+      ]
     },
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "dist"
+      ]
     },
     "test:vitest": {
-      "dependsOn": ["build"],
-      "inputs": ["src/**/*.tsx", "src/**/*.ts", "tests/vitest/**/*.ts", "tests/vitest/**/*.tsx"]
+      "dependsOn": [
+        "build"
+      ],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "tests/vitest/**/*.ts",
+        "tests/vitest/**/*.tsx"
+      ]
     }
   }
 }
