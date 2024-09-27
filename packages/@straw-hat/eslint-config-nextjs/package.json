@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/eslint-config-nextjs",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Straw Hat Team ESLint NextJS configurations",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -26,6 +26,7 @@
   ],
   "peerDependencies": {
     "eslint": "^8.2.0",
-    "eslint-config-next": "^14.1.4"
+    "eslint-config-next": "^14.1.4",
+    "eslint-config-prettier": "^8.10.0"
   }
 }
