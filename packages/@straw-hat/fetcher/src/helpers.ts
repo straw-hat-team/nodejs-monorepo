@@ -2,26 +2,24 @@ function isString(val: any): val is string {
   return typeof val === 'string';
 }
 
-function isBlob(value: any): value is Blob {
-  return value instanceof Blob;
-}
-
-// TODO: Support other types of body:
-// 1. json
-// 2. text
-// 3. blob
-// 4. arrayBuffer
-// 5. formData
 export function getRequestBody(body: any): BodyInit | undefined {
   if (body === undefined) {
     return undefined;
   }
 
-  if (isString(body)) {
+  if (body instanceof FormData) {
     return body;
   }
 
-  if (isBlob(body)) {
+  if (body instanceof Blob) {
+    return body;
+  }
+
+  if (body instanceof URLSearchParams) {
+    return body;
+  }
+
+  if (isString(body)) {
     return body;
   }
 
