@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/eslint-config-nextjs",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Straw Hat Team ESLint NextJS configurations",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
