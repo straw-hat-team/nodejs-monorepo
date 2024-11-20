@@ -79,9 +79,12 @@ export async function forEachHttpOperation(
     operation: OperationObject;
   }) => Promise<any>,
 ) {
-  for (const [operationPath, pathItem] of Object.entries<PathItemObject>(document.paths as any)) {
-    for (const operationMethod of Object.values(OpenAPIV3.HttpMethods)) {
-      const operation = pathItem[operationMethod];
+  const paths = Object.entries<PathItemObject>(document.paths as any);
+  const methods = Object.values(OpenAPIV3.HttpMethods) as string[];
+
+  for (const [operationPath, pathItem] of paths) {
+    for (const operationMethod of methods) {
+      const operation = pathItem[operationMethod as keyof PathItemObject];
 
       if (operation === undefined) {
         continue;

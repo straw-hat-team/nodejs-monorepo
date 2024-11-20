@@ -277,6 +277,13 @@ export async function addTypeScripType(
     return anyOf(scope, schema.anyOf);
   }
 
+  // TODO: Pydantic is generating the JSON Schema without the type
+  //  just the `enum` field, so we need to handle this case.
+  //  follow up with Pydantic to fix this.
+  if (schema.type === 'string' || 'enum' in schema) {
+    return stringType(scope, schema);
+  }
+
   switch (schema.type) {
     case 'array':
       return arrayType(scope, schema);
@@ -288,9 +295,6 @@ export async function addTypeScripType(
     }
     case 'number': {
       return numberType(scope, schema);
-    }
-    case 'string': {
-      return stringType(scope, schema);
     }
     case 'integer': {
       return integerType(scope, schema);

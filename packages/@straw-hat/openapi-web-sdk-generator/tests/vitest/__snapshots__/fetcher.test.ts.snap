@@ -39,8 +39,27 @@ export async function addPet(
 exports[`fetcher generator > components/schemas.ts 1`] = `
 "import * as schemas from "./schemas";
 
+export type AllowedTimeframesOutput =
+  | "1m"
+  | "3m"
+  | "5m"
+  | "15m"
+  | "30m"
+  | "1h"
+  | "2h"
+  | "4h"
+  | "6h"
+  | "8h"
+  | "12h"
+  | "1d"
+  | "3d"
+  | "1w"
+  | "1M";
+
 export type Custom = {
   [key: string]: unknown;
+
+  timeframe?: schemas.AllowedTimeframesOutput;
 
   instructions?: Record<string, unknown> | null;
 
@@ -1352,42 +1371,44 @@ export async function getUserByName(
 
 exports[`fetcher generator > index.ts 1`] = `
 "export * from "./update-pet";
+export * from "./add-pet";
 export * from "./update-pet";
 export * from "./add-pet";
-export * from "./add-pet";
+export * from "./find-pets-by-status";
 export * from "./find-pets-by-status";
 export * from "./find-pets-by-tags";
-export * from "./find-pets-by-status";
-export * from "./get-pet-by-id";
 export * from "./find-pets-by-tags";
-export * from "./update-pet-with-form";
 export * from "./get-pet-by-id";
-export * from "./delete-pet";
 export * from "./update-pet-with-form";
 export * from "./delete-pet";
+export * from "./get-pet-by-id";
 export * from "./upload-file";
 export * from "./get-inventory";
-export * from "./upload-file";
+export * from "./update-pet-with-form";
 export * from "./place-order";
-export * from "./get-inventory";
+export * from "./delete-pet";
 export * from "./get-order-by-id";
-export * from "./place-order";
 export * from "./delete-order";
 export * from "./create-user";
-export * from "./get-order-by-id";
+export * from "./upload-file";
 export * from "./create-users-with-list-input";
-export * from "./delete-order";
 export * from "./login-user";
-export * from "./create-user";
+export * from "./get-inventory";
 export * from "./logout-user";
-export * from "./create-users-with-list-input";
+export * from "./place-order";
 export * from "./get-user-by-name";
-export * from "./login-user";
-export * from "./logout-user";
+export * from "./get-order-by-id";
 export * from "./update-user";
 export * from "./delete-user";
+export * from "./delete-order";
+export * from "./create-user";
+export * from "./create-users-with-list-input";
+export * from "./login-user";
+export * from "./logout-user";
 export * from "./get-user-by-name";
-export * from './update-user';"
+export * from "./update-user";
+export * from "./delete-user";
+"
 `;
 
 exports[`fetcher generator > login-user.ts 1`] = `
@@ -1703,10 +1724,6 @@ export async function uploadFile(
   });
 
   return getResponseBody(response);
-}
-"
-`;
-tResponseBody(response);
 }
 "
 `;

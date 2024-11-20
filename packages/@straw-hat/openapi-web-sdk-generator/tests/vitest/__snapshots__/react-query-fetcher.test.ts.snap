@@ -28,10 +28,16 @@ export * from "./use-delete-order";
 export * from "./use-create-user";
 export * from "./use-create-user";
 export * from "./use-create-users-with-list-input";
+export * from "./use-create-users-with-list-input";
+export * from "./use-login-user";
 export * from "./use-login-user";
 export * from "./use-logout-user";
+export * from "./use-logout-user";
+export * from "./use-get-user-by-name";
 export * from "./use-get-user-by-name";
 export * from "./use-update-user";
+export * from "./use-update-user";
+export * from "./use-delete-user";
 export * from "./use-delete-user";
 "
 `;
@@ -155,14 +161,7 @@ export function useCreateUsersWithListInput<TError = unknown>(
     endpoint: createUsersWithListInput,
   });
 }
-
-                ...options,
-                mutationKey: MUTATION_KEY,
-              },
-              endpoint: createUsersWithListInput,
-            });
-          }
-      "
+"
 `;
 
 exports[`react-query-fetcher generator > use-delete-order.ts 1`] = `
