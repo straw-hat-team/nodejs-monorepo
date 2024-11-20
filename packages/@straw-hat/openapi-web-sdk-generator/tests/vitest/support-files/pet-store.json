@@ -870,6 +870,18 @@
   },
   "components": {
     "schemas": {
+      "Custom": {
+        "x-schema-id": "custom",
+        "type": "object",
+        "properties": {
+          "instructions": {
+            "anyOf": [
+              { "type": "object" },
+              { "type": "null" }
+            ]
+          }
+        }
+      },
       "Order": {
         "x-schema-id": "order",
         "type": "object",

@@ -105,6 +105,14 @@ function createDocs(schema: OpenAPIV3.SchemaObject) {
 }
 
 async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject): Promise<TypeDefinition> {
+  if (schema.properties === undefined) {
+    return scope.maybeRegisterType(schema, {
+      name: undefined,
+      definition: 'Record<string, unknown>',
+      docs: createDocs(schema),
+    });
+  }
+
   const definition: string[] = ['{'];
 
   // TODO: handle additionalProperties key

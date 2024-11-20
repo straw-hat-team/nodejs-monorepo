@@ -39,6 +39,10 @@ export async function addPet(
 exports[`fetcher generator > components/schemas.ts 1`] = `
 "import * as schemas from "./schemas";
 
+export type Custom = {
+  instructions?: Record<string, unknown> | null;
+};
+
 export type Order = {
   /**
    * @format int64
@@ -180,6 +184,10 @@ function getLength(value: string) {
 
 function isZero(value: number) {
   return value === 0;
+}
+
+export function getCustomInstructions(custom: Custom) {
+  return custom["instructions"];
 }
 
 export function getOrderId(order: Order) {
@@ -1015,43 +1023,67 @@ export async function deletePet(
 `;
 
 exports[`fetcher generator > delete-user.ts 1`] = `
-"import type { Fetcher } from "@straw-hat/fetcher";
-import { getResponseBody } from "@straw-hat/fetcher";
-import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+"
+        import type { Fetcher } from '@straw-hat/fetcher';
+        import {
+          
+          getResponseBody,
+        } from '@straw-hat/fetcher';
+        import { createUrlPath, OperationParams } from '@straw-hat/fetcher/openapi';
+      
 
-export type DeleteUserPathParams = {
-  /**
-   * The name that needs to be deleted
-   */
-  username: string;
+
+
+
+
+
+
+
+
+      export type DeleteUserPathParams = {
+/**
+* The name that needs to be deleted
+*/
+username: string
 };
 
-export type DeleteUserParams = Pick<
-  OperationParams<DeleteUserPathParams, never, never>,
-  "options" | "path"
->;
+      
 
-export type DeleteUserResponse = unknown;
+      
 
-export function deleteUserUrlPath(params: Omit<DeleteUserParams, "options">) {
-  return createUrlPath<DeleteUserPathParams, never>("/user/{username}", params);
-}
+      export type DeleteUserParams = Pick<
+        OperationParams<
+          DeleteUserPathParams,
+          never,
+          never
+        >,
+        "options" | "path"
+      >
 
-export async function deleteUser(
-  client: Fetcher,
-  params: DeleteUserParams,
-): Promise<DeleteUserResponse> {
-  const url = deleteUserUrlPath(params);
+      export type DeleteUserResponse = unknown;
 
-  const response = await client(url, {
-    method: "DELETE",
+      export function deleteUserUrlPath(params: Omit<DeleteUserParams, 'options'>) {
+        return createUrlPath<
+          DeleteUserPathParams,
+          never,
+        >('/user/{username}', params);
+      }
 
-    signal: params.options?.signal,
-  });
+      export async function deleteUser(
+        client: Fetcher,
+        params: DeleteUserParams
+      ): Promise<DeleteUserResponse> {
+        const url = deleteUserUrlPath(params);
 
-  return getResponseBody(response);
-}
-"
+        const response = await client(url, {
+          method: 'DELETE',
+          
+          signal: params.options?.signal,
+        });
+
+        return getResponseBody(response);
+      }
+    "
 `;
 
 exports[`fetcher generator > find-pets-by-status.ts 1`] = `
@@ -1107,46 +1139,6 @@ import { getResponseBody } from "@straw-hat/fetcher";
 import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 import * as schemas from "./components/schemas";
 
-import * as schemas from "./components/schemas";
-
-export type FindPetsByTagsQueryParams = {
-  /**
-   * Tags to filter by
-   */
-  tags?: Array<string>;
-};
-
-export type FindPetsByTagsParams = Pick<
-  OperationParams<never, FindPetsByTagsQueryParams, never>,
-  "options" | "query"
->;
-
-export type FindPetsByTagsResponse = Array<schemas.Pet>;
-
-export function findPetsByTagsUrlPath(
-  params: Omit<FindPetsByTagsParams, "options">,
-) {
-  return createUrlPath<never, FindPetsByTagsQueryParams>(
-    "/pet/findByTags",
-    params,
-  );
-}
-
-export async function findPetsByTags(
-  client: Fetcher,
-  params: FindPetsByTagsParams,
-): Promise<FindPetsByTagsResponse> {
-  const url = findPetsByTagsUrlPath(params);
-
-  const response = await client(url, {
-    method: "GET",
-
-    signal: params.options?.signal,
-  });
-
-  return getResponseBody(response);
-}
-
 export type FindPetsByTagsQueryParams = {
   /**
    * Tags to filter by
@@ -1197,7 +1189,35 @@ export type GetInventoryParams = Pick<
   "options"
 >;
 
-export type GetInventoryResponse = {};
+export type GetInventoryResponse = Record<string, unknown>;
+
+export function getInventoryUrlPath(
+  params: Omit<GetInventoryParams, "options">,
+) {
+  return createUrlPath<never, never>("/store/inventory", params);
+}
+
+export async function getInventory(
+  client: Fetcher,
+  params: GetInventoryParams,
+): Promise<GetInventoryResponse> {
+  const url = getInventoryUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+
+export type GetInventoryParams = Pick<
+  OperationParams<never, never, never>,
+  "options"
+>;
+
+export type GetInventoryResponse = Record<string, unknown>;
 
 export function getInventoryUrlPath(
   params: Omit<GetInventoryParams, "options">,
@@ -1365,35 +1385,34 @@ export * from "./add-pet";
 export * from "./find-pets-by-status";
 export * from "./find-pets-by-status";
 export * from "./find-pets-by-tags";
-export * from "./get-pet-by-id";
-export * from "./update-pet-with-form";
 export * from "./find-pets-by-tags";
-export * from "./delete-pet";
+export * from "./get-pet-by-id";
 export * from "./get-pet-by-id";
 export * from "./update-pet-with-form";
+export * from "./update-pet-with-form";
+export * from "./delete-pet";
 export * from "./delete-pet";
 export * from "./upload-file";
 export * from "./upload-file";
 export * from "./get-inventory";
+export * from "./place-order";
 export * from "./get-inventory";
 export * from "./place-order";
 export * from "./get-order-by-id";
-export * from "./place-order";
 export * from "./delete-order";
 export * from "./get-order-by-id";
-export * from "./create-user";
-export * from "./create-users-with-list-input";
 export * from "./delete-order";
-export * from "./login-user";
 export * from "./create-user";
+export * from "./create-user";
+export * from "./create-users-with-list-input";
+export * from "./login-user";
 export * from "./create-users-with-list-input";
 export * from "./logout-user";
 export * from "./login-user";
+export * from "./get-user-by-name";
 export * from "./logout-user";
-export * from "./get-user-by-name";
-export * from "./get-user-by-name";
 export * from "./update-user";
-export * from "./update-user";
+export * from "./get-user-by-name";
 export * from "./delete-user";
 export * from "./delete-user";
 "
