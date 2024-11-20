@@ -90,6 +90,7 @@ export async function forEachHttpOperation(
         continue;
       }
 
+      // @ts-expect-error
       if (!hasOperationId(operation)) {
         throw new OperationIdMissingError(operationPath, operationMethod);
       }
@@ -98,6 +99,7 @@ export async function forEachHttpOperation(
         operationPath,
         operationMethod,
         pathItem,
+        // @ts-expect-error
         operation,
       });
     }

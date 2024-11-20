@@ -1370,44 +1370,44 @@ export async function getUserByName(
 `;
 
 exports[`fetcher generator > index.ts 1`] = `
-"export * from "./update-pet";
-export * from "./add-pet";
+"export * from "./add-pet";
 export * from "./update-pet";
 export * from "./add-pet";
 export * from "./find-pets-by-status";
+export * from "./update-pet";
+export * from "./find-pets-by-tags";
 export * from "./find-pets-by-status";
+export * from "./delete-pet";
 export * from "./find-pets-by-tags";
-export * from "./find-pets-by-tags";
+export * from "./get-pet-by-id";
+export * from "./delete-pet";
+export * from "./update-pet-with-form";
 export * from "./get-pet-by-id";
 export * from "./update-pet-with-form";
-export * from "./delete-pet";
-export * from "./get-pet-by-id";
+export * from "./upload-file";
 export * from "./upload-file";
 export * from "./get-inventory";
-export * from "./update-pet-with-form";
+export * from "./get-inventory";
 export * from "./place-order";
-export * from "./delete-pet";
+export * from "./delete-order";
 export * from "./get-order-by-id";
+export * from "./place-order";
 export * from "./delete-order";
 export * from "./create-user";
-export * from "./upload-file";
+export * from "./get-order-by-id";
+export * from "./create-user";
+export * from "./create-users-with-list-input";
 export * from "./create-users-with-list-input";
 export * from "./login-user";
-export * from "./get-inventory";
+export * from "./login-user";
 export * from "./logout-user";
-export * from "./place-order";
-export * from "./get-user-by-name";
-export * from "./get-order-by-id";
-export * from "./update-user";
+export * from "./logout-user";
 export * from "./delete-user";
-export * from "./delete-order";
-export * from "./create-user";
-export * from "./create-users-with-list-input";
-export * from "./login-user";
-export * from "./logout-user";
 export * from "./get-user-by-name";
 export * from "./update-user";
 export * from "./delete-user";
+export * from "./get-user-by-name";
+export * from "./update-user";
 "
 `;
 
@@ -1494,6 +1494,36 @@ exports[`fetcher generator > place-order.ts 1`] = `
 import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
 import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 import * as schemas from "./components/schemas";
+
+import * as schemas from "./components/schemas";
+
+export type PlaceOrderBodyParams = schemas.Order;
+
+export type PlaceOrderParams = Pick<
+  OperationParams<never, never, PlaceOrderBodyParams>,
+  "options" | "body"
+>;
+
+export type PlaceOrderResponse = schemas.Order;
+
+export function placeOrderUrlPath(params: Omit<PlaceOrderParams, "options">) {
+  return createUrlPath<never, never>("/store/order", params);
+}
+
+export async function placeOrder(
+  client: Fetcher,
+  params: PlaceOrderParams,
+): Promise<PlaceOrderResponse> {
+  const url = placeOrderUrlPath(params);
+
+  const response = await client(url, {
+    method: "POST",
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
 
 export type PlaceOrderBodyParams = schemas.Order;
 

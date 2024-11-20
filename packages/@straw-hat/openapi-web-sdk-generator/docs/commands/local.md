@@ -20,4 +20,4 @@ DESCRIPTION
   Generate the code from a local OpenAPI V3 file.
 ```
 
-_See code: [src/commands/local.ts](https://github.com/straw-hat-team/nodejs-monorepo/blob/v3.1.0/src/commands/local.ts)_
+_See code: [src/commands/local.ts](https://github.com/straw-hat-team/nodejs-monorepo/blob/v3.1.1/src/commands/local.ts)_

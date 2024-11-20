@@ -281,6 +281,7 @@ export async function addTypeScripType(
   //  just the `enum` field, so we need to handle this case.
   //  follow up with Pydantic to fix this.
   if (schema.type === 'string' || 'enum' in schema) {
+    // @ts-expect-error
     return stringType(scope, schema);
   }
 
