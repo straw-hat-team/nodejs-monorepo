@@ -40,10 +40,15 @@ exports[`fetcher generator > components/schemas.ts 1`] = `
 "import * as schemas from "./schemas";
 
 export type Custom = {
+  [key: string]: unknown;
+
   instructions?: Record<string, unknown> | null;
+
+  noAdditionalProperties?: {};
 };
 
 export type Order = {
+  [key: string]: unknown;
   /**
    * @format int64
    */
@@ -69,6 +74,7 @@ export type Order = {
 };
 
 export type Customer = {
+  [key: string]: unknown;
   /**
    * @format int64
    */
@@ -80,6 +86,8 @@ export type Customer = {
 };
 
 export type Address = {
+  [key: string]: unknown;
+
   street?: string;
 
   city?: string;
@@ -90,6 +98,7 @@ export type Address = {
 };
 
 export type Category = {
+  [key: string]: unknown;
   /**
    * @format int64
    */
@@ -99,6 +108,7 @@ export type Category = {
 };
 
 export type User = {
+  [key: string]: unknown;
   /**
    * @format int64
    */
@@ -123,6 +133,7 @@ export type User = {
 };
 
 export type Tag = {
+  [key: string]: unknown;
   /**
    * @format int64
    */
@@ -132,6 +143,7 @@ export type Tag = {
 };
 
 export type Pet = {
+  [key: string]: unknown;
   /**
    * @format int64
    */
@@ -151,6 +163,7 @@ export type Pet = {
 };
 
 export type ApiResponse = {
+  [key: string]: unknown;
   /**
    * @format int32
    */
@@ -188,6 +201,10 @@ function isZero(value: number) {
 
 export function getCustomInstructions(custom: Custom) {
   return custom["instructions"];
+}
+
+export function getCustomNoAdditionalProperties(custom: Custom) {
+  return custom["noAdditionalProperties"];
 }
 
 export function getOrderId(order: Order) {
@@ -943,6 +960,7 @@ import { getResponseBody } from "@straw-hat/fetcher";
 import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type DeleteOrderPathParams = {
+  [key: string]: unknown;
   /**
    * ID of the order that needs to be deleted
    * @format int64
@@ -987,6 +1005,7 @@ import { getResponseBody } from "@straw-hat/fetcher";
 import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type DeletePetPathParams = {
+  [key: string]: unknown;
   /**
    * Pet id to delete
    * @format int64
@@ -1023,67 +1042,44 @@ export async function deletePet(
 `;
 
 exports[`fetcher generator > delete-user.ts 1`] = `
-"
-        import type { Fetcher } from '@straw-hat/fetcher';
-        import {
-          
-          getResponseBody,
-        } from '@straw-hat/fetcher';
-        import { createUrlPath, OperationParams } from '@straw-hat/fetcher/openapi';
-      
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
-
-
-
-
-
-
-
-
-      export type DeleteUserPathParams = {
-/**
-* The name that needs to be deleted
-*/
-username: string
+export type DeleteUserPathParams = {
+  [key: string]: unknown;
+  /**
+   * The name that needs to be deleted
+   */
+  username: string;
 };
 
-      
+export type DeleteUserParams = Pick<
+  OperationParams<DeleteUserPathParams, never, never>,
+  "options" | "path"
+>;
 
-      
+export type DeleteUserResponse = unknown;
 
-      export type DeleteUserParams = Pick<
-        OperationParams<
-          DeleteUserPathParams,
-          never,
-          never
-        >,
-        "options" | "path"
-      >
+export function deleteUserUrlPath(params: Omit<DeleteUserParams, "options">) {
+  return createUrlPath<DeleteUserPathParams, never>("/user/{username}", params);
+}
 
-      export type DeleteUserResponse = unknown;
+export async function deleteUser(
+  client: Fetcher,
+  params: DeleteUserParams,
+): Promise<DeleteUserResponse> {
+  const url = deleteUserUrlPath(params);
 
-      export function deleteUserUrlPath(params: Omit<DeleteUserParams, 'options'>) {
-        return createUrlPath<
-          DeleteUserPathParams,
-          never,
-        >('/user/{username}', params);
-      }
+  const response = await client(url, {
+    method: "DELETE",
 
-      export async function deleteUser(
-        client: Fetcher,
-        params: DeleteUserParams
-      ): Promise<DeleteUserResponse> {
-        const url = deleteUserUrlPath(params);
+    signal: params.options?.signal,
+  });
 
-        const response = await client(url, {
-          method: 'DELETE',
-          
-          signal: params.options?.signal,
-        });
-
-        return getResponseBody(response);
-      }
-    "
+  return getResponseBody(response);
+}
+"
 `;
 
 exports[`fetcher generator > find-pets-by-status.ts 1`] = `
@@ -1093,6 +1089,7 @@ import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 import * as schemas from "./components/schemas";
 
 export type FindPetsByStatusQueryParams = {
+  [key: string]: unknown;
   /**
    * Status values that need to be considered for filter
    * @default available
@@ -1140,6 +1137,7 @@ import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 import * as schemas from "./components/schemas";
 
 export type FindPetsByTagsQueryParams = {
+  [key: string]: unknown;
   /**
    * Tags to filter by
    */
@@ -1211,34 +1209,6 @@ export async function getInventory(
 
   return getResponseBody(response);
 }
-
-export type GetInventoryParams = Pick<
-  OperationParams<never, never, never>,
-  "options"
->;
-
-export type GetInventoryResponse = Record<string, unknown>;
-
-export function getInventoryUrlPath(
-  params: Omit<GetInventoryParams, "options">,
-) {
-  return createUrlPath<never, never>("/store/inventory", params);
-}
-
-export async function getInventory(
-  client: Fetcher,
-  params: GetInventoryParams,
-): Promise<GetInventoryResponse> {
-  const url = getInventoryUrlPath(params);
-
-  const response = await client(url, {
-    method: "GET",
-
-    signal: params.options?.signal,
-  });
-
-  return getResponseBody(response);
-}
 "
 `;
 
@@ -1249,6 +1219,7 @@ import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 import * as schemas from "./components/schemas";
 
 export type GetOrderByIdPathParams = {
+  [key: string]: unknown;
   /**
    * ID of order that needs to be fetched
    * @format int64
@@ -1296,6 +1267,7 @@ import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 import * as schemas from "./components/schemas";
 
 export type GetPetByIdPathParams = {
+  [key: string]: unknown;
   /**
    * ID of pet to return
    * @format int64
@@ -1338,6 +1310,7 @@ import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 import * as schemas from "./components/schemas";
 
 export type GetUserByNamePathParams = {
+  [key: string]: unknown;
   /**
    * The name that needs to be fetched. Use user1 for testing.
    */
@@ -1383,39 +1356,38 @@ export * from "./update-pet";
 export * from "./add-pet";
 export * from "./add-pet";
 export * from "./find-pets-by-status";
+export * from "./find-pets-by-tags";
 export * from "./find-pets-by-status";
-export * from "./find-pets-by-tags";
-export * from "./find-pets-by-tags";
 export * from "./get-pet-by-id";
-export * from "./get-pet-by-id";
+export * from "./find-pets-by-tags";
 export * from "./update-pet-with-form";
+export * from "./get-pet-by-id";
+export * from "./delete-pet";
 export * from "./update-pet-with-form";
 export * from "./delete-pet";
-export * from "./delete-pet";
-export * from "./upload-file";
 export * from "./upload-file";
 export * from "./get-inventory";
+export * from "./upload-file";
 export * from "./place-order";
 export * from "./get-inventory";
+export * from "./get-order-by-id";
 export * from "./place-order";
-export * from "./get-order-by-id";
-export * from "./delete-order";
-export * from "./get-order-by-id";
 export * from "./delete-order";
 export * from "./create-user";
-export * from "./create-user";
+export * from "./get-order-by-id";
 export * from "./create-users-with-list-input";
+export * from "./delete-order";
 export * from "./login-user";
-export * from "./create-users-with-list-input";
+export * from "./create-user";
 export * from "./logout-user";
-export * from "./login-user";
+export * from "./create-users-with-list-input";
 export * from "./get-user-by-name";
+export * from "./login-user";
 export * from "./logout-user";
 export * from "./update-user";
+export * from "./delete-user";
 export * from "./get-user-by-name";
-export * from "./delete-user";
-export * from "./delete-user";
-"
+export * from './update-user';"
 `;
 
 exports[`fetcher generator > login-user.ts 1`] = `
@@ -1424,6 +1396,7 @@ import { getResponseBody } from "@straw-hat/fetcher";
 import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type LoginUserQueryParams = {
+  [key: string]: unknown;
   /**
    * The user name for login
    */
@@ -1573,6 +1546,7 @@ import { getResponseBody } from "@straw-hat/fetcher";
 import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type UpdatePetWithFormPathParams = {
+  [key: string]: unknown;
   /**
    * ID of pet that needs to be updated
    * @format int64
@@ -1581,6 +1555,7 @@ export type UpdatePetWithFormPathParams = {
 };
 
 export type UpdatePetWithFormQueryParams = {
+  [key: string]: unknown;
   /**
    * Name of pet that needs to be updated
    */
@@ -1635,6 +1610,7 @@ import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 import * as schemas from "./components/schemas";
 
 export type UpdateUserPathParams = {
+  [key: string]: unknown;
   /**
    * name that need to be deleted
    */
@@ -1678,6 +1654,7 @@ import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 import * as schemas from "./components/schemas";
 
 export type UploadFilePathParams = {
+  [key: string]: unknown;
   /**
    * ID of pet to update
    * @format int64
@@ -1686,6 +1663,7 @@ export type UploadFilePathParams = {
 };
 
 export type UploadFileQueryParams = {
+  [key: string]: unknown;
   /**
    * Additional Metadata
    */
@@ -1725,6 +1703,10 @@ export async function uploadFile(
   });
 
   return getResponseBody(response);
+}
+"
+`;
+tResponseBody(response);
 }
 "
 `;

@@ -879,6 +879,10 @@
               { "type": "object" },
               { "type": "null" }
             ]
+          },
+          "noAdditionalProperties": {
+            "type": "object",
+            "additionalProperties": false
           }
         }
       },

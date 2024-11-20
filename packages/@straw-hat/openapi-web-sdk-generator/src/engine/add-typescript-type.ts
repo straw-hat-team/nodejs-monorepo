@@ -105,7 +105,18 @@ function createDocs(schema: OpenAPIV3.SchemaObject) {
 }
 
 async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject): Promise<TypeDefinition> {
+  // "By default any additional properties are allowed." https://json-schema.org/understanding-json-schema/reference/object#additionalproperties
+  const additionalProperties = schema.additionalProperties ?? true;
+
   if (schema.properties === undefined) {
+    if (!additionalProperties) {
+      return scope.maybeRegisterType(schema, {
+        name: undefined,
+        definition: '{}',
+        docs: createDocs(schema),
+      });
+    }
+
     return scope.maybeRegisterType(schema, {
       name: undefined,
       definition: 'Record<string, unknown>',
@@ -115,24 +126,23 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject): 
 
   const definition: string[] = ['{'];
 
-  // TODO: handle additionalProperties key
-
-  if ('properties' in schema) {
-    const tasks = Object.entries<OpenAPIV3ReferenceableSchemaObject>(schema.properties ?? {}).map(
-      async ([propName, propSchema]) => {
-        const propertyDefinition = await addTypeScripType(scope, propSchema);
-        const optionalFlag = schema.required?.includes(propName) ? '' : '?';
-        return [
-          propertyDefinition.docs ?? '',
-          `${propName}${optionalFlag}: ${getTypeDefinition(propertyDefinition)}`,
-        ].join('\n');
-      },
-    );
-    const properties = await Promise.all(tasks);
-
-    definition.push(properties.join(';\n'));
+  if (additionalProperties) {
+    definition.push('[key: string]: unknown;');
   }
 
+  const tasks = Object.entries<OpenAPIV3ReferenceableSchemaObject>(schema.properties ?? {}).map(
+    async ([propName, propSchema]) => {
+      const propertyDefinition = await addTypeScripType(scope, propSchema);
+      const optionalFlag = schema.required?.includes(propName) ? '' : '?';
+      return [
+        propertyDefinition.docs ?? '',
+        `${propName}${optionalFlag}: ${getTypeDefinition(propertyDefinition)}`,
+      ].join('\n');
+    },
+  );
+  const properties = await Promise.all(tasks);
+
+  definition.push(properties.join(';\n'));
   definition.push('}');
 
   return scope.maybeRegisterType(schema, {
