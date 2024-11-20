@@ -1,5 +1,5 @@
 import { deleteAsync } from 'del';
-import makeDir from 'make-dir';
+import { makeDirectory } from 'make-dir';
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { createDebugger, formatCode } from './helpers.js';
@@ -34,7 +34,7 @@ export class Dir {
   createDir(...pathsSegments: string[]) {
     const dirPath = this.resolve(...pathsSegments);
     this.debug(`Ensure directory ${dirPath}`);
-    return makeDir(dirPath);
+    return makeDirectory(dirPath);
   }
 
   readFile(relativePath: string) {

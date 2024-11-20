@@ -1,22 +1,22 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`fetcher generator > add-pet.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getRequestBody, getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type AddPetBodyParams = schemas.Pet;
 
 export type AddPetParams = Pick<
   OperationParams<never, never, AddPetBodyParams>,
-  \\"options\\" | \\"body\\"
+  "options" | "body"
 >;
 
 export type AddPetResponse = schemas.Pet;
 
-export function addPetUrlPath(params: Omit<AddPetParams, \\"options\\">) {
-  return createUrlPath<never, never>(\\"/pet\\", params);
+export function addPetUrlPath(params: Omit<AddPetParams, "options">) {
+  return createUrlPath<never, never>("/pet", params);
 }
 
 export async function addPet(
@@ -26,7 +26,7 @@ export async function addPet(
   const url = addPetUrlPath(params);
 
   const response = await client(url, {
-    method: \\"POST\\",
+    method: "POST",
     body: getRequestBody(params.body),
     signal: params.options?.signal,
   });
@@ -37,7 +37,7 @@ export async function addPet(
 `;
 
 exports[`fetcher generator > components/schemas.ts 1`] = `
-"import * as schemas from \\"./schemas\\";
+"import * as schemas from "./schemas";
 
 export type Order = {
   /**
@@ -59,7 +59,7 @@ export type Order = {
   /**
    * Order Status
    */
-  status?: \\"placed\\" | \\"approved\\" | \\"delivered\\";
+  status?: "placed" | "approved" | "delivered";
 
   complete?: boolean;
 };
@@ -143,7 +143,7 @@ export type Pet = {
   /**
    * pet status in the store
    */
-  status?: \\"available\\" | \\"pending\\" | \\"sold\\";
+  status?: "available" | "pending" | "sold";
 };
 
 export type ApiResponse = {
@@ -157,17 +157,17 @@ export type ApiResponse = {
   message?: string;
 };
 
-export const ORDER_STATUS_PLACED = \\"placed\\";
-export const ORDER_STATUS_APPROVED = \\"approved\\";
-export const ORDER_STATUS_DELIVERED = \\"delivered\\";
+export const ORDER_STATUS_PLACED = "placed";
+export const ORDER_STATUS_APPROVED = "approved";
+export const ORDER_STATUS_DELIVERED = "delivered";
 export const ORDER_STATUS = [
   ORDER_STATUS_PLACED,
   ORDER_STATUS_APPROVED,
   ORDER_STATUS_DELIVERED,
 ];
-export const PET_STATUS_AVAILABLE = \\"available\\";
-export const PET_STATUS_PENDING = \\"pending\\";
-export const PET_STATUS_2 = \\"sold\\";
+export const PET_STATUS_AVAILABLE = "available";
+export const PET_STATUS_PENDING = "pending";
+export const PET_STATUS_2 = "sold";
 export const PET_STATUS = [
   PET_STATUS_AVAILABLE,
   PET_STATUS_PENDING,
@@ -183,7 +183,7 @@ function isZero(value: number) {
 }
 
 export function getOrderId(order: Order) {
-  return order[\\"id\\"];
+  return order["id"];
 }
 
 export function isEqualToOrderId(order: Order, target: number) {
@@ -191,7 +191,7 @@ export function isEqualToOrderId(order: Order, target: number) {
 }
 
 export function getOrderPetId(order: Order) {
-  return order[\\"petId\\"];
+  return order["petId"];
 }
 
 export function isEqualToOrderPetId(order: Order, target: number) {
@@ -199,7 +199,7 @@ export function isEqualToOrderPetId(order: Order, target: number) {
 }
 
 export function getOrderQuantity(order: Order) {
-  return order[\\"quantity\\"];
+  return order["quantity"];
 }
 
 export function isEqualToOrderQuantity(order: Order, target: number) {
@@ -207,7 +207,7 @@ export function isEqualToOrderQuantity(order: Order, target: number) {
 }
 
 export function getOrderShipDate(order: Order) {
-  return order[\\"shipDate\\"];
+  return order["shipDate"];
 }
 
 export function isEqualToOrderShipDate(order: Order, target: string) {
@@ -231,7 +231,7 @@ export function isOrderShipDateEmpty(order: Order) {
 }
 
 export function getOrderStatus(order: Order) {
-  return order[\\"status\\"];
+  return order["status"];
 }
 
 export function isEqualToOrderStatus(order: Order, target: string) {
@@ -247,13 +247,13 @@ export function getOrderStatusUpperCased(order: Order) {
 }
 
 export function isOrderStatusPlaced(
-  value: \\"placed\\" | \\"approved\\" | \\"delivered\\",
+  value: "placed" | "approved" | "delivered",
 ) {
   return value === ORDER_STATUS_PLACED;
 }
 
 export function isNotOrderStatusPlaced(
-  value: \\"placed\\" | \\"approved\\" | \\"delivered\\",
+  value: "placed" | "approved" | "delivered",
 ) {
   return value !== ORDER_STATUS_PLACED;
 }
@@ -267,13 +267,13 @@ export function isNotOrderWithStatusPlaced(order: Order) {
 }
 
 export function isOrderStatusApproved(
-  value: \\"placed\\" | \\"approved\\" | \\"delivered\\",
+  value: "placed" | "approved" | "delivered",
 ) {
   return value === ORDER_STATUS_APPROVED;
 }
 
 export function isNotOrderStatusApproved(
-  value: \\"placed\\" | \\"approved\\" | \\"delivered\\",
+  value: "placed" | "approved" | "delivered",
 ) {
   return value !== ORDER_STATUS_APPROVED;
 }
@@ -287,13 +287,13 @@ export function isNotOrderWithStatusApproved(order: Order) {
 }
 
 export function isOrderStatusDelivered(
-  value: \\"placed\\" | \\"approved\\" | \\"delivered\\",
+  value: "placed" | "approved" | "delivered",
 ) {
   return value === ORDER_STATUS_DELIVERED;
 }
 
 export function isNotOrderStatusDelivered(
-  value: \\"placed\\" | \\"approved\\" | \\"delivered\\",
+  value: "placed" | "approved" | "delivered",
 ) {
   return value !== ORDER_STATUS_DELIVERED;
 }
@@ -311,7 +311,7 @@ export function isOrderStatus(value: string) {
 }
 
 export function getOrderComplete(order: Order) {
-  return order[\\"complete\\"];
+  return order["complete"];
 }
 
 export function isOrderComplete(order: Order) {
@@ -327,7 +327,7 @@ export function isEqualToOrderComplete(order: Order, target: boolean) {
 }
 
 export function getCustomerId(customer: Customer) {
-  return customer[\\"id\\"];
+  return customer["id"];
 }
 
 export function isEqualToCustomerId(customer: Customer, target: number) {
@@ -335,7 +335,7 @@ export function isEqualToCustomerId(customer: Customer, target: number) {
 }
 
 export function getCustomerUsername(customer: Customer) {
-  return customer[\\"username\\"];
+  return customer["username"];
 }
 
 export function isEqualToCustomerUsername(customer: Customer, target: string) {
@@ -359,11 +359,11 @@ export function isCustomerUsernameEmpty(customer: Customer) {
 }
 
 export function getCustomerAddress(customer: Customer) {
-  return customer[\\"address\\"];
+  return customer["address"];
 }
 
 export function getAddressStreet(address: Address) {
-  return address[\\"street\\"];
+  return address["street"];
 }
 
 export function isEqualToAddressStreet(address: Address, target: string) {
@@ -387,7 +387,7 @@ export function isAddressStreetEmpty(address: Address) {
 }
 
 export function getAddressCity(address: Address) {
-  return address[\\"city\\"];
+  return address["city"];
 }
 
 export function isEqualToAddressCity(address: Address, target: string) {
@@ -411,7 +411,7 @@ export function isAddressCityEmpty(address: Address) {
 }
 
 export function getAddressState(address: Address) {
-  return address[\\"state\\"];
+  return address["state"];
 }
 
 export function isEqualToAddressState(address: Address, target: string) {
@@ -435,7 +435,7 @@ export function isAddressStateEmpty(address: Address) {
 }
 
 export function getAddressZip(address: Address) {
-  return address[\\"zip\\"];
+  return address["zip"];
 }
 
 export function isEqualToAddressZip(address: Address, target: string) {
@@ -459,7 +459,7 @@ export function isAddressZipEmpty(address: Address) {
 }
 
 export function getCategoryId(category: Category) {
-  return category[\\"id\\"];
+  return category["id"];
 }
 
 export function isEqualToCategoryId(category: Category, target: number) {
@@ -467,7 +467,7 @@ export function isEqualToCategoryId(category: Category, target: number) {
 }
 
 export function getCategoryName(category: Category) {
-  return category[\\"name\\"];
+  return category["name"];
 }
 
 export function isEqualToCategoryName(category: Category, target: string) {
@@ -491,7 +491,7 @@ export function isCategoryNameEmpty(category: Category) {
 }
 
 export function getUserId(user: User) {
-  return user[\\"id\\"];
+  return user["id"];
 }
 
 export function isEqualToUserId(user: User, target: number) {
@@ -499,7 +499,7 @@ export function isEqualToUserId(user: User, target: number) {
 }
 
 export function getUserUsername(user: User) {
-  return user[\\"username\\"];
+  return user["username"];
 }
 
 export function isEqualToUserUsername(user: User, target: string) {
@@ -523,7 +523,7 @@ export function isUserUsernameEmpty(user: User) {
 }
 
 export function getUserFirstName(user: User) {
-  return user[\\"firstName\\"];
+  return user["firstName"];
 }
 
 export function isEqualToUserFirstName(user: User, target: string) {
@@ -547,7 +547,7 @@ export function isUserFirstNameEmpty(user: User) {
 }
 
 export function getUserLastName(user: User) {
-  return user[\\"lastName\\"];
+  return user["lastName"];
 }
 
 export function isEqualToUserLastName(user: User, target: string) {
@@ -571,7 +571,7 @@ export function isUserLastNameEmpty(user: User) {
 }
 
 export function getUserEmail(user: User) {
-  return user[\\"email\\"];
+  return user["email"];
 }
 
 export function isEqualToUserEmail(user: User, target: string) {
@@ -595,7 +595,7 @@ export function isUserEmailEmpty(user: User) {
 }
 
 export function getUserPassword(user: User) {
-  return user[\\"password\\"];
+  return user["password"];
 }
 
 export function isEqualToUserPassword(user: User, target: string) {
@@ -619,7 +619,7 @@ export function isUserPasswordEmpty(user: User) {
 }
 
 export function getUserPhone(user: User) {
-  return user[\\"phone\\"];
+  return user["phone"];
 }
 
 export function isEqualToUserPhone(user: User, target: string) {
@@ -643,7 +643,7 @@ export function isUserPhoneEmpty(user: User) {
 }
 
 export function getUserUserStatus(user: User) {
-  return user[\\"userStatus\\"];
+  return user["userStatus"];
 }
 
 export function isEqualToUserUserStatus(user: User, target: number) {
@@ -651,7 +651,7 @@ export function isEqualToUserUserStatus(user: User, target: number) {
 }
 
 export function getTagId(tag: Tag) {
-  return tag[\\"id\\"];
+  return tag["id"];
 }
 
 export function isEqualToTagId(tag: Tag, target: number) {
@@ -659,7 +659,7 @@ export function isEqualToTagId(tag: Tag, target: number) {
 }
 
 export function getTagName(tag: Tag) {
-  return tag[\\"name\\"];
+  return tag["name"];
 }
 
 export function isEqualToTagName(tag: Tag, target: string) {
@@ -683,7 +683,7 @@ export function isTagNameEmpty(tag: Tag) {
 }
 
 export function getPetId(pet: Pet) {
-  return pet[\\"id\\"];
+  return pet["id"];
 }
 
 export function isEqualToPetId(pet: Pet, target: number) {
@@ -691,7 +691,7 @@ export function isEqualToPetId(pet: Pet, target: number) {
 }
 
 export function getPetName(pet: Pet) {
-  return pet[\\"name\\"];
+  return pet["name"];
 }
 
 export function isEqualToPetName(pet: Pet, target: string) {
@@ -711,15 +711,15 @@ export function isPetNameEmpty(pet: Pet) {
 }
 
 export function getPetPhotoUrls(pet: Pet) {
-  return pet[\\"photoUrls\\"];
+  return pet["photoUrls"];
 }
 
 export function getPetTags(pet: Pet) {
-  return pet[\\"tags\\"];
+  return pet["tags"];
 }
 
 export function getPetStatus(pet: Pet) {
-  return pet[\\"status\\"];
+  return pet["status"];
 }
 
 export function isEqualToPetStatus(pet: Pet, target: string) {
@@ -734,12 +734,12 @@ export function getPetStatusUpperCased(pet: Pet) {
   return getPetStatus(pet)?.toUpperCase();
 }
 
-export function isPetStatusAvailable(value: \\"available\\" | \\"pending\\" | \\"sold\\") {
+export function isPetStatusAvailable(value: "available" | "pending" | "sold") {
   return value === PET_STATUS_AVAILABLE;
 }
 
 export function isNotPetStatusAvailable(
-  value: \\"available\\" | \\"pending\\" | \\"sold\\",
+  value: "available" | "pending" | "sold",
 ) {
   return value !== PET_STATUS_AVAILABLE;
 }
@@ -752,11 +752,11 @@ export function isNotPetWithStatusAvailable(pet: Pet) {
   return getPetStatus(pet) !== PET_STATUS_AVAILABLE;
 }
 
-export function isPetStatusPending(value: \\"available\\" | \\"pending\\" | \\"sold\\") {
+export function isPetStatusPending(value: "available" | "pending" | "sold") {
   return value === PET_STATUS_PENDING;
 }
 
-export function isNotPetStatusPending(value: \\"available\\" | \\"pending\\" | \\"sold\\") {
+export function isNotPetStatusPending(value: "available" | "pending" | "sold") {
   return value !== PET_STATUS_PENDING;
 }
 
@@ -768,11 +768,11 @@ export function isNotPetWithStatusPending(pet: Pet) {
   return getPetStatus(pet) !== PET_STATUS_PENDING;
 }
 
-export function isPetStatus2(value: \\"available\\" | \\"pending\\" | \\"sold\\") {
+export function isPetStatus2(value: "available" | "pending" | "sold") {
   return value === PET_STATUS_2;
 }
 
-export function isNotPetStatus2(value: \\"available\\" | \\"pending\\" | \\"sold\\") {
+export function isNotPetStatus2(value: "available" | "pending" | "sold") {
   return value !== PET_STATUS_2;
 }
 
@@ -789,7 +789,7 @@ export function isPetStatus(value: string) {
 }
 
 export function getApiResponseCode(apiResponse: ApiResponse) {
-  return apiResponse[\\"code\\"];
+  return apiResponse["code"];
 }
 
 export function isEqualToApiResponseCode(
@@ -800,7 +800,7 @@ export function isEqualToApiResponseCode(
 }
 
 export function getApiResponseType(apiResponse: ApiResponse) {
-  return apiResponse[\\"type\\"];
+  return apiResponse["type"];
 }
 
 export function isEqualToApiResponseType(
@@ -827,7 +827,7 @@ export function isApiResponseTypeEmpty(apiResponse: ApiResponse) {
 }
 
 export function getApiResponseMessage(apiResponse: ApiResponse) {
-  return apiResponse[\\"message\\"];
+  return apiResponse["message"];
 }
 
 export function isEqualToApiResponseMessage(
@@ -856,22 +856,22 @@ export function isApiResponseMessageEmpty(apiResponse: ApiResponse) {
 `;
 
 exports[`fetcher generator > create-user.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getRequestBody, getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type CreateUserBodyParams = schemas.User;
 
 export type CreateUserParams = Pick<
   OperationParams<never, never, CreateUserBodyParams>,
-  \\"options\\" | \\"body\\"
+  "options" | "body"
 >;
 
 export type CreateUserResponse = unknown;
 
-export function createUserUrlPath(params: Omit<CreateUserParams, \\"options\\">) {
-  return createUrlPath<never, never>(\\"/user\\", params);
+export function createUserUrlPath(params: Omit<CreateUserParams, "options">) {
+  return createUrlPath<never, never>("/user", params);
 }
 
 export async function createUser(
@@ -881,7 +881,7 @@ export async function createUser(
   const url = createUserUrlPath(params);
 
   const response = await client(url, {
-    method: \\"POST\\",
+    method: "POST",
     body: getRequestBody(params.body),
     signal: params.options?.signal,
   });
@@ -892,24 +892,24 @@ export async function createUser(
 `;
 
 exports[`fetcher generator > create-users-with-list-input.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getRequestBody, getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type CreateUsersWithListInputBodyParams = Array<schemas.User>;
 
 export type CreateUsersWithListInputParams = Pick<
   OperationParams<never, never, CreateUsersWithListInputBodyParams>,
-  \\"options\\" | \\"body\\"
+  "options" | "body"
 >;
 
 export type CreateUsersWithListInputResponse = schemas.User;
 
 export function createUsersWithListInputUrlPath(
-  params: Omit<CreateUsersWithListInputParams, \\"options\\">,
+  params: Omit<CreateUsersWithListInputParams, "options">,
 ) {
-  return createUrlPath<never, never>(\\"/user/createWithList\\", params);
+  return createUrlPath<never, never>("/user/createWithList", params);
 }
 
 export async function createUsersWithListInput(
@@ -919,7 +919,7 @@ export async function createUsersWithListInput(
   const url = createUsersWithListInputUrlPath(params);
 
   const response = await client(url, {
-    method: \\"POST\\",
+    method: "POST",
     body: getRequestBody(params.body),
     signal: params.options?.signal,
   });
@@ -930,9 +930,9 @@ export async function createUsersWithListInput(
 `;
 
 exports[`fetcher generator > delete-order.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type DeleteOrderPathParams = {
   /**
@@ -944,14 +944,14 @@ export type DeleteOrderPathParams = {
 
 export type DeleteOrderParams = Pick<
   OperationParams<DeleteOrderPathParams, never, never>,
-  \\"options\\" | \\"path\\"
+  "options" | "path"
 >;
 
 export type DeleteOrderResponse = unknown;
 
-export function deleteOrderUrlPath(params: Omit<DeleteOrderParams, \\"options\\">) {
+export function deleteOrderUrlPath(params: Omit<DeleteOrderParams, "options">) {
   return createUrlPath<DeleteOrderPathParams, never>(
-    \\"/store/order/{orderId}\\",
+    "/store/order/{orderId}",
     params,
   );
 }
@@ -963,7 +963,7 @@ export async function deleteOrder(
   const url = deleteOrderUrlPath(params);
 
   const response = await client(url, {
-    method: \\"DELETE\\",
+    method: "DELETE",
 
     signal: params.options?.signal,
   });
@@ -974,9 +974,9 @@ export async function deleteOrder(
 `;
 
 exports[`fetcher generator > delete-pet.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type DeletePetPathParams = {
   /**
@@ -988,13 +988,13 @@ export type DeletePetPathParams = {
 
 export type DeletePetParams = Pick<
   OperationParams<DeletePetPathParams, never, never>,
-  \\"options\\" | \\"path\\"
+  "options" | "path"
 >;
 
 export type DeletePetResponse = unknown;
 
-export function deletePetUrlPath(params: Omit<DeletePetParams, \\"options\\">) {
-  return createUrlPath<DeletePetPathParams, never>(\\"/pet/{petId}\\", params);
+export function deletePetUrlPath(params: Omit<DeletePetParams, "options">) {
+  return createUrlPath<DeletePetPathParams, never>("/pet/{petId}", params);
 }
 
 export async function deletePet(
@@ -1004,7 +1004,7 @@ export async function deletePet(
   const url = deletePetUrlPath(params);
 
   const response = await client(url, {
-    method: \\"DELETE\\",
+    method: "DELETE",
 
     signal: params.options?.signal,
   });
@@ -1015,9 +1015,9 @@ export async function deletePet(
 `;
 
 exports[`fetcher generator > delete-user.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type DeleteUserPathParams = {
   /**
@@ -1028,13 +1028,13 @@ export type DeleteUserPathParams = {
 
 export type DeleteUserParams = Pick<
   OperationParams<DeleteUserPathParams, never, never>,
-  \\"options\\" | \\"path\\"
+  "options" | "path"
 >;
 
 export type DeleteUserResponse = unknown;
 
-export function deleteUserUrlPath(params: Omit<DeleteUserParams, \\"options\\">) {
-  return createUrlPath<DeleteUserPathParams, never>(\\"/user/{username}\\", params);
+export function deleteUserUrlPath(params: Omit<DeleteUserParams, "options">) {
+  return createUrlPath<DeleteUserPathParams, never>("/user/{username}", params);
 }
 
 export async function deleteUser(
@@ -1044,7 +1044,7 @@ export async function deleteUser(
   const url = deleteUserUrlPath(params);
 
   const response = await client(url, {
-    method: \\"DELETE\\",
+    method: "DELETE",
 
     signal: params.options?.signal,
   });
@@ -1055,31 +1055,31 @@ export async function deleteUser(
 `;
 
 exports[`fetcher generator > find-pets-by-status.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type FindPetsByStatusQueryParams = {
   /**
    * Status values that need to be considered for filter
    * @default available
    */
-  status?: \\"available\\" | \\"pending\\" | \\"sold\\";
+  status?: "available" | "pending" | "sold";
 };
 
 export type FindPetsByStatusParams = Pick<
   OperationParams<never, FindPetsByStatusQueryParams, never>,
-  \\"options\\" | \\"query\\"
+  "options" | "query"
 >;
 
 export type FindPetsByStatusResponse = Array<schemas.Pet>;
 
 export function findPetsByStatusUrlPath(
-  params: Omit<FindPetsByStatusParams, \\"options\\">,
+  params: Omit<FindPetsByStatusParams, "options">,
 ) {
   return createUrlPath<never, FindPetsByStatusQueryParams>(
-    \\"/pet/findByStatus\\",
+    "/pet/findByStatus",
     params,
   );
 }
@@ -1091,7 +1091,7 @@ export async function findPetsByStatus(
   const url = findPetsByStatusUrlPath(params);
 
   const response = await client(url, {
-    method: \\"GET\\",
+    method: "GET",
 
     signal: params.options?.signal,
   });
@@ -1102,10 +1102,12 @@ export async function findPetsByStatus(
 `;
 
 exports[`fetcher generator > find-pets-by-tags.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+import * as schemas from "./components/schemas";
 
 export type FindPetsByTagsQueryParams = {
   /**
@@ -1116,16 +1118,16 @@ export type FindPetsByTagsQueryParams = {
 
 export type FindPetsByTagsParams = Pick<
   OperationParams<never, FindPetsByTagsQueryParams, never>,
-  \\"options\\" | \\"query\\"
+  "options" | "query"
 >;
 
 export type FindPetsByTagsResponse = Array<schemas.Pet>;
 
 export function findPetsByTagsUrlPath(
-  params: Omit<FindPetsByTagsParams, \\"options\\">,
+  params: Omit<FindPetsByTagsParams, "options">,
 ) {
   return createUrlPath<never, FindPetsByTagsQueryParams>(
-    \\"/pet/findByTags\\",
+    "/pet/findByTags",
     params,
   );
 }
@@ -1137,7 +1139,45 @@ export async function findPetsByTags(
   const url = findPetsByTagsUrlPath(params);
 
   const response = await client(url, {
-    method: \\"GET\\",
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+
+export type FindPetsByTagsQueryParams = {
+  /**
+   * Tags to filter by
+   */
+  tags?: Array<string>;
+};
+
+export type FindPetsByTagsParams = Pick<
+  OperationParams<never, FindPetsByTagsQueryParams, never>,
+  "options" | "query"
+>;
+
+export type FindPetsByTagsResponse = Array<schemas.Pet>;
+
+export function findPetsByTagsUrlPath(
+  params: Omit<FindPetsByTagsParams, "options">,
+) {
+  return createUrlPath<never, FindPetsByTagsQueryParams>(
+    "/pet/findByTags",
+    params,
+  );
+}
+
+export async function findPetsByTags(
+  client: Fetcher,
+  params: FindPetsByTagsParams,
+): Promise<FindPetsByTagsResponse> {
+  const url = findPetsByTagsUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
 
     signal: params.options?.signal,
   });
@@ -1148,21 +1188,21 @@ export async function findPetsByTags(
 `;
 
 exports[`fetcher generator > get-inventory.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type GetInventoryParams = Pick<
   OperationParams<never, never, never>,
-  \\"options\\"
+  "options"
 >;
 
 export type GetInventoryResponse = {};
 
 export function getInventoryUrlPath(
-  params: Omit<GetInventoryParams, \\"options\\">,
+  params: Omit<GetInventoryParams, "options">,
 ) {
-  return createUrlPath<never, never>(\\"/store/inventory\\", params);
+  return createUrlPath<never, never>("/store/inventory", params);
 }
 
 export async function getInventory(
@@ -1172,7 +1212,7 @@ export async function getInventory(
   const url = getInventoryUrlPath(params);
 
   const response = await client(url, {
-    method: \\"GET\\",
+    method: "GET",
 
     signal: params.options?.signal,
   });
@@ -1183,10 +1223,10 @@ export async function getInventory(
 `;
 
 exports[`fetcher generator > get-order-by-id.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type GetOrderByIdPathParams = {
   /**
@@ -1198,16 +1238,16 @@ export type GetOrderByIdPathParams = {
 
 export type GetOrderByIdParams = Pick<
   OperationParams<GetOrderByIdPathParams, never, never>,
-  \\"options\\" | \\"path\\"
+  "options" | "path"
 >;
 
 export type GetOrderByIdResponse = schemas.Order;
 
 export function getOrderByIdUrlPath(
-  params: Omit<GetOrderByIdParams, \\"options\\">,
+  params: Omit<GetOrderByIdParams, "options">,
 ) {
   return createUrlPath<GetOrderByIdPathParams, never>(
-    \\"/store/order/{orderId}\\",
+    "/store/order/{orderId}",
     params,
   );
 }
@@ -1219,7 +1259,7 @@ export async function getOrderById(
   const url = getOrderByIdUrlPath(params);
 
   const response = await client(url, {
-    method: \\"GET\\",
+    method: "GET",
 
     signal: params.options?.signal,
   });
@@ -1230,10 +1270,10 @@ export async function getOrderById(
 `;
 
 exports[`fetcher generator > get-pet-by-id.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type GetPetByIdPathParams = {
   /**
@@ -1245,13 +1285,13 @@ export type GetPetByIdPathParams = {
 
 export type GetPetByIdParams = Pick<
   OperationParams<GetPetByIdPathParams, never, never>,
-  \\"options\\" | \\"path\\"
+  "options" | "path"
 >;
 
 export type GetPetByIdResponse = schemas.Pet;
 
-export function getPetByIdUrlPath(params: Omit<GetPetByIdParams, \\"options\\">) {
-  return createUrlPath<GetPetByIdPathParams, never>(\\"/pet/{petId}\\", params);
+export function getPetByIdUrlPath(params: Omit<GetPetByIdParams, "options">) {
+  return createUrlPath<GetPetByIdPathParams, never>("/pet/{petId}", params);
 }
 
 export async function getPetById(
@@ -1261,7 +1301,7 @@ export async function getPetById(
   const url = getPetByIdUrlPath(params);
 
   const response = await client(url, {
-    method: \\"GET\\",
+    method: "GET",
 
     signal: params.options?.signal,
   });
@@ -1272,10 +1312,10 @@ export async function getPetById(
 `;
 
 exports[`fetcher generator > get-user-by-name.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type GetUserByNamePathParams = {
   /**
@@ -1286,16 +1326,16 @@ export type GetUserByNamePathParams = {
 
 export type GetUserByNameParams = Pick<
   OperationParams<GetUserByNamePathParams, never, never>,
-  \\"options\\" | \\"path\\"
+  "options" | "path"
 >;
 
 export type GetUserByNameResponse = schemas.User;
 
 export function getUserByNameUrlPath(
-  params: Omit<GetUserByNameParams, \\"options\\">,
+  params: Omit<GetUserByNameParams, "options">,
 ) {
   return createUrlPath<GetUserByNamePathParams, never>(
-    \\"/user/{username}\\",
+    "/user/{username}",
     params,
   );
 }
@@ -1307,7 +1347,7 @@ export async function getUserByName(
   const url = getUserByNameUrlPath(params);
 
   const response = await client(url, {
-    method: \\"GET\\",
+    method: "GET",
 
     signal: params.options?.signal,
   });
@@ -1318,32 +1358,51 @@ export async function getUserByName(
 `;
 
 exports[`fetcher generator > index.ts 1`] = `
-"export * from \\"./update-pet\\";
-export * from \\"./add-pet\\";
-export * from \\"./find-pets-by-status\\";
-export * from \\"./find-pets-by-tags\\";
-export * from \\"./get-pet-by-id\\";
-export * from \\"./update-pet-with-form\\";
-export * from \\"./delete-pet\\";
-export * from \\"./upload-file\\";
-export * from \\"./get-inventory\\";
-export * from \\"./place-order\\";
-export * from \\"./get-order-by-id\\";
-export * from \\"./delete-order\\";
-export * from \\"./create-user\\";
-export * from \\"./create-users-with-list-input\\";
-export * from \\"./login-user\\";
-export * from \\"./logout-user\\";
-export * from \\"./get-user-by-name\\";
-export * from \\"./update-user\\";
-export * from \\"./delete-user\\";
+"export * from "./update-pet";
+export * from "./update-pet";
+export * from "./add-pet";
+export * from "./add-pet";
+export * from "./find-pets-by-status";
+export * from "./find-pets-by-status";
+export * from "./find-pets-by-tags";
+export * from "./get-pet-by-id";
+export * from "./update-pet-with-form";
+export * from "./find-pets-by-tags";
+export * from "./delete-pet";
+export * from "./get-pet-by-id";
+export * from "./update-pet-with-form";
+export * from "./delete-pet";
+export * from "./upload-file";
+export * from "./upload-file";
+export * from "./get-inventory";
+export * from "./get-inventory";
+export * from "./place-order";
+export * from "./get-order-by-id";
+export * from "./place-order";
+export * from "./delete-order";
+export * from "./get-order-by-id";
+export * from "./create-user";
+export * from "./create-users-with-list-input";
+export * from "./delete-order";
+export * from "./login-user";
+export * from "./create-user";
+export * from "./create-users-with-list-input";
+export * from "./logout-user";
+export * from "./login-user";
+export * from "./logout-user";
+export * from "./get-user-by-name";
+export * from "./get-user-by-name";
+export * from "./update-user";
+export * from "./update-user";
+export * from "./delete-user";
+export * from "./delete-user";
 "
 `;
 
 exports[`fetcher generator > login-user.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type LoginUserQueryParams = {
   /**
@@ -1358,13 +1417,13 @@ export type LoginUserQueryParams = {
 
 export type LoginUserParams = Pick<
   OperationParams<never, LoginUserQueryParams, never>,
-  \\"options\\" | \\"query\\"
+  "options" | "query"
 >;
 
 export type LoginUserResponse = string;
 
-export function loginUserUrlPath(params: Omit<LoginUserParams, \\"options\\">) {
-  return createUrlPath<never, LoginUserQueryParams>(\\"/user/login\\", params);
+export function loginUserUrlPath(params: Omit<LoginUserParams, "options">) {
+  return createUrlPath<never, LoginUserQueryParams>("/user/login", params);
 }
 
 export async function loginUser(
@@ -1374,7 +1433,7 @@ export async function loginUser(
   const url = loginUserUrlPath(params);
 
   const response = await client(url, {
-    method: \\"GET\\",
+    method: "GET",
 
     signal: params.options?.signal,
   });
@@ -1385,19 +1444,19 @@ export async function loginUser(
 `;
 
 exports[`fetcher generator > logout-user.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type LogoutUserParams = Pick<
   OperationParams<never, never, never>,
-  \\"options\\"
+  "options"
 >;
 
 export type LogoutUserResponse = unknown;
 
-export function logoutUserUrlPath(params: Omit<LogoutUserParams, \\"options\\">) {
-  return createUrlPath<never, never>(\\"/user/logout\\", params);
+export function logoutUserUrlPath(params: Omit<LogoutUserParams, "options">) {
+  return createUrlPath<never, never>("/user/logout", params);
 }
 
 export async function logoutUser(
@@ -1407,7 +1466,7 @@ export async function logoutUser(
   const url = logoutUserUrlPath(params);
 
   const response = await client(url, {
-    method: \\"GET\\",
+    method: "GET",
 
     signal: params.options?.signal,
   });
@@ -1418,22 +1477,22 @@ export async function logoutUser(
 `;
 
 exports[`fetcher generator > place-order.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getRequestBody, getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type PlaceOrderBodyParams = schemas.Order;
 
 export type PlaceOrderParams = Pick<
   OperationParams<never, never, PlaceOrderBodyParams>,
-  \\"options\\" | \\"body\\"
+  "options" | "body"
 >;
 
 export type PlaceOrderResponse = schemas.Order;
 
-export function placeOrderUrlPath(params: Omit<PlaceOrderParams, \\"options\\">) {
-  return createUrlPath<never, never>(\\"/store/order\\", params);
+export function placeOrderUrlPath(params: Omit<PlaceOrderParams, "options">) {
+  return createUrlPath<never, never>("/store/order", params);
 }
 
 export async function placeOrder(
@@ -1443,7 +1502,7 @@ export async function placeOrder(
   const url = placeOrderUrlPath(params);
 
   const response = await client(url, {
-    method: \\"POST\\",
+    method: "POST",
     body: getRequestBody(params.body),
     signal: params.options?.signal,
   });
@@ -1454,22 +1513,22 @@ export async function placeOrder(
 `;
 
 exports[`fetcher generator > update-pet.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getRequestBody, getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type UpdatePetBodyParams = schemas.Pet;
 
 export type UpdatePetParams = Pick<
   OperationParams<never, never, UpdatePetBodyParams>,
-  \\"options\\" | \\"body\\"
+  "options" | "body"
 >;
 
 export type UpdatePetResponse = schemas.Pet;
 
-export function updatePetUrlPath(params: Omit<UpdatePetParams, \\"options\\">) {
-  return createUrlPath<never, never>(\\"/pet\\", params);
+export function updatePetUrlPath(params: Omit<UpdatePetParams, "options">) {
+  return createUrlPath<never, never>("/pet", params);
 }
 
 export async function updatePet(
@@ -1479,7 +1538,7 @@ export async function updatePet(
   const url = updatePetUrlPath(params);
 
   const response = await client(url, {
-    method: \\"PUT\\",
+    method: "PUT",
     body: getRequestBody(params.body),
     signal: params.options?.signal,
   });
@@ -1490,9 +1549,9 @@ export async function updatePet(
 `;
 
 exports[`fetcher generator > update-pet-with-form.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
 
 export type UpdatePetWithFormPathParams = {
   /**
@@ -1519,18 +1578,18 @@ export type UpdatePetWithFormParams = Pick<
     UpdatePetWithFormQueryParams,
     never
   >,
-  \\"options\\" | \\"path\\" | \\"query\\"
+  "options" | "path" | "query"
 >;
 
 export type UpdatePetWithFormResponse = unknown;
 
 export function updatePetWithFormUrlPath(
-  params: Omit<UpdatePetWithFormParams, \\"options\\">,
+  params: Omit<UpdatePetWithFormParams, "options">,
 ) {
   return createUrlPath<
     UpdatePetWithFormPathParams,
     UpdatePetWithFormQueryParams
-  >(\\"/pet/{petId}\\", params);
+  >("/pet/{petId}", params);
 }
 
 export async function updatePetWithForm(
@@ -1540,7 +1599,7 @@ export async function updatePetWithForm(
   const url = updatePetWithFormUrlPath(params);
 
   const response = await client(url, {
-    method: \\"POST\\",
+    method: "POST",
 
     signal: params.options?.signal,
   });
@@ -1551,10 +1610,10 @@ export async function updatePetWithForm(
 `;
 
 exports[`fetcher generator > update-user.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getRequestBody, getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type UpdateUserPathParams = {
   /**
@@ -1567,13 +1626,13 @@ export type UpdateUserBodyParams = schemas.User;
 
 export type UpdateUserParams = Pick<
   OperationParams<UpdateUserPathParams, never, UpdateUserBodyParams>,
-  \\"options\\" | \\"body\\" | \\"path\\"
+  "options" | "body" | "path"
 >;
 
 export type UpdateUserResponse = unknown;
 
-export function updateUserUrlPath(params: Omit<UpdateUserParams, \\"options\\">) {
-  return createUrlPath<UpdateUserPathParams, never>(\\"/user/{username}\\", params);
+export function updateUserUrlPath(params: Omit<UpdateUserParams, "options">) {
+  return createUrlPath<UpdateUserPathParams, never>("/user/{username}", params);
 }
 
 export async function updateUser(
@@ -1583,7 +1642,7 @@ export async function updateUser(
   const url = updateUserUrlPath(params);
 
   const response = await client(url, {
-    method: \\"PUT\\",
+    method: "PUT",
     body: getRequestBody(params.body),
     signal: params.options?.signal,
   });
@@ -1594,10 +1653,10 @@ export async function updateUser(
 `;
 
 exports[`fetcher generator > upload-file.ts 1`] = `
-"import type { Fetcher } from \\"@straw-hat/fetcher\\";
-import { getRequestBody, getResponseBody } from \\"@straw-hat/fetcher\\";
-import { createUrlPath, OperationParams } from \\"@straw-hat/fetcher/openapi\\";
-import * as schemas from \\"./components/schemas\\";
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
 
 export type UploadFilePathParams = {
   /**
@@ -1622,14 +1681,14 @@ export type UploadFileParams = Pick<
     UploadFileQueryParams,
     UploadFileBodyParams
   >,
-  \\"options\\" | \\"body\\" | \\"path\\" | \\"query\\"
+  "options" | "body" | "path" | "query"
 >;
 
 export type UploadFileResponse = schemas.ApiResponse;
 
-export function uploadFileUrlPath(params: Omit<UploadFileParams, \\"options\\">) {
+export function uploadFileUrlPath(params: Omit<UploadFileParams, "options">) {
   return createUrlPath<UploadFilePathParams, UploadFileQueryParams>(
-    \\"/pet/{petId}/uploadImage\\",
+    "/pet/{petId}/uploadImage",
     params,
   );
 }
@@ -1641,7 +1700,7 @@ export async function uploadFile(
   const url = uploadFileUrlPath(params);
 
   const response = await client(url, {
-    method: \\"POST\\",
+    method: "POST",
     body: getRequestBody(params.body),
     signal: params.options?.signal,
   });

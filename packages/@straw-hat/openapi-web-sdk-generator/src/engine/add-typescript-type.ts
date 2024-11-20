@@ -163,6 +163,16 @@ function integerType(scope: Scope, schema: OpenAPIV3.NonArraySchemaObject) {
   return numberType(scope, schema);
 }
 
+
+function nullType(scope: Scope, schema: OpenAPIV3.NonArraySchemaObject) {
+  return scope.maybeRegisterType(schema, {
+    name: undefined,
+    definition: 'null',
+    docs: createDocs(schema),
+  });
+}
+
+
 function unknownType(scope: Scope, schema: OpenAPIV3.NonArraySchemaObject) {
   return scope.maybeRegisterType(schema, {
     name: undefined,
@@ -266,6 +276,10 @@ export async function addTypeScripType(
     }
     case 'integer': {
       return integerType(scope, schema);
+    }
+    // @ts-expect-error TODO: fix openapi-types to allow null
+    case 'null': {
+      return nullType(scope, schema);
     }
     default: {
       return unknownType(scope, schema);

@@ -2,7 +2,7 @@ import { FancyMap } from '@straw-hat/fancy-map';
 import { config as dotenvConfig } from 'dotenv';
 import { expand as dotenvExpand } from 'dotenv-expand';
 import * as fs from 'fs';
-import makeDir from 'make-dir';
+import { makeDirectory } from 'make-dir';
 import * as path from 'path';
 import resolve from 'resolve';
 import { createDebugger } from './debug';
@@ -72,7 +72,7 @@ export function touchFileSync(filePath: string) {
       throw err;
     }
 
-    makeDir.sync(path.dirname(filePath));
+    makeDirectory.sync(path.dirname(filePath));
   }
 
   fs.writeFileSync(filePath, '');
