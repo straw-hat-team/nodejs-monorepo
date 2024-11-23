@@ -11,6 +11,15 @@ describe('getResponseBody', () => {
     expect(data).toEqual({ hello: 'world' });
   });
 
+  test('formats the response with 204', async () => {
+    const response = new Response(null, {
+      headers: new Headers([['Content-Type', 'application/json; charset=utf-8;']]),
+      status: 204,
+    });
+    const data = await getResponseBody(response);
+    expect(data).toEqual(null);
+  });
+
   test('formats the response as text', async () => {
     const response = new Response('something', {
       headers: new Headers([['Content-Type', 'application/text']]),

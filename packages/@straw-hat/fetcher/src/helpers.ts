@@ -29,8 +29,12 @@ export function getRequestBody(body: any): BodyInit | undefined {
 const JSON_CONTENT_TYPE_REGEX = /^application\/(.+\+)?json/;
 
 export function getResponseBody(response: Response) {
+  if (response.status === 204) {
+    return null;
+  }
+
   const contentType = response.headers.get('Content-Type') ?? '';
-  const isJSON = JSON_CONTENT_TYPE_REGEX.test(contentType.toLowerCase());
+  const isJSON = response.status !== 204 && JSON_CONTENT_TYPE_REGEX.test(contentType.toLowerCase());
 
   if (isJSON) {
     return response.json();
