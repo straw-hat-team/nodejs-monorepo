@@ -1,9 +1,8 @@
-`sht-openapi-web-sdk-generator help`
-====================================
+# `sht-openapi-web-sdk-generator help`
 
 Display help for sht-openapi-web-sdk-generator.
 
-* [`sht-openapi-web-sdk-generator help [COMMAND]`](#sht-openapi-web-sdk-generator-help-command)
+- [`sht-openapi-web-sdk-generator help [COMMAND]`](#sht-openapi-web-sdk-generator-help-command)
 
 ## `sht-openapi-web-sdk-generator help [COMMAND]`
 

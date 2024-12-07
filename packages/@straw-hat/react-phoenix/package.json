@@ -1,0 +1,51 @@
+{
+  "name": "@straw-hat/react-phoenix",
+  "version": "0.1.0",
+  "description": "Integration between React and Phoenix",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
+    "directory": "packages/@straw-hat/react-phoenix"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "hooks",
+    "elixir",
+    "phoenix",
+    "react-hooks",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "phoenix": "^1.7.17"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "@straw-hat/tsconfig": "workspace:*",
+    "@types/phoenix": "^1.6.6",
+    "@types/react": "^18.3.1",
+    "react": "^18.3.1",
+    "typescript": "^5.4.5"
+  }
+}

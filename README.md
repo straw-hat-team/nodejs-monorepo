@@ -22,6 +22,7 @@
 - [@straw-hat/prettier-config](packages/@straw-hat/prettier-config/README.md)
 - [@straw-hat/react-fullscreen](packages/@straw-hat/react-fullscreen/README.md)
 - [@straw-hat/react-hooks](packages/@straw-hat/react-hooks/README.md)
+- [@straw-hat/react-phoenix](packages/@straw-hat/react-phoenix/README.md)
 - [@straw-hat/react-query-fetcher](packages/@straw-hat/react-query-fetcher/README.md)
 - [@straw-hat/sdk](packages/@straw-hat/sdk/README.md)
 - [@straw-hat/tsconfig](packages/@straw-hat/tsconfig/README.md)

@@ -181,7 +181,6 @@ function integerType(scope: Scope, schema: OpenAPIV3.NonArraySchemaObject) {
   return numberType(scope, schema);
 }
 
-
 function nullType(scope: Scope, schema: OpenAPIV3.NonArraySchemaObject) {
   return scope.maybeRegisterType(schema, {
     name: undefined,
@@ -189,7 +188,6 @@ function nullType(scope: Scope, schema: OpenAPIV3.NonArraySchemaObject) {
     docs: createDocs(schema),
   });
 }
-
 
 function unknownType(scope: Scope, schema: OpenAPIV3.NonArraySchemaObject) {
   return scope.maybeRegisterType(schema, {

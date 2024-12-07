@@ -880,10 +880,7 @@
         "properties": {
           "timeframe": { "$ref": "#/components/schemas/AllowedTimeframes-Output" },
           "instructions": {
-            "anyOf": [
-              { "type": "object" },
-              { "type": "null" }
-            ]
+            "anyOf": [{ "type": "object" }, { "type": "null" }]
           },
           "noAdditionalProperties": {
             "type": "object",
