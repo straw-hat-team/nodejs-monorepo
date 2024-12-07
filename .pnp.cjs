@@ -91,6 +91,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/@straw-hat/react-hooks"\
     },\
     {\
+      "name": "@straw-hat/react-phoenix",\
+      "reference": "workspace:packages/@straw-hat/react-phoenix"\
+    },\
+    {\
       "name": "@straw-hat/react-query-fetcher",\
       "reference": "workspace:packages/@straw-hat/react-query-fetcher"\
     },\
@@ -154,6 +158,7 @@ const RAW_RUNTIME_STATE =
     ["@straw-hat/react-fullscreen", ["workspace:packages/@straw-hat/react-fullscreen"]],\
     ["@straw-hat/react-hooks", ["workspace:packages/@straw-hat/react-hooks"]],\
     ["@straw-hat/react-native-sdk", ["workspace:packages/experimentals/@straw-hat/react-native-sdk"]],\
+    ["@straw-hat/react-phoenix", ["workspace:packages/@straw-hat/react-phoenix"]],\
     ["@straw-hat/react-query-fetcher", ["workspace:packages/@straw-hat/react-query-fetcher"]],\
     ["@straw-hat/sdk", ["workspace:packages/@straw-hat/sdk"]],\
     ["@straw-hat/tsconfig", ["workspace:packages/@straw-hat/tsconfig"]],\
@@ -10566,6 +10571,21 @@ const RAW_RUNTIME_STATE =
         "linkType": "SOFT"\
       }]\
     ]],\
+    ["@straw-hat/react-phoenix", [\
+      ["workspace:packages/@straw-hat/react-phoenix", {\
+        "packageLocation": "./packages/@straw-hat/react-phoenix/",\
+        "packageDependencies": [\
+          ["@straw-hat/react-phoenix", "workspace:packages/@straw-hat/react-phoenix"],\
+          ["@straw-hat/tsconfig", "workspace:packages/@straw-hat/tsconfig"],\
+          ["@types/phoenix", "npm:1.6.6"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["phoenix", "npm:1.7.17"],\
+          ["react", "npm:18.3.1"],\
+          ["typescript", "patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@straw-hat/react-query-fetcher", [\
       ["workspace:packages/@straw-hat/react-query-fetcher", {\
         "packageLocation": "./packages/@straw-hat/react-query-fetcher/",\
@@ -11159,6 +11179,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-parse-json-npm-4.0.0-298522afa6-4df9de9815.zip/node_modules/@types/parse-json/",\
         "packageDependencies": [\
           ["@types/parse-json", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/phoenix", [\
+      ["npm:1.6.6", {\
+        "packageLocation": "./.yarn/cache/@types-phoenix-npm-1.6.6-b47f7364f0-9dc897cb9a.zip/node_modules/@types/phoenix/",\
+        "packageDependencies": [\
+          ["@types/phoenix", "npm:1.6.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21319,6 +21348,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/performance-now-npm-2.1.0-45e3ce7e49-534e641aa8.zip/node_modules/performance-now/",\
         "packageDependencies": [\
           ["performance-now", "npm:2.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["phoenix", [\
+      ["npm:1.7.17", {\
+        "packageLocation": "./.yarn/cache/phoenix-npm-1.7.17-575ac50a65-b993c56d73.zip/node_modules/phoenix/",\
+        "packageDependencies": [\
+          ["phoenix", "npm:1.7.17"]\
         ],\
         "linkType": "HARD"\
       }]\

@@ -7356,6 +7356,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@straw-hat/react-phoenix@workspace:packages/@straw-hat/react-phoenix":
+  version: 0.0.0-use.local
+  resolution: "@straw-hat/react-phoenix@workspace:packages/@straw-hat/react-phoenix"
+  dependencies:
+    "@straw-hat/tsconfig": "workspace:*"
+    "@types/phoenix": "npm:^1.6.6"
+    "@types/react": "npm:^18.3.1"
+    phoenix: "npm:^1.7.17"
+    react: "npm:^18.3.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
 "@straw-hat/react-query-fetcher@workspace:packages/@straw-hat/react-query-fetcher":
   version: 0.0.0-use.local
   resolution: "@straw-hat/react-query-fetcher@workspace:packages/@straw-hat/react-query-fetcher"
@@ -7826,6 +7841,13 @@ __metadata:
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
   checksum: 10/4df9de98150d2978afc2161482a3a8e6617883effba3223324f079de97ba7eabd7d84b90ced11c3f82b0c08d4a8383f678c9f73e9c41258f769b3fa234a2bb4f
+  languageName: node
+  linkType: hard
+
+"@types/phoenix@npm:^1.6.6":
+  version: 1.6.6
+  resolution: "@types/phoenix@npm:1.6.6"
+  checksum: 10/9dc897cb9a4cd62f7a0de48855e6cafded5c676e7d78c4d3a9ade4f21ec82b95eb7195caada26a9a3a5d9aba14f0fd875bc3898e086234b20da63991a033f6e8
   languageName: node
   linkType: hard
 
@@ -16551,6 +16573,13 @@ __metadata:
   version: 2.1.0
   resolution: "performance-now@npm:2.1.0"
   checksum: 10/534e641aa8f7cba160f0afec0599b6cecefbb516a2e837b512be0adbe6c1da5550e89c78059c7fabc5c9ffdf6627edabe23eb7c518c4500067a898fa65c2b550
+  languageName: node
+  linkType: hard
+
+"phoenix@npm:^1.7.17":
+  version: 1.7.17
+  resolution: "phoenix@npm:1.7.17"
+  checksum: 10/b993c56d738da8b48797f8531f38078f69ca1d7b0134450f0c60cd80a115aa4bbe17584a927ee83a85ffbf52a6957983e4d1c4f83b3d8b3fb9186edb85f9bfc1
   languageName: node
   linkType: hard
 
