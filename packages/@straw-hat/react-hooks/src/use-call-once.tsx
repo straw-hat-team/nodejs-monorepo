@@ -1,8 +1,8 @@
-import * as React from 'react';
+import { useRef } from 'react';
 
 export function useCallOnce(callback: Function) {
-  const calledRef = React.useRef(false);
-  const returnRef = React.useRef();
+  const calledRef = useRef(false);
+  const returnRef = useRef(null);
 
   return (...args: any[]) => {
     if (calledRef.current) {

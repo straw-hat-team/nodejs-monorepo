@@ -1,8 +1,8 @@
-import * as React from 'react';
+import { RefObject, useLayoutEffect, useRef } from 'react';
 
-export function useLatest<T extends unknown>(value: T): React.RefObject<T> {
-  const ref = React.useRef(value);
-  React.useLayoutEffect(() => {
+export function useLatest<T extends unknown>(value: T): RefObject<T> {
+  const ref = useRef(value);
+  useLayoutEffect(() => {
     ref.current = value;
   });
   return ref;
