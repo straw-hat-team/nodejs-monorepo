@@ -91,9 +91,8 @@ tmp
 **/docs/reference
 !.tool-versions
 
-# Yarn Zero-Install
 .yarn/*
-!.yarn/cache
+# !.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
