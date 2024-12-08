@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/react-phoenix",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Integration between React and Phoenix",
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
     "phoenix": "^1.7.17"
   },
   "peerDependencies": {
-    "react": "^17.0.1"
+    "react": "^18.0.0"
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
