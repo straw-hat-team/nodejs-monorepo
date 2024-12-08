@@ -27,7 +27,7 @@ test('fetcher generator', async () => {
     expect(await tmpDir.readFile(filePath)).toMatchSnapshot(snapshotName);
   }
 
-  const pkg = await import(tmpDir.resolve('components/schemas'));
+  const pkg = await import(tmpDir.resolve('components/helpers'));
 
   // Getters
   expect(pkg.getOrderId({ id: '123' })).toBe('123');

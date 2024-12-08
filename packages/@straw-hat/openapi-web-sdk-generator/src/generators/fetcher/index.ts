@@ -50,10 +50,15 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
   };
 
   async #processSchemas() {
-    const schemaFilePath = this.#outputDir.resolve('components/schemas.ts');
     const scope = new Scope({
       resolveSchema: this.#resolveSchema({
-        relativeToFilePath: schemaFilePath,
+        relativeToFilePath: this.#outputDir.resolve('components/schemas.ts'),
+      }),
+    });
+
+    const helperScope = new Scope({
+      resolveSchema: this.#resolveSchema({
+        relativeToFilePath: this.#outputDir.resolve('components/helpers.ts'),
       }),
     });
     const schemas: Record<string, OpenAPIV3ReferenceableSchemaObject> =
@@ -61,12 +66,14 @@ export default class FetcherCodegen extends CodegenBase<FetcherCodegenOptions> {
 
     for (const schemaObject of Object.values(schemas)) {
       await addTypeScripType(scope, schemaObject);
-      await addSchemaHelpers(scope, schemaObject);
+      await addSchemaHelpers(helperScope, schemaObject);
     }
 
-    const formatted = await formatCode(scope.toString());
+    const schemaFormatted = await formatCode(scope.toString());
+    const helperFormatted = await formatCode(helperScope.toString());
 
-    await this.#outputDir.writeFile('components/schemas.ts', formatted);
+    await this.#outputDir.writeFile('components/schemas.ts', schemaFormatted);
+    await this.#outputDir.writeFile('components/helpers.ts', helperFormatted);
   }
 
   #processOperation = async (args: {

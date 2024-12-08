@@ -36,6 +36,733 @@ export async function addPet(
 "
 `;
 
+exports[`fetcher generator > components/helpers.ts 1`] = `
+"import * as schemas from "./schemas";
+
+export const ORDER_STATUS_PLACED = "placed";
+export const ORDER_STATUS_APPROVED = "approved";
+export const ORDER_STATUS_DELIVERED = "delivered";
+export const ORDER_STATUS = [
+  ORDER_STATUS_PLACED,
+  ORDER_STATUS_APPROVED,
+  ORDER_STATUS_DELIVERED,
+];
+export const PET_STATUS_AVAILABLE = "available";
+export const PET_STATUS_PENDING = "pending";
+export const PET_STATUS_2 = "sold";
+export const PET_STATUS = [
+  PET_STATUS_AVAILABLE,
+  PET_STATUS_PENDING,
+  PET_STATUS_2,
+];
+
+function getLength(value: string) {
+  return value.length;
+}
+
+function isZero(value: number) {
+  return value === 0;
+}
+
+export function getCustomInstructions(custom: schemas.Custom) {
+  return custom["instructions"];
+}
+
+export function getCustomNoAdditionalProperties(custom: schemas.Custom) {
+  return custom["noAdditionalProperties"];
+}
+
+export function getOrderId(order: schemas.Order) {
+  return order["id"];
+}
+
+export function isEqualToOrderId(order: schemas.Order, target: number) {
+  return getOrderId(order) === target;
+}
+
+export function getOrderPetId(order: schemas.Order) {
+  return order["petId"];
+}
+
+export function isEqualToOrderPetId(order: schemas.Order, target: number) {
+  return getOrderPetId(order) === target;
+}
+
+export function getOrderQuantity(order: schemas.Order) {
+  return order["quantity"];
+}
+
+export function isEqualToOrderQuantity(order: schemas.Order, target: number) {
+  return getOrderQuantity(order) === target;
+}
+
+export function getOrderShipDate(order: schemas.Order) {
+  return order["shipDate"];
+}
+
+export function isEqualToOrderShipDate(order: schemas.Order, target: string) {
+  return getOrderShipDate(order) === target;
+}
+
+export function getOrderShipDateLength(order: schemas.Order) {
+  const value = getOrderShipDate(order);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isOrderShipDateEmpty(order: schemas.Order) {
+  const value = getOrderShipDateLength(order);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getOrderStatus(order: schemas.Order) {
+  return order["status"];
+}
+
+export function isEqualToOrderStatus(order: schemas.Order, target: string) {
+  return getOrderStatus(order) === target;
+}
+
+export function getOrderStatusLowerCased(order: schemas.Order) {
+  return getOrderStatus(order)?.toLowerCase();
+}
+
+export function getOrderStatusUpperCased(order: schemas.Order) {
+  return getOrderStatus(order)?.toUpperCase();
+}
+
+export function isOrderStatusPlaced(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value === ORDER_STATUS_PLACED;
+}
+
+export function isNotOrderStatusPlaced(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value !== ORDER_STATUS_PLACED;
+}
+
+export function isOrderWithStatusPlaced(order: schemas.Order) {
+  return getOrderStatus(order) === ORDER_STATUS_PLACED;
+}
+
+export function isNotOrderWithStatusPlaced(order: schemas.Order) {
+  return getOrderStatus(order) !== ORDER_STATUS_PLACED;
+}
+
+export function isOrderStatusApproved(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value === ORDER_STATUS_APPROVED;
+}
+
+export function isNotOrderStatusApproved(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value !== ORDER_STATUS_APPROVED;
+}
+
+export function isOrderWithStatusApproved(order: schemas.Order) {
+  return getOrderStatus(order) === ORDER_STATUS_APPROVED;
+}
+
+export function isNotOrderWithStatusApproved(order: schemas.Order) {
+  return getOrderStatus(order) !== ORDER_STATUS_APPROVED;
+}
+
+export function isOrderStatusDelivered(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value === ORDER_STATUS_DELIVERED;
+}
+
+export function isNotOrderStatusDelivered(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value !== ORDER_STATUS_DELIVERED;
+}
+
+export function isOrderWithStatusDelivered(order: schemas.Order) {
+  return getOrderStatus(order) === ORDER_STATUS_DELIVERED;
+}
+
+export function isNotOrderWithStatusDelivered(order: schemas.Order) {
+  return getOrderStatus(order) !== ORDER_STATUS_DELIVERED;
+}
+
+export function isOrderStatus(value: string) {
+  return ORDER_STATUS.includes(value);
+}
+
+export function getOrderComplete(order: schemas.Order) {
+  return order["complete"];
+}
+
+export function isOrderComplete(order: schemas.Order) {
+  return getOrderComplete(order) === true;
+}
+
+export function isNotOrderComplete(order: schemas.Order) {
+  return getOrderComplete(order) === false;
+}
+
+export function isEqualToOrderComplete(order: schemas.Order, target: boolean) {
+  return getOrderComplete(order) === target;
+}
+
+export function getCustomerId(customer: schemas.Customer) {
+  return customer["id"];
+}
+
+export function isEqualToCustomerId(
+  customer: schemas.Customer,
+  target: number,
+) {
+  return getCustomerId(customer) === target;
+}
+
+export function getCustomerUsername(customer: schemas.Customer) {
+  return customer["username"];
+}
+
+export function isEqualToCustomerUsername(
+  customer: schemas.Customer,
+  target: string,
+) {
+  return getCustomerUsername(customer) === target;
+}
+
+export function getCustomerUsernameLength(customer: schemas.Customer) {
+  const value = getCustomerUsername(customer);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isCustomerUsernameEmpty(customer: schemas.Customer) {
+  const value = getCustomerUsernameLength(customer);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getCustomerAddress(customer: schemas.Customer) {
+  return customer["address"];
+}
+
+export function getAddressStreet(address: schemas.Address) {
+  return address["street"];
+}
+
+export function isEqualToAddressStreet(
+  address: schemas.Address,
+  target: string,
+) {
+  return getAddressStreet(address) === target;
+}
+
+export function getAddressStreetLength(address: schemas.Address) {
+  const value = getAddressStreet(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isAddressStreetEmpty(address: schemas.Address) {
+  const value = getAddressStreetLength(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getAddressCity(address: schemas.Address) {
+  return address["city"];
+}
+
+export function isEqualToAddressCity(address: schemas.Address, target: string) {
+  return getAddressCity(address) === target;
+}
+
+export function getAddressCityLength(address: schemas.Address) {
+  const value = getAddressCity(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isAddressCityEmpty(address: schemas.Address) {
+  const value = getAddressCityLength(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getAddressState(address: schemas.Address) {
+  return address["state"];
+}
+
+export function isEqualToAddressState(
+  address: schemas.Address,
+  target: string,
+) {
+  return getAddressState(address) === target;
+}
+
+export function getAddressStateLength(address: schemas.Address) {
+  const value = getAddressState(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isAddressStateEmpty(address: schemas.Address) {
+  const value = getAddressStateLength(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getAddressZip(address: schemas.Address) {
+  return address["zip"];
+}
+
+export function isEqualToAddressZip(address: schemas.Address, target: string) {
+  return getAddressZip(address) === target;
+}
+
+export function getAddressZipLength(address: schemas.Address) {
+  const value = getAddressZip(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isAddressZipEmpty(address: schemas.Address) {
+  const value = getAddressZipLength(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getCategoryId(category: schemas.Category) {
+  return category["id"];
+}
+
+export function isEqualToCategoryId(
+  category: schemas.Category,
+  target: number,
+) {
+  return getCategoryId(category) === target;
+}
+
+export function getCategoryName(category: schemas.Category) {
+  return category["name"];
+}
+
+export function isEqualToCategoryName(
+  category: schemas.Category,
+  target: string,
+) {
+  return getCategoryName(category) === target;
+}
+
+export function getCategoryNameLength(category: schemas.Category) {
+  const value = getCategoryName(category);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isCategoryNameEmpty(category: schemas.Category) {
+  const value = getCategoryNameLength(category);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserId(user: schemas.User) {
+  return user["id"];
+}
+
+export function isEqualToUserId(user: schemas.User, target: number) {
+  return getUserId(user) === target;
+}
+
+export function getUserUsername(user: schemas.User) {
+  return user["username"];
+}
+
+export function isEqualToUserUsername(user: schemas.User, target: string) {
+  return getUserUsername(user) === target;
+}
+
+export function getUserUsernameLength(user: schemas.User) {
+  const value = getUserUsername(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserUsernameEmpty(user: schemas.User) {
+  const value = getUserUsernameLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserFirstName(user: schemas.User) {
+  return user["firstName"];
+}
+
+export function isEqualToUserFirstName(user: schemas.User, target: string) {
+  return getUserFirstName(user) === target;
+}
+
+export function getUserFirstNameLength(user: schemas.User) {
+  const value = getUserFirstName(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserFirstNameEmpty(user: schemas.User) {
+  const value = getUserFirstNameLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserLastName(user: schemas.User) {
+  return user["lastName"];
+}
+
+export function isEqualToUserLastName(user: schemas.User, target: string) {
+  return getUserLastName(user) === target;
+}
+
+export function getUserLastNameLength(user: schemas.User) {
+  const value = getUserLastName(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserLastNameEmpty(user: schemas.User) {
+  const value = getUserLastNameLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserEmail(user: schemas.User) {
+  return user["email"];
+}
+
+export function isEqualToUserEmail(user: schemas.User, target: string) {
+  return getUserEmail(user) === target;
+}
+
+export function getUserEmailLength(user: schemas.User) {
+  const value = getUserEmail(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserEmailEmpty(user: schemas.User) {
+  const value = getUserEmailLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserPassword(user: schemas.User) {
+  return user["password"];
+}
+
+export function isEqualToUserPassword(user: schemas.User, target: string) {
+  return getUserPassword(user) === target;
+}
+
+export function getUserPasswordLength(user: schemas.User) {
+  const value = getUserPassword(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserPasswordEmpty(user: schemas.User) {
+  const value = getUserPasswordLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserPhone(user: schemas.User) {
+  return user["phone"];
+}
+
+export function isEqualToUserPhone(user: schemas.User, target: string) {
+  return getUserPhone(user) === target;
+}
+
+export function getUserPhoneLength(user: schemas.User) {
+  const value = getUserPhone(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserPhoneEmpty(user: schemas.User) {
+  const value = getUserPhoneLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserUserStatus(user: schemas.User) {
+  return user["userStatus"];
+}
+
+export function isEqualToUserUserStatus(user: schemas.User, target: number) {
+  return getUserUserStatus(user) === target;
+}
+
+export function getTagId(tag: schemas.Tag) {
+  return tag["id"];
+}
+
+export function isEqualToTagId(tag: schemas.Tag, target: number) {
+  return getTagId(tag) === target;
+}
+
+export function getTagName(tag: schemas.Tag) {
+  return tag["name"];
+}
+
+export function isEqualToTagName(tag: schemas.Tag, target: string) {
+  return getTagName(tag) === target;
+}
+
+export function getTagNameLength(tag: schemas.Tag) {
+  const value = getTagName(tag);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isTagNameEmpty(tag: schemas.Tag) {
+  const value = getTagNameLength(tag);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getPetId(pet: schemas.Pet) {
+  return pet["id"];
+}
+
+export function isEqualToPetId(pet: schemas.Pet, target: number) {
+  return getPetId(pet) === target;
+}
+
+export function getPetName(pet: schemas.Pet) {
+  return pet["name"];
+}
+
+export function isEqualToPetName(pet: schemas.Pet, target: string) {
+  return getPetName(pet) === target;
+}
+
+export function getPetNameLength(pet: schemas.Pet) {
+  const value = getPetName(pet);
+
+  return getLength(value);
+}
+
+export function isPetNameEmpty(pet: schemas.Pet) {
+  const value = getPetNameLength(pet);
+
+  return isZero(value);
+}
+
+export function getPetPhotoUrls(pet: schemas.Pet) {
+  return pet["photoUrls"];
+}
+
+export function getPetTags(pet: schemas.Pet) {
+  return pet["tags"];
+}
+
+export function getPetStatus(pet: schemas.Pet) {
+  return pet["status"];
+}
+
+export function isEqualToPetStatus(pet: schemas.Pet, target: string) {
+  return getPetStatus(pet) === target;
+}
+
+export function getPetStatusLowerCased(pet: schemas.Pet) {
+  return getPetStatus(pet)?.toLowerCase();
+}
+
+export function getPetStatusUpperCased(pet: schemas.Pet) {
+  return getPetStatus(pet)?.toUpperCase();
+}
+
+export function isPetStatusAvailable(value: "available" | "pending" | "sold") {
+  return value === PET_STATUS_AVAILABLE;
+}
+
+export function isNotPetStatusAvailable(
+  value: "available" | "pending" | "sold",
+) {
+  return value !== PET_STATUS_AVAILABLE;
+}
+
+export function isPetWithStatusAvailable(pet: schemas.Pet) {
+  return getPetStatus(pet) === PET_STATUS_AVAILABLE;
+}
+
+export function isNotPetWithStatusAvailable(pet: schemas.Pet) {
+  return getPetStatus(pet) !== PET_STATUS_AVAILABLE;
+}
+
+export function isPetStatusPending(value: "available" | "pending" | "sold") {
+  return value === PET_STATUS_PENDING;
+}
+
+export function isNotPetStatusPending(value: "available" | "pending" | "sold") {
+  return value !== PET_STATUS_PENDING;
+}
+
+export function isPetWithStatusPending(pet: schemas.Pet) {
+  return getPetStatus(pet) === PET_STATUS_PENDING;
+}
+
+export function isNotPetWithStatusPending(pet: schemas.Pet) {
+  return getPetStatus(pet) !== PET_STATUS_PENDING;
+}
+
+export function isPetStatus2(value: "available" | "pending" | "sold") {
+  return value === PET_STATUS_2;
+}
+
+export function isNotPetStatus2(value: "available" | "pending" | "sold") {
+  return value !== PET_STATUS_2;
+}
+
+export function isPetWithStatus2(pet: schemas.Pet) {
+  return getPetStatus(pet) === PET_STATUS_2;
+}
+
+export function isNotPetWithStatus2(pet: schemas.Pet) {
+  return getPetStatus(pet) !== PET_STATUS_2;
+}
+
+export function isPetStatus(value: string) {
+  return PET_STATUS.includes(value);
+}
+
+export function getApiResponseCode(apiResponse: schemas.ApiResponse) {
+  return apiResponse["code"];
+}
+
+export function isEqualToApiResponseCode(
+  apiResponse: schemas.ApiResponse,
+  target: number,
+) {
+  return getApiResponseCode(apiResponse) === target;
+}
+
+export function getApiResponseType(apiResponse: schemas.ApiResponse) {
+  return apiResponse["type"];
+}
+
+export function isEqualToApiResponseType(
+  apiResponse: schemas.ApiResponse,
+  target: string,
+) {
+  return getApiResponseType(apiResponse) === target;
+}
+
+export function getApiResponseTypeLength(apiResponse: schemas.ApiResponse) {
+  const value = getApiResponseType(apiResponse);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isApiResponseTypeEmpty(apiResponse: schemas.ApiResponse) {
+  const value = getApiResponseTypeLength(apiResponse);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getApiResponseMessage(apiResponse: schemas.ApiResponse) {
+  return apiResponse["message"];
+}
+
+export function isEqualToApiResponseMessage(
+  apiResponse: schemas.ApiResponse,
+  target: string,
+) {
+  return getApiResponseMessage(apiResponse) === target;
+}
+
+export function getApiResponseMessageLength(apiResponse: schemas.ApiResponse) {
+  const value = getApiResponseMessage(apiResponse);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isApiResponseMessageEmpty(apiResponse: schemas.ApiResponse) {
+  const value = getApiResponseMessageLength(apiResponse);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+"
+`;
+
 exports[`fetcher generator > components/schemas.ts 1`] = `
 "import * as schemas from "./schemas";
 
@@ -192,710 +919,6 @@ export type ApiResponse = {
 
   message?: string;
 };
-
-export const ORDER_STATUS_PLACED = "placed";
-export const ORDER_STATUS_APPROVED = "approved";
-export const ORDER_STATUS_DELIVERED = "delivered";
-export const ORDER_STATUS = [
-  ORDER_STATUS_PLACED,
-  ORDER_STATUS_APPROVED,
-  ORDER_STATUS_DELIVERED,
-];
-export const PET_STATUS_AVAILABLE = "available";
-export const PET_STATUS_PENDING = "pending";
-export const PET_STATUS_2 = "sold";
-export const PET_STATUS = [
-  PET_STATUS_AVAILABLE,
-  PET_STATUS_PENDING,
-  PET_STATUS_2,
-];
-
-function getLength(value: string) {
-  return value.length;
-}
-
-function isZero(value: number) {
-  return value === 0;
-}
-
-export function getCustomInstructions(custom: Custom) {
-  return custom["instructions"];
-}
-
-export function getCustomNoAdditionalProperties(custom: Custom) {
-  return custom["noAdditionalProperties"];
-}
-
-export function getOrderId(order: Order) {
-  return order["id"];
-}
-
-export function isEqualToOrderId(order: Order, target: number) {
-  return getOrderId(order) === target;
-}
-
-export function getOrderPetId(order: Order) {
-  return order["petId"];
-}
-
-export function isEqualToOrderPetId(order: Order, target: number) {
-  return getOrderPetId(order) === target;
-}
-
-export function getOrderQuantity(order: Order) {
-  return order["quantity"];
-}
-
-export function isEqualToOrderQuantity(order: Order, target: number) {
-  return getOrderQuantity(order) === target;
-}
-
-export function getOrderShipDate(order: Order) {
-  return order["shipDate"];
-}
-
-export function isEqualToOrderShipDate(order: Order, target: string) {
-  return getOrderShipDate(order) === target;
-}
-
-export function getOrderShipDateLength(order: Order) {
-  const value = getOrderShipDate(order);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isOrderShipDateEmpty(order: Order) {
-  const value = getOrderShipDateLength(order);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getOrderStatus(order: Order) {
-  return order["status"];
-}
-
-export function isEqualToOrderStatus(order: Order, target: string) {
-  return getOrderStatus(order) === target;
-}
-
-export function getOrderStatusLowerCased(order: Order) {
-  return getOrderStatus(order)?.toLowerCase();
-}
-
-export function getOrderStatusUpperCased(order: Order) {
-  return getOrderStatus(order)?.toUpperCase();
-}
-
-export function isOrderStatusPlaced(
-  value: "placed" | "approved" | "delivered",
-) {
-  return value === ORDER_STATUS_PLACED;
-}
-
-export function isNotOrderStatusPlaced(
-  value: "placed" | "approved" | "delivered",
-) {
-  return value !== ORDER_STATUS_PLACED;
-}
-
-export function isOrderWithStatusPlaced(order: Order) {
-  return getOrderStatus(order) === ORDER_STATUS_PLACED;
-}
-
-export function isNotOrderWithStatusPlaced(order: Order) {
-  return getOrderStatus(order) !== ORDER_STATUS_PLACED;
-}
-
-export function isOrderStatusApproved(
-  value: "placed" | "approved" | "delivered",
-) {
-  return value === ORDER_STATUS_APPROVED;
-}
-
-export function isNotOrderStatusApproved(
-  value: "placed" | "approved" | "delivered",
-) {
-  return value !== ORDER_STATUS_APPROVED;
-}
-
-export function isOrderWithStatusApproved(order: Order) {
-  return getOrderStatus(order) === ORDER_STATUS_APPROVED;
-}
-
-export function isNotOrderWithStatusApproved(order: Order) {
-  return getOrderStatus(order) !== ORDER_STATUS_APPROVED;
-}
-
-export function isOrderStatusDelivered(
-  value: "placed" | "approved" | "delivered",
-) {
-  return value === ORDER_STATUS_DELIVERED;
-}
-
-export function isNotOrderStatusDelivered(
-  value: "placed" | "approved" | "delivered",
-) {
-  return value !== ORDER_STATUS_DELIVERED;
-}
-
-export function isOrderWithStatusDelivered(order: Order) {
-  return getOrderStatus(order) === ORDER_STATUS_DELIVERED;
-}
-
-export function isNotOrderWithStatusDelivered(order: Order) {
-  return getOrderStatus(order) !== ORDER_STATUS_DELIVERED;
-}
-
-export function isOrderStatus(value: string) {
-  return ORDER_STATUS.includes(value);
-}
-
-export function getOrderComplete(order: Order) {
-  return order["complete"];
-}
-
-export function isOrderComplete(order: Order) {
-  return getOrderComplete(order) === true;
-}
-
-export function isNotOrderComplete(order: Order) {
-  return getOrderComplete(order) === false;
-}
-
-export function isEqualToOrderComplete(order: Order, target: boolean) {
-  return getOrderComplete(order) === target;
-}
-
-export function getCustomerId(customer: Customer) {
-  return customer["id"];
-}
-
-export function isEqualToCustomerId(customer: Customer, target: number) {
-  return getCustomerId(customer) === target;
-}
-
-export function getCustomerUsername(customer: Customer) {
-  return customer["username"];
-}
-
-export function isEqualToCustomerUsername(customer: Customer, target: string) {
-  return getCustomerUsername(customer) === target;
-}
-
-export function getCustomerUsernameLength(customer: Customer) {
-  const value = getCustomerUsername(customer);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isCustomerUsernameEmpty(customer: Customer) {
-  const value = getCustomerUsernameLength(customer);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getCustomerAddress(customer: Customer) {
-  return customer["address"];
-}
-
-export function getAddressStreet(address: Address) {
-  return address["street"];
-}
-
-export function isEqualToAddressStreet(address: Address, target: string) {
-  return getAddressStreet(address) === target;
-}
-
-export function getAddressStreetLength(address: Address) {
-  const value = getAddressStreet(address);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isAddressStreetEmpty(address: Address) {
-  const value = getAddressStreetLength(address);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getAddressCity(address: Address) {
-  return address["city"];
-}
-
-export function isEqualToAddressCity(address: Address, target: string) {
-  return getAddressCity(address) === target;
-}
-
-export function getAddressCityLength(address: Address) {
-  const value = getAddressCity(address);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isAddressCityEmpty(address: Address) {
-  const value = getAddressCityLength(address);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getAddressState(address: Address) {
-  return address["state"];
-}
-
-export function isEqualToAddressState(address: Address, target: string) {
-  return getAddressState(address) === target;
-}
-
-export function getAddressStateLength(address: Address) {
-  const value = getAddressState(address);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isAddressStateEmpty(address: Address) {
-  const value = getAddressStateLength(address);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getAddressZip(address: Address) {
-  return address["zip"];
-}
-
-export function isEqualToAddressZip(address: Address, target: string) {
-  return getAddressZip(address) === target;
-}
-
-export function getAddressZipLength(address: Address) {
-  const value = getAddressZip(address);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isAddressZipEmpty(address: Address) {
-  const value = getAddressZipLength(address);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getCategoryId(category: Category) {
-  return category["id"];
-}
-
-export function isEqualToCategoryId(category: Category, target: number) {
-  return getCategoryId(category) === target;
-}
-
-export function getCategoryName(category: Category) {
-  return category["name"];
-}
-
-export function isEqualToCategoryName(category: Category, target: string) {
-  return getCategoryName(category) === target;
-}
-
-export function getCategoryNameLength(category: Category) {
-  const value = getCategoryName(category);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isCategoryNameEmpty(category: Category) {
-  const value = getCategoryNameLength(category);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getUserId(user: User) {
-  return user["id"];
-}
-
-export function isEqualToUserId(user: User, target: number) {
-  return getUserId(user) === target;
-}
-
-export function getUserUsername(user: User) {
-  return user["username"];
-}
-
-export function isEqualToUserUsername(user: User, target: string) {
-  return getUserUsername(user) === target;
-}
-
-export function getUserUsernameLength(user: User) {
-  const value = getUserUsername(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isUserUsernameEmpty(user: User) {
-  const value = getUserUsernameLength(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getUserFirstName(user: User) {
-  return user["firstName"];
-}
-
-export function isEqualToUserFirstName(user: User, target: string) {
-  return getUserFirstName(user) === target;
-}
-
-export function getUserFirstNameLength(user: User) {
-  const value = getUserFirstName(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isUserFirstNameEmpty(user: User) {
-  const value = getUserFirstNameLength(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getUserLastName(user: User) {
-  return user["lastName"];
-}
-
-export function isEqualToUserLastName(user: User, target: string) {
-  return getUserLastName(user) === target;
-}
-
-export function getUserLastNameLength(user: User) {
-  const value = getUserLastName(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isUserLastNameEmpty(user: User) {
-  const value = getUserLastNameLength(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getUserEmail(user: User) {
-  return user["email"];
-}
-
-export function isEqualToUserEmail(user: User, target: string) {
-  return getUserEmail(user) === target;
-}
-
-export function getUserEmailLength(user: User) {
-  const value = getUserEmail(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isUserEmailEmpty(user: User) {
-  const value = getUserEmailLength(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getUserPassword(user: User) {
-  return user["password"];
-}
-
-export function isEqualToUserPassword(user: User, target: string) {
-  return getUserPassword(user) === target;
-}
-
-export function getUserPasswordLength(user: User) {
-  const value = getUserPassword(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isUserPasswordEmpty(user: User) {
-  const value = getUserPasswordLength(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getUserPhone(user: User) {
-  return user["phone"];
-}
-
-export function isEqualToUserPhone(user: User, target: string) {
-  return getUserPhone(user) === target;
-}
-
-export function getUserPhoneLength(user: User) {
-  const value = getUserPhone(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isUserPhoneEmpty(user: User) {
-  const value = getUserPhoneLength(user);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getUserUserStatus(user: User) {
-  return user["userStatus"];
-}
-
-export function isEqualToUserUserStatus(user: User, target: number) {
-  return getUserUserStatus(user) === target;
-}
-
-export function getTagId(tag: Tag) {
-  return tag["id"];
-}
-
-export function isEqualToTagId(tag: Tag, target: number) {
-  return getTagId(tag) === target;
-}
-
-export function getTagName(tag: Tag) {
-  return tag["name"];
-}
-
-export function isEqualToTagName(tag: Tag, target: string) {
-  return getTagName(tag) === target;
-}
-
-export function getTagNameLength(tag: Tag) {
-  const value = getTagName(tag);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isTagNameEmpty(tag: Tag) {
-  const value = getTagNameLength(tag);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getPetId(pet: Pet) {
-  return pet["id"];
-}
-
-export function isEqualToPetId(pet: Pet, target: number) {
-  return getPetId(pet) === target;
-}
-
-export function getPetName(pet: Pet) {
-  return pet["name"];
-}
-
-export function isEqualToPetName(pet: Pet, target: string) {
-  return getPetName(pet) === target;
-}
-
-export function getPetNameLength(pet: Pet) {
-  const value = getPetName(pet);
-
-  return getLength(value);
-}
-
-export function isPetNameEmpty(pet: Pet) {
-  const value = getPetNameLength(pet);
-
-  return isZero(value);
-}
-
-export function getPetPhotoUrls(pet: Pet) {
-  return pet["photoUrls"];
-}
-
-export function getPetTags(pet: Pet) {
-  return pet["tags"];
-}
-
-export function getPetStatus(pet: Pet) {
-  return pet["status"];
-}
-
-export function isEqualToPetStatus(pet: Pet, target: string) {
-  return getPetStatus(pet) === target;
-}
-
-export function getPetStatusLowerCased(pet: Pet) {
-  return getPetStatus(pet)?.toLowerCase();
-}
-
-export function getPetStatusUpperCased(pet: Pet) {
-  return getPetStatus(pet)?.toUpperCase();
-}
-
-export function isPetStatusAvailable(value: "available" | "pending" | "sold") {
-  return value === PET_STATUS_AVAILABLE;
-}
-
-export function isNotPetStatusAvailable(
-  value: "available" | "pending" | "sold",
-) {
-  return value !== PET_STATUS_AVAILABLE;
-}
-
-export function isPetWithStatusAvailable(pet: Pet) {
-  return getPetStatus(pet) === PET_STATUS_AVAILABLE;
-}
-
-export function isNotPetWithStatusAvailable(pet: Pet) {
-  return getPetStatus(pet) !== PET_STATUS_AVAILABLE;
-}
-
-export function isPetStatusPending(value: "available" | "pending" | "sold") {
-  return value === PET_STATUS_PENDING;
-}
-
-export function isNotPetStatusPending(value: "available" | "pending" | "sold") {
-  return value !== PET_STATUS_PENDING;
-}
-
-export function isPetWithStatusPending(pet: Pet) {
-  return getPetStatus(pet) === PET_STATUS_PENDING;
-}
-
-export function isNotPetWithStatusPending(pet: Pet) {
-  return getPetStatus(pet) !== PET_STATUS_PENDING;
-}
-
-export function isPetStatus2(value: "available" | "pending" | "sold") {
-  return value === PET_STATUS_2;
-}
-
-export function isNotPetStatus2(value: "available" | "pending" | "sold") {
-  return value !== PET_STATUS_2;
-}
-
-export function isPetWithStatus2(pet: Pet) {
-  return getPetStatus(pet) === PET_STATUS_2;
-}
-
-export function isNotPetWithStatus2(pet: Pet) {
-  return getPetStatus(pet) !== PET_STATUS_2;
-}
-
-export function isPetStatus(value: string) {
-  return PET_STATUS.includes(value);
-}
-
-export function getApiResponseCode(apiResponse: ApiResponse) {
-  return apiResponse["code"];
-}
-
-export function isEqualToApiResponseCode(
-  apiResponse: ApiResponse,
-  target: number,
-) {
-  return getApiResponseCode(apiResponse) === target;
-}
-
-export function getApiResponseType(apiResponse: ApiResponse) {
-  return apiResponse["type"];
-}
-
-export function isEqualToApiResponseType(
-  apiResponse: ApiResponse,
-  target: string,
-) {
-  return getApiResponseType(apiResponse) === target;
-}
-
-export function getApiResponseTypeLength(apiResponse: ApiResponse) {
-  const value = getApiResponseType(apiResponse);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isApiResponseTypeEmpty(apiResponse: ApiResponse) {
-  const value = getApiResponseTypeLength(apiResponse);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
-
-export function getApiResponseMessage(apiResponse: ApiResponse) {
-  return apiResponse["message"];
-}
-
-export function isEqualToApiResponseMessage(
-  apiResponse: ApiResponse,
-  target: string,
-) {
-  return getApiResponseMessage(apiResponse) === target;
-}
-
-export function getApiResponseMessageLength(apiResponse: ApiResponse) {
-  const value = getApiResponseMessage(apiResponse);
-  if (value === undefined) {
-    return undefined;
-  }
-  return getLength(value);
-}
-
-export function isApiResponseMessageEmpty(apiResponse: ApiResponse) {
-  const value = getApiResponseMessageLength(apiResponse);
-  if (value === undefined) {
-    return undefined;
-  }
-  return isZero(value);
-}
 "
 `;
 
