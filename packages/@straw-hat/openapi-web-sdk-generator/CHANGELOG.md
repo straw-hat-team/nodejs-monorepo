@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## v4.0.0 - 2024-12-08
+
+### Breaking Changes
+
+- All `helpers` are now exported from `components/helpers.ts` instead of `components/schemas.ts`.
+
 ## v3.0.1 - 2023-11-11
 
 - Fix: `@straw-hat/fetcher` dependency version. It requires `v5.0.0` or higher.
