@@ -25,6 +25,7 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
 
   const schemaName = getSchemaName(schema);
   const camelCaseSchemaName = camelCase(schemaName);
+  const schemaTypeRef = `schemas.${schemaName}`;
 
   for (const [propertyName, propertySchema] of Object.entries(schema.properties ?? {})) {
     if (!isOpenAPIV3SchemaObject(propertySchema)) {
@@ -39,20 +40,20 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
 
     scope.registerFunction({
       name: getterFuncName,
-      args: [[camelCaseSchemaName, schemaName]],
+      args: [[camelCaseSchemaName, schemaTypeRef]],
       body: `return ${camelCaseSchemaName}['${propertyName}']`,
     });
 
     if (schemaType === 'boolean') {
       scope.registerFunction({
         name: `is${schemaName}${pascalCasedPropertyName}`,
-        args: [[camelCaseSchemaName, schemaName]],
+        args: [[camelCaseSchemaName, schemaTypeRef]],
         body: `return ${getterFuncName}(${camelCaseSchemaName}) === true;`,
       });
 
       scope.registerFunction({
         name: `isNot${schemaName}${pascalCasedPropertyName}`,
-        args: [[camelCaseSchemaName, schemaName]],
+        args: [[camelCaseSchemaName, schemaTypeRef]],
         body: `return ${getterFuncName}(${camelCaseSchemaName}) === false;`,
       });
     }
@@ -62,7 +63,7 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
       scope.registerFunction({
         name: `isEqualTo${schemaName}${pascalCasedPropertyName}`,
         args: [
-          [camelCaseSchemaName, schemaName],
+          [camelCaseSchemaName, schemaTypeRef],
           ['target', targetType],
         ],
         body: `return ${getterFuncName}(${camelCaseSchemaName}) === target`,
@@ -78,13 +79,13 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
 
         scope.registerFunction({
           name: `get${schemaName}${pascalCasedPropertyName}LowerCased`,
-          args: [[camelCaseSchemaName, schemaName]],
+          args: [[camelCaseSchemaName, schemaTypeRef]],
           body: `return ${getterFuncName}(${camelCaseSchemaName})${optional}.toLowerCase()`,
         });
 
         scope.registerFunction({
           name: `get${schemaName}${pascalCasedPropertyName}UpperCased`,
-          args: [[camelCaseSchemaName, schemaName]],
+          args: [[camelCaseSchemaName, schemaTypeRef]],
           body: `return ${getterFuncName}(${camelCaseSchemaName})${optional}.toUpperCase()`,
         });
 
@@ -107,13 +108,13 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
 
           scope.registerFunction({
             name: `is${schemaName}With${pascalCasedPropertyName}${pascalCasedEnumValue}`,
-            args: [[camelCaseSchemaName, schemaName]],
+            args: [[camelCaseSchemaName, schemaTypeRef]],
             body: `return ${getterFuncName}(${camelCaseSchemaName}) === ${def.varName};`,
           });
 
           scope.registerFunction({
             name: `isNot${schemaName}With${pascalCasedPropertyName}${pascalCasedEnumValue}`,
-            args: [[camelCaseSchemaName, schemaName]],
+            args: [[camelCaseSchemaName, schemaTypeRef]],
             body: `return ${getterFuncName}(${camelCaseSchemaName}) !== ${def.varName};`,
           });
         }
@@ -131,7 +132,7 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
       } else {
         scope.registerFunction({
           name: `get${schemaName}${pascalCasedPropertyName}Length`,
-          args: [[camelCaseSchemaName, schemaName]],
+          args: [[camelCaseSchemaName, schemaTypeRef]],
           body: `
             const value = ${getterFuncName}(${camelCaseSchemaName});
             ${whenInject(!isRequired, `if (value === undefined) { return undefined; }`)}
@@ -141,7 +142,7 @@ async function objectType(scope: Scope, schema: OpenAPIV3NonArraySchemaObject) {
 
         scope.registerFunction({
           name: `is${schemaName}${pascalCasedPropertyName}Empty`,
-          args: [[camelCaseSchemaName, schemaName]],
+          args: [[camelCaseSchemaName, schemaTypeRef]],
           body: `
             const value = get${schemaName}${pascalCasedPropertyName}Length(${camelCaseSchemaName});
             ${whenInject(!isRequired, `if (value === undefined) { return undefined; }`)}
@@ -157,6 +158,8 @@ export async function addSchemaHelpers(scope: Scope, schema: OpenAPIV3Referencea
   if (isReferenceObject(schema)) {
     return;
   }
+
+  scope.addImport('schemas', 'schemas');
 
   scope.registerFunction({
     private: true,
