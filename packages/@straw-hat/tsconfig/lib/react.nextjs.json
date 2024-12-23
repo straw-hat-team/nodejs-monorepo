@@ -3,7 +3,7 @@
   "extends": "./base",
   "display": "React Next.js",
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
