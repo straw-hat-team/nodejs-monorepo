@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/eslint-config-nextjs",
-  "version": "4.1.1",
+  "version": "5.0.0",
   "description": "Straw Hat Team ESLint NextJS configurations",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -19,11 +19,15 @@
     "registry": "https://registry.npmjs.org/"
   },
   "type": "commonjs",
-  "main": "lib/index.js",
+  "main": "lib/index.mjs",
   "files": [
     "lib",
     "README.md"
   ],
+  "dependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.17.0"
+  },
   "peerDependencies": {
     "eslint": "^8.2.0",
     "eslint-config-next": "^14.1.4",
