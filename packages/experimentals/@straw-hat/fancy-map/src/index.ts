@@ -40,5 +40,5 @@ export class FancyMap<K, V> extends Map<K, V> {
       this.set(key, value);
     }
     return this.get(key) as V;
-  }
+  }w
 }
