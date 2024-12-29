@@ -15,7 +15,6 @@
 - [@straw-hat/fancy-map](packages/@straw-hat/fancy-map/README.md)
 - [@straw-hat/fetcher](packages/@straw-hat/fetcher/README.md)
 - [@straw-hat/is-ssr](packages/@straw-hat/is-ssr/README.md)
-- [@straw-hat/jest-config-chain](packages/@straw-hat/jest-config-chain/README.md)
 - [@straw-hat/logger](packages/@straw-hat/logger/README.md)
 - [@straw-hat/next-sdk](packages/@straw-hat/next-sdk/README.md)
 - [@straw-hat/openapi-web-sdk-generator](packages/@straw-hat/openapi-web-sdk-generator/README.md)
@@ -34,3 +33,4 @@
 - [@straw-hat/cli](packages/@straw-hat/cli/README.md)
 - [@straw-hat/cli-core](packages/@straw-hat/cli-core/README.md)
 - [@straw-hat/react-native-sdk](packages/@straw-hat/react-native-sdk/README.md)
+- [@straw-hat/jest-config-chain](packages/@straw-hat/jest-config-chain/README.md)
