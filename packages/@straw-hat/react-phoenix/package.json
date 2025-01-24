@@ -36,7 +36,7 @@
     "README.md"
   ],
   "dependencies": {
-    "phoenix": "^1.7.17"
+    "phoenix": "^1.7.18"
   },
   "peerDependencies": {
     "react": "^18.0.0"
