@@ -40,10 +40,10 @@
   },
   "dependencies": {
     "prettier-plugin-organize-imports": "^4.1.0",
-    "prettier-plugin-tailwindcss": "^0.6.9"
+    "prettier-plugin-tailwindcss": "^0.6.11"
   },
   "devDependencies": {
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.1",
     "typescript": "^5.7.2"
   }
 }
