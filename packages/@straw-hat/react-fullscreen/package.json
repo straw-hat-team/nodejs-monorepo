@@ -41,6 +41,6 @@
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
     "@types/fscreen": "^1.0.4",
-    "@types/react": "19.0.1"
+    "@types/react": "19.0.10"
   }
 }
