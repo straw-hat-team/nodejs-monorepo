@@ -31,9 +31,9 @@
     "README.md"
   ],
   "dependencies": {
-    "@oclif/core": "3.27.0",
+    "@oclif/core": "4.2.8",
     "@straw-hat/fancy-map": "4.0.0",
-    "chalk": "5.3.0",
+    "chalk": "5.4.1",
     "ci-info": "4.1.0",
     "conf": "13.1.0",
     "debug": "4.4.0",
@@ -42,8 +42,8 @@
     "ejs": "3.1.10",
     "enquirer": "2.4.1",
     "make-dir": "5.0.0",
-    "ora": "8.1.1",
-    "resolve": "1.22.8"
+    "ora": "8.2.0",
+    "resolve": "1.22.10"
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
