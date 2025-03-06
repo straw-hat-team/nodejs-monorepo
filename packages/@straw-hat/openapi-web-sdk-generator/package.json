@@ -66,12 +66,12 @@
     "@types/debug": "^4.1.12",
     "@types/js-yaml": "^4.0.9",
     "@types/mustache": "^4.2.5",
-    "@types/node": "^22.10.1",
+    "@types/node": "^22.13.9",
     "@types/prettier": "^3.0.0",
-    "oclif": "^4.16.0",
+    "oclif": "^4.17.34",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
   },
   "oclif": {
     "commands": "./dist/commands",
