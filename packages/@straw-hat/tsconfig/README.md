@@ -7,14 +7,15 @@ Base TypeScript configurations.
 
 ## References
 
-The following is the of available configuration types:
+The following is the list of available configuration types:
 
-- `@straw-hat/tsconfig/lib/base`: for the baseline for your projects.
-- `@straw-hat/tsconfig/lib/react.nextjs`: for React NextJS applications.
-- `@straw-hat/tsconfig/lib/react.cra`: for React CRA-like web applications.
-- `@straw-hat/tsconfig/lib/react.lib`: for React libraries.
-- `@straw-hat/tsconfig/lib/cypress`: for Cypress tests.
-- `@straw-hat/tsconfig/lib/browser.lib`: for libraries that are intended to be used in the browser.
+- `@straw-hat/tsconfig/lib/base`: Modern baseline for your projects (skipLibCheck, target es2022, strict, etc).
+- `@straw-hat/tsconfig/lib/lib`: For Node.js libraries (declaration, composite, NodeNext, etc).
+- `@straw-hat/tsconfig/lib/browser.lib`: For browser libraries (adds DOM libs).
+- `@straw-hat/tsconfig/lib/react.lib`: For React libraries (adds JSX and DOM libs).
+- `@straw-hat/tsconfig/lib/react.nextjs`: For React Next.js applications (Preserve modules, noEmit, DOM libs).
+- `@straw-hat/tsconfig/lib/react.cra`: For React CRA-like web applications (Preserve modules, noEmit, DOM libs).
+- `@straw-hat/tsconfig/lib/cypress`: For Cypress tests (CommonJS, DOM libs).
 
 ## How-To Guides
 
@@ -33,3 +34,9 @@ The following is the of available configuration types:
      "extends": "@straw-hat/tsconfig/lib/{type}"
    }
    ```
+
+- For libraries in a monorepo, use `lib` or `react.lib` and set `composite: true` and `declarationMap: true`.
+- For browser/React projects, use `browser.lib`, `react.lib`, `react.nextjs`, or `react.cra` as appropriate.
+- For Cypress, use `cypress`.
+
+See each config file for the exact options included.

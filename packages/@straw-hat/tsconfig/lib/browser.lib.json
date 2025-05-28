@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "./base",
+  "extends": "./lib",
   "display": "Browser Library",
   "compilerOptions": {
     "lib": ["ESNext", "dom", "dom.iterable"]

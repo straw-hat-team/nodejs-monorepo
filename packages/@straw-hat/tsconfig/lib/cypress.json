@@ -3,7 +3,8 @@
   "extends": "./base",
   "display": "Cypress",
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs"
+    "target": "es2022",
+    "module": "CommonJS",
+    "lib": ["es2022", "dom", "dom.iterable"]
   }
 }

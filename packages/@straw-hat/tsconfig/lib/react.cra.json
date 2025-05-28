@@ -9,6 +9,8 @@
     "declaration": false,
     "emitDeclarationOnly": false,
     "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"]
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "Preserve",
+    "noEmit": true
   }
 }
