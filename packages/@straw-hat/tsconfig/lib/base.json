@@ -27,6 +27,8 @@
     "noImplicitOverride": true,
     "lib": ["ESNext"],
     "noUncheckedIndexedAccess": true,
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "isolatedModules": true
   }
 }
