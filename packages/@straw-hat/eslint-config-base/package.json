@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/eslint-config-base",
-  "version": "3.2.0",
+  "version": "4.0.0",
   "description": "Straw Hat Team ESLint base configurations",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -25,13 +25,13 @@
     "README.md"
   ],
   "peerDependencies": {
-    "@straw-hat/eslint-config-prettier": "^1.0.2",
-    "eslint": "^8.2.0",
+    "@straw-hat/eslint-config-prettier": "^4.0.0",
+    "eslint": "^9.38.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unicorn": "^50.0.1",
-    "prettier": "^2.4.1"
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "prettier": "^3.4.2"
   }
 }

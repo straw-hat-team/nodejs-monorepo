@@ -1,5 +1,6 @@
 module.exports = {
-  extends: ['@straw-hat/eslint-config-base', 'plugin:import/typescript', 'eslint-plugin-tsdoc'],
+  extends: ['@straw-hat/eslint-config-base', 'plugin:import/typescript'],
+  plugins: ['eslint-plugin-tsdoc'],
   overrides: [
     {
       files: ['**/*.ts?(x)'],

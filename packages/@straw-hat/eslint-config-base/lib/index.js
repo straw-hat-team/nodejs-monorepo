@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['airbnb-base', 'prettier'],
-  plugins: ['simple-import-sort', 'plugin:unicorn/recommended'],
+  extends: ['airbnb-base', 'prettier', 'plugin:unicorn/recommended'],
+  plugins: ['simple-import-sort'],
   rules: {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',

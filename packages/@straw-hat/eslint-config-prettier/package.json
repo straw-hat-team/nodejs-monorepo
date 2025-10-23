@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/eslint-config-prettier",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Straw Hat Team ESLint configuration for prettier integration",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -25,9 +25,9 @@
     "README.md"
   ],
   "peerDependencies": {
-    "eslint": "^8.2.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.4.1"
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.4.2"
   }
 }

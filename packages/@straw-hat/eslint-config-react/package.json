@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/eslint-config-react",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "Straw Hat Team ESLint React configurations",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -25,19 +25,19 @@
     "README.md"
   ],
   "peerDependencies": {
-    "@straw-hat/eslint-config-base": "^2.0.2",
-    "@straw-hat/eslint-config-prettier": "^1.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": "^19.0.0",
+    "@straw-hat/eslint-config-base": "^4.0.0",
+    "@straw-hat/eslint-config-prettier": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "eslint": "^9.38.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.4.1"
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "prettier": "^3.4.2"
   }
 }
