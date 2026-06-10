@@ -1,0 +1,1710 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`fetcher generator > add-pet.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type AddPetBodyParams = schemas.Pet;
+
+export type AddPetParams = Pick<
+  OperationParams<never, never, AddPetBodyParams>,
+  "options" | "body"
+>;
+
+export type AddPetResponse = schemas.Pet;
+
+export function addPetUrlPath(params: Omit<AddPetParams, "options">) {
+  return createUrlPath<never, never>("/pet", params);
+}
+
+export async function addPet(
+  client: Fetcher,
+  params: AddPetParams,
+): Promise<AddPetResponse> {
+  const url = addPetUrlPath(params);
+
+  const response = await client(url, {
+    method: "POST",
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > components/helpers.ts 1`] = `
+"import * as schemas from "./schemas";
+
+export const ORDER_STATUS_PLACED = "placed";
+export const ORDER_STATUS_APPROVED = "approved";
+export const ORDER_STATUS_DELIVERED = "delivered";
+export const ORDER_STATUS = [
+  ORDER_STATUS_PLACED,
+  ORDER_STATUS_APPROVED,
+  ORDER_STATUS_DELIVERED,
+];
+export const PET_STATUS_AVAILABLE = "available";
+export const PET_STATUS_PENDING = "pending";
+export const PET_STATUS_2 = "sold";
+export const PET_STATUS = [
+  PET_STATUS_AVAILABLE,
+  PET_STATUS_PENDING,
+  PET_STATUS_2,
+];
+
+function getLength(value: string) {
+  return value.length;
+}
+
+function isZero(value: number) {
+  return value === 0;
+}
+
+export function getCustomInstructions(custom: schemas.Custom) {
+  return custom["instructions"];
+}
+
+export function getCustomNoAdditionalProperties(custom: schemas.Custom) {
+  return custom["noAdditionalProperties"];
+}
+
+export function getOrderId(order: schemas.Order) {
+  return order["id"];
+}
+
+export function isEqualToOrderId(order: schemas.Order, target: number) {
+  return getOrderId(order) === target;
+}
+
+export function getOrderPetId(order: schemas.Order) {
+  return order["petId"];
+}
+
+export function isEqualToOrderPetId(order: schemas.Order, target: number) {
+  return getOrderPetId(order) === target;
+}
+
+export function getOrderQuantity(order: schemas.Order) {
+  return order["quantity"];
+}
+
+export function isEqualToOrderQuantity(order: schemas.Order, target: number) {
+  return getOrderQuantity(order) === target;
+}
+
+export function getOrderShipDate(order: schemas.Order) {
+  return order["shipDate"];
+}
+
+export function isEqualToOrderShipDate(order: schemas.Order, target: string) {
+  return getOrderShipDate(order) === target;
+}
+
+export function getOrderShipDateLength(order: schemas.Order) {
+  const value = getOrderShipDate(order);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isOrderShipDateEmpty(order: schemas.Order) {
+  const value = getOrderShipDateLength(order);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getOrderStatus(order: schemas.Order) {
+  return order["status"];
+}
+
+export function isEqualToOrderStatus(order: schemas.Order, target: string) {
+  return getOrderStatus(order) === target;
+}
+
+export function getOrderStatusLowerCased(order: schemas.Order) {
+  return getOrderStatus(order)?.toLowerCase();
+}
+
+export function getOrderStatusUpperCased(order: schemas.Order) {
+  return getOrderStatus(order)?.toUpperCase();
+}
+
+export function isOrderStatusPlaced(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value === ORDER_STATUS_PLACED;
+}
+
+export function isNotOrderStatusPlaced(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value !== ORDER_STATUS_PLACED;
+}
+
+export function isOrderWithStatusPlaced(order: schemas.Order) {
+  return getOrderStatus(order) === ORDER_STATUS_PLACED;
+}
+
+export function isNotOrderWithStatusPlaced(order: schemas.Order) {
+  return getOrderStatus(order) !== ORDER_STATUS_PLACED;
+}
+
+export function isOrderStatusApproved(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value === ORDER_STATUS_APPROVED;
+}
+
+export function isNotOrderStatusApproved(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value !== ORDER_STATUS_APPROVED;
+}
+
+export function isOrderWithStatusApproved(order: schemas.Order) {
+  return getOrderStatus(order) === ORDER_STATUS_APPROVED;
+}
+
+export function isNotOrderWithStatusApproved(order: schemas.Order) {
+  return getOrderStatus(order) !== ORDER_STATUS_APPROVED;
+}
+
+export function isOrderStatusDelivered(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value === ORDER_STATUS_DELIVERED;
+}
+
+export function isNotOrderStatusDelivered(
+  value: "placed" | "approved" | "delivered",
+) {
+  return value !== ORDER_STATUS_DELIVERED;
+}
+
+export function isOrderWithStatusDelivered(order: schemas.Order) {
+  return getOrderStatus(order) === ORDER_STATUS_DELIVERED;
+}
+
+export function isNotOrderWithStatusDelivered(order: schemas.Order) {
+  return getOrderStatus(order) !== ORDER_STATUS_DELIVERED;
+}
+
+export function isOrderStatus(value: string) {
+  return ORDER_STATUS.includes(value);
+}
+
+export function getOrderComplete(order: schemas.Order) {
+  return order["complete"];
+}
+
+export function isOrderComplete(order: schemas.Order) {
+  return getOrderComplete(order) === true;
+}
+
+export function isNotOrderComplete(order: schemas.Order) {
+  return getOrderComplete(order) === false;
+}
+
+export function isEqualToOrderComplete(order: schemas.Order, target: boolean) {
+  return getOrderComplete(order) === target;
+}
+
+export function getCustomerId(customer: schemas.Customer) {
+  return customer["id"];
+}
+
+export function isEqualToCustomerId(
+  customer: schemas.Customer,
+  target: number,
+) {
+  return getCustomerId(customer) === target;
+}
+
+export function getCustomerUsername(customer: schemas.Customer) {
+  return customer["username"];
+}
+
+export function isEqualToCustomerUsername(
+  customer: schemas.Customer,
+  target: string,
+) {
+  return getCustomerUsername(customer) === target;
+}
+
+export function getCustomerUsernameLength(customer: schemas.Customer) {
+  const value = getCustomerUsername(customer);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isCustomerUsernameEmpty(customer: schemas.Customer) {
+  const value = getCustomerUsernameLength(customer);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getCustomerAddress(customer: schemas.Customer) {
+  return customer["address"];
+}
+
+export function getAddressStreet(address: schemas.Address) {
+  return address["street"];
+}
+
+export function isEqualToAddressStreet(
+  address: schemas.Address,
+  target: string,
+) {
+  return getAddressStreet(address) === target;
+}
+
+export function getAddressStreetLength(address: schemas.Address) {
+  const value = getAddressStreet(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isAddressStreetEmpty(address: schemas.Address) {
+  const value = getAddressStreetLength(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getAddressCity(address: schemas.Address) {
+  return address["city"];
+}
+
+export function isEqualToAddressCity(address: schemas.Address, target: string) {
+  return getAddressCity(address) === target;
+}
+
+export function getAddressCityLength(address: schemas.Address) {
+  const value = getAddressCity(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isAddressCityEmpty(address: schemas.Address) {
+  const value = getAddressCityLength(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getAddressState(address: schemas.Address) {
+  return address["state"];
+}
+
+export function isEqualToAddressState(
+  address: schemas.Address,
+  target: string,
+) {
+  return getAddressState(address) === target;
+}
+
+export function getAddressStateLength(address: schemas.Address) {
+  const value = getAddressState(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isAddressStateEmpty(address: schemas.Address) {
+  const value = getAddressStateLength(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getAddressZip(address: schemas.Address) {
+  return address["zip"];
+}
+
+export function isEqualToAddressZip(address: schemas.Address, target: string) {
+  return getAddressZip(address) === target;
+}
+
+export function getAddressZipLength(address: schemas.Address) {
+  const value = getAddressZip(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isAddressZipEmpty(address: schemas.Address) {
+  const value = getAddressZipLength(address);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getCategoryId(category: schemas.Category) {
+  return category["id"];
+}
+
+export function isEqualToCategoryId(
+  category: schemas.Category,
+  target: number,
+) {
+  return getCategoryId(category) === target;
+}
+
+export function getCategoryName(category: schemas.Category) {
+  return category["name"];
+}
+
+export function isEqualToCategoryName(
+  category: schemas.Category,
+  target: string,
+) {
+  return getCategoryName(category) === target;
+}
+
+export function getCategoryNameLength(category: schemas.Category) {
+  const value = getCategoryName(category);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isCategoryNameEmpty(category: schemas.Category) {
+  const value = getCategoryNameLength(category);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserId(user: schemas.User) {
+  return user["id"];
+}
+
+export function isEqualToUserId(user: schemas.User, target: number) {
+  return getUserId(user) === target;
+}
+
+export function getUserUsername(user: schemas.User) {
+  return user["username"];
+}
+
+export function isEqualToUserUsername(user: schemas.User, target: string) {
+  return getUserUsername(user) === target;
+}
+
+export function getUserUsernameLength(user: schemas.User) {
+  const value = getUserUsername(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserUsernameEmpty(user: schemas.User) {
+  const value = getUserUsernameLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserFirstName(user: schemas.User) {
+  return user["firstName"];
+}
+
+export function isEqualToUserFirstName(user: schemas.User, target: string) {
+  return getUserFirstName(user) === target;
+}
+
+export function getUserFirstNameLength(user: schemas.User) {
+  const value = getUserFirstName(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserFirstNameEmpty(user: schemas.User) {
+  const value = getUserFirstNameLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserLastName(user: schemas.User) {
+  return user["lastName"];
+}
+
+export function isEqualToUserLastName(user: schemas.User, target: string) {
+  return getUserLastName(user) === target;
+}
+
+export function getUserLastNameLength(user: schemas.User) {
+  const value = getUserLastName(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserLastNameEmpty(user: schemas.User) {
+  const value = getUserLastNameLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserEmail(user: schemas.User) {
+  return user["email"];
+}
+
+export function isEqualToUserEmail(user: schemas.User, target: string) {
+  return getUserEmail(user) === target;
+}
+
+export function getUserEmailLength(user: schemas.User) {
+  const value = getUserEmail(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserEmailEmpty(user: schemas.User) {
+  const value = getUserEmailLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserPassword(user: schemas.User) {
+  return user["password"];
+}
+
+export function isEqualToUserPassword(user: schemas.User, target: string) {
+  return getUserPassword(user) === target;
+}
+
+export function getUserPasswordLength(user: schemas.User) {
+  const value = getUserPassword(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserPasswordEmpty(user: schemas.User) {
+  const value = getUserPasswordLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserPhone(user: schemas.User) {
+  return user["phone"];
+}
+
+export function isEqualToUserPhone(user: schemas.User, target: string) {
+  return getUserPhone(user) === target;
+}
+
+export function getUserPhoneLength(user: schemas.User) {
+  const value = getUserPhone(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isUserPhoneEmpty(user: schemas.User) {
+  const value = getUserPhoneLength(user);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getUserUserStatus(user: schemas.User) {
+  return user["userStatus"];
+}
+
+export function isEqualToUserUserStatus(user: schemas.User, target: number) {
+  return getUserUserStatus(user) === target;
+}
+
+export function getTagId(tag: schemas.Tag) {
+  return tag["id"];
+}
+
+export function isEqualToTagId(tag: schemas.Tag, target: number) {
+  return getTagId(tag) === target;
+}
+
+export function getTagName(tag: schemas.Tag) {
+  return tag["name"];
+}
+
+export function isEqualToTagName(tag: schemas.Tag, target: string) {
+  return getTagName(tag) === target;
+}
+
+export function getTagNameLength(tag: schemas.Tag) {
+  const value = getTagName(tag);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isTagNameEmpty(tag: schemas.Tag) {
+  const value = getTagNameLength(tag);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getPetId(pet: schemas.Pet) {
+  return pet["id"];
+}
+
+export function isEqualToPetId(pet: schemas.Pet, target: number) {
+  return getPetId(pet) === target;
+}
+
+export function getPetName(pet: schemas.Pet) {
+  return pet["name"];
+}
+
+export function isEqualToPetName(pet: schemas.Pet, target: string) {
+  return getPetName(pet) === target;
+}
+
+export function getPetNameLength(pet: schemas.Pet) {
+  const value = getPetName(pet);
+
+  return getLength(value);
+}
+
+export function isPetNameEmpty(pet: schemas.Pet) {
+  const value = getPetNameLength(pet);
+
+  return isZero(value);
+}
+
+export function getPetPhotoUrls(pet: schemas.Pet) {
+  return pet["photoUrls"];
+}
+
+export function getPetTags(pet: schemas.Pet) {
+  return pet["tags"];
+}
+
+export function getPetStatus(pet: schemas.Pet) {
+  return pet["status"];
+}
+
+export function isEqualToPetStatus(pet: schemas.Pet, target: string) {
+  return getPetStatus(pet) === target;
+}
+
+export function getPetStatusLowerCased(pet: schemas.Pet) {
+  return getPetStatus(pet)?.toLowerCase();
+}
+
+export function getPetStatusUpperCased(pet: schemas.Pet) {
+  return getPetStatus(pet)?.toUpperCase();
+}
+
+export function isPetStatusAvailable(value: "available" | "pending" | "sold") {
+  return value === PET_STATUS_AVAILABLE;
+}
+
+export function isNotPetStatusAvailable(
+  value: "available" | "pending" | "sold",
+) {
+  return value !== PET_STATUS_AVAILABLE;
+}
+
+export function isPetWithStatusAvailable(pet: schemas.Pet) {
+  return getPetStatus(pet) === PET_STATUS_AVAILABLE;
+}
+
+export function isNotPetWithStatusAvailable(pet: schemas.Pet) {
+  return getPetStatus(pet) !== PET_STATUS_AVAILABLE;
+}
+
+export function isPetStatusPending(value: "available" | "pending" | "sold") {
+  return value === PET_STATUS_PENDING;
+}
+
+export function isNotPetStatusPending(value: "available" | "pending" | "sold") {
+  return value !== PET_STATUS_PENDING;
+}
+
+export function isPetWithStatusPending(pet: schemas.Pet) {
+  return getPetStatus(pet) === PET_STATUS_PENDING;
+}
+
+export function isNotPetWithStatusPending(pet: schemas.Pet) {
+  return getPetStatus(pet) !== PET_STATUS_PENDING;
+}
+
+export function isPetStatus2(value: "available" | "pending" | "sold") {
+  return value === PET_STATUS_2;
+}
+
+export function isNotPetStatus2(value: "available" | "pending" | "sold") {
+  return value !== PET_STATUS_2;
+}
+
+export function isPetWithStatus2(pet: schemas.Pet) {
+  return getPetStatus(pet) === PET_STATUS_2;
+}
+
+export function isNotPetWithStatus2(pet: schemas.Pet) {
+  return getPetStatus(pet) !== PET_STATUS_2;
+}
+
+export function isPetStatus(value: string) {
+  return PET_STATUS.includes(value);
+}
+
+export function getApiResponseCode(apiResponse: schemas.ApiResponse) {
+  return apiResponse["code"];
+}
+
+export function isEqualToApiResponseCode(
+  apiResponse: schemas.ApiResponse,
+  target: number,
+) {
+  return getApiResponseCode(apiResponse) === target;
+}
+
+export function getApiResponseType(apiResponse: schemas.ApiResponse) {
+  return apiResponse["type"];
+}
+
+export function isEqualToApiResponseType(
+  apiResponse: schemas.ApiResponse,
+  target: string,
+) {
+  return getApiResponseType(apiResponse) === target;
+}
+
+export function getApiResponseTypeLength(apiResponse: schemas.ApiResponse) {
+  const value = getApiResponseType(apiResponse);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isApiResponseTypeEmpty(apiResponse: schemas.ApiResponse) {
+  const value = getApiResponseTypeLength(apiResponse);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+
+export function getApiResponseMessage(apiResponse: schemas.ApiResponse) {
+  return apiResponse["message"];
+}
+
+export function isEqualToApiResponseMessage(
+  apiResponse: schemas.ApiResponse,
+  target: string,
+) {
+  return getApiResponseMessage(apiResponse) === target;
+}
+
+export function getApiResponseMessageLength(apiResponse: schemas.ApiResponse) {
+  const value = getApiResponseMessage(apiResponse);
+  if (value === undefined) {
+    return undefined;
+  }
+  return getLength(value);
+}
+
+export function isApiResponseMessageEmpty(apiResponse: schemas.ApiResponse) {
+  const value = getApiResponseMessageLength(apiResponse);
+  if (value === undefined) {
+    return undefined;
+  }
+  return isZero(value);
+}
+"
+`;
+
+exports[`fetcher generator > components/schemas.ts 1`] = `
+"import * as schemas from "./schemas";
+
+export type AllowedTimeframesOutput =
+  | "1m"
+  | "3m"
+  | "5m"
+  | "15m"
+  | "30m"
+  | "1h"
+  | "2h"
+  | "4h"
+  | "6h"
+  | "8h"
+  | "12h"
+  | "1d"
+  | "3d"
+  | "1w"
+  | "1M";
+
+export type Custom = {
+  [key: string]: unknown;
+
+  timeframe?: schemas.AllowedTimeframesOutput;
+
+  instructions?: Record<string, unknown> | null;
+
+  noAdditionalProperties?: {};
+};
+
+export type Order = {
+  [key: string]: unknown;
+  /**
+   * @format int64
+   */
+  id?: number;
+  /**
+   * @format int64
+   */
+  petId?: number;
+  /**
+   * @format int32
+   */
+  quantity?: number;
+  /**
+   * @format date-time
+   */
+  shipDate?: string;
+  /**
+   * Order Status
+   */
+  status?: "placed" | "approved" | "delivered";
+
+  complete?: boolean;
+};
+
+export type Customer = {
+  [key: string]: unknown;
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  username?: string;
+
+  address?: Array<schemas.Address>;
+};
+
+export type Address = {
+  [key: string]: unknown;
+
+  street?: string;
+
+  city?: string;
+
+  state?: string;
+
+  zip?: string;
+};
+
+export type Category = {
+  [key: string]: unknown;
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  name?: string;
+};
+
+export type User = {
+  [key: string]: unknown;
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  username?: string;
+
+  firstName?: string;
+
+  lastName?: string;
+
+  email?: string;
+
+  password?: string;
+
+  phone?: string;
+  /**
+   * User Status
+   * @format int32
+   */
+  userStatus?: number;
+};
+
+export type Tag = {
+  [key: string]: unknown;
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  name?: string;
+};
+
+export type Pet = {
+  [key: string]: unknown;
+  /**
+   * @format int64
+   */
+  id?: number;
+
+  name: string;
+
+  category?: schemas.Category;
+
+  photoUrls: Array<string>;
+
+  tags?: Array<schemas.Tag>;
+  /**
+   * pet status in the store
+   */
+  status?: "available" | "pending" | "sold";
+};
+
+export type ApiResponse = {
+  [key: string]: unknown;
+  /**
+   * @format int32
+   */
+  code?: number;
+
+  type?: string;
+
+  message?: string;
+};
+"
+`;
+
+exports[`fetcher generator > create-user.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type CreateUserBodyParams = schemas.User;
+
+export type CreateUserParams = Pick<
+  OperationParams<never, never, CreateUserBodyParams>,
+  "options" | "body"
+>;
+
+export type CreateUserResponse = unknown;
+
+export function createUserUrlPath(params: Omit<CreateUserParams, "options">) {
+  return createUrlPath<never, never>("/user", params);
+}
+
+export async function createUser(
+  client: Fetcher,
+  params: CreateUserParams,
+): Promise<CreateUserResponse> {
+  const url = createUserUrlPath(params);
+
+  const response = await client(url, {
+    method: "POST",
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > create-users-with-list-input.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type CreateUsersWithListInputBodyParams = Array<schemas.User>;
+
+export type CreateUsersWithListInputParams = Pick<
+  OperationParams<never, never, CreateUsersWithListInputBodyParams>,
+  "options" | "body"
+>;
+
+export type CreateUsersWithListInputResponse = schemas.User;
+
+export function createUsersWithListInputUrlPath(
+  params: Omit<CreateUsersWithListInputParams, "options">,
+) {
+  return createUrlPath<never, never>("/user/createWithList", params);
+}
+
+export async function createUsersWithListInput(
+  client: Fetcher,
+  params: CreateUsersWithListInputParams,
+): Promise<CreateUsersWithListInputResponse> {
+  const url = createUsersWithListInputUrlPath(params);
+
+  const response = await client(url, {
+    method: "POST",
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > delete-order.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+
+export type DeleteOrderPathParams = {
+  [key: string]: unknown;
+  /**
+   * ID of the order that needs to be deleted
+   * @format int64
+   */
+  orderId: number;
+};
+
+export type DeleteOrderParams = Pick<
+  OperationParams<DeleteOrderPathParams, never, never>,
+  "options" | "path"
+>;
+
+export type DeleteOrderResponse = unknown;
+
+export function deleteOrderUrlPath(params: Omit<DeleteOrderParams, "options">) {
+  return createUrlPath<DeleteOrderPathParams, never>(
+    "/store/order/{orderId}",
+    params,
+  );
+}
+
+export async function deleteOrder(
+  client: Fetcher,
+  params: DeleteOrderParams,
+): Promise<DeleteOrderResponse> {
+  const url = deleteOrderUrlPath(params);
+
+  const response = await client(url, {
+    method: "DELETE",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > delete-pet.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+
+export type DeletePetPathParams = {
+  [key: string]: unknown;
+  /**
+   * Pet id to delete
+   * @format int64
+   */
+  petId: number;
+};
+
+export type DeletePetParams = Pick<
+  OperationParams<DeletePetPathParams, never, never>,
+  "options" | "path"
+>;
+
+export type DeletePetResponse = unknown;
+
+export function deletePetUrlPath(params: Omit<DeletePetParams, "options">) {
+  return createUrlPath<DeletePetPathParams, never>("/pet/{petId}", params);
+}
+
+export async function deletePet(
+  client: Fetcher,
+  params: DeletePetParams,
+): Promise<DeletePetResponse> {
+  const url = deletePetUrlPath(params);
+
+  const response = await client(url, {
+    method: "DELETE",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > delete-user.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+
+export type DeleteUserPathParams = {
+  [key: string]: unknown;
+  /**
+   * The name that needs to be deleted
+   */
+  username: string;
+};
+
+export type DeleteUserParams = Pick<
+  OperationParams<DeleteUserPathParams, never, never>,
+  "options" | "path"
+>;
+
+export type DeleteUserResponse = unknown;
+
+export function deleteUserUrlPath(params: Omit<DeleteUserParams, "options">) {
+  return createUrlPath<DeleteUserPathParams, never>("/user/{username}", params);
+}
+
+export async function deleteUser(
+  client: Fetcher,
+  params: DeleteUserParams,
+): Promise<DeleteUserResponse> {
+  const url = deleteUserUrlPath(params);
+
+  const response = await client(url, {
+    method: "DELETE",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > find-pets-by-status.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type FindPetsByStatusQueryParams = {
+  [key: string]: unknown;
+  /**
+   * Status values that need to be considered for filter
+   * @default available
+   */
+  status?: "available" | "pending" | "sold";
+};
+
+export type FindPetsByStatusParams = Pick<
+  OperationParams<never, FindPetsByStatusQueryParams, never>,
+  "options" | "query"
+>;
+
+export type FindPetsByStatusResponse = Array<schemas.Pet>;
+
+export function findPetsByStatusUrlPath(
+  params: Omit<FindPetsByStatusParams, "options">,
+) {
+  return createUrlPath<never, FindPetsByStatusQueryParams>(
+    "/pet/findByStatus",
+    params,
+  );
+}
+
+export async function findPetsByStatus(
+  client: Fetcher,
+  params: FindPetsByStatusParams,
+): Promise<FindPetsByStatusResponse> {
+  const url = findPetsByStatusUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > find-pets-by-tags.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type FindPetsByTagsQueryParams = {
+  [key: string]: unknown;
+  /**
+   * Tags to filter by
+   */
+  tags?: Array<string>;
+};
+
+export type FindPetsByTagsParams = Pick<
+  OperationParams<never, FindPetsByTagsQueryParams, never>,
+  "options" | "query"
+>;
+
+export type FindPetsByTagsResponse = Array<schemas.Pet>;
+
+export function findPetsByTagsUrlPath(
+  params: Omit<FindPetsByTagsParams, "options">,
+) {
+  return createUrlPath<never, FindPetsByTagsQueryParams>(
+    "/pet/findByTags",
+    params,
+  );
+}
+
+export async function findPetsByTags(
+  client: Fetcher,
+  params: FindPetsByTagsParams,
+): Promise<FindPetsByTagsResponse> {
+  const url = findPetsByTagsUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > get-inventory.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+
+export type GetInventoryParams = Pick<
+  OperationParams<never, never, never>,
+  "options"
+>;
+
+export type GetInventoryResponse = Record<string, unknown>;
+
+export function getInventoryUrlPath(
+  params: Omit<GetInventoryParams, "options">,
+) {
+  return createUrlPath<never, never>("/store/inventory", params);
+}
+
+export async function getInventory(
+  client: Fetcher,
+  params: GetInventoryParams,
+): Promise<GetInventoryResponse> {
+  const url = getInventoryUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > get-order-by-id.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type GetOrderByIdPathParams = {
+  [key: string]: unknown;
+  /**
+   * ID of order that needs to be fetched
+   * @format int64
+   */
+  orderId: number;
+};
+
+export type GetOrderByIdParams = Pick<
+  OperationParams<GetOrderByIdPathParams, never, never>,
+  "options" | "path"
+>;
+
+export type GetOrderByIdResponse = schemas.Order;
+
+export function getOrderByIdUrlPath(
+  params: Omit<GetOrderByIdParams, "options">,
+) {
+  return createUrlPath<GetOrderByIdPathParams, never>(
+    "/store/order/{orderId}",
+    params,
+  );
+}
+
+export async function getOrderById(
+  client: Fetcher,
+  params: GetOrderByIdParams,
+): Promise<GetOrderByIdResponse> {
+  const url = getOrderByIdUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > get-pet-by-id.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type GetPetByIdPathParams = {
+  [key: string]: unknown;
+  /**
+   * ID of pet to return
+   * @format int64
+   */
+  petId: number;
+};
+
+export type GetPetByIdParams = Pick<
+  OperationParams<GetPetByIdPathParams, never, never>,
+  "options" | "path"
+>;
+
+export type GetPetByIdResponse = schemas.Pet;
+
+export function getPetByIdUrlPath(params: Omit<GetPetByIdParams, "options">) {
+  return createUrlPath<GetPetByIdPathParams, never>("/pet/{petId}", params);
+}
+
+export async function getPetById(
+  client: Fetcher,
+  params: GetPetByIdParams,
+): Promise<GetPetByIdResponse> {
+  const url = getPetByIdUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > get-user-by-name.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type GetUserByNamePathParams = {
+  [key: string]: unknown;
+  /**
+   * The name that needs to be fetched. Use user1 for testing.
+   */
+  username: string;
+};
+
+export type GetUserByNameParams = Pick<
+  OperationParams<GetUserByNamePathParams, never, never>,
+  "options" | "path"
+>;
+
+export type GetUserByNameResponse = schemas.User;
+
+export function getUserByNameUrlPath(
+  params: Omit<GetUserByNameParams, "options">,
+) {
+  return createUrlPath<GetUserByNamePathParams, never>(
+    "/user/{username}",
+    params,
+  );
+}
+
+export async function getUserByName(
+  client: Fetcher,
+  params: GetUserByNameParams,
+): Promise<GetUserByNameResponse> {
+  const url = getUserByNameUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > login-user.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+
+export type LoginUserQueryParams = {
+  [key: string]: unknown;
+  /**
+   * The user name for login
+   */
+  username?: string;
+  /**
+   * The password for login in clear text
+   */
+  password?: string;
+};
+
+export type LoginUserParams = Pick<
+  OperationParams<never, LoginUserQueryParams, never>,
+  "options" | "query"
+>;
+
+export type LoginUserResponse = string;
+
+export function loginUserUrlPath(params: Omit<LoginUserParams, "options">) {
+  return createUrlPath<never, LoginUserQueryParams>("/user/login", params);
+}
+
+export async function loginUser(
+  client: Fetcher,
+  params: LoginUserParams,
+): Promise<LoginUserResponse> {
+  const url = loginUserUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > logout-user.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+
+export type LogoutUserParams = Pick<
+  OperationParams<never, never, never>,
+  "options"
+>;
+
+export type LogoutUserResponse = unknown;
+
+export function logoutUserUrlPath(params: Omit<LogoutUserParams, "options">) {
+  return createUrlPath<never, never>("/user/logout", params);
+}
+
+export async function logoutUser(
+  client: Fetcher,
+  params: LogoutUserParams,
+): Promise<LogoutUserResponse> {
+  const url = logoutUserUrlPath(params);
+
+  const response = await client(url, {
+    method: "GET",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > place-order.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type PlaceOrderBodyParams = schemas.Order;
+
+export type PlaceOrderParams = Pick<
+  OperationParams<never, never, PlaceOrderBodyParams>,
+  "options" | "body"
+>;
+
+export type PlaceOrderResponse = schemas.Order;
+
+export function placeOrderUrlPath(params: Omit<PlaceOrderParams, "options">) {
+  return createUrlPath<never, never>("/store/order", params);
+}
+
+export async function placeOrder(
+  client: Fetcher,
+  params: PlaceOrderParams,
+): Promise<PlaceOrderResponse> {
+  const url = placeOrderUrlPath(params);
+
+  const response = await client(url, {
+    method: "POST",
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > update-pet.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type UpdatePetBodyParams = schemas.Pet;
+
+export type UpdatePetParams = Pick<
+  OperationParams<never, never, UpdatePetBodyParams>,
+  "options" | "body"
+>;
+
+export type UpdatePetResponse = schemas.Pet;
+
+export function updatePetUrlPath(params: Omit<UpdatePetParams, "options">) {
+  return createUrlPath<never, never>("/pet", params);
+}
+
+export async function updatePet(
+  client: Fetcher,
+  params: UpdatePetParams,
+): Promise<UpdatePetResponse> {
+  const url = updatePetUrlPath(params);
+
+  const response = await client(url, {
+    method: "PUT",
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > update-pet-with-form.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+
+export type UpdatePetWithFormPathParams = {
+  [key: string]: unknown;
+  /**
+   * ID of pet that needs to be updated
+   * @format int64
+   */
+  petId: number;
+};
+
+export type UpdatePetWithFormQueryParams = {
+  [key: string]: unknown;
+  /**
+   * Name of pet that needs to be updated
+   */
+  name?: string;
+  /**
+   * Status of pet that needs to be updated
+   */
+  status?: string;
+};
+
+export type UpdatePetWithFormParams = Pick<
+  OperationParams<
+    UpdatePetWithFormPathParams,
+    UpdatePetWithFormQueryParams,
+    never
+  >,
+  "options" | "path" | "query"
+>;
+
+export type UpdatePetWithFormResponse = unknown;
+
+export function updatePetWithFormUrlPath(
+  params: Omit<UpdatePetWithFormParams, "options">,
+) {
+  return createUrlPath<
+    UpdatePetWithFormPathParams,
+    UpdatePetWithFormQueryParams
+  >("/pet/{petId}", params);
+}
+
+export async function updatePetWithForm(
+  client: Fetcher,
+  params: UpdatePetWithFormParams,
+): Promise<UpdatePetWithFormResponse> {
+  const url = updatePetWithFormUrlPath(params);
+
+  const response = await client(url, {
+    method: "POST",
+
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > update-user.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type UpdateUserPathParams = {
+  [key: string]: unknown;
+  /**
+   * name that need to be deleted
+   */
+  username: string;
+};
+
+export type UpdateUserBodyParams = schemas.User;
+
+export type UpdateUserParams = Pick<
+  OperationParams<UpdateUserPathParams, never, UpdateUserBodyParams>,
+  "options" | "body" | "path"
+>;
+
+export type UpdateUserResponse = unknown;
+
+export function updateUserUrlPath(params: Omit<UpdateUserParams, "options">) {
+  return createUrlPath<UpdateUserPathParams, never>("/user/{username}", params);
+}
+
+export async function updateUser(
+  client: Fetcher,
+  params: UpdateUserParams,
+): Promise<UpdateUserResponse> {
+  const url = updateUserUrlPath(params);
+
+  const response = await client(url, {
+    method: "PUT",
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;
+
+exports[`fetcher generator > upload-file.ts 1`] = `
+"import type { Fetcher } from "@straw-hat/fetcher";
+import { getRequestBody, getResponseBody } from "@straw-hat/fetcher";
+import { createUrlPath, OperationParams } from "@straw-hat/fetcher/openapi";
+import * as schemas from "./components/schemas";
+
+export type UploadFilePathParams = {
+  [key: string]: unknown;
+  /**
+   * ID of pet to update
+   * @format int64
+   */
+  petId: number;
+};
+
+export type UploadFileQueryParams = {
+  [key: string]: unknown;
+  /**
+   * Additional Metadata
+   */
+  additionalMetadata?: string;
+};
+
+export type UploadFileBodyParams = unknown;
+
+export type UploadFileParams = Pick<
+  OperationParams<
+    UploadFilePathParams,
+    UploadFileQueryParams,
+    UploadFileBodyParams
+  >,
+  "options" | "body" | "path" | "query"
+>;
+
+export type UploadFileResponse = schemas.ApiResponse;
+
+export function uploadFileUrlPath(params: Omit<UploadFileParams, "options">) {
+  return createUrlPath<UploadFilePathParams, UploadFileQueryParams>(
+    "/pet/{petId}/uploadImage",
+    params,
+  );
+}
+
+export async function uploadFile(
+  client: Fetcher,
+  params: UploadFileParams,
+): Promise<UploadFileResponse> {
+  const url = uploadFileUrlPath(params);
+
+  const response = await client(url, {
+    method: "POST",
+    body: getRequestBody(params.body),
+    signal: params.options?.signal,
+  });
+
+  return getResponseBody(response);
+}
+"
+`;

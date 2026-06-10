@@ -1,0 +1,12 @@
+{
+  "extends": "@straw-hat/tsconfig/lib/lib",
+  "compilerOptions": {
+    "outDir": "dist",
+    "jsx": "react",
+    //TODO: remove module and moduleResolution https://github.com/microsoft/TypeScript/issues/47663
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ESNext", "DOM"]
+  },
+  "include": ["src", "tests"]
+}

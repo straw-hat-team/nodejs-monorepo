@@ -1,0 +1,41 @@
+{
+  "name": "@straw-hat/is-ssr",
+  "version": "2.0.0",
+  "description": "Check if the code is running on the server side",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
+    "directory": "packages/@straw-hat/is-ssr"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ssr",
+    "browser",
+    "server-side-rendering",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:vitest": "yarn run vitest",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@straw-hat/tsconfig": "workspace:*",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

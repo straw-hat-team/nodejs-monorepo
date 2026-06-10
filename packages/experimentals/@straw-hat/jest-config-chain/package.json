@@ -1,0 +1,44 @@
+{
+  "name": "@straw-hat/jest-config-chain",
+  "version": "1.0.3",
+  "description": "Chainable configuration for Jest",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
+    "directory": "packages/@straw-hat/jest-config-chain"
+  },
+  "license": "MIT",
+  "keywords": [
+    "config",
+    "chainable",
+    "config-chain",
+    "jest",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:vitest": "yarn run vitest",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@straw-hat/chainable-config": "^0.9.0"
+  },
+  "devDependencies": {
+    "@straw-hat/tsconfig": "workspace:*",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

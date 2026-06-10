@@ -1,0 +1,7 @@
+{
+  "extends": "@straw-hat/tsconfig/lib/react.lib",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src", "tests"]
+}

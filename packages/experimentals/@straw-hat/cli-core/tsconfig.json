@@ -1,0 +1,7 @@
+{
+  "extends": "@straw-hat/tsconfig/lib/base",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}

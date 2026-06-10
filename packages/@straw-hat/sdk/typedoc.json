@@ -1,0 +1,5 @@
+{
+  "entryPointStrategy": "Expand",
+  "entryPoints": ["src"],
+  "out": "docs/reference"
+}

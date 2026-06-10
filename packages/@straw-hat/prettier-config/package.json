@@ -1,0 +1,49 @@
+{
+  "name": "@straw-hat/prettier-config",
+  "version": "3.1.5",
+  "description": "Prettier configuration",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
+    "directory": "packages/@straw-hat/prettier-config"
+  },
+  "license": "MIT",
+  "keywords": [
+    "prettier",
+    "config",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js",
+    "./base": "./lib/base.js",
+    "./nextjs": "./lib/nextjs.js",
+    "./tailwindcss": "./lib/tailwindcss.js",
+    "./lib": "./lib/lib.js"
+  },
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "prettier": "^3.0.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-tailwindcss": "^0.6.9"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  }
+}

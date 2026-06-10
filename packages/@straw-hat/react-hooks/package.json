@@ -1,0 +1,50 @@
+{
+  "name": "@straw-hat/react-hooks",
+  "version": "0.7.1",
+  "description": "A collection of React hooks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
+    "directory": "packages/@straw-hat/react-hooks"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
+    "test:vitest": "yarn run vitest",
+    "prepack": "yarn build",
+    "docs:typedoc": "yarn run -T typedoc"
+  },
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "@straw-hat/is-ssr": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@straw-hat/tsconfig": "workspace:*",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/react": "^19.0.1",
+    "react": "^19.0.0",
+    "react-test-renderer": "^19.0.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

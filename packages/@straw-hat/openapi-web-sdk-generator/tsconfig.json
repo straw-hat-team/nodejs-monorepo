@@ -1,0 +1,13 @@
+{
+  "extends": "@straw-hat/tsconfig/lib/lib",
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "target": "es2022"
+  },
+  "include": ["src", "tests"],
+  "ts-node": {
+    "esm": true
+  }
+}

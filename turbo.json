@@ -1,0 +1,35 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["SHT_NPM_TOKEN", "NODE_ENV"],
+  "tasks": {
+    "docs:typedoc": {
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": [
+        "docs/reference/**/*"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "dist"
+      ]
+    },
+    "test:vitest": {
+      "dependsOn": [
+        "build"
+      ],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "tests/vitest/**/*.ts",
+        "tests/vitest/**/*.tsx"
+      ]
+    }
+  }
+}

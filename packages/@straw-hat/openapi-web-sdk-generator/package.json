@@ -1,0 +1,87 @@
+{
+  "name": "@straw-hat/openapi-web-sdk-generator",
+  "version": "4.0.0",
+  "description": "A Web SDK Generator using OpenAPI v3.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
+    "directory": "packages/@straw-hat/openapi-web-sdk-generator"
+  },
+  "homepage": "https://github.com/straw-hat-team/nodejs-monorepo/tree/master/packages/@straw-hat/openapi-web-sdk-generator#readme",
+  "bugs": {
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "openapi",
+    "generator",
+    "fetch",
+    "http",
+    "sdk",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prebuild": "yarn run -T rimraf dist",
+    "build": "tsc -p tsconfig.prod.json",
+    "test:vitest": "yarn run vitest",
+    "prepack": "yarn build && yarn oclif manifest && yarn oclif:readme",
+    "postpack": "yarn run -T rimraf oclif.manifest.json",
+    "docs:typedoc": "yarn run -T typedoc",
+    "oclif:readme": "oclif readme --multi --dir=docs/commands"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "bin": {
+    "sht-openapi-web-sdk-generator": "./bin/run.js"
+  },
+  "type": "module",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "templates",
+    "/oclif.manifest.json"
+  ],
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.1.0",
+    "@oclif/core": "^3.27.0",
+    "@oclif/plugin-help": "^6.2.18",
+    "@stoplight/json-ref-resolver": "^3.1.6",
+    "change-case": "^5.4.4",
+    "cosmiconfig": "^9.0.0",
+    "debug": "^4.4.0",
+    "del": "^8.0.0",
+    "import-from-esm": "1.4.0-alpha.1",
+    "make-dir": "^5.0.0",
+    "mustache": "^4.2.0",
+    "openapi-types": "^12.1.3",
+    "prettier": "^3.4.2"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.10",
+    "@straw-hat/tsconfig": "workspace:*",
+    "@straw-hat/types": "workspace:*",
+    "@types/debug": "^4.1.12",
+    "@types/js-yaml": "^4.0.9",
+    "@types/mustache": "^4.2.5",
+    "@types/node": "^22.10.1",
+    "@types/prettier": "^3.0.0",
+    "oclif": "^4.16.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "oclif": {
+    "commands": "./dist/commands",
+    "bin": "sht-openapi-web-sdk-generator",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  }
+}
