@@ -7,6 +7,10 @@
     "url": "https://github.com/straw-hat-team/nodejs-monorepo.git",
     "directory": "packages/@straw-hat/openapi-web-sdk-generator"
   },
+  "homepage": "https://github.com/straw-hat-team/nodejs-monorepo/tree/master/packages/@straw-hat/openapi-web-sdk-generator#readme",
+  "bugs": {
+    "url": "https://github.com/straw-hat-team/nodejs-monorepo/issues"
+  },
   "license": "MIT",
   "keywords": [
     "openapi",
