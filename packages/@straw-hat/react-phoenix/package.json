@@ -21,10 +21,10 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "prebuild": "yarn run -T rimraf dist",
-    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
-    "prepack": "yarn build",
-    "docs:typedoc": "yarn run -T typedoc"
+    "prebuild": "rimraf dist",
+    "build": "pnpm run prebuild && tsc -p tsconfig.prod.json",
+    "prepack": "pnpm run build",
+    "docs:typedoc": "typedoc"
   },
   "type": "module",
   "exports": {
@@ -46,6 +46,6 @@
     "@types/phoenix": "^1.6.6",
     "@types/react": "^19.0.1",
     "react": "^19.0.0",
-    "typescript": "^5.7.2"
+    "typescript": "5.7.2"
   }
 }

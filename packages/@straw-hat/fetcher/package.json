@@ -20,11 +20,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "prebuild": "yarn run -T rimraf dist",
-    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
-    "test:vitest": "yarn run vitest",
-    "prepack": "yarn build",
-    "docs:typedoc": "yarn run -T typedoc"
+    "prebuild": "rimraf dist",
+    "build": "pnpm run prebuild && tsc -p tsconfig.prod.json",
+    "test:vitest": "vitest",
+    "prepack": "pnpm run build",
+    "docs:typedoc": "typedoc"
   },
   "engines": {
     "node": ">=16"
@@ -42,7 +42,7 @@
   ],
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
-    "typescript": "^5.7.2",
+    "typescript": "5.7.2",
     "vitest": "^2.1.8"
   }
 }

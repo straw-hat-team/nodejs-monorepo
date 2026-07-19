@@ -1,0 +1,10 @@
+packages:
+  - packages/@straw-hat/*
+  - packages/experimentals/@straw-hat/*
+linkWorkspacePackages: true
+autoInstallPeers: false
+allowBuilds:
+  cypress: true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true

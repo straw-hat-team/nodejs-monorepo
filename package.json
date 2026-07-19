@@ -1,18 +1,13 @@
 {
-  "packageManager": "yarn@4.5.3",
+  "packageManager": "pnpm@11.5.2",
   "name": "@straw-hat/nodejs-monorepo",
   "type": "commonjs",
   "private": true,
-  "workspaces": [
-    "packages/@straw-hat/*",
-    "packages/experimentals/@straw-hat/*"
-  ],
   "scripts": {
-    "prepare": "husky install",
     "turbo:docs:typedoc": "turbo run docs:typedoc",
     "turbo:build": "turbo run build",
     "turbo:test:vitest": "turbo run test:vitest -- --run",
-    "publish": "yarn workspaces foreach -v --no-private npm publish --tolerate-republish",
+    "publish": "pnpm -r publish --no-git-checks",
     "format:prettier": "prettier */** --write --ignore-unknown --no-error-on-unmatched-pattern"
   },
   "devDependencies": {
@@ -23,13 +18,12 @@
     "@straw-hat/tsconfig": "workspace:*",
     "@vitest/ui": "2.1.8",
     "jest": "^29.7.0",
-    "monodeploy": "^5.0.2",
     "npm-run-all": "^4.1.5",
     "prettier": "3.4.2",
     "rimraf": "^6.0.1",
     "turbo": "2.3.3",
     "typedoc": "^0.27.3",
-    "typescript": "^5.7.2",
+    "typescript": "5.7.2",
     "vitest": "^2.1.8"
   }
 }
