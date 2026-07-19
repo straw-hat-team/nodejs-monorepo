@@ -23,17 +23,18 @@ jobs:
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           SHT_NPM_TOKEN: '${{ secrets.SECRETS_VAULT }}/SHT_NPM_TOKEN'
+      - uses: pnpm/action-setup@v4
       - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.6.4
       - shell: sh
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
         env:
           SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}
       - shell: sh
-        run: yarn turbo:build
+        run: pnpm turbo:build
         env:
           SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}
       - shell: sh
-        run: yarn turbo:test:vitest
+        run: pnpm turbo:test:vitest
         env:
           SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}
 
@@ -49,11 +50,13 @@ jobs:
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           SHT_NPM_TOKEN: '${{ secrets.SECRETS_VAULT }}/SHT_NPM_TOKEN'
+      - uses: pnpm/action-setup@v4
       - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.6.4
       - shell: sh
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
         env:
           SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}
-      - uses: straw-hat-team/github-actions-workflows/nodejs/prettier@v1.6.4
+      - shell: sh
+        run: pnpm exec prettier --check */** --ignore-unknown --no-error-on-unmatched-pattern
         env:
           SHT_NPM_TOKEN: ${{ env.SHT_NPM_TOKEN }}

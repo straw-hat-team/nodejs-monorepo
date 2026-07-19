@@ -19,10 +19,10 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "prebuild": "yarn run -T rimraf dist",
-    "experimental:build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
-    "prepack": "yarn build",
-    "docs:typedoc": "yarn run -T typedoc"
+    "prebuild": "rimraf dist",
+    "experimental:build": "pnpm run prebuild && tsc -p tsconfig.prod.json",
+    "prepack": "pnpm run build",
+    "docs:typedoc": "typedoc"
   },
   "type": "commonjs",
   "main": "dist/index.js",
@@ -38,6 +38,6 @@
     "@straw-hat/tsconfig": "workspace:*",
     "@types/react-native": "^0.73.0",
     "react-native": "^0.76.4",
-    "typescript": "^5.7.2"
+    "typescript": "5.7.2"
   }
 }

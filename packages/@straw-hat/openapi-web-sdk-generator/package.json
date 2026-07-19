@@ -25,12 +25,12 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "prebuild": "yarn run -T rimraf dist",
+    "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.prod.json",
-    "test:vitest": "yarn run vitest",
-    "prepack": "yarn build && yarn oclif manifest && yarn oclif:readme",
-    "postpack": "yarn run -T rimraf oclif.manifest.json",
-    "docs:typedoc": "yarn run -T typedoc",
+    "test:vitest": "vitest",
+    "prepack": "pnpm run build && oclif manifest && pnpm run oclif:readme",
+    "postpack": "rimraf oclif.manifest.json",
+    "docs:typedoc": "typedoc",
     "oclif:readme": "oclif readme --multi --dir=docs/commands"
   },
   "engines": {
@@ -74,7 +74,7 @@
     "@types/prettier": "^3.0.0",
     "oclif": "^4.16.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2",
+    "typescript": "5.7.2",
     "vitest": "^2.1.8"
   },
   "oclif": {

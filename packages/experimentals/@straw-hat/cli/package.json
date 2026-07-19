@@ -14,11 +14,11 @@
     "straw-hat-team"
   ],
   "scripts": {
-    "prebuild": "yarn run -T rimraf dist",
-    "experimental:build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
-    "prepack": "yarn build && yarn oclif:manifest",
-    "postpack": "yarn run -T rimraf oclif.manifest.json",
-    "docs:typedoc": "yarn run -T typedoc",
+    "prebuild": "rimraf dist",
+    "experimental:build": "pnpm run prebuild && tsc -p tsconfig.prod.json",
+    "prepack": "pnpm run build && pnpm run oclif:manifest",
+    "postpack": "rimraf oclif.manifest.json",
+    "docs:typedoc": "typedoc",
     "oclif:manifest": "oclif manifest dist",
     "oclif:readme": "oclif readme --multi  --dir=docs/commands"
   },

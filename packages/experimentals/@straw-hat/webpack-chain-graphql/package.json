@@ -21,10 +21,10 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "prebuild": "yarn run -T rimraf dist",
-    "build": "yarn prebuild && yarn run -T tsc -p tsconfig.prod.json",
-    "prepack": "yarn build",
-    "docs:typedoc": "yarn run -T typedoc"
+    "prebuild": "rimraf dist",
+    "build": "pnpm run prebuild && tsc -p tsconfig.prod.json",
+    "prepack": "pnpm run build",
+    "docs:typedoc": "typedoc"
   },
   "type": "commonjs",
   "main": "dist/index.js",
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
     "typedoc": "^0.27.3",
-    "typescript": "^5.7.2",
+    "typescript": "5.7.2",
     "webpack-chain": "^6.5.1"
   }
 }
