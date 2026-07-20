@@ -70,12 +70,12 @@
     "@types/debug": "^4.1.12",
     "@types/js-yaml": "^4.0.9",
     "@types/mustache": "^4.2.5",
-    "@types/node": "^22.10.1",
+    "@types/node": "^26.1.1",
     "@types/prettier": "^3.0.0",
-    "oclif": "^4.16.0",
+    "oclif": "^4.23.28",
     "ts-node": "^10.9.2",
-    "typescript": "5.7.2",
-    "vitest": "^2.1.8"
+    "typescript": "7.0.2",
+    "vitest": "^4.1.10"
   },
   "oclif": {
     "commands": "./dist/commands",
