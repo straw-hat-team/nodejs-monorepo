@@ -28,7 +28,7 @@ importers:
         version: 2.1.8(vitest@2.1.9)
       jest:
         specifier: ^30.4.2
-        version: 30.4.2(@types/node@22.20.1)(supports-color@8.1.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
+        version: 30.4.2(@types/node@22.20.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -242,7 +242,7 @@ importers:
   packages/@straw-hat/react-hooks:
     dependencies:
       '@straw-hat/is-ssr':
-        specifier: ^2.0.0
+        specifier: workspace:^
         version: link:../is-ssr
     devDependencies:
       '@straw-hat/tsconfig':
@@ -328,7 +328,7 @@ importers:
   packages/@straw-hat/sdk:
     dependencies:
       '@straw-hat/types':
-        specifier: ^0.5.0
+        specifier: workspace:^
         version: link:../types
     devDependencies:
       '@straw-hat/tsconfig':
@@ -365,7 +365,7 @@ importers:
         version: 7.18.6(@babel/core@7.29.7)
       '@babel/plugin-proposal-numeric-separator':
         specifier: ^7.18.6
-        version: 7.18.6(@babel/core@7.29.7)
+        version: 7.18.6
       '@babel/plugin-proposal-optional-chaining':
         specifier: ^7.21.0
         version: 7.21.0(@babel/core@7.29.7)
@@ -394,10 +394,10 @@ importers:
         specifier: 2.2.50
         version: 2.2.50
       '@straw-hat/cli-core':
-        specifier: 0.10.3
+        specifier: workspace:*
         version: link:../cli-core
       '@straw-hat/jest-config-chain':
-        specifier: 1.0.3
+        specifier: workspace:*
         version: link:../jest-config-chain
       cypress:
         specifier: ^15.18.1
@@ -416,7 +416,7 @@ importers:
         version: 7.21.0
       jest:
         specifier: 30.4.2
-        version: 30.4.2(@types/node@22.20.1)(supports-color@8.1.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
+        version: 30.4.2(@types/node@22.20.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
       jest-cli:
         specifier: 30.4.2
         version: 30.4.2(@types/node@22.20.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
@@ -440,7 +440,7 @@ importers:
         specifier: 4.11.14
         version: 4.11.14
       '@straw-hat/fancy-map':
-        specifier: 4.0.0
+        specifier: workspace:*
         version: link:../fancy-map
       chalk:
         specifier: 5.6.2
@@ -511,7 +511,7 @@ importers:
   packages/experimentals/@straw-hat/jest-config-chain:
     dependencies:
       '@straw-hat/chainable-config':
-        specifier: ^0.9.0
+        specifier: workspace:^
         version: link:../../../@straw-hat/chainable-config
     devDependencies:
       '@straw-hat/tsconfig':
@@ -527,7 +527,7 @@ importers:
   packages/experimentals/@straw-hat/next-sdk:
     dependencies:
       '@straw-hat/types':
-        specifier: ^0.5.0
+        specifier: workspace:^
         version: link:../../../@straw-hat/types
     devDependencies:
       '@straw-hat/tsconfig':
@@ -8004,9 +8004,8 @@ snapshots:
       '@babel/helper-plugin-utils': 7.29.7
       '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3(@babel/core@7.29.7)
 
-  '@babel/plugin-proposal-numeric-separator@7.18.6(@babel/core@7.29.7)':
+  '@babel/plugin-proposal-numeric-separator@7.18.6':
     dependencies:
-      '@babel/core': 7.29.7
       '@babel/helper-plugin-utils': 7.29.7
       '@babel/plugin-syntax-numeric-separator': 7.10.4(@babel/core@7.29.7)
 
@@ -8671,6 +8670,7 @@ snapshots:
   '@babel/preset-env@8.0.2(@babel/core@7.29.7)':
     dependencies:
       '@babel/compat-data': 8.0.0
+      '@babel/core': 7.29.7
       '@babel/helper-compilation-targets': 8.0.0
       '@babel/helper-plugin-utils': 8.0.1(@babel/core@7.29.7)
       '@babel/helper-validator-option': 8.0.0
@@ -9392,11 +9392,11 @@ snapshots:
       jest-util: 30.4.1
       slash: 3.0.0
 
-  '@jest/core@30.4.2(supports-color@8.1.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))':
+  '@jest/core@30.4.2(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))':
     dependencies:
       '@jest/console': 30.4.1
       '@jest/pattern': 30.4.0
-      '@jest/reporters': 30.4.1(supports-color@8.1.1)
+      '@jest/reporters': 30.4.1
       '@jest/test-result': 30.4.1
       '@jest/transform': 30.4.1
       '@jest/types': 30.4.1
@@ -9493,7 +9493,7 @@ snapshots:
       '@types/node': 22.20.1
       jest-regex-util: 30.4.0
 
-  '@jest/reporters@30.4.1(supports-color@8.1.1)':
+  '@jest/reporters@30.4.1':
     dependencies:
       '@bcoe/v8-coverage': 0.2.3
       '@jest/console': 30.4.1
@@ -9510,7 +9510,7 @@ snapshots:
       istanbul-lib-coverage: 3.2.2
       istanbul-lib-instrument: 6.0.3
       istanbul-lib-report: 3.0.1
-      istanbul-lib-source-maps: 5.0.6(supports-color@8.1.1)
+      istanbul-lib-source-maps: 5.0.6
       istanbul-reports: 3.2.0
       jest-message-util: 30.4.1
       jest-util: 30.4.1
@@ -12686,7 +12686,7 @@ snapshots:
       make-dir: 4.0.0
       supports-color: 7.2.0
 
-  istanbul-lib-source-maps@5.0.6(supports-color@8.1.1):
+  istanbul-lib-source-maps@5.0.6:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       debug: 4.4.3(supports-color@8.1.1)
@@ -12756,7 +12756,7 @@ snapshots:
 
   jest-cli@30.4.2(@types/node@22.20.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2)):
     dependencies:
-      '@jest/core': 30.4.2(supports-color@8.1.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
+      '@jest/core': 30.4.2(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
       '@jest/test-result': 30.4.1
       '@jest/types': 30.4.1
       chalk: 4.1.2
@@ -13071,7 +13071,7 @@ snapshots:
     dependencies:
       ansi-escapes: 7.3.0
       chalk: 5.3.0
-      jest: 30.4.2(@types/node@22.20.1)(supports-color@8.1.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
+      jest: 30.4.2(@types/node@22.20.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
       jest-regex-util: 30.4.0
       jest-watcher: 30.4.1
       slash: 5.1.0
@@ -13104,9 +13104,9 @@ snapshots:
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
-  jest@30.4.2(@types/node@22.20.1)(supports-color@8.1.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2)):
+  jest@30.4.2(@types/node@22.20.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2)):
     dependencies:
-      '@jest/core': 30.4.2(supports-color@8.1.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
+      '@jest/core': 30.4.2(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))
       '@jest/types': 30.4.1
       import-local: 3.2.0
       jest-cli: 30.4.2(@types/node@22.20.1)(ts-node@10.9.2(@types/node@22.20.1)(typescript@5.7.2))

@@ -34,7 +34,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@straw-hat/chainable-config": "^0.9.0"
+    "@straw-hat/chainable-config": "workspace:^"
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
