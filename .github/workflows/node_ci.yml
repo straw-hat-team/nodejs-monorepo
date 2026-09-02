@@ -22,7 +22,7 @@ jobs:
           export-env: true
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          SHT_NPM_TOKEN: '${{ secrets.SECRETS_VAULT }}/SHT_NPM_TOKEN'
+          SHT_NPM_TOKEN: '${{ secrets.SECRETS_VAULT_ID }}/ozrgpobr7rqqgg4inmqqurfgfy/SHT_NPM_TOKEN'
       - uses: pnpm/action-setup@v4
       - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.6.4
       - shell: sh
@@ -49,7 +49,7 @@ jobs:
           export-env: true
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          SHT_NPM_TOKEN: '${{ secrets.SECRETS_VAULT }}/SHT_NPM_TOKEN'
+          SHT_NPM_TOKEN: '${{ secrets.SECRETS_VAULT_ID }}/ozrgpobr7rqqgg4inmqqurfgfy/SHT_NPM_TOKEN'
       - uses: pnpm/action-setup@v4
       - uses: straw-hat-team/github-actions-workflows/nodejs/setup@v1.6.4
       - shell: sh
