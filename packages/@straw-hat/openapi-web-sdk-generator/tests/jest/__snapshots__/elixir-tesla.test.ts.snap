@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`elixir-tesla generator: api.ex 1`] = `
+"
+       def update_pet()
+         :ok
+       end
+      
+       def add_pet()
+         :ok
+       end
+      
+       def find_pets_by_status()
+         :ok
+       end
+      
+       def find_pets_by_tags()
+         :ok
+       end
+      
+       def get_pet_by_id()
+         :ok
+       end
+      
+       def update_pet_with_form()
+         :ok
+       end
+      
+       def delete_pet()
+         :ok
+       end
+      
+       def upload_file()
+         :ok
+       end
+      
+       def get_inventory()
+         :ok
+       end
+      
+       def place_order()
+         :ok
+       end
+      
+       def get_order_by_id()
+         :ok
+       end
+      
+       def delete_order()
+         :ok
+       end
+      
+       def create_user()
+         :ok
+       end
+      
+       def create_users_with_list_input()
+         :ok
+       end
+      
+       def login_user()
+         :ok
+       end
+      
+       def logout_user()
+         :ok
+       end
+      
+       def get_user_by_name()
+         :ok
+       end
+      
+       def update_user()
+         :ok
+       end
+      
+       def delete_user()
+         :ok
+       end
+      "
+`;
