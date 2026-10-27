@@ -4,6 +4,7 @@ packages:
 linkWorkspacePackages: true
 autoInstallPeers: false
 allowBuilds:
+  '@parcel/watcher': false
   cypress: true
   esbuild: true
   sharp: true
