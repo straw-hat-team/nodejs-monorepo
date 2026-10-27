@@ -36,18 +36,18 @@
     "README.md"
   ],
   "dependencies": {
-    "@oclif/core": "4.11.14",
-    "@oclif/plugin-help": "6.2.53",
-    "@oclif/plugin-version": "2.2.50",
+    "@oclif/core": "5.1.9",
+    "@oclif/plugin-help": "7.0.5",
+    "@oclif/plugin-version": "3.0.7",
     "@straw-hat/cli-core": "workspace:*",
     "@straw-hat/jest-config-chain": "workspace:*",
-    "cypress": "^15.18.1",
+    "cypress": "^16.2.0",
     "debug": "4.4.3",
-    "del": "8.0.1",
+    "del": "9.0.1",
     "enquirer": "2.4.1",
     "envinfo": "7.21.0",
-    "jest": "30.4.2",
-    "jest-cli": "30.4.2",
+    "jest": "30.5.2",
+    "jest-cli": "30.5.2",
     "jest-watch-typeahead": "3.0.1"
   },
   "devDependencies": {
