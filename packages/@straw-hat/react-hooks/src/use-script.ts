@@ -31,7 +31,9 @@ export function useScript(props: UseScriptProps) {
       script = document.createElement('script');
       script.src = props.src;
       script.defer = true;
-      script.nonce = props.nonce;
+      if (props.nonce) {
+        script.nonce = props.nonce;
+      }
       script.type = props.type ?? 'text/javascript';
       script.noModule = props.noModule ?? false;
       script.setAttribute(DATA_STATUS_ATTR, Status.Loading);

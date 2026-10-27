@@ -13,6 +13,6 @@ describe('doNothing', () => {
     fetchMock.mockResolvedValue(response);
     const client = fetcher({ middleware: doNothing });
 
-    expect(client('https://app.acmec.com')).resolves.toEqual(response);
+    await expect(client('https://app.acmec.com')).resolves.toEqual(response);
   });
 });
