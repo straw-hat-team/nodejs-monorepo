@@ -13,13 +13,13 @@ describe('errorHandler', () => {
 
     const client = fetcher({ middleware: errorHandler() });
 
-    expect(client('https://app.acmec.com')).rejects.toThrow('Internal Server Error');
+    await expect(client('https://app.acmec.com')).rejects.toThrow('Internal Server Error');
   });
   test('when the request succeed then it returns the response', async () => {
     fetchMock.mockResolvedValue(new Response('anything', { status: 200 }));
 
     const client = fetcher({ middleware: errorHandler() });
 
-    expect(client('https://app.acmec.com')).resolves.toBeInstanceOf(Response);
+    await expect(client('https://app.acmec.com')).resolves.toBeInstanceOf(Response);
   });
 });

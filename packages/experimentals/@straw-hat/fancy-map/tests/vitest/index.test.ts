@@ -6,7 +6,7 @@ describe('getOrSetSync', () => {
     const cb = vi.fn(async () => 123);
     const map = new FancyMap();
 
-    expect(map.getOrSet('key', cb)).resolves.toBe(123);
+    await expect(map.getOrSet('key', cb)).resolves.toBe(123);
     expect(cb).toBeCalledWith('key');
   });
 

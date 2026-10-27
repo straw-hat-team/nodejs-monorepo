@@ -3,11 +3,10 @@
   "display": "Base",
   "compilerOptions": {
     "declaration": true,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "newLine": "LF",
     "emitDeclarationOnly": true,
     "noErrorTruncation": true,

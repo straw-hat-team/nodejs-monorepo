@@ -5,7 +5,7 @@
     "jsx": "react",
     //TODO: remove module and moduleResolution https://github.com/microsoft/TypeScript/issues/47663
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "lib": ["ESNext", "DOM"]
   },
   "include": ["src", "tests"]

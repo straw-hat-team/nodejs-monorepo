@@ -89,7 +89,7 @@ describe('Logger', () => {
 });
 
 describe('LogHandler', () => {
-  test('when handleEvent is not implemented then throw an error', () => {
+  test('when handleEvent is not implemented then throw an error', async () => {
     const handler = new WithoutEventHandler(LogLevels.Notset);
     const event = new LogEvent({
       level: LogLevels.Notset,
@@ -98,7 +98,7 @@ describe('LogHandler', () => {
       metadata: {},
       time: new Date(),
     });
-    expect(() => handler.handleEvent(event)).rejects.toThrow();
+    await expect(() => handler.handleEvent(event)).rejects.toThrow();
   });
   test('rejects out of range events', () => {
     const handler = new NullableHandler(LogLevels.Critical);
