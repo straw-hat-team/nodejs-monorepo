@@ -36,15 +36,15 @@
     "@straw-hat/is-ssr": "workspace:^"
   },
   "peerDependencies": {
-    "react": "^19.3.0"
+    "react": "^19.3.1"
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
     "@testing-library/react-hooks": "^8.0.1",
     "@types/react": "^19.3.0",
-    "react": "^19.3.0",
-    "react-test-renderer": "^19.3.0",
+    "react": "^19.3.1",
+    "react-test-renderer": "^19.3.1",
     "typescript": "7.0.2",
-    "vitest": "^5.0.0"
+    "vitest": "^5.0.5"
   }
 }
