@@ -36,14 +36,14 @@
     "README.md"
   ],
   "dependencies": {
-    "phoenix": "^1.7.17"
+    "phoenix": "^1.8.16"
   },
   "peerDependencies": {
     "react": "^18.0.0"
   },
   "devDependencies": {
     "@straw-hat/tsconfig": "workspace:*",
-    "@types/phoenix": "^1.6.6",
+    "@types/phoenix": "^1.6.8",
     "@types/react": "^19.3.0",
     "react": "^19.3.1",
     "typescript": "7.0.2"

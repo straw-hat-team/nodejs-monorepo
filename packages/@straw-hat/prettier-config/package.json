@@ -43,7 +43,7 @@
     "prettier-plugin-tailwindcss": "^0.8.1"
   },
   "devDependencies": {
-    "prettier": "^3.9.5",
+    "prettier": "^3.9.10",
     "typescript": "7.0.2"
   }
 }
