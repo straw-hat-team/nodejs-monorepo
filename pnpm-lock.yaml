@@ -198,8 +198,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       oclif:
-        specifier: ^6.0.10
-        version: 6.0.10(@types/node@26.6.5)(supports-color@8.1.1)
+        specifier: ^6.0.14
+        version: 6.0.14(@types/node@26.6.5)
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@26.6.5)(typescript@7.0.2)
@@ -2271,8 +2271,8 @@ packages:
     resolution: {integrity: sha512-yhDWRNRRgCPXmmlNQoqlVMF75M/6MkLWiSYsxSyCCG3o1cn8NW5pmAzU71LwN/7SVUyqm1ou0y51pQ2CScVvkQ==}
     engines: {node: '>=22.0.0'}
 
-  '@oclif/plugin-not-found@4.0.6':
-    resolution: {integrity: sha512-blt1UpQ/+TWjzfcLY89ifQUN/GgJIvBFvwj/QnJUToBDWLKswKWUpUewnrsbZA+MU0XYasluJ1fokCP4bo+Vbg==}
+  '@oclif/plugin-not-found@4.0.7':
+    resolution: {integrity: sha512-i1SKG/rnCx/uy2YYzo3mthouiV5sFC+LXbudwRbjDgHEY87uSGPQG02kRYuge5s5XDmn0c8FOqzu6IVbx1aV5w==}
     engines: {node: '>=22.0.0'}
 
   '@oclif/plugin-version@3.0.7':
@@ -5672,8 +5672,8 @@ packages:
     resolution: {integrity: sha512-5vvB5+W7ePv+p3uqxi+RcW1XAzLW0/hxt3/4X4Lc4qHudzOhmBiBwOY6DRob4WnanAEGvNcLjF+KNOufrUoEQw==}
     engines: {node: '>=12.20.0'}
 
-  oclif@6.0.10:
-    resolution: {integrity: sha512-LS+ZNHNsp2kXi6zDExwWY143zPeTsTTy+ubK0K6D8s+0a7nEmeInmrGcHJ68QgLYoNw8ubTgAkhl8U3rl9t9Sg==}
+  oclif@6.0.14:
+    resolution: {integrity: sha512-GSG6pEm2JkSnVIw0SpAjQew1IAezQQTz3h71bgg/lCKWGd+I4a+u+wV6nBnsp9ZNBc5t3NGrFJSsJlPOsFvoFA==}
     engines: {node: '>=22.0.0'}
     hasBin: true
 
@@ -9124,7 +9124,7 @@ snapshots:
     dependencies:
       '@oclif/core': 5.1.9
 
-  '@oclif/plugin-not-found@4.0.6(@types/node@26.6.5)':
+  '@oclif/plugin-not-found@4.0.7(@types/node@26.6.5)':
     dependencies:
       '@inquirer/prompts': 7.10.1(@types/node@26.6.5)
       '@oclif/core': 5.1.9
@@ -9139,7 +9139,7 @@ snapshots:
       ansis: 3.17.0
       which: 4.0.0
 
-  '@oclif/plugin-warn-if-update-available@4.0.5(supports-color@8.1.1)':
+  '@oclif/plugin-warn-if-update-available@4.0.5':
     dependencies:
       '@oclif/core': 5.1.9
       ansis: 3.17.0
@@ -12872,7 +12872,7 @@ snapshots:
 
   obug@3.0.0: {}
 
-  oclif@6.0.10(@types/node@26.6.5)(supports-color@8.1.1):
+  oclif@6.0.14(@types/node@26.6.5):
     dependencies:
       '@aws-sdk/client-cloudfront': 3.1156.0
       '@aws-sdk/client-s3': 3.1156.0
@@ -12881,8 +12881,8 @@ snapshots:
       '@inquirer/select': 2.5.0
       '@oclif/core': 5.1.9
       '@oclif/plugin-help': 7.0.5
-      '@oclif/plugin-not-found': 4.0.6(@types/node@26.6.5)
-      '@oclif/plugin-warn-if-update-available': 4.0.5(supports-color@8.1.1)
+      '@oclif/plugin-not-found': 4.0.7(@types/node@26.6.5)
+      '@oclif/plugin-warn-if-update-available': 4.0.5
       ansis: 3.17.0
       async-retry: 1.3.3
       change-case: 4.1.2
