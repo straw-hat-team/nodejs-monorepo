@@ -31,7 +31,7 @@
     "README.md"
   ],
   "dependencies": {
-    "@oclif/core": "5.1.9",
+    "@oclif/core": "5.1.10",
     "@straw-hat/fancy-map": "workspace:*",
     "chalk": "6.0.1",
     "ci-info": "4.4.0",
