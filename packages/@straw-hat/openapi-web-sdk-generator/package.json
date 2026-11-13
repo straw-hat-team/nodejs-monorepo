@@ -50,8 +50,8 @@
   ],
   "dependencies": {
     "@apidevtools/swagger-parser": "^13.1.0",
-    "@oclif/core": "^5.1.11",
-    "@oclif/plugin-help": "^7.0.6",
+    "@oclif/core": "^5.1.12",
+    "@oclif/plugin-help": "^7.0.7",
     "@stoplight/json-ref-resolver": "^3.1.6",
     "change-case": "^5.4.4",
     "cosmiconfig": "^10.0.1",
