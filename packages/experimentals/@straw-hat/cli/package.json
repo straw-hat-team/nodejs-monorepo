@@ -36,9 +36,9 @@
     "README.md"
   ],
   "dependencies": {
-    "@oclif/core": "5.1.11",
-    "@oclif/plugin-help": "7.0.6",
-    "@oclif/plugin-version": "3.0.7",
+    "@oclif/core": "5.1.12",
+    "@oclif/plugin-help": "7.0.7",
+    "@oclif/plugin-version": "3.0.10",
     "@straw-hat/cli-core": "workspace:*",
     "@straw-hat/jest-config-chain": "workspace:*",
     "cypress": "^16.2.1",
