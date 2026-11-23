@@ -75,7 +75,7 @@
     "oclif": "^6.0.15",
     "ts-node": "^10.9.2",
     "typescript": "7.0.2",
-    "vitest": "^5.1.0"
+    "vitest": "^5.1.1"
   },
   "oclif": {
     "commands": "./dist/commands",
